@@ -420,7 +420,7 @@ CopyNameFromMenu::
 	ret
 
 YesNoBox::
-	lb bc, SCREEN_WIDTH - 6, 7
+	lb bc, SCREEN_WIDTH - 6, 6
 
 PlaceYesNoBox::
 	jr _YesNoBox
@@ -446,7 +446,7 @@ _YesNoBox::
 	ld [wMenuBorderRightCoord], a
 	ld a, c
 	ld [wMenuBorderTopCoord], a
-	add 4
+	add 5
 	ld [wMenuBorderBottomCoord], a
 	call PushWindow
 
@@ -477,7 +477,8 @@ YesNoMenuHeader::
 	db 1 ; default option
 
 .MenuData:
-	db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
+	db STATICMENU_CURSOR
+	; db STATICMENU_CURSOR | STATICMENU_NO_TOP_SPACING ; flags
 	db 2
 	db "예@"
 	db "아니오@"
