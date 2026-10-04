@@ -1,6 +1,6 @@
 ChrisNameMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 10, TEXTBOX_Y - 1
+	menu_coords 0, 1, 10, TEXTBOX_Y
 	dw .MaleNames
 	db 1 ; default option
 	db 0 ; ???
@@ -8,18 +8,18 @@ ChrisNameMenuHeader:
 .MaleNames:
 	db STATICMENU_CURSOR | STATICMENU_PLACE_TITLE | STATICMENU_DISABLE_B ; flags
 	db 5 ; items
-	db "NEW NAME@"
+	db "스스로 결정하다@"
 MalePlayerNameArray:
-	db "CHRIS@"
-	db "MAT@"
-	db "ALLAN@"
-	db "JON@"
+	db "골드@"
+	db "수호@"
+	db "인산@"
+	db "강산@"
 	db 2 ; title indent
-	db " NAME @" ; title
+	db " 이름 후보 @" ; title
 
 KrisNameMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 10, TEXTBOX_Y - 1
+	menu_coords 0, 1, 10, TEXTBOX_Y
 	dw .FemaleNames
 	db 1 ; default option
 	db 0 ; ???
@@ -27,11 +27,11 @@ KrisNameMenuHeader:
 .FemaleNames:
 	db STATICMENU_CURSOR | STATICMENU_PLACE_TITLE | STATICMENU_DISABLE_B ; flags
 	db 5 ; items
-	db "NEW NAME@"
+	db "스스로 결정하다@"
 FemalePlayerNameArray:
-	db "KRIS@"
-	db "AMANDA@"
-	db "JUANA@"
-	db "JODI@"
+	db "크리스@"
+	db "금선@"
+	db "은아@"
+	db "동주@"
 	db 2 ; title indent
-	db " NAME @" ; title
+	db " 이름 후보 @" ; title

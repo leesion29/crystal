@@ -65,14 +65,14 @@ MainMenu:
 
 .Strings:
 ; entries correspond to MAINMENUITEM_* constants
-	db "CONTINUE@"
-	db "NEW GAME@"
-	db "OPTION@"
-	db "MYSTERY GIFT@"
-	db "MOBILE@"
-	db "MOBILE STUDIUM@"
+	db "모험을 계속하다@"
+	db "새로운 모험을 시작하다@"
+	db "설정을 바꾸다@"
+	db "이상한 소포@"
+	db "모바일@"
+	db "스타디움@"
 if DEF(_DEBUG)
-	db "DEBUG ROOM@"
+	db "디버그 룸@"
 endc
 
 .Jumptable:
@@ -348,15 +348,15 @@ MainMenu_PrintCurrentTimeAndDay:
 	ret
 
 .Days:
-	db "SUN@"
-	db "MON@"
-	db "TUES@"
-	db "WEDNES@"
-	db "THURS@"
-	db "FRI@"
-	db "SATUR@"
+	db "일@"
+	db "월@"
+	db "화@"
+	db "수@"
+	db "목@"
+	db "금@"
+	db "토@"
 .Day:
-	db "DAY@"
+	db "요일@"
 
 ClearTilemapEtc:
 	xor a

@@ -1,29 +1,26 @@
 _OakText6::
-	text "Now, what did you"
-	line "say your name was?"
+	text "그럼……"
+	line "슬슬 너의 이름을"
+	cont "가르쳐다오!"
 	prompt
 
 _OakText7::
-	text "<PLAYER>, are you"
-	line "ready?"
+	text "<PLAYER>!"
+	line "준비는 되었는가?"
 
 if !DEF(_DEBUG)
-	para "Your very own"
-	line "#MON story is"
-	cont "about to unfold."
+	para "드디어 이제부터"
+	line "너의 이야기가 시작되어진다"
 
-	para "You'll face fun"
-	line "times and tough"
-	cont "challenges."
+	para "즐거운 것도 괴로운 것도"
+	line "잔뜩 너를 기다리고 있을 것이다!"
 
-	para "A world of dreams"
-	line "and adventures"
+	para "꿈과 모험과!"
+	line "포켓몬스터의 세계에!"
+	cont "렛츠 고!"
 
-	para "with #MON"
-	line "awaits! Let's go!"
 endc
-	para "I'll be seeing you"
-	line "later!"
+	para "그럼 다음에 다시 만나자!"
 	done
 
 _ClockTimeMayBeWrongText::

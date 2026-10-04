@@ -1526,25 +1526,25 @@ _MayRegisterItemText::
 	done
 
 _OakText1::
-	text "Hello! Sorry to"
-	line "keep you waiting!"
+	text "이야- 오래 기다리게 했다!"
 
 if !DEF(_DEBUG)
-	para "Welcome to the"
-	line "world of #MON!"
+	para "포켓몬스터의 세계에"
+	line "잘왔단다!"
 
-	para "My name is OAK."
+	para "나의 이름은 오박사"
 
-	para "People call me the"
-	line "#MON PROF."
+	para "모두로부터는 포켓몬박사라고"
+	line "존경받고 있단다"
 endc
 	prompt
 
 _OakText2::
-	text "This world is in-"
-	line "habited by crea-"
-	cont "tures that we call"
-	cont "#MON.@"
+	text "포켓몬스터……포켓몬"
+	para "이 세계에는"
+	line "포켓몬스터라고 불려지는"
+	cont "생명체들이"
+	cont "도처에 살고있다!@"
 	text_end
 
 _OakText3::
@@ -1554,26 +1554,22 @@ _OakText3::
 	text_end ; unreferenced
 
 _OakText4::
-	text "People and #MON"
-	line "live together by"
+	text "사람은 포켓몬들과"
+	line "정답게 지내거나"
+	cont "함께 싸우거나…………"
 
-	para "supporting each"
-	line "other."
-
-	para "Some people play"
-	line "with #MON, some"
-	cont "battle with them."
+	para "서로 도와가며"
+	line "살아가고 있단다"
 	prompt
 
 _OakText5::
-	text "But we don't know"
-	line "everything about"
-	cont "#MON yet."
+	text "하지만 우리들은 포켓몬 전부를"
+	line "알고 있지는 못하다"
 
-	para "There are still"
-	line "many mysteries to"
-	cont "solve."
+	para "포켓몬의 비밀은"
+	line "아직도 잔뜩 있다!"
 
-	para "That's why I study"
-	line "#MON every day."
+	para "나는 그것을 밝혀내기 위하여"
+	line "매일 포켓몬의 연구를"
+	cont "계속하고 있다는 말이다!"
 	prompt

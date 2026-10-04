@@ -186,14 +186,14 @@ StartMenu::
 	dw StartMenu_Pokegear, .PokegearString, .PokegearDesc
 	dw StartMenu_Quit,     .QuitString,     .QuitDesc
 
-.PokedexString:  db "#DEX@"
-.PartyString:    db "#MON@"
-.PackString:     db "PACK@"
+.PokedexString:  db "도감@"
+.PartyString:    db "포켓몬@"
+.PackString:     db "가방@"
 .StatusString:   db "<PLAYER>@"
-.SaveString:     db "SAVE@"
-.OptionString:   db "OPTION@"
-.ExitString:     db "EXIT@"
-.PokegearString: db "<POKE>GEAR@"
+.SaveString:     db "레포트@"
+.OptionString:   db "설정@"
+.ExitString:     db "닫다@"
+.PokegearString: db "포켓기어@"
 .QuitString:     db "QUIT@"
 
 .PokedexDesc:
@@ -201,32 +201,32 @@ StartMenu::
 	next "database@"
 
 .PartyDesc:
-	db   "Party <PKMN>"
-	next "status@"
+	db   "포켓몬의"
+	next "상태 보기@"
 
 .PackDesc:
-	db   "Contains"
-	next "items@"
+	db   "도구를 담는"
+	next "배낭@"
 
 .PokegearDesc:
-	db   "Trainer's"
-	next "key device@"
+	db   "트레이너의"
+	next "필수품@"
 
 .StatusDesc:
-	db   "Your own"
-	next "status@"
+	db   "당신의"
+	next "현재 상태@"
 
 .SaveDesc:
-	db   "Save your"
-	next "progress@"
+	db   "지금까지의"
+	next "일을 기록@"
 
 .OptionDesc:
-	db   "Change"
-	next "settings@"
+	db   "여러가지를"
+	next "설정@"
 
 .ExitDesc:
-	db   "Close this"
-	next "menu@"
+	db   "메뉴를"
+	next "닫기@"
 
 .QuitDesc:
 	db   "Quit and"
