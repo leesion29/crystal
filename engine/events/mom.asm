@@ -77,7 +77,7 @@ BankOfMom:
 	jr .done_2
 
 .nope
-	call DSTChecks
+	; Daylight Saving Time is disabled for this Korean release.
 	ld a, $7
 
 .done_2

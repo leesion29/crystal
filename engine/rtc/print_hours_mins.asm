@@ -17,6 +17,9 @@ PrintFiveDigitNumber: ; unreferenced
 
 PrintHoursMins:
 ; Hours in b, minutes in c
+	; Used by the #GEAR clock, DST prompts, and the clock-reset menu.
+	; Keep this compact UI in Crystal's 12:34 AM/PM form.  Route the colon
+	; through PlaceString so it still resolves correctly after font caching.
 	ld a, b
 	cp 12
 	push af
@@ -30,7 +33,6 @@ PrintHoursMins:
 	ld a, 12
 .PM:
 	ld b, a
-; Crazy stuff happening with the stack
 	push bc
 	ld hl, sp+1
 	push de
@@ -40,7 +42,8 @@ PrintHoursMins:
 	ld [hl], ' '
 	lb bc, 1, 2
 	call PrintNum
-	ld [hl], ':'
+	ld de, String_Colon
+	call PlaceString
 	inc hl
 	ld d, h
 	ld e, l
@@ -51,15 +54,15 @@ PrintHoursMins:
 	pop hl
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
 	call PrintNum
+	inc hl
 	pop bc
 	ld de, String_AM
 	pop af
 	jr c, .place_am_pm
 	ld de, String_PM
 .place_am_pm
-	inc hl
-	call PlaceString
-	ret
+	jp PlaceString
 
-String_AM: db "AM@"
-String_PM: db "PM@"
+String_AM:    db "AM@"
+String_PM:    db "PM@"
+String_Colon: db ":@"

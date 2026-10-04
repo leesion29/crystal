@@ -67,6 +67,12 @@ ShowPlayerNamingChoices:
 	dec a
 	call CopyNameFromMenu
 	call CloseWindow
+	; The Korean title is printed on the menu's top border row. Its upper
+	; glyph tiles extend one tile above the backed-up menu area.
+	hlcoord 0, 0
+	lb bc, 1, 11
+	call ClearBox
+	call ApplyTilemap
 	ret
 
 INCLUDE "data/player_names.asm"

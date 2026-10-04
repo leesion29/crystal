@@ -48,20 +48,9 @@ MeetMomScript:
 	promptbutton
 	special SetDayOfWeek
 .SetDayOfWeek:
-	writetext IsItDSTText
-	yesorno
-	iffalse .WrongDay
-	special InitialSetDSTFlag
-	yesorno
-	iffalse .SetDayOfWeek
-	sjump .DayOfWeekDone
-
-.WrongDay:
-	special InitialClearDSTFlag
-	yesorno
-	iffalse .SetDayOfWeek
-.DayOfWeekDone:
-	writetext ComeHomeForDSTText
+	; Daylight Saving Time is not used for this Korean release.  Keep the
+	; original phone tutorial branch, but skip Crystal's DST-only questions.
+	writetext DoYouKnowHowToUsePhoneText
 	yesorno
 	iffalse .ExplainPhone
 	sjump .KnowPhone
@@ -245,21 +234,9 @@ MomGivesPokegearText:
 	line "that!"
 	done
 
-IsItDSTText:
-	text "Is it Daylight"
-	line "Saving Time now?"
-	done
-
-ComeHomeForDSTText:
-	text "Come home to"
-	line "adjust your clock"
-
-	para "for Daylight"
-	line "Saving Time."
-
-	para "By the way, do you"
-	line "know how to use"
-	cont "the PHONE?"
+DoYouKnowHowToUsePhoneText:
+	text "그래 그래"
+	line "전화의 사용방법 기억하고 있니?"
 	done
 
 KnowTheInstructionsText:

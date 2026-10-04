@@ -237,7 +237,8 @@ TrimHangulTiles:
 	inc de
 	cp $80
 	jr c, .skip_tile
-	cp $f0
+	; $ec-$ef are fixed cursor/gender glyph tiles, not cache slots.
+	cp $ec
 	jr nc, .skip_tile
 	and $fe
 	push de
@@ -391,11 +392,32 @@ CopyHangulTilesToVRAM:
 HDMATransfer_HangulFontToVRAM::
 ; Copy a cached 8x16 glyph (two 2bpp tiles) directly during VBlank.
 
+	; Menus such as the Trainer Card print while the LCD is disabled. In that
+	; state LY never reaches VBlank, but VRAM is immediately writable.
+	ldh a, [rLCDC]
+	bit B_LCDC_ENABLE, a
+	jr z, .copy
 .wait_vblank
 	ldh a, [rLY]
 	cp SCREEN_HEIGHT
 	jr c, .wait_vblank
+	jr z, .copy
+	; Starting a 32-byte CPU copy late in VBlank can cross into Mode 3, where
+	; VRAM writes are ignored. Wait for the start of the next VBlank instead.
+.wait_next_frame
+	ldh a, [rLY]
+	cp SCREEN_HEIGHT
+	jr nc, .wait_next_frame
+	jr .wait_vblank
 
+
+.copy
+	; vTiles0/vTiles1 are font tiles in VRAM bank 0.  The active bank can be
+	; bank 1 after an attrmap transfer, so preserve it and select bank 0 here.
+	ldh a, [rVBK]
+	push af
+	xor a
+	ldh [rVBK], a
 	ld de, wHangulFontGfx
 	ld bc, 2 * TILE_SIZE
 .copy_byte
@@ -406,6 +428,8 @@ HDMATransfer_HangulFontToVRAM::
 	ld a, b
 	or c
 	jr nz, .copy_byte
+	pop af
+	ldh [rVBK], a
 	ret
 
 

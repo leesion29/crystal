@@ -283,15 +283,13 @@ MainMenu_PrintCurrentTimeAndDay:
 	call CheckRTCStatus
 	and RTC_RESET
 	jr nz, .TimeFail
-	hlcoord 0, 14
-	ld b, 2
-	ld c, 18
-	call Textbox
-	ret
+	hlcoord 0, 12
+	ld b, 4
+	ld c, 13
+	jp Textbox
 
 .TimeFail:
-	call SpeechTextbox
-	ret
+	jp SpeechTextbox
 
 .PlaceTime:
 	ld a, [wSaveFileExists]
@@ -301,23 +299,30 @@ MainMenu_PrintCurrentTimeAndDay:
 	and RTC_RESET
 	jp nz, .PrintTimeNotSet
 	call UpdateTime
+	hlcoord 1, 13
+	lb bc, 4, 13
+	call ClearBox
 	call GetWeekday
 	ld b, a
-	decoord 1, 15
+	decoord 1, 14
 	call .PrintDayOfWeek
-	decoord 4, 16
+	decoord 2, 16
 	ldh a, [hHours]
 	ld c, a
 	farcall PrintHour
-	ld [hl], ':'
+	ld de, .HourString
+	call PlaceString
 	inc hl
+	hlcoord 9, 16
 	ld de, hMinutes
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
 	call PrintNum
-	ret
+	hlcoord 11, 16
+	ld de, .MinuteString
+	jp PlaceString
 
-.minString: ; unreferenced
-	db "min.@"
+.HourString:   db "시@"
+.MinuteString: db "분@"
 
 .PrintTimeNotSet:
 	hlcoord 1, 14
@@ -326,11 +331,7 @@ MainMenu_PrintCurrentTimeAndDay:
 	ret
 
 .TimeNotSetString:
-	db "TIME NOT SET@"
-
-.MainMenuTimeUnknownText: ; unreferenced
-	text_far _MainMenuTimeUnknownText
-	text_end
+	db "시계의 시간 불명@"
 
 .PrintDayOfWeek:
 	push de
@@ -357,6 +358,10 @@ MainMenu_PrintCurrentTimeAndDay:
 	db "토@"
 .Day:
 	db "요일@"
+
+.MainMenuTimeUnknownText: ; unreferenced
+	text_far _MainMenuTimeUnknownText
+	text_end
 
 ClearTilemapEtc:
 	xor a

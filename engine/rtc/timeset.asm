@@ -171,10 +171,12 @@ SetHour:
 	ld [hl], a
 
 .okay
-	hlcoord 11, 9
-	ld a, ' '
-	ld bc, 7
-	call ByteFill
+	; Hangul glyphs use an upper and lower tile row. Clear the full
+	; interior of the selector so changing the time-of-day label cannot
+	; leave the previous glyphs in the upper row.
+	hlcoord 11, 8
+	lb bc, 2, 8
+	call ClearBox
 	hlcoord 11, 9
 	call DisplayHourOClock
 	call WaitBGMap
@@ -260,10 +262,11 @@ SetMinutes:
 	inc a
 	ld [hl], a
 .finish_dpad
-	hlcoord 12, 9
-	ld a, ' '
-	ld bc, 7
-	call ByteFill
+	; Clear both interior rows because the Korean minute suffix occupies
+	; the row above the text cursor as well.
+	hlcoord 12, 8
+	lb bc, 2, 7
+	call ClearBox
 	hlcoord 14, 9
 	call DisplayMinutesWithMinString
 	call WaitBGMap
@@ -341,11 +344,16 @@ OakText_ResponseToSetTime:
 	ld a, [wInitHourBuffer]
 	ld c, a
 	call PrintHour
-	ld [hl], ':'
+	ld de, String_oclock
+	call PlaceString
 	inc hl
 	ld de, wInitMinuteBuffer
-	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
+	lb bc, 1, 2
 	call PrintNum
+	inc hl
+	ld de, String_min
+	call PlaceString
+	inc hl
 	ld b, h
 	ld c, l
 	ld a, [wInitHourBuffer]
