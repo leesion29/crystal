@@ -486,6 +486,11 @@ INCLUDE "engine/events/npc_trade.asm"
 INCLUDE "engine/events/mom_phone.asm"
 
 
+SECTION "Hangul PoC", ROMX
+
+INCLUDE "engine/hangul/text.asm"
+
+
 SECTION "mobile40", ROMX
 
 INCLUDE "mobile/mobile_40.asm"

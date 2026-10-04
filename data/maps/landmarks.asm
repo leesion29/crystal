@@ -107,7 +107,7 @@ Landmarks:
 	assert_table_length NUM_LANDMARKS
 
 NewBarkTownName:     db "NEW BARK<BSP>TOWN@"
-CherrygroveCityName: db "CHERRYGROVE<BSP>CITY@"
+CherrygroveCityName: db "무궁시티@"
 VioletCityName:      db "VIOLET CITY@"
 AzaleaTownName:      db "AZALEA TOWN@"
 GoldenrodCityName:   db "GOLDENROD<BSP>CITY@"

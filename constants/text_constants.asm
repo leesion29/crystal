@@ -46,3 +46,7 @@ DEF FIRST_HIRAGANA_DAKUTEN_CHAR EQU $20
 
 ; gfx/font/unown_font.png
 DEF FIRST_UNOWN_CHAR EQU $40
+
+; Text glyph cache: 56 pairs of vTiles1 tiles from $80 through $ef.
+DEF MAX_HANGUL_TILE_COUNT EQU 56
+DEF HANGUL_ATTR_USED_F    EQU 7

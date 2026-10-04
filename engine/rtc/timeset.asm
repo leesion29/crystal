@@ -55,15 +55,15 @@ endc
 .loop
 	ld hl, OakTimeWhatTimeIsItText
 	call PrintText
-	hlcoord 3, 7
+	hlcoord 10, 7
 	ld b, 2
-	ld c, 15
+	ld c, 8
 	call Textbox
-	hlcoord 11, 7
+	hlcoord 14, 7
 	ld [hl], $1
-	hlcoord 11, 10
+	hlcoord 14, 10
 	ld [hl], $2
-	hlcoord 4, 9
+	hlcoord 11, 9
 	call DisplayHourOClock
 	ld c, 10
 	call DelayFrames
@@ -93,7 +93,7 @@ endc
 	ld [hl], $1
 	hlcoord 15, 10
 	ld [hl], $2
-	hlcoord 12, 9
+	hlcoord 14, 9
 	call DisplayMinutesWithMinString
 	ld c, 10
 	call DelayFrames
@@ -171,11 +171,11 @@ SetHour:
 	ld [hl], a
 
 .okay
-	hlcoord 4, 9
+	hlcoord 11, 9
 	ld a, ' '
-	ld bc, 15
+	ld bc, 7
 	call ByteFill
-	hlcoord 4, 9
+	hlcoord 11, 9
 	call DisplayHourOClock
 	call WaitBGMap
 	and a
@@ -264,7 +264,7 @@ SetMinutes:
 	ld a, ' '
 	ld bc, 7
 	call ByteFill
-	hlcoord 12, 9
+	hlcoord 14, 9
 	call DisplayMinutesWithMinString
 	call WaitBGMap
 	and a
@@ -300,7 +300,7 @@ OakTimeWhatTimeIsItText:
 	text_end
 
 String_oclock:
-	db "o'clock@"
+	db "시@"
 
 OakTimeWhatHoursText:
 	; What?@ @
@@ -320,7 +320,7 @@ OakTimeHowManyMinutesText:
 	text_end
 
 String_min:
-	db "min.@"
+	db "분@"
 
 OakTimeWhoaMinutesText:
 	; Whoa!@ @
@@ -518,13 +518,13 @@ SetDayOfWeek:
 	dw .Saturday
 	dw .Sunday
 
-.Sunday:    db " SUNDAY@"
-.Monday:    db " MONDAY@"
-.Tuesday:   db " TUESDAY@"
-.Wednesday: db "WEDNESDAY@"
-.Thursday:  db "THURSDAY@"
-.Friday:    db " FRIDAY@"
-.Saturday:  db "SATURDAY@"
+.Sunday:    db "일요일@"
+.Monday:    db "월요일@"
+.Tuesday:   db "화요일@"
+.Wednesday: db "수요일@"
+.Thursday:  db "목요일@"
+.Friday:    db "금요일@"
+.Saturday:  db "토요일@"
 
 .OakTimeWhatDayIsItText:
 	text_far _OakTimeWhatDayIsItText
@@ -708,9 +708,9 @@ GetTimeOfDayString:
 	ld de, .day_string
 	ret
 
-.nite_string: db "NITE@"
-.morn_string: db "MORN@"
-.day_string:  db "DAY@"
+.nite_string: db "밤　@"
+.morn_string: db "아침@"
+.day_string:  db "낮　@"
 
 AdjustHourForAMorPM:
 ; Convert the hour stored in c (0-23) to a 1-12 value

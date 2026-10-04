@@ -5,9 +5,8 @@ NurseMornText:
 	done
 
 NurseDayText:
-	text "Hello!"
-	line "Welcome to our"
-	cont "#MON CENTER."
+	text "안녕하세요!"
+	line "포켓몬센터입니다!"
 	done
 
 NurseNiteText:
@@ -50,30 +49,28 @@ PokeComNurseNiteText:
 	done
 
 NurseAskHealText:
-	text "We can heal your"
-	line "#MON to perfect"
-	cont "health."
+	text "이곳에서는 포켓몬의"
+	line "체력을 회복합니다!"
 
-	para "Shall we heal your"
-	line "#MON?"
+	para "당신의 포켓몬을"
+	line "쉬게 하겠습니까?"
 	done
 
 NurseTakePokemonText:
-	text "OK, may I see your"
-	line "#MON?"
+	text "그럼 "
+	line "맡아놓겠습니다!"
 	done
 
 NurseReturnPokemonText:
-	text "Thank you for"
-	line "waiting."
+	text "오래 기다리셨습니다!"
 
-	para "Your #MON are"
-	line "fully healed."
+	para "맡아놓은 포켓몬은"
+	line "모두 건강해졌습니다!"
 	done
 
 NurseGoodbyeText:
-	text "We hope to see you"
-	line "again."
+	text "다음 번에도"
+	line "방문하시길 기다리겠습니다!"
 	done
 
 ; not used

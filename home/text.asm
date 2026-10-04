@@ -177,6 +177,29 @@ PlaceNextChar::
 	pop hl
 	ret
 
+PlaceHangul::
+; A Korean character follows the HANGUL_POC_ESCAPE byte with a two-byte glyph
+; identifier. _PlaceHangul writes its two vertically adjacent tiles and
+; leaves HL at the next character position.
+
+	inc de
+	ld a, [de]
+	ld b, a
+	inc de
+	ld a, [de]
+	ld c, a
+	homecall _PlaceHangul
+	call PrintLetterDelay
+	jp NextChar
+
+PlaceCommonChar::
+; Once Hangul appears, route standard font characters through the same cache.
+	ld b, 0
+	ld c, a
+	homecall _PlaceHangul
+	call PrintLetterDelay
+	jp NextChar
+
 DummyChar:: ; unreferenced
 	pop de
 	; fallthrough
@@ -251,6 +274,16 @@ ENDM
 	jp NextChar
 
 .not_diacritic
+	cp HANGUL_POC_ESCAPE
+	jp z, PlaceHangul
+	ld a, [wHangulDynamicMode]
+	and a
+	jr z, .static_font_char
+	ld a, [de]
+	cp $80
+	jp nc, PlaceCommonChar
+.static_font_char
+	ld a, [de]
 	cp FIRST_REGULAR_TEXT_CHAR
 	jr nc, .place
 ; dakuten or handakuten

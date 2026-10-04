@@ -563,10 +563,8 @@ MysticWaterGuyTextAfter:
 	done
 
 CherrygroveCitySignText:
-	text "CHERRYGROVE CITY"
-
-	para "The City of Cute,"
-	line "Fragrant Flowers"
+	text "이곳은 무궁시티"
+	para "아름다운 꽃의 향기가 그윽한 마을"
 	done
 
 GuideGentsHouseSignText:

@@ -157,19 +157,18 @@ _OakTimeWokeUpText::
 	text "<……><……><……><……><……><……>"
 	line "<……><……><……><……><……><……>"
 
-	para "Zzz… Hm? Wha…?"
-	line "You woke me up!"
+	para "으음- 음냐 음냐……"
+	line "뭐야 벌써 이런 시간이……"
 
-	para "Will you check the"
-	line "clock for me?"
+	cont "미안하지만 시계를 봐 주겠니?…"
 	prompt
 
 _OakTimeWhatTimeIsItText::
-	text "What time is it?"
+	text "지금은 몇시인가?"
 	done
 
 _OakTimeWhatHoursText::
-	text "What?@"
+	text "뭐야!"
 	text_end
 
 _OakTimeHoursQuestionMarkText::
@@ -177,11 +176,11 @@ _OakTimeHoursQuestionMarkText::
 	done
 
 _OakTimeHowManyMinutesText::
-	text "How many minutes?"
+	text "그래서 몇 분이라고?"
 	done
 
 _OakTimeWhoaMinutesText::
-	text "Whoa!@"
+	text "뭐라!@"
 	text_end
 
 _OakTimeMinutesQuestionMarkText::
@@ -190,7 +189,7 @@ _OakTimeMinutesQuestionMarkText::
 
 _OakTimeOversleptText::
 	text "!"
-	line "I overslept!"
+	line "이런! 마냥 잠만 잔 것 같군"
 	done
 
 _OakTimeYikesText::
@@ -201,8 +200,7 @@ _OakTimeYikesText::
 
 _OakTimeSoDarkText::
 	text "!"
-	line "No wonder it's so"
-	cont "dark!"
+	line "과연 어두운 것 같군!"
 	done
 
 _OakTimeWhatDayIsItText::

@@ -320,6 +320,19 @@ wTilemap::
 wTilemapEnd::
 
 
+SECTION "Hangul PoC Buffer", WRAM0
+
+; One 8x16 glyph after 1bpp-to-2bpp expansion.
+wHangulFontGfx:: ds 2 tiles
+wHangulDynamicMode:: db
+
+
+SECTION "Hangul Tile Cache", WRAMX, BANK[$2]
+
+; One source code pair per even-numbered tile pair from $80 through $ee.
+wHangulAttributes:: ds MAX_HANGUL_TILE_COUNT * 2
+
+
 ; This union spans 480 bytes.
 SECTION UNION "Miscellaneous", WRAM0
 

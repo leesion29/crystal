@@ -663,8 +663,8 @@ _YouCantUseItInABattleText::
 	prompt
 
 _AreYouABoyOrAreYouAGirlText::
-	text "Are you a boy?"
-	line "Or are you a girl?"
+	text "너는 남자아이니?"
+	line "아니면 여자아이니?"
 	done
 
 Text_BattleEffectActivate::

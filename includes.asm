@@ -1,4 +1,6 @@
 INCLUDE "constants/charmap.asm"
+INCLUDE "constants/charmap_hangul_poc.asm"
+INCLUDE "constants/charmap_hangul_complete.asm"
 
 INCLUDE "macros/asserts.asm"
 INCLUDE "macros/const.asm"

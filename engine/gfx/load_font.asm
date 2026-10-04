@@ -16,6 +16,9 @@ Get2bppOptionalHDMA: ; unreferenced
 	jp Get2bpp
 
 _LoadStandardFont::
+	; Clear the shared standard-character and Hangul tile cache.
+	farcall ResetHangulTiles
+
 	ld de, Font
 	ld hl, vTiles1
 	lb bc, BANK(Font), 128 ; 'A' to '9'
