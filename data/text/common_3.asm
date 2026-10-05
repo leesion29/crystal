@@ -183,30 +183,29 @@ _MobileBattleRemainingTimeText::
 	done
 
 _WouldYouLikeToSaveTheGameText::
-	text "Would you like to"
-	line "save the game?"
+	text "여기까지의 활약을"
+	line "포켓몬 레포트에 기록하시겠습니까?"
 	done
 
 _SavingDontTurnOffThePowerText::
-	text "SAVING… DON'T TURN"
-	line "OFF THE POWER."
+	text "포켓몬 레포트에 기록하고 있습니다"
+	line "전원을 끄지 말아주세요"
 	done
 
 _SavedTheGameText::
-	text "<PLAYER> saved"
-	line "the game."
+	text "<PLAYER>는(은)"
+	line "레포트에 정확히 기록했습니다!"
 	done
 
 _AlreadyASaveFileText::
-	text "There is already a"
-	line "save file. Is it"
-	cont "OK to overwrite?"
+	text "이전에 기록한 레포트에"
+	line "덮어써도 괜찮겠습니까?"
 	done
 
 _AnotherSaveFileText::
-	text "There is another"
-	line "save file. Is it"
-	cont "OK to overwrite?"
+	text "별도의 모험"
+	line "레포트가 기록되어 있습니다!"
+	cont "새로 기록해도 괜찮겠습니까?"
 	done
 
 _SaveFileCorruptedText::

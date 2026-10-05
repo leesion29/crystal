@@ -204,11 +204,12 @@ _OakTimeSoDarkText::
 	done
 
 _OakTimeWhatDayIsItText::
-	text "What day is it?"
+	text "오늘은 무슨 요일?"
 	done
 
 _OakTimeIsItText::
-	text ", is it?"
+	text "…?"
+	line "설마 틀리지는 않았겠지?"
 	done
 
 ; Mobile Adapter

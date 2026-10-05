@@ -200,38 +200,30 @@ MomWalksBackMovement:
 	step_end
 
 ElmsLookingForYouText:
-	text "Oh, <PLAYER>…! Our"
-	line "neighbor, PROF."
+	text "아, <PLAYER>!"
+	line "옆집의 공박사님이"
+	cont "찾아왔었단다"
 
-	para "ELM, was looking"
-	line "for you."
+	para "뭔가 너에게"
+	line "부탁할 것이 있다고 하셔서"
 
-	para "He said he wanted"
-	line "you to do some-"
-	cont "thing for him."
+	para "그래! 잊어먹을 뻔 했네"
+	line "수리를 보냈던 포켓몬 기어가"
+	cont "돌아왔단다"
 
-	para "Oh! I almost for-"
-	line "got! Your #MON"
-
-	para "GEAR is back from"
-	line "the repair shop."
-
-	para "Here you go!"
+	para "여기!"
 	done
 
 MomGivesPokegearText:
-	text "#MON GEAR, or"
-	line "just #GEAR."
+	text "포켓몬기어"
+	line "줄여서 포켓기어"
 
-	para "It's essential if"
-	line "you want to be a"
-	cont "good trainer."
+	para "훌륭한 트레이너가 되려면"
+	line "가지고 있어야 하지, 안 그래?"
 
-	para "Oh, the day of the"
-	line "week isn't set."
-
-	para "You mustn't forget"
-	line "that!"
+	para "응? 요일을 맞추기 않았네"
+	line "사용하기 전에 무슨 요일인가"
+	cont "정해놓지 않으면"
 	done
 
 DoYouKnowHowToUsePhoneText:
@@ -248,30 +240,24 @@ KnowTheInstructionsText:
 	done
 
 DontKnowTheInstructionsText:
-	text "I'll read the"
-	line "instructions."
+	text "그럼 설명서를 읽을게"
 
-	para "Turn the #GEAR"
-	line "on and select the"
-	cont "PHONE icon."
+	para "포켓몬기어의 스위치를 넣고"
+	line "전화 아이콘을 고르는 것이란다"
 	done
 
 InstructionsNextText:
-	text "Phone numbers are"
-	line "stored in memory."
+	text "전화번호는"
+	line "자동으로 등록되어지니까"
+	cont "기록하고 싶은 상대를 고르면 된다"
 
-	para "Just choose a name"
-	line "you want to call."
-
-	para "Gee, isn't that"
-	line "convenient?"
+	para "이렇게 간단하게"
+	line "전화를 할 수 있다니 대단하네"
 	done
 
 HurryUpElmIsWaitingText:
-	text "PROF.ELM is wait-"
-	line "ing for you."
-
-	para "Hurry up, baby!"
+	text "공박사님이 부르셨단다"
+	line "빨리 가봐야지!"
 	done
 
 SoWhatWasProfElmsErrandText:
@@ -296,68 +282,58 @@ ImBehindYouText:
 	done
 
 NeighborMornIntroText:
-	text "Good morning,"
+	text "좋은 아침이야,"
 	line "<PLAY_G>!"
 
-	para "I'm visiting!"
+	para "나는 놀러왔단다!"
 	done
 
 NeighborDayIntroText:
-	text "Hello, <PLAY_G>!"
-	line "I'm visiting!"
+	text "반가워, <PLAY_G>!"
+	line "나는 놀러왔단다!"
 	done
 
 NeighborNiteIntroText:
-	text "Good evening,"
+	text "좋은 저녁이네,"
 	line "<PLAY_G>!"
 
-	para "I'm visiting!"
+	para "나는 놀러왔단다!"
 	done
 
 NeighborText:
-	text "<PLAY_G>, have you"
-	line "heard?"
+	text "<PLAY_G>,"
+	line "내가 내 딸 이야기를 했었나?"
 
-	para "My daughter is"
-	line "adamant about"
+	para "내 딸은 공박사님의"
+	line "조수가 되고 싶어 한단다"
 
-	para "becoming PROF."
-	line "ELM's assistant."
-
-	para "She really loves"
-	line "#MON!"
+	para "그 아이, 포켓몬을"
+	line "정말 좋아하거든!"
 	done
 
 PlayersHouse1FStoveText:
-	text "Mom's specialty!"
-
-	para "CINNABAR VOLCANO"
-	line "BURGER!"
+	text "엄마 특제요리"
+	line "홍련섬 충의 화산 햄버거!"
 	done
 
 PlayersHouse1FSinkText:
-	text "The sink is spot-"
-	line "less. Mom likes it"
-	cont "clean."
+	text "반짝반짝거리는 싱크대다!"
+	line "엄마는 깔끔쟁이"
 	done
 
 PlayersHouse1FFridgeText:
-	text "Let's see what's"
-	line "in the fridge…"
+	text "냉장고 안에는……"
 
-	para "FRESH WATER and"
-	line "tasty LEMONADE!"
+	para "맛있는 물이 가득"
+	line "그리고 달콤한 후르츠 밀크!"
 	done
 
 PlayersHouse1FTVText:
-	text "There's a movie on"
-	line "TV: Stars dot the"
+	text "TV에서 영화를 상영 중이다"
+	para "두 남자아이가 여행을 하고"
+	line "기차의 창 너머로 별이 보인다……"
 
-	para "sky as two boys"
-	line "ride on a train…"
-
-	para "I'd better get"
-	line "rolling too!"
+	para "……나도 빨리 가봐야지!"
 	done
 
 PlayersHouse1F_MapEvents:

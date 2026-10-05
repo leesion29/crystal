@@ -21,7 +21,7 @@ _Option:
 	ld b, SCREEN_HEIGHT - 2
 	ld c, SCREEN_WIDTH - 2
 	call Textbox
-	hlcoord 2, 2
+	hlcoord 1, 2
 	ld de, StringOptions
 	call PlaceString
 	xor a
@@ -75,21 +75,14 @@ _Option:
 	ret
 
 StringOptions:
-	db "TEXT SPEED<LF>"
-	db "        :<LF>"
-	db "BATTLE SCENE<LF>"
-	db "        :<LF>"
-	db "BATTLE STYLE<LF>"
-	db "        :<LF>"
-	db "SOUND<LF>"
-	db "        :<LF>"
-	db "PRINT<LF>"
-	db "        :<LF>"
-	db "MENU ACCOUNT<LF>"
-	db "        :<LF>"
-	db "FRAME<LF>"
-	db "        :TYPE<LF>"
-	db "CANCEL@"
+	db "이야기의 속도<LF><LF>"
+	db "전투 애니메이션<LF><LF>"
+	db "시합의 룰<LF><LF>"
+	db "사운드<LF><LF>"
+	db "프린트<LF><LF>"
+	db "메뉴 설명<LF><LF>"
+	db "윈도우       타입<LF><LF>"
+	db "          닫기@"
 
 GetOptionPointer:
 	jumptable .Pointers, wJumptableIndex
@@ -152,7 +145,8 @@ Options_TextSpeed:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	hlcoord 11, 3
+	hlcoord 11, 2
+	call Options_ClearValueField
 	call PlaceString
 	and a
 	ret
@@ -163,9 +157,9 @@ Options_TextSpeed:
 	dw .Mid
 	dw .Slow
 
-.Fast: db "FAST@"
-.Mid:  db "MID @"
-.Slow: db "SLOW@"
+.Fast: db "빠르게@"
+.Mid:  db "보통 @"
+.Slow: db "느리게@"
 
 GetTextSpeed:
 ; converts TEXT_DELAY_* value in a to OPT_TEXT_SPEED_* value in c,
@@ -222,13 +216,14 @@ Options_BattleScene:
 	ld de, .Off
 
 .Display:
-	hlcoord 11, 5
+	hlcoord 11, 4
+	call Options_ClearValueField
 	call PlaceString
 	and a
 	ret
 
-.On:  db "ON @"
-.Off: db "OFF@"
+.On:  db "켜기 @"
+.Off: db "끄기@"
 
 Options_BattleStyle:
 	ld hl, wOptions
@@ -260,13 +255,14 @@ Options_BattleStyle:
 	ld de, .Set
 
 .Display:
-	hlcoord 11, 7
+	hlcoord 11, 6
+	call Options_ClearValueField
 	call PlaceString
 	and a
 	ret
 
-.Shift: db "SHIFT@"
-.Set:   db "SET  @"
+.Shift: db "교체  @"
+.Set:   db "토너먼트@"
 
 Options_Sound:
 	ld hl, wOptions
@@ -305,13 +301,14 @@ Options_Sound:
 	ld de, .Stereo
 
 .Display:
-	hlcoord 11, 9
+	hlcoord 11, 8
+	call Options_ClearValueField
 	call PlaceString
 	and a
 	ret
 
-.Mono:   db "MONO  @"
-.Stereo: db "STEREO@"
+.Mono:   db "모노  @"
+.Stereo: db "스테레오@"
 
 	const_def
 	const OPT_PRINT_LIGHTEST ; 0
@@ -359,7 +356,8 @@ Options_Print:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	hlcoord 11, 11
+	hlcoord 11, 10
+	call Options_ClearValueField
 	call PlaceString
 	and a
 	ret
@@ -372,11 +370,11 @@ Options_Print:
 	dw .Darker
 	dw .Darkest
 
-.Lightest: db "LIGHTEST@"
-.Lighter:  db "LIGHTER @"
-.Normal:   db "NORMAL  @"
-.Darker:   db "DARKER  @"
-.Darkest:  db "DARKEST @"
+.Lightest: db "더 밝게@"
+.Lighter:  db "밝게 @"
+.Normal:   db "보통  @"
+.Darker:   db "어둡게  @"
+.Darkest:  db "더 어둡게 @"
 
 GetPrinterSetting:
 ; converts GBPRINTER_* value in a to OPT_PRINT_* value in c,
@@ -445,7 +443,8 @@ Options_MenuAccount:
 	ld de, .On
 
 .Display:
-	hlcoord 11, 13
+	hlcoord 11, 12
+	call Options_ClearValueField
 	call PlaceString
 	and a
 	ret
@@ -477,7 +476,7 @@ Options_Frame:
 	ld [hl], a
 UpdateFrame:
 	ld a, [wTextboxFrame]
-	hlcoord 16, 15 ; where on the screen the number is drawn
+	hlcoord 16, 14 ; where on the screen the number is drawn
 	add '1'
 	ld [hl], a
 	call LoadFontsExtra
@@ -544,7 +543,7 @@ OptionsControl:
 	ret
 
 Options_UpdateCursorPosition:
-	hlcoord 1, 1
+	hlcoord 10, 1
 	ld de, SCREEN_WIDTH
 	ld c, SCREEN_HEIGHT - 2
 .loop
@@ -552,9 +551,22 @@ Options_UpdateCursorPosition:
 	add hl, de
 	dec c
 	jr nz, .loop
-	hlcoord 1, 2
+	hlcoord 10, 2
 	ld bc, 2 * SCREEN_WIDTH
 	ld a, [wJumptableIndex]
 	call AddNTimes
 	ld [hl], '▶'
+	ret
+
+Options_ClearValueField:
+; A Hangul glyph occupies the row above its text coordinate as well.
+; Clear both rows of the fixed-width value field before redrawing it.
+	push de
+	push hl
+	ld bc, -SCREEN_WIDTH
+	add hl, bc
+	lb bc, 2, 8
+	call ClearBox
+	pop hl
+	pop de
 	ret

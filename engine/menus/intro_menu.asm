@@ -533,10 +533,10 @@ Continue_LoadMenuHeader:
 .MenuData_Dex:
 	db 0 ; flags
 	db 4 ; items
-	db "PLAYER@"
-	db "BADGES@"
-	db "#DEX@"
-	db "TIME@"
+	db "주인공@"
+	db "뱃지 수@"
+	db "포켓몬 도감@"
+	db "플레이 시간@"
 
 .MenuHeader_NoDex:
 	db MENU_BACKUP_TILES ; flags
@@ -547,10 +547,10 @@ Continue_LoadMenuHeader:
 .MenuData_NoDex:
 	db 0 ; flags
 	db 4 ; items
-	db "PLAYER <PLAYER>@"
-	db "BADGES@"
+	db "주인공@"
+	db "뱃지 수@"
 	db " @"
-	db "TIME@"
+	db "플레이 시간@"
 
 Continue_DisplayBadgesDexPlayerName:
 	call MenuBoxCoord2Tile
