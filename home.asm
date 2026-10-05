@@ -59,3 +59,8 @@ INCLUDE "home/battle.asm"
 INCLUDE "home/sprite_anims.asm"
 INCLUDE "home/audio.asm"
 INCLUDE "home/mobile.asm"
+
+; Keep the codec wrapper separate: most ROM0 slack is below the header, not
+; contiguous with the nearly full Home section.
+SECTION "Name Display Codec Home", ROM0
+INCLUDE "home/name_codec.asm"

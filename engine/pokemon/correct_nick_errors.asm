@@ -13,6 +13,25 @@ CorrectNickErrors::
 	ld a, [de]
 	cp '@' ; terminator
 	jr z, .end
+	cp HANGUL_POC_ESCAPE
+	jr nz, .standard
+	ld a, b
+	cp 4 ; three encoded bytes and room for the terminator
+	jr c, .done
+	inc de
+	ld a, [de]
+	dec a
+	cp $0b
+	jr nc, .invalid_hangul
+	inc de
+	dec b
+	dec b
+	jr .done
+.invalid_hangul
+	dec de
+	ld a, '?'
+	ld [de], a
+.standard
 
 ; check if this char is a text command
 	ld hl, .textcommands

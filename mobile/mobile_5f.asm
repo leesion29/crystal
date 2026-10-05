@@ -178,6 +178,21 @@ CheckStringForErrors:
 .loop
 	ld a, [de]
 	inc de
+	cp HANGUL_POC_ESCAPE
+	jr nz, .standard
+	ld a, c
+	cp 3
+	jr c, .Fail
+	ld a, [de]
+	dec a
+	cp $0b
+	jr nc, .Fail
+	inc de
+	inc de
+	dec c
+	dec c
+	jr .NextChar
+.standard
 	and a ; "<NULL>"
 	jr z, .NextChar
 	cp FIRST_REGULAR_TEXT_CHAR
@@ -224,6 +239,21 @@ CheckStringForErrors_IgnoreTerminator:
 .loop
 	ld a, [de]
 	inc de
+	cp HANGUL_POC_ESCAPE
+	jr nz, .standard
+	ld a, c
+	cp 3
+	jr c, .end
+	ld a, [de]
+	dec a
+	cp $0b
+	jr nc, .end
+	inc de
+	inc de
+	dec c
+	dec c
+	jr .next
+.standard
 	and a
 	jr z, .next
 	cp '<DEXEND>' + 1

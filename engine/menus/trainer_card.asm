@@ -235,8 +235,7 @@ TrainerCard_PrintTopHalfOfCard:
 	ld de, .ID_No
 	call TrainerCardSetup_PlaceTilemapString
 	hlcoord 7, 2
-	ld de, wPlayerName
-	call PlaceString
+	call PlacePlayerName
 	hlcoord 5, 4
 	ld de, wPlayerID
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 5

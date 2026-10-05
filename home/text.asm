@@ -335,7 +335,14 @@ MACRO print_name
 ENDM
 
 PrintMomsName:   print_name wMomsName
-PrintPlayerName: print_name wPlayerName
+PrintPlayerName:
+	push de
+	call PlacePlayerName
+	ld h, b
+	ld l, c
+	pop de
+	jp NextChar
+
 PrintRivalName:  print_name wRivalName
 PrintRedsName:   print_name wRedsName
 PrintGreensName: print_name wGreensName
@@ -413,8 +420,7 @@ PlaceEnemysName::
 
 PlaceGenderedPlayerName::
 	push de
-	ld de, wPlayerName
-	call PlaceString
+	call PlacePlayerName
 	ld h, b
 	ld l, c
 	ld a, [wPlayerGender]

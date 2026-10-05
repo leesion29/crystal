@@ -8,6 +8,12 @@ DEF ITEM_NAME_LENGTH          EQU 13
 DEF TRAINER_CLASS_NAME_LENGTH EQU 13
 DEF NAME_LENGTH_JAPANESE      EQU 6
 
+; Committed Hangul player names keep the original 11-byte record width.
+; The display form uses one escape byte plus the two-byte Gold glyph ID.
+DEF HANGUL_PLAYER_NAME_MAX_CHARS EQU 5
+DEF HANGUL_NAME_DISPLAY_LENGTH EQU HANGUL_PLAYER_NAME_MAX_CHARS * 3 + 1
+assert HANGUL_PLAYER_NAME_MAX_CHARS * 2 + 1 == NAME_LENGTH
+
 ; GetName types (see home/names.asm)
 	const_def 1
 	const MON_NAME              ; 1

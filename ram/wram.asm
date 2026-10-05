@@ -800,6 +800,17 @@ wNamingScreenCursorObjectPointer:: dw
 wNamingScreenLastCharacter:: db
 wNamingScreenStringEntryCoord:: dw
 
+; Private Gold-format editing state; never stored in a save record.
+wHangulNamingDestinationPointer:: dw
+wHangulNamingCurNameLength:: db
+wHangulNamingMaxNameLength:: db
+wHangulNamingLastCharacter:: db
+wHangulNamingBuffer:: ds 22
+wHangulNamingBackup:: ds 22
+wHangulNamingBackupLength:: db
+wHangulNamingActive:: db
+wHangulNamingInitStage:: db
+
 NEXTU
 ; slot machine
 wSlots::

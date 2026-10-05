@@ -44,19 +44,35 @@ NamingScreen:
 	ret
 
 .SetUpNamingScreen:
+	ld a, 1
+	ld [wHangulNamingActive], a
+	ld [wHangulNamingInitStage], a
 	call ClearBGPalettes
 	ld b, SCGB_DIPLOMA
 	call GetSGBLayout
 	call DisableLCD
 	call LoadNamingScreenGFX
+	ld a, 2
+	ld [wHangulNamingInitStage], a
 	call NamingScreen_InitText
+	ld a, 3
+	ld [wHangulNamingInitStage], a
 	ld a, LCDC_DEFAULT
 	ldh [rLCDC], a
+	ld a, 4
+	ld [wHangulNamingInitStage], a
+	call HangulNaming_DrawKeyboard
+	ld a, 5
+	ld [wHangulNamingInitStage], a
 	call .GetNamingScreenSetup
+	ld a, 6
+	ld [wHangulNamingInitStage], a
 	call WaitBGMap
 	call WaitTop
 	call SetDefaultBGPAndOBP
 	call NamingScreen_InitNameEntry
+	ld a, 7
+	ld [wHangulNamingInitStage], a
 	ret
 
 .GetNamingScreenSetup:
@@ -152,6 +168,8 @@ NamingScreenJumptable:
 	ld de, .PlayerNameString
 	call PlaceString
 	call .StoreSpriteIconParams
+	ld a, HANGUL_PLAYER_NAME_MAX_CHARS
+	ld [wNamingScreenMaxNameLength], a
 	ret
 
 .PlayerNameString:
@@ -298,8 +316,18 @@ NamingScreen_InitText:
 
 .not_box
 	call ClearBox
+	ld a, [wHangulNamingActive]
+	and a
+	ret nz ; Hangul keyboard is drawn after the LCD has been enabled.
 	ld de, NameInputUpper
 NamingScreen_ApplyTextInputMode:
+	ld a, [wHangulNamingActive]
+	and a
+	jr z, .original
+	ld a, [wNamingScreenLetterCase]
+	cp 2
+	jp nc, HangulNaming_DrawKeyboard
+.original
 	call NamingScreen_IsTargetBox
 	jr nz, .not_box
 	assert BoxNameInputLower - NameInputLower == BoxNameInputUpper - NameInputUpper
@@ -310,12 +338,12 @@ NamingScreen_ApplyTextInputMode:
 
 .not_box
 	push de
-	hlcoord 1, 8
-	lb bc, 7, 18
+	hlcoord 1, 7
+	lb bc, 8, 18
 	call NamingScreen_IsTargetBox
 	jr nz, .not_box_2
-	hlcoord 1, 6
-	lb bc, 9, 18
+	hlcoord 1, 5
+	lb bc, 10, 18
 
 .not_box_2
 	call ClearBox
@@ -334,7 +362,31 @@ NamingScreen_ApplyTextInputMode:
 	ld c, $11
 .col
 	ld a, [de]
+	cp $80
+	jr c, .fixed_tile
+	push bc
+	ld c, a
+	call HangulNaming_AlphabetTile
+	jr nc, .cached_tile
 	ld [hli], a
+	jr .alphabet_done
+.cached_tile
+	push af
+	ld a, $83
+	call HangulNaming_RecordPlayerStage
+	pop af
+	ld b, 0
+	homecall _PlaceHangul
+	push af
+	ld a, $84
+	call HangulNaming_RecordPlayerStage
+	pop af
+.alphabet_done
+	pop bc
+	jr .next_tile
+.fixed_tile
+	ld [hli], a
+.next_tile
 	inc de
 	dec c
 	jr nz, .col
@@ -376,7 +428,7 @@ NamingScreenJoypadLoop:
 	hlcoord 1, 3
 
 .got_coords
-	lb bc, 1, 18
+	lb bc, 2, 18
 	call ClearBox
 	ld hl, wNamingScreenDestinationPointer
 	ld e, [hl]
@@ -386,10 +438,41 @@ NamingScreenJoypadLoop:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
+	ld a, [wNamingScreenType]
+	cp NAME_PLAYER
+	jr nz, .original_entry
+	ld de, wHangulNamingBuffer
+	call PlaceHangulName
+	jr .entry_placed
+.original_entry
 	call PlaceString
+.entry_placed
+	ld h, b
+	ld l, c
+	ld a, [wNamingScreenType]
+	cp NAME_PLAYER
+	jr nz, .legacy_input_cursor
+	ld a, [wNamingScreenCurNameLength]
+	ld b, a
+	ld a, HANGUL_PLAYER_NAME_MAX_CHARS
+	sub b
+	jr z, .cursor_placed
+	ld b, a
+.underlines
+	ld [hl], NAMINGSCREEN_UNDERLINE
+	inc hl
+	dec b
+	jr nz, .underlines
+	jr .cursor_placed
+.legacy_input_cursor
+	ld de, .InputCursor
+	call PlaceString
+.cursor_placed
 	ld a, $1
 	ldh [hBGMapMode], a
 	ret
+
+.InputCursor: db "-@"
 
 .RunJumptable:
 	jumptable .Jumptable, wJumptableIndex
@@ -459,6 +542,14 @@ NamingScreenJoypadLoop:
 	ld hl, SPRITEANIMSTRUCT_VAR2
 	add hl, bc
 	ld [hl], $4
+	ld a, [wNamingScreenType]
+	cp NAME_PLAYER
+	jr nz, .legacy_start
+	ld hl, SPRITEANIMSTRUCT_VAR1
+	add hl, bc
+	ld [hl], 11
+	ret
+.legacy_start
 	call NamingScreen_IsTargetBox
 	ret nz
 	inc [hl]
@@ -470,23 +561,13 @@ NamingScreenJoypadLoop:
 
 .end
 	call NamingScreen_StoreEntry
+	ret c ; a rejected player record must not leave the input screen
 	ld hl, wJumptableIndex
 	set JUMPTABLE_EXIT_F, [hl]
 	ret
 
 .select
-	ld hl, wNamingScreenLetterCase
-	ld a, [hl]
-	xor 1
-	ld [hl], a
-	jr z, .upper
-	ld de, NameInputLower
-	call NamingScreen_ApplyTextInputMode
-	ret
-
-.upper
-	ld de, NameInputUpper
-	call NamingScreen_ApplyTextInputMode
+	call HangulNaming_SwitchPage
 	ret
 
 .GetCursorPosition:
@@ -496,6 +577,9 @@ NamingScreenJoypadLoop:
 	ld b, [hl]
 
 NamingScreen_GetCursorPosition:
+	ld a, [wNamingScreenType]
+	cp NAME_PLAYER
+	jp z, HangulPlayer_GetCursorPosition
 	ld hl, SPRITEANIMSTRUCT_VAR2
 	add hl, bc
 	ld a, [hl]
@@ -531,6 +615,9 @@ NamingScreen_GetCursorPosition:
 	ret
 
 NamingScreen_AnimateCursor:
+	ld a, [wNamingScreenType]
+	cp NAME_PLAYER
+	jp z, HangulPlayer_AnimateCursor
 	call .GetDPad
 	ld hl, SPRITEANIMSTRUCT_VAR2
 	add hl, bc
@@ -689,7 +776,11 @@ NamingScreen_AnimateCursor:
 	ret
 
 NamingScreen_TryAddCharacter:
-	ld a, [wNamingScreenLastCharacter] ; lost
+	ld a, [wNamingScreenLastCharacter]
+	and a
+	ret z
+	farcall HangulNaming_Add
+	ret
 MailComposition_TryAddCharacter:
 	ld a, [wNamingScreenMaxNameLength]
 	ld c, a
@@ -745,6 +836,12 @@ AddDakutenToCharacter: ; unreferenced
 INCLUDE "data/text/unused_dakutens.asm"
 
 NamingScreen_DeleteCharacter:
+	ld a, [wHangulNamingActive]
+	and a
+	jr z, .original
+	farcall HangulNaming_Delete
+	ret
+.original
 	ld hl, wNamingScreenCurNameLength
 	ld a, [hl]
 	and a
@@ -773,6 +870,12 @@ NamingScreen_GetTextCursorPosition:
 	ret
 
 NamingScreen_InitNameEntry:
+	ld a, [wHangulNamingActive]
+	and a
+	jr z, .original
+	farcall HangulNaming_Init
+	ret
+.original
 ; load NAMINGSCREEN_UNDERLINE, (NAMINGSCREEN_MIDDLELINE * [wNamingScreenMaxNameLength]), "@" into the dw address at wNamingScreenDestinationPointer
 	ld hl, wNamingScreenDestinationPointer
 	ld a, [hli]
@@ -792,6 +895,19 @@ NamingScreen_InitNameEntry:
 	ret
 
 NamingScreen_StoreEntry:
+	ld a, [wHangulNamingActive]
+	and a
+	jr z, .original
+	ld a, [wNamingScreenType]
+	cp NAME_PLAYER
+	jr nz, .legacy_hangul
+	farcall HangulNaming_CommitPlayer
+	ret
+.legacy_hangul
+	farcall HangulNaming_Serialize
+	and a
+	ret
+.original
 	ld hl, wNamingScreenDestinationPointer
 	ld a, [hli]
 	ld h, [hl]
@@ -810,9 +926,15 @@ NamingScreen_StoreEntry:
 	inc hl
 	dec c
 	jr nz, .loop
+	and a
 	ret
 
 NamingScreen_GetLastCharacter:
+	ld a, [wHangulNamingActive]
+	and a
+	jr z, .original
+	jp HangulNaming_ReadKey
+.original
 	ld hl, wNamingScreenCursorObjectPointer
 	ld c, [hl]
 	inc hl
@@ -860,6 +982,15 @@ LoadNamingScreenGFX:
 	callfar ClearSpriteAnims
 	call LoadStandardFont
 	call LoadFontsExtra
+	ld a, [wHangulNamingActive]
+	and a
+	jr z, .keyboard_loaded
+	ld de, HangulNaming_KeyboardGFX
+	ld hl, vTiles2
+	lb bc, BANK(HangulNaming_KeyboardGFX), 66
+	call Get2bpp
+	call HangulNaming_LoadKeyboardFonts
+.keyboard_loaded
 
 	ld de, NamingScreenGFX_MiddleLine
 	ld hl, vTiles0 tile NAMINGSCREEN_MIDDLELINE
@@ -894,6 +1025,13 @@ LoadNamingScreenGFX:
 	ld [wGlobalAnimXOffset], a
 	ld [wJumptableIndex], a
 	ld [wNamingScreenLetterCase], a
+	ld a, [wHangulNamingActive]
+	and a
+	jr z, .letter_case_ready
+	ld a, 2
+	ld [wNamingScreenLetterCase], a
+.letter_case_ready
+	xor a
 	ldh [hBGMapMode], a
 	ld [wNamingScreenCurNameLength], a
 	ld a, $7
@@ -918,6 +1056,8 @@ NamingScreenGFX_UnderLine:
 INCBIN "gfx/naming_screen/underline.1bpp"
 
 _ComposeMailMessage:
+	xor a
+	ld [wHangulNamingActive], a
 	ld hl, wNamingScreenDestinationPointer
 	ld [hl], e
 	inc hl

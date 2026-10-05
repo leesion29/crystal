@@ -47,7 +47,12 @@ SECTION "bank4", ROMX
 INCLUDE "engine/items/pack.asm"
 INCLUDE "engine/overworld/time.asm"
 INCLUDE "engine/items/tmhm2.asm"
+PUSHS
+SECTION "Naming Screen", ROMX
 INCLUDE "engine/menus/naming_screen.asm"
+INCLUDE "engine/menus/hangul_naming.asm"
+INCLUDE "engine/menus/hangul_player_keyboard.asm"
+POPS
 INCLUDE "engine/events/misc_scripts.asm"
 INCLUDE "engine/events/heal_machine_anim.asm"
 INCLUDE "engine/events/whiteout.asm"
@@ -485,6 +490,14 @@ INCLUDE "engine/tilesets/tileset_anims.asm"
 INCLUDE "engine/events/npc_trade.asm"
 INCLUDE "engine/events/mom_phone.asm"
 
+
+SECTION "Hangul Naming Composition", ROMX[$4000]
+INCLUDE "data/hangul/naming_jamo_table.asm"
+INCLUDE "engine/hangul/naming_composition.asm"
+INCLUDE "engine/hangul/naming_adapter.asm"
+
+SECTION "Hangul Name Codec", ROMX
+INCLUDE "engine/hangul/name_codec.asm"
 
 SECTION "Hangul PoC", ROMX
 
