@@ -17,6 +17,7 @@ GetTrainerClassName:
 	ld bc, NAME_LENGTH
 	call CopyBytes
 	pop de
+	call ExpandNicknameBuffer
 	ret
 
 GetOTName:

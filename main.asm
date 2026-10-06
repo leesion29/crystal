@@ -51,6 +51,7 @@ PUSHS
 SECTION "Naming Screen", ROMX
 INCLUDE "engine/menus/naming_screen.asm"
 INCLUDE "engine/menus/hangul_naming.asm"
+INCLUDE "engine/menus/hangul_mail_keyboard.asm"
 INCLUDE "engine/menus/hangul_player_keyboard.asm"
 POPS
 INCLUDE "engine/events/misc_scripts.asm"
@@ -495,6 +496,7 @@ SECTION "Hangul Naming Composition", ROMX[$4000]
 INCLUDE "data/hangul/naming_jamo_table.asm"
 INCLUDE "engine/hangul/naming_composition.asm"
 INCLUDE "engine/hangul/naming_adapter.asm"
+INCLUDE "engine/hangul/mail_adapter.asm"
 
 SECTION "Hangul Name Codec", ROMX
 INCLUDE "engine/hangul/name_codec.asm"

@@ -1,7 +1,6 @@
 NurseMornText:
-	text "Good morning!"
-	line "Welcome to our"
-	cont "#MON CENTER."
+	text "안녕하세요!"
+	line "포켓몬 센터입니다!"
 	done
 
 NurseDayText:
@@ -10,11 +9,8 @@ NurseDayText:
 	done
 
 NurseNiteText:
-	text "Good evening!"
-	line "You're out late."
-
-	para "Welcome to our"
-	line "#MON CENTER."
+	text "늦은 시간까지 수고하시네요!"
+	line "포켓몬 센터입니다!"
 	done
 
 PokeComNurseMornText:
@@ -79,21 +75,14 @@ NurseGoodbyeText:
 	done
 
 NursePokerusText:
-	text "Your #MON"
-	line "appear to be"
+	text "맡기신 포켓몬에게"
+	line "어떤 작은 생명체가"
+	cont "달라붙어 있는 것 같습니다"
 
-	para "infected by tiny"
-	line "life forms."
-
-	para "Your #MON are"
-	line "healthy and seem"
-	cont "to be fine."
-
-	para "But we can't tell"
-	line "you anything more"
-
-	para "at a #MON"
-	line "CENTER."
+	para "포켓몬은 건강하고"
+	line "문제는 없어 보입니다만"
+	cont "포켓몬 센터에서는"
+	cont "이것이상의 것은 모르겠습니다"
 	done
 
 PokeComNursePokerusText:
@@ -112,8 +101,7 @@ PokeComNursePokerusText:
 	done
 
 DifficultBookshelfText:
-	text "It's full of"
-	line "difficult books."
+	text "어려운 책들로 가득하군!"
 	done
 
 PictureBookshelfText:
@@ -122,37 +110,31 @@ PictureBookshelfText:
 	done
 
 MagazineBookshelfText:
-	text "#MON magazines…"
-	line "#MON PAL,"
+	text "포켓몬 잡지가 가지런하군!"
 
-	para "#MON HANDBOOK,"
-	line "#MON GRAPH…"
+	para "……포켓몬 친구 "
+	line "……포켓몬 수첩"
+	cont "……포켓몬 그래프"
 	done
 
 TeamRocketOathText:
-	text "TEAM ROCKET OATH"
+	text "로켓단의 신조"
 
-	para "Steal #MON for"
-	line "profit!"
+	para "포켓몬을 빼앗아 돈을 벌자!"
+	line "포켓몬을 이용해 돈을 벌자!"
 
-	para "Exploit #MON"
-	line "for profit!"
-
-	para "All #MON exist"
-	line "for the glory of"
-	cont "TEAM ROCKET!"
+	para "모든 포켓몬은"
+	line "로켓단을 위하여!"
 	done
 
 IncenseBurnerText:
-	text "What is this?"
-
-	para "Oh, it's an"
-	line "incense burner!"
+	text "불단이다……"
+	line "음 향내음이 나는군!"
 	done
 
 MerchandiseShelfText:
-	text "Lots of #MON"
-	line "merchandise!"
+	text "포켓몬 상품이"
+	line "가득 모여있어!"
 	done
 
 LookTownMapText:
@@ -160,8 +142,8 @@ LookTownMapText:
 	done
 
 WindowText:
-	text "My reflection!"
-	line "Lookin' good!"
+	text "반짝반짝 유리창!"
+	line "내얼굴이 비쳐지고있어!"
 	done
 
 TVText:
@@ -169,45 +151,22 @@ TVText:
 	done
 
 HomepageText:
-	text "#MON JOURNAL"
-	line "HOME PAGE…"
-
-	para "It hasn't been"
-	line "updated…"
-	done
-
-; not used
-	text "#MON RADIO!"
-
-	para "Call in with your"
-	line "requests now!"
+	text "포켓몬저널 홈페이지"
+	line "……움~ 내용이 바뀌지 않았어"
 	done
 
 TrashCanText:
-	text "There's nothing in"
-	line "here…"
-	done
-
-; not used
-	text "A #MON may be"
-	line "able to move this."
-	done
-
-; not used
-	text "Maybe a #MON"
-	line "can break this."
+	text "안은 텅 비었어……"
 	done
 
 PokecenterSignText:
-	text "Heal Your #MON!"
-	line "#MON CENTER"
+	text "포켓몬의 체력회복!"
+	line "포켓몬 센터"
 	done
 
 MartSignText:
-	text "For All Your"
-	line "#MON Needs"
-
-	para "#MON MART"
+	text "포켓몬 상품이라면"
+	line "프렌들리숍"
 	done
 
 ContestResults_ReadyToJudgeText:
@@ -236,139 +195,118 @@ ContestResults_PlayerWonAPrizeText:
 	done
 
 ReceivedItemText:
-	text "<PLAYER> received"
+	text "<PLAYER>는(은)"
 	line "@"
 	text_ram wStringBuffer4
-	text "."
+	text "를(을)"
+	cont "얻었다!"
 	done
 
 ContestResults_JoinUsNextTimeText:
-	text "Please join us for"
-	line "the next Contest!"
+	text "다음 대회에서도"
+	line "분발해주세요"
 	done
 
 ContestResults_ConsolationPrizeText:
-	text "Everyone else gets"
-	line "a BERRY as a con-"
-	cont "solation prize!"
+	text "애석하게도"
+	line "입상하지 못한 사람에게는"
+	cont "나무열매를 드리겠습니다"
 	done
 
 ContestResults_DidNotWinText:
-	text "We hope you do"
-	line "better next time."
+	text "다음 대회에서도"
+	line "분발해주세요"
 	done
 
 ContestResults_ReturnPartyText:
-	text "We'll return the"
-	line "#MON we kept"
-
-	para "for you."
-	line "Here you go!"
+	text "맡기셨던 포켓몬은"
+	line "돌려드리겠습니다"
 	done
 
 ContestResults_PartyFullText:
-	text "Your party's full,"
-	line "so the #MON was"
-
-	para "sent to your BOX"
-	line "in BILL's PC."
+	text "더 이상 포켓몬을 지닐 수 없어서"
+	line "박스로 전송되었다"
 	done
 
 GymStatue_CityGymText:
+	text "@"
 	text_ram wStringBuffer3
-	text_start
-	line "#MON GYM"
+	text " 포켓몬 체육관"
 	done
 
 GymStatue_WinningTrainersText:
-	text "LEADER: @"
+	text "@"
 	text_ram wStringBuffer4
-	text_start
-	para "WINNING TRAINERS:"
+	text " 인정 트레이너"
 	line "<PLAYER>"
 	done
 
 CoinVendor_WelcomeText:
-	text "Welcome to the"
-	line "GAME CORNER."
+	text "어서오세요!"
+	line "게임코너입니다!"
 	done
 
 CoinVendor_NoCoinCaseText:
-	text "Do you need game"
-	line "coins?"
+	text "게임용 동전 말입니까?"
 
-	para "Oh, you don't have"
-	line "a COIN CASE for"
-	cont "your coins."
+	para "엥? 동전을 넣을"
+	line "동전케이스가 없어요!"
 	done
 
 CoinVendor_IntroText:
-	text "Do you need some"
-	line "game coins?"
+	text "게임용 동전 말입니까?"
 
-	para "It costs ¥1000 for"
-	line "50 coins. Do you"
-	cont "want some?"
+	para "50개 1000원 되겠습니다!"
+	line "동전을 구입하시겠습니까?"
 	done
 
 CoinVendor_Buy50CoinsText:
-	text "Thank you!"
-	line "Here are 50 coins."
+	text "네! 감사합니다!"
+	line "동전 50개 받으세요!"
 	done
 
 CoinVendor_Buy500CoinsText:
-	text "Thank you! Here"
-	line "are 500 coins."
+	text "네! 감사합니다!"
+	line "동전 500개 받으세요!"
 	done
 
 CoinVendor_NotEnoughMoneyText:
-	text "You don't have"
-	line "enough money."
+	text "돈이 부족하군요!"
 	done
 
 CoinVendor_CoinCaseFullText:
-	text "Whoops! Your COIN"
-	line "CASE is full."
+	text "이크……!"
+	line "동전케이스가 넘치겠어요!"
 	done
 
 CoinVendor_CancelText:
-	text "No coins for you?"
-	line "Come again!"
+	text "…… 필요없어요?"
+	line "그러시다면 또 오세요!"
 	done
 
 BugContestPrizeNoRoomText:
-	text "Oh? Your PACK is"
-	line "full."
+	text "얼라리?"
+	line "짐이 가득인것 같군요…"
 
-	para "We'll keep this"
-	line "for you today, so"
-
-	para "come back when you"
-	line "make room for it."
+	para "오늘 가져가지 못하신다면"
+	line "맡아 놓아두겠으니"
+	cont "짐을 정리해놓고 와주세요"
 	done
 
 HappinessText3:
-	text "Wow! You and your"
-	line "#MON are really"
-	cont "close!"
+	text "오옷!! 너와 포켓몬은"
+	line "사이가 좋은 형제 같구나!"
 	done
 
 HappinessText2:
-	text "#MON get more"
-	line "friendly if you"
-
-	para "spend time with"
-	line "them."
+	text "포켓몬이랑 함께 있어준다면"
+	line "점점 잘 따르게 될 꺼야"
 	done
 
 HappinessText1:
-	text "You haven't tamed"
-	line "your #MON."
-
-	para "If you aren't"
-	line "nice, it'll pout."
+	text "음! 포켓몬이 잘 따르지 않잖아!"
+	line "잘 대해주지 않으면 포켓몬 화낼껄"
 	done
-
 RegisteredNumber1Text:
 	text "<PLAYER> registered"
 	line "@"

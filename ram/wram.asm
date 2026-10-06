@@ -811,6 +811,10 @@ wHangulNamingBackupLength:: db
 wHangulNamingActive:: db
 wHangulNamingInitStage:: db
 
+; Mail-only edit/snapshot buffers; fit inside the existing Miscellaneous union.
+wHangulMailBuffer:: ds MAIL_MSG_LENGTH + 2
+wHangulMailBackup:: ds MAIL_MSG_LENGTH + 2
+
 NEXTU
 ; slot machine
 wSlots::

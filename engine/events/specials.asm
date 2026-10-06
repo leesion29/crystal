@@ -87,7 +87,36 @@ NameRival:
 	ld b, NAME_RIVAL
 	ld de, wRivalName
 	farcall _NamingScreen
+	; Packed spaces are $0b,$ff, so InitName's ASCII space test is insufficient.
 	ld hl, wRivalName
+	ld c, NAME_LENGTH
+.check_blank
+	ld a, [hli]
+	dec c
+	cp '@'
+	jr z, .blank
+	cp $0b
+	jr nz, .single
+	ld a, c
+	and a
+	ret z
+	ld a, [hli]
+	dec c
+	cp $ff
+	ret nz
+	jr .next
+.single
+	cp ' '
+	ret nz
+.next
+	ld a, c
+	and a
+	jr nz, .check_blank
+	ret
+.blank
+	ld hl, wRivalName
+	ld a, '@'
+	ld [hl], a
 	ld de, .DefaultName
 	call InitName
 	ret

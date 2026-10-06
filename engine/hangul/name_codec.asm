@@ -1,3 +1,11 @@
+DecodeHangulMailRow::
+; BC = 25-byte output buffer, DE = 17-byte terminated mail row.
+; Preserve the output pointer across farcall's HL dispatch register.
+	ld h, b
+	ld l, c
+	ld c, MAIL_LINE_LENGTH + 1
+	jp DecodeSizedHangulName
+
 DecodeHangulName::
 ; Input: DE = an accessible NAME_LENGTH-byte name record (not a ROMX string),
 ;        HL = a HANGUL_NAME_DISPLAY_LENGTH-byte output buffer.

@@ -241,12 +241,11 @@ Text_YourMonIsAdorable:
 	done
 
 Text_TellMomIfLeaving:
-	text "Hi, <PLAY_G>!"
-	line "Leaving again?"
+	text "이런 <PLAY_G>,"
+	line "또 밖에 나가니?"
 
-	para "You should tell"
-	line "your mom if you"
-	cont "are leaving."
+	para "외출할 때는 엄마에게"
+	line "꼭 이야기를 해야지!"
 	done
 
 Text_CallMomOnGear:

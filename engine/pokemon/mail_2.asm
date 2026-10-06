@@ -46,6 +46,7 @@ ReadAnyMail:
 	ld hl, vTiles1
 	lb bc, BANK(StandardEnglishFont), $80
 	call Get1bpp
+	farcall ResetHangulTiles
 	pop de
 	call .LoadGFX
 	call EnableLCD
@@ -716,7 +717,9 @@ MailGFX_PlaceMessage:
 	ld [wMonOrItemNameBuffer + NAME_LENGTH - 1], a
 	ld de, wTempMailMessage
 	hlcoord 2, 7
-	call PlaceString
+	ld b, h
+	ld c, l
+	farcall HangulMail_PlaceMessage
 	ld de, wMonOrItemNameBuffer
 	ld a, [de]
 	and a
@@ -731,7 +734,7 @@ MailGFX_PlaceMessage:
 	hlcoord 5, 14
 
 .place_author
-	jp PlaceString
+	jp PlaceHangulName
 
 InvertBytes: ; unreferenced
 ; invert bc bytes starting at hl

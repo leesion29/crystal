@@ -258,24 +258,19 @@ HurryUpElmIsWaitingText:
 	done
 
 SoWhatWasProfElmsErrandText:
-	text "So, what was PROF."
-	line "ELM's errand?"
+	text "공박사님의"
+	line "용무는 무엇이었니?"
 
-	para "…"
+	para "<……><……><……>"
 
-	para "That does sound"
-	line "challenging."
-
-	para "But, you should be"
-	line "proud that people"
-	cont "rely on you."
+	para "그래 아주 힘들겠구나"
+	line "그래도 다른사람에게 부탁을 받는건"
+	cont "중요한 것이란다!"
 	done
 
 ImBehindYouText:
-	text "<PLAYER>, do it!"
-
-	para "I'm behind you all"
-	line "the way!"
+	text "<PLAYER>! 힘내거라!"
+	line "엄마가 응원할께!"
 	done
 
 NeighborMornIntroText:

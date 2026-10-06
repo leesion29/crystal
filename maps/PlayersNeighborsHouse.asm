@@ -45,55 +45,46 @@ PlayersNeighborsHouseRadioScript:
 	end
 
 PlayersNeighborsDaughterText:
-	text "PIKACHU is an"
-	line "evolved #MON."
+	text "피카츄는 이미 진화한"
+	line "포켓몬이다!"
 
-	para "I was amazed by"
-	line "PROF.ELM's find-"
-	cont "ings."
+	para "그 공박사님의 발표에는"
+	line "나도 깜짝 놀랐었다!"
 
-	para "He's so famous for"
-	line "his research on"
-	cont "#MON evolution."
+	para "역시 포켓몬 진화의"
+	line "연구에서는 유명한 박사님"
 
-	para "…sigh…"
-
-	para "I wish I could be"
-	line "a researcher like"
-	cont "him…"
+	para "하아……나도 그런"
+	line "훌륭한 연구자가 되고싶어"
 	done
 
 PlayersNeighborText:
-	text "My daughter is"
-	line "adamant about"
+	text "내 딸은 공박사님의"
+	line "조수가 되고 싶어 해"
 
-	para "becoming PROF."
-	line "ELM's assistant."
+	para "그 아이, 포켓몬을"
+	line "정말 좋아하거든"
 
-	para "She really loves"
-	line "#MON!"
-
-	para "But then, so do I!"
+	para "물론 나도 마찬가지란다!"
 	done
 
 PlayerNeighborRadioText1:
-	text "PROF.OAK'S #MON"
-	line "TALK! Please tune"
-	cont "in next time!"
+	text "오박사님의 포켓몬 강좌"
+	line "모두 꼭 들어주세요!"
 	done
 
 PlayerNeighborRadioText2:
-	text "#MON CHANNEL!"
+	text "여기는 포켓몬 채널"
 	done
 
 PlayerNeighborRadioText3:
-	text "This is DJ MARY,"
-	line "your co-host!"
+	text "상대는"
+	line "DJ 호두였습니다!"
 	done
 
 PlayerNeighborRadioText4:
-	text "#MON!"
-	line "#MON CHANNEL…"
+	text "포켓몬"
+	line "포켓몬 채널……"
 	done
 
 PlayersNeighborsHouse_MapEvents:

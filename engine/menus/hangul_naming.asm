@@ -328,16 +328,20 @@ HangulNaming_KeyboardGFX:
 INCBIN "gfx/naming_screen/hangul.2bpp", 0, 66 tiles
 
 HangulNaming_UsesGoldKeyboard:
-; Z = player, Pokemon nickname (including aliases), or box name.
+; Z = player, rival, Pokemon nickname (including aliases), or box name.
 ; Only AF changes. Storage/serialization dispatch deliberately stays separate.
 	ld a, [wNamingScreenType]
 	cp NAME_MON
 	ret z
 	cp NAME_PLAYER
 	ret z
+	cp NAME_RIVAL
+	ret z
 	cp NAME_6
 	ret z
 	cp NAME_BOX
+	ret z
+	cp NAME_MAIL
 	ret z
 	cp NAME_7
 	ret

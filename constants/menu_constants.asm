@@ -127,6 +127,8 @@ DEF NUM_PARTYMENUACTIONS EQU const_value
 	const NAME_6 ; duplicate of NAME_MON
 	const NAME_7 ; duplicate of NAME_MON
 DEF NUM_NAMING_SCREEN_TYPES EQU const_value
+; Mail has a separate setup routine, outside NamingScreenJumptable.
+DEF NAME_MAIL EQU NUM_NAMING_SCREEN_TYPES
 
 ; party menu mon palettes
 	const_def

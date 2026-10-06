@@ -343,7 +343,10 @@ PrintPlayerName:
 	pop de
 	jp NextChar
 
-PrintRivalName:  print_name wRivalName
+PrintRivalName:
+	push de
+	ld de, wRivalName
+	jp PlaceNicknameCommand
 PrintRedsName:   print_name wRedsName
 PrintGreensName: print_name wGreensName
 
@@ -412,7 +415,7 @@ PlaceEnemysName::
 
 .rival
 	ld de, wRivalName
-	jr PlaceCommandCharacter
+	jp PlaceNicknameCommand
 
 .linkbattle
 	ld de, wOTClassName
@@ -452,8 +455,8 @@ String_Space::    db " @"
 PlaceJPRouteText::
 PlaceWatashiText::
 PlaceKokoWaText:: db "@"
-KunSuffixText::   db "@"
-ChanSuffixText::  db "@"
+KunSuffixText::   db "군@"
+ChanSuffixText::  db "양@"
 
 NextLineChar::
 	pop hl

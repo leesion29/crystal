@@ -183,6 +183,8 @@ NamingScreenJumptable:
 	ld de, .RivalNameString
 	call PlaceString
 	call .StoreSpriteIconParams
+	ld a, HANGUL_PLAYER_NAME_MAX_CHARS
+	ld [wNamingScreenMaxNameLength], a
 	ret
 
 .RivalNameString:
@@ -1063,7 +1065,9 @@ NamingScreenGFX_UnderLine:
 INCBIN "gfx/naming_screen/underline.1bpp"
 
 _ComposeMailMessage:
-	xor a
+	ld a, NAME_MAIL
+	ld [wNamingScreenType], a
+	ld a, 1
 	ld [wHangulNamingActive], a
 	ld hl, wNamingScreenDestinationPointer
 	ld [hl], e
@@ -1125,13 +1129,7 @@ _ComposeMailMessage:
 	ld a, %11100100
 	call DmgToCgbObjPal0
 	call NamingScreen_InitNameEntry
-	ld hl, wNamingScreenDestinationPointer
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	ld hl, MAIL_LINE_LENGTH
-	add hl, de
-	ld [hl], '<NEXT>'
+	farcall HangulMail_Init
 	ret
 
 .MailIcon:
@@ -1158,26 +1156,7 @@ INCBIN "gfx/naming_screen/mail.2bpp"
 	hlcoord 1, 1
 	lb bc, 4, SCREEN_WIDTH - 2
 	call ClearBox
-	ld de, MailEntry_Uppercase
-
-.PlaceMailCharset:
-	hlcoord 1, 7
-	ld b, 6
-.next
-	ld c, SCREEN_WIDTH - 1
-.loop_
-	ld a, [de]
-	ld [hli], a
-	inc de
-	dec c
-	jr nz, .loop_
-	push de
-	ld de, SCREEN_WIDTH + 1
-	add hl, de
-	pop de
-	dec b
-	jr nz, .next
-	ret
+	jp HangulMail_DrawKeyboard
 
 .DoMailEntry:
 	call JoyTextDelay
@@ -1197,24 +1176,12 @@ INCBIN "gfx/naming_screen/mail.2bpp"
 	xor a
 	ldh [hSCX], a
 	ldh [hSCY], a
+	ld [wHangulNamingActive], a
 	scf
 	ret
 
 .Update:
-	xor a
-	ldh [hBGMapMode], a
-	hlcoord 1, 1
-	lb bc, 4, 18
-	call ClearBox
-	ld hl, wNamingScreenDestinationPointer
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	hlcoord 2, 2
-	call PlaceString
-	ld a, $1
-	ldh [hBGMapMode], a
-	ret
+	jp HangulMail_UpdateEntry
 
 .DoJumptable:
 	jumptable .Jumptable, wJumptableIndex
@@ -1224,7 +1191,7 @@ INCBIN "gfx/naming_screen/mail.2bpp"
 	dw .process_joypad
 
 .init_blinking_cursor
-	depixel 9, 2
+	depixel 8, 3
 	ld a, SPRITE_ANIM_OBJ_COMPOSE_MAIL_CURSOR
 	call InitSpriteAnimStruct
 	ld a, c
@@ -1252,31 +1219,18 @@ INCBIN "gfx/naming_screen/mail.2bpp"
 	ld a, [hl]
 	and PAD_START
 	jr nz, .start
-	ld a, [hl]
-	and PAD_SELECT
-	jr nz, .select
 	ret
 
 .a
 	call NamingScreen_PressedA_GetCursorCommand
 	cp $1
-	jr z, .select
+	ret z
 	cp $2
 	jr z, .b
 	cp $3
 	jr z, .finished
-	call NamingScreen_GetLastCharacter
-	call MailComposition_TryAddLastCharacter
-	jr c, .start
-	ld hl, wNamingScreenCurNameLength
-	ld a, [hl]
-	cp MAIL_LINE_LENGTH
-	ret nz
-	inc [hl]
-	call NamingScreen_GetTextCursorPosition
-	ld [hl], NAMINGSCREEN_UNDERLINE
-	dec hl
-	ld [hl], '<NEXT>'
+	call HangulMail_ReadKey
+	farcall HangulMail_Add
 	ret
 
 .start
@@ -1286,44 +1240,24 @@ INCBIN "gfx/naming_screen/mail.2bpp"
 	ld b, [hl]
 	ld hl, SPRITEANIMSTRUCT_VAR1
 	add hl, bc
-	ld [hl], $9
+	ld [hl], $b
 	ld hl, SPRITEANIMSTRUCT_VAR2
 	add hl, bc
 	ld [hl], $5
 	ret
 
 .b
-	call NamingScreen_DeleteCharacter
-	ld hl, wNamingScreenCurNameLength
-	ld a, [hl]
-	cp MAIL_LINE_LENGTH
-	ret nz
-	dec [hl]
-	call NamingScreen_GetTextCursorPosition
-	ld [hl], NAMINGSCREEN_UNDERLINE
-	inc hl
-	ld [hl], '<NEXT>'
+	farcall HangulMail_Delete
 	ret
 
 .finished
-	call NamingScreen_StoreEntry
+	farcall HangulMail_Commit
+	; B reports a rejected record without closing the UI.
+	ld a, b
+	inc a
+	ret z
 	ld hl, wJumptableIndex
 	set JUMPTABLE_EXIT_F, [hl]
-	ret
-
-.select
-	ld hl, wNamingScreenLetterCase
-	ld a, [hl]
-	xor 1
-	ld [hl], a
-	jr nz, .switch_to_lowercase
-	ld de, MailEntry_Uppercase
-	call .PlaceMailCharset
-	ret
-
-.switch_to_lowercase
-	ld de, MailEntry_Lowercase
-	call .PlaceMailCharset
 	ret
 
 ; called from engine/sprite_anims/functions.asm
@@ -1363,10 +1297,10 @@ ComposeMail_AnimateCursor:
 	ret
 
 .LetterEntries:
-	db $00, $10, $20, $30, $40, $50, $60, $70, $80, $90
+	db $08, $10, $18, $20, $30, $38, $40, $48, $58, $60, $68, $70
 
 .CaseDelEnd:
-	db $00, $00, $00, $30, $30, $30, $60, $60, $60, $60
+	db $0c, $0c, $0c, $0c, $0c, $0c, $4c, $4c, $4c, $4c, $4c, $4c
 
 .GetDPad:
 	ld hl, hJoyLast
@@ -1391,7 +1325,7 @@ ComposeMail_AnimateCursor:
 	ld hl, SPRITEANIMSTRUCT_VAR1
 	add hl, bc
 	ld a, [hl]
-	cp $9
+	cp $b
 	jr nc, .wrap_around_letter_right
 	inc [hl]
 	ret
@@ -1401,16 +1335,14 @@ ComposeMail_AnimateCursor:
 	ret
 
 .case_del_done_right
-	cp $3
-	jr nz, .wrap_around_command_right
-	xor a
-.wrap_around_command_right
-	ld e, a
-	add a
-	add e
+	ld e, 0
+	cp 3
+	jr z, .set_command
+	ld e, 6
+.set_command
 	ld hl, SPRITEANIMSTRUCT_VAR1
 	add hl, bc
-	ld [hl], a
+	ld [hl], e
 	ret
 
 .left
@@ -1426,23 +1358,11 @@ ComposeMail_AnimateCursor:
 	ret
 
 .wrap_around_letter_left
-	ld [hl], $9
+	ld [hl], $b
 	ret
 
 .caps_del_done_left
-	cp $1
-	jr nz, .wrap_around_command_left
-	ld a, $4
-.wrap_around_command_left
-	dec a
-	dec a
-	ld e, a
-	add a
-	add e
-	ld hl, SPRITEANIMSTRUCT_VAR1
-	add hl, bc
-	ld [hl], a
-	ret
+	jr .case_del_done_right
 
 .down
 	ld hl, SPRITEANIMSTRUCT_VAR2
@@ -1485,15 +1405,9 @@ ComposeMail_GetCursorPosition:
 	ld hl, SPRITEANIMSTRUCT_VAR1
 	add hl, bc
 	ld a, [hl]
-	cp $3
-	jr c, .case
 	cp $6
 	jr c, .del
 	ld a, $3
-	ret
-
-.case
-	ld a, $1
 	ret
 
 .del

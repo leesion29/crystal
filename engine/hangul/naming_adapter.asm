@@ -222,6 +222,8 @@ HangulNaming_UsesPackedName:
 	ret z
 	cp NAME_PLAYER
 	ret z
+	cp NAME_RIVAL
+	ret z
 	cp NAME_6
 	ret z
 	cp NAME_BOX
