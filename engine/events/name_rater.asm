@@ -118,8 +118,17 @@ IsNewNameEmpty:
 	ld a, [hli]
 	cp '@'
 	jr z, .terminator
+	cp $0b
+	jr nz, .single
+	ld a, [hli]
+	cp $ff ; Gold's packed space glyph
+	jr nz, .nonspace
+	dec c
+	jr .next
+.single
 	cp ' '
 	jr nz, .nonspace
+.next
 	dec c
 	jr nz, .loop
 
@@ -147,15 +156,18 @@ CompareNewToOld:
 	cp b
 	jr nz, .different
 	ld de, wStringBuffer2
+	ld b, c
+	and a
+	jr z, .terminator
 .loop
 	ld a, [de]
-	cp '@'
-	jr z, .terminator
 	cp [hl]
 	jr nz, .different
 	inc hl
 	inc de
-	jr .loop
+	dec b
+	jr nz, .loop
+	jr .terminator
 
 .different
 	and a
@@ -173,9 +185,23 @@ GetNicknamenameLength:
 	cp '@'
 	ret z
 	inc c
+	cp HANGUL_POC_ESCAPE
+	jr z, .triple
+	dec a
+	cp $0b
+	jr nc, .next
+	inc hl
+	inc c
+	jr .next
+.triple
+	inc hl
+	inc hl
+	inc c
+	inc c
+.next
 	ld a, c
 	cp MON_NAME_LENGTH - 1
-	jr nz, .loop
+	jr c, .loop
 	ret
 
 NameRaterHelloText:

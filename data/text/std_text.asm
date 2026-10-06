@@ -117,9 +117,8 @@ DifficultBookshelfText:
 	done
 
 PictureBookshelfText:
-	text "A whole collection"
-	line "of #MON picture"
-	cont "books!"
+	text "포켓몬 그림책이"
+	line "모여져있군!"
 	done
 
 MagazineBookshelfText:
@@ -157,7 +156,7 @@ MerchandiseShelfText:
 	done
 
 LookTownMapText:
-	text "It's the TOWN MAP."
+	text "타운맵이 있다!"
 	done
 
 WindowText:
@@ -166,7 +165,7 @@ WindowText:
 	done
 
 TVText:
-	text "It's a TV."
+	text "TV다!"
 	done
 
 HomepageText:

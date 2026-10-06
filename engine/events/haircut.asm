@@ -68,7 +68,7 @@ INCLUDE "data/events/happiness_probabilities.asm"
 CopyPokemonName_Buffer1_Buffer3:
 	ld hl, wStringBuffer1
 	ld de, wStringBuffer3
-	ld bc, MON_NAME_LENGTH
+	ld bc, STRING_BUFFER_LENGTH
 	jp CopyBytes
 
 DummyPredef1:

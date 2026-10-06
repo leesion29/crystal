@@ -1,3 +1,7 @@
+; A small floating section fits the remaining header-side ROM0 gap; keep the
+; larger nickname reader in Home so section fragmentation does not block linking.
+PUSHS
+SECTION "Name Copy Home", ROM0
 CopyName1::
 ; Copies the name from de to wStringBuffer2
 	ld hl, wStringBuffer2
@@ -21,3 +25,4 @@ CopyName2::
 	cp '@'
 	jr nz, .loop
 	ret
+POPS

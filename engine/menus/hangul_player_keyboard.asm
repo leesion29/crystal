@@ -1,4 +1,4 @@
-; Player-only Korean keyboard. Static glyphs and commands use Gold's tiles;
+; Player/nickname Korean keyboard. Static glyphs and commands use Gold's tiles;
 ; selection uses a separate logical table, never the mutable tilemap/cache.
 HangulPlayer_DrawKeyboard:
 	xor a

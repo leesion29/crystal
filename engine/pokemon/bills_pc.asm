@@ -998,7 +998,9 @@ BillsPC_BoxName:
 	call AddNTimes
 	ld e, l
 	ld d, h
-	jr .print
+	hlcoord 10, 1
+	call PlaceBoxName
+	ret
 
 .party
 	ld de, .PartyPKMN
@@ -1304,7 +1306,7 @@ endr
 	call CloseSRAM
 	pop hl
 	ld de, wStringBuffer1
-	call PlaceString
+	call PlaceHangulName
 	ret
 
 .boxfail
@@ -1329,7 +1331,7 @@ endr
 	call CopyBytes
 	pop hl
 	ld de, wStringBuffer1
-	call PlaceString
+	call PlaceHangulName
 	ret
 
 .partyfail
@@ -1356,7 +1358,7 @@ endr
 	call CloseSRAM
 	pop hl
 	ld de, wStringBuffer1
-	call PlaceString
+	call PlaceHangulName
 	ret
 
 .sBoxFail
@@ -2284,7 +2286,7 @@ endr
 	dec a
 	call GetBoxName
 	pop hl
-	call PlaceString
+	call PlaceBoxName
 	ret
 
 GetBoxName:
@@ -2293,6 +2295,38 @@ GetBoxName:
 	call AddNTimes
 	ld d, h
 	ld e, l
+	ret
+
+BillsPC_IsBoxNameBlank:
+; HL = bounded box record. Carry = empty or spaces only; HL/BC/AF change.
+	ld c, BOX_NAME_LENGTH
+.loop
+	ld a, [hli]
+	dec c
+	cp '@'
+	jr z, .blank
+	cp $0b
+	jr nz, .single
+	ld a, c
+	and a
+	jr z, .nonblank
+	ld a, [hli]
+	dec c
+	cp $ff
+	jr nz, .nonblank
+	jr .next
+.single
+	cp ' '
+	jr nz, .nonblank
+.next
+	ld a, c
+	and a
+	jr nz, .loop
+.nonblank
+	and a
+	ret
+.blank
+	scf
 	ret
 
 BillsPC_PrintBoxCountAndCapacity:
@@ -2381,7 +2415,7 @@ BillsPC_PrintBoxName:
 	and $f
 	call GetBoxName
 	hlcoord 11, 2
-	call PlaceString
+	call PlaceBoxName
 	ret
 
 .Current:
@@ -2442,16 +2476,23 @@ BillsPC_ChangeBoxSubmenu:
 	ld a, [wMenuSelection]
 	dec a
 	call GetBoxName
-	ld e, l
-	ld d, h
+	push hl
 	ld hl, wBoxNameBuffer
-	ld c, BOX_NAME_LENGTH - 1
-	call InitString
+	call BillsPC_IsBoxNameBlank
+	pop hl
+	jr nc, .copy_box_name
+	ld de, wBoxNameBuffer
+	ld bc, BOX_NAME_LENGTH
+	call CopyBytes ; empty input keeps the previous box name
+.copy_box_name
 	ld a, [wMenuSelection]
 	dec a
 	call GetBoxName
-	ld de, wBoxNameBuffer
-	call CopyName2
+	ld d, h
+	ld e, l
+	ld hl, wBoxNameBuffer
+	ld bc, BOX_NAME_LENGTH
+	call CopyBytes ; payload $50/$17 is data, not a string command
 	ret
 
 	hlcoord 11, 7 ; unreferenced

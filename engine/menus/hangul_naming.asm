@@ -1,6 +1,5 @@
 HangulNaming_DrawKeyboard:
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
+	call HangulNaming_UsesGoldKeyboard
 	jp z, HangulPlayer_DrawKeyboard
 ; Keep Crystal's nine-column cursor grid; read keys from data, not cached tiles.
 	xor a
@@ -162,8 +161,7 @@ HangulNaming_GetKeyTable:
 	db $fc, $fd, $fe, $ff, $40, $41, $7f, 0, 0
 
 HangulNaming_ReadKey:
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
+	call HangulNaming_UsesGoldKeyboard
 	jp z, HangulPlayer_ReadKey
 	ld hl, wNamingScreenCursorObjectPointer
 	ld c, [hl]
@@ -232,9 +230,8 @@ HangulNaming_ReadKey:
 	jr .store
 
 HangulNaming_SwitchPage:
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
-	ret z ; player keyboard has all jamo on one screen, no page command
+	call HangulNaming_UsesGoldKeyboard
+	ret z ; one-screen keyboards have no page command
 	ld a, $80
 	call HangulNaming_RecordPlayerStage
 	ld hl, wNamingScreenLetterCase
@@ -295,9 +292,8 @@ HangulNaming_RecordPlayerStage:
 	ret
 
 HangulNaming_LoadKeyboardFonts::
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
-	ret z ; player labels are already in the Gold keyboard graphics
+	call HangulNaming_UsesGoldKeyboard
+	ret z ; labels are already in the Gold keyboard graphics
 ; Preload the current keyboard font regions during screen setup.
 ; Get1bpp supports both LCD states; preloading is a residency choice.
 	ld de, Font + ('A' - $80) * TILE_1BPP_SIZE
@@ -330,3 +326,18 @@ HangulNaming_AlphabetTile:
 
 HangulNaming_KeyboardGFX:
 INCBIN "gfx/naming_screen/hangul.2bpp", 0, 66 tiles
+
+HangulNaming_UsesGoldKeyboard:
+; Z = player, Pokemon nickname (including aliases), or box name.
+; Only AF changes. Storage/serialization dispatch deliberately stays separate.
+	ld a, [wNamingScreenType]
+	cp NAME_MON
+	ret z
+	cp NAME_PLAYER
+	ret z
+	cp NAME_6
+	ret z
+	cp NAME_BOX
+	ret z
+	cp NAME_7
+	ret

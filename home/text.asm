@@ -375,7 +375,7 @@ PlaceBattlersName:
 	jr nz, .enemy
 
 	ld de, wBattleMonNickname
-	jr PlaceCommandCharacter
+	jp PlaceNicknameCommand
 
 .enemy
 	ld de, EnemyText
@@ -383,7 +383,7 @@ PlaceBattlersName:
 	ld h, b
 	ld l, c
 	ld de, wEnemyMonNickname
-	jr PlaceCommandCharacter
+	jp PlaceNicknameCommand
 
 PlaceEnemysName::
 	push de
@@ -784,7 +784,7 @@ TextCommand_RAM::
 	push hl
 	ld h, b
 	ld l, c
-	call PlaceString
+	call PlaceRAMString
 	pop hl
 	ret
 
@@ -1042,6 +1042,7 @@ TextCommand_STRINGBUFFER::
 ; 6: wBattleMonNickname
 	ld a, [hli]
 	push hl
+	push af
 	ld e, a
 	ld d, 0
 	ld hl, StringBufferPointers
@@ -1053,7 +1054,14 @@ TextCommand_STRINGBUFFER::
 	ld e, l
 	ld h, b
 	ld l, c
+	pop af
+	cp 5
+	jr nc, .nickname
 	call PlaceString
+	jr .done
+.nickname
+	call PlaceHangulName
+.done
 	pop hl
 	ret
 

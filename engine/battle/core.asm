@@ -4654,7 +4654,7 @@ PrintPlayerHUD:
 	ld de, wBattleMonNickname
 	hlcoord 10, 7
 	call Battle_DummyFunction
-	call PlaceString
+	call PlaceHangulName
 
 	push bc
 
@@ -4740,7 +4740,7 @@ DrawEnemyHUD:
 	ld de, wEnemyMonNickname
 	hlcoord 1, 0
 	call Battle_DummyFunction
-	call PlaceString
+	call PlaceHangulName
 	ld h, b
 	ld l, c
 	dec hl
@@ -7526,6 +7526,8 @@ AnimateExpBar:
 	ld de, wStringBuffer1
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
+	ld de, wStringBuffer1
+	call ExpandNicknameBuffer
 	call TerminateExpBarSound
 	ld de, SFX_HIT_END_OF_EXP_BAR
 	call PlaySFX

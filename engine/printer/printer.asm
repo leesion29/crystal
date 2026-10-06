@@ -658,7 +658,7 @@ PrintPCBox_Page1:
 	ld d, h
 	ld e, l
 	hlcoord 6, 5
-	call PlaceString
+	call PlaceBoxName
 	ld a, 1
 	call Printer_GetBoxMonSpecies
 	hlcoord 2, 9

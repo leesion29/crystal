@@ -439,7 +439,7 @@ StatsScreen_InitUpperHalf:
 	call GetNicknamePointer
 	call CopyNickname
 	hlcoord 8, 2
-	call PlaceString
+	call PlaceHangulName
 	hlcoord 18, 0
 	call .PlaceGenderChar
 	hlcoord 9, 4
@@ -801,7 +801,7 @@ LoadBluePage:
 	call CopyNickname
 	farcall CorrectNickErrors
 	hlcoord 2, 13
-	call PlaceString
+	call PlaceHangulName
 	ld a, [wTempMonCaughtGender]
 	and a
 	jr z, .done

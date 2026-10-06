@@ -221,7 +221,7 @@ MomGivesPokegearText:
 	para "훌륭한 트레이너가 되려면"
 	line "가지고 있어야 하지, 안 그래?"
 
-	para "응? 요일을 맞추기 않았네"
+	para "응? 요일을 맞추지 않았네"
 	line "사용하기 전에 무슨 요일인가"
 	cont "정해놓지 않으면"
 	done
@@ -232,11 +232,8 @@ DoYouKnowHowToUsePhoneText:
 	done
 
 KnowTheInstructionsText:
-	text "Don't you just"
-	line "turn the #GEAR"
-
-	para "on and select the"
-	line "PHONE icon?"
+	text "포켓몬기어의 스위치를 넣고"
+	line "아이콘을 고르기만 하면 되잖니?"
 	done
 
 DontKnowTheInstructionsText:

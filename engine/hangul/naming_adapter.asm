@@ -53,12 +53,13 @@ HangulNaming_Add::
 .full
 	pop bc
 .validate
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
+	call HangulNaming_UsesPackedName
 	jr nz, .legacy_limit
-	; Keep Gold's speculative merge intact, then reject any sixth character.
+	; Keep Gold's speculative merge intact, then reject excess logical length.
+	call HangulNaming_PackedRecordLength
+	ld b, a
 	ld a, [wHangulNamingCurNameLength]
-	cp HANGUL_PLAYER_NAME_MAX_CHARS * 2 + 1
+	cp b
 	jr c, .accepted
 	jr .restore
 .legacy_limit
@@ -112,8 +113,7 @@ HangulNaming_Measure:
 	ret
 
 HangulNaming_Serialize::
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
+	call HangulNaming_UsesPackedName
 	jr z, .player_edit
 	call HangulNaming_Measure
 	ld [wNamingScreenCurNameLength], a
@@ -150,7 +150,7 @@ HangulNaming_Serialize::
 	ret
 
 .player_edit
-; Do not touch the committed destination while editing a player name.
+; Do not touch the committed destination while editing a packed name.
 ; Normalize the private record for PlaceHangulName, including stale deleted IDs.
 	ld a, [wHangulNamingCurNameLength]
 	srl a
@@ -167,10 +167,12 @@ HangulNaming_Serialize::
 	ret
 
 HangulNaming_CommitPlayer::
-; Validate the entire editing state before writing the 11-byte destination.
+; Validate the entire editing state before writing the fixed-width destination.
 ; Carry clear = committed, carry set = rejected with destination unchanged.
+	call HangulNaming_PackedRecordLength
+	ld b, a
 	ld a, [wHangulNamingCurNameLength]
-	cp HANGUL_PLAYER_NAME_MAX_CHARS * 2 + 1
+	cp b
 	jr nc, .invalid
 	bit 0, a
 	jr nz, .invalid
@@ -188,11 +190,13 @@ HangulNaming_CommitPlayer::
 	dec b
 	jr nz, .validate
 .write
+	call HangulNaming_PackedRecordLength
+	ld c, a
+	ld b, 0
 	ld hl, wNamingScreenDestinationPointer
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld bc, NAME_LENGTH
 	ld a, '@'
 	call ByteFill
 	ld a, [wHangulNamingCurNameLength]
@@ -210,4 +214,25 @@ HangulNaming_CommitPlayer::
 	ret
 .invalid
 	scf
+	ret
+
+HangulNaming_UsesPackedName:
+	ld a, [wNamingScreenType]
+	cp NAME_MON
+	ret z
+	cp NAME_PLAYER
+	ret z
+	cp NAME_6
+	ret z
+	cp NAME_BOX
+	ret z
+	cp NAME_7
+	ret
+
+HangulNaming_PackedRecordLength:
+	ld a, [wNamingScreenType]
+	cp NAME_BOX
+	ld a, NAME_LENGTH
+	ret nz
+	ld a, BOX_NAME_LENGTH
 	ret

@@ -5,6 +5,11 @@ DecodeHangulName::
 ;         carry set, B=$ff = invalid record, output buffer untouched.
 ; DE/HL advance on success; BC/AF are clobbered. Source is never modified.
 ; Validate before writing: a glyph index may itself be '@' or $17.
+	ld c, NAME_LENGTH
+	; fallthrough
+
+DecodeSizedHangulName::
+; C = accessible record width (NAME_LENGTH or BOX_NAME_LENGTH).
 
 	push de
 	push hl
@@ -53,7 +58,6 @@ DecodeHangulName::
 ; B selects the format. Only name records use this low-byte discriminator;
 ; general text strings retain their existing Japanese/control-byte meanings.
 	ld b, 0
-	ld c, NAME_LENGTH
 	ld a, [de]
 	dec a
 	cp $0b
@@ -122,3 +126,21 @@ DecodeHangulName::
 	ld b, $ff
 	scf
 	ret
+
+ValidatePackedNickname::
+	push bc
+	push de
+	ld c, NAME_LENGTH
+	call DecodeSizedHangulName.Validate
+	pop de
+	pop bc
+	ret
+
+CopyCurNicknameToMonOrItemName::
+; Keep this small buffer packed; display expansion never fits here.
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMonNicknames
+	call SkipNames
+	ld de, wMonOrItemNameBuffer
+	ld bc, MON_NAME_LENGTH
+	jp CopyBytes

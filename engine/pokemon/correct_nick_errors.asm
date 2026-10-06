@@ -7,6 +7,18 @@ CorrectNickErrors::
 	push bc
 	push de
 	ld b, MON_NAME_LENGTH
+	ld a, [de]
+	dec a
+	cp $0b
+	jr nc, .checkchar
+	farcall ValidatePackedNickname
+	jr nc, .end
+	ld a, '?'
+	ld [de], a
+	inc de
+	ld a, '@'
+	ld [de], a
+	jr .end
 
 .checkchar
 ; end of nick?

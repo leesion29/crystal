@@ -309,6 +309,7 @@ GetNickname::
 	pop de
 
 	callfar CorrectNickErrors
+	call ExpandNicknameBuffer
 
 	pop bc
 	pop hl

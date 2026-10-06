@@ -268,7 +268,7 @@ NamingScreenJumptable:
 	ret
 
 .StoreMonIconParams:
-	ld a, MON_NAME_LENGTH - 1
+	ld a, HANGUL_PLAYER_NAME_MAX_CHARS
 	hlcoord 5, 6
 	jr .StoreParams
 
@@ -278,8 +278,8 @@ NamingScreenJumptable:
 	jr .StoreParams
 
 .StoreBoxIconParams:
-	ld a, BOX_NAME_LENGTH - 1
-	hlcoord 5, 4
+	ld a, HANGUL_BOX_NAME_MAX_CHARS
+	hlcoord 5, 6
 	jr .StoreParams
 
 .StoreParams:
@@ -310,6 +310,8 @@ NamingScreen_InitText:
 	call ByteFill
 	hlcoord 1, 1
 	lb bc, 6, 18
+	call HangulNaming_UsesGoldKeyboard
+	jr z, .not_box
 	call NamingScreen_IsTargetBox
 	jr nz, .not_box
 	lb bc, 4, 18
@@ -423,6 +425,8 @@ NamingScreenJoypadLoop:
 	xor a
 	ldh [hBGMapMode], a
 	hlcoord 1, 5
+	call HangulNaming_UsesGoldKeyboard
+	jr z, .got_coords
 	call NamingScreen_IsTargetBox
 	jr nz, .got_coords
 	hlcoord 1, 3
@@ -438,8 +442,7 @@ NamingScreenJoypadLoop:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
+	call HangulNaming_UsesGoldKeyboard
 	jr nz, .original_entry
 	ld de, wHangulNamingBuffer
 	call PlaceHangulName
@@ -449,12 +452,18 @@ NamingScreenJoypadLoop:
 .entry_placed
 	ld h, b
 	ld l, c
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
+	call HangulNaming_UsesGoldKeyboard
 	jr nz, .legacy_input_cursor
-	ld a, [wNamingScreenCurNameLength]
+	ld e, HANGUL_PLAYER_NAME_MAX_CHARS
+	ld a, [wNamingScreenType]
+	cp NAME_BOX
+	jr nz, .underline_capacity
+	ld e, HANGUL_BOX_NAME_MAX_CHARS
+.underline_capacity
+	ld a, [wHangulNamingCurNameLength]
+	srl a
 	ld b, a
-	ld a, HANGUL_PLAYER_NAME_MAX_CHARS
+	ld a, e
 	sub b
 	jr z, .cursor_placed
 	ld b, a
@@ -483,6 +492,8 @@ NamingScreenJoypadLoop:
 
 .InitCursor:
 	depixel 10, 3
+	call HangulNaming_UsesGoldKeyboard
+	jr z, .got_cursor_position ; Gold layout uses the same rows for box names
 	call NamingScreen_IsTargetBox
 	jr nz, .got_cursor_position
 	ld d, 8 * TILE_WIDTH
@@ -542,8 +553,7 @@ NamingScreenJoypadLoop:
 	ld hl, SPRITEANIMSTRUCT_VAR2
 	add hl, bc
 	ld [hl], $4
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
+	call HangulNaming_UsesGoldKeyboard
 	jr nz, .legacy_start
 	ld hl, SPRITEANIMSTRUCT_VAR1
 	add hl, bc
@@ -577,8 +587,7 @@ NamingScreenJoypadLoop:
 	ld b, [hl]
 
 NamingScreen_GetCursorPosition:
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
+	call HangulNaming_UsesGoldKeyboard
 	jp z, HangulPlayer_GetCursorPosition
 	ld hl, SPRITEANIMSTRUCT_VAR2
 	add hl, bc
@@ -615,8 +624,7 @@ NamingScreen_GetCursorPosition:
 	ret
 
 NamingScreen_AnimateCursor:
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
+	call HangulNaming_UsesGoldKeyboard
 	jp z, HangulPlayer_AnimateCursor
 	call .GetDPad
 	ld hl, SPRITEANIMSTRUCT_VAR2
@@ -898,8 +906,7 @@ NamingScreen_StoreEntry:
 	ld a, [wHangulNamingActive]
 	and a
 	jr z, .original
-	ld a, [wNamingScreenType]
-	cp NAME_PLAYER
+	call HangulNaming_UsesGoldKeyboard
 	jr nz, .legacy_hangul
 	farcall HangulNaming_CommitPlayer
 	ret
