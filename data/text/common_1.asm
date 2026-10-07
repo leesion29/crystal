@@ -176,7 +176,7 @@ _OakTimeWhatHoursText::
 	text_end
 
 _OakTimeHoursQuestionMarkText::
-	text "가 맞습니까?"
+	text "?"
 	done
 
 _OakTimeHowManyMinutesText::
@@ -188,7 +188,7 @@ _OakTimeWhoaMinutesText::
 	text_end
 
 _OakTimeMinutesQuestionMarkText::
-	text "이 맞습니까?"
+	text "!"
 	done
 
 _OakTimeOversleptText::
@@ -197,8 +197,8 @@ _OakTimeOversleptText::
 	done
 
 _OakTimeYikesText::
-	text ","
-	line "으로 설정되었습니다"
+	text "!"
+	line "큰일이군! 거의 잠으로 때웠다!"
 	done
 
 _OakTimeSoDarkText::

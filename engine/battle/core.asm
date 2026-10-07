@@ -4652,11 +4652,12 @@ CheckDanger:
 
 PrintPlayerHUD:
 	ld de, wBattleMonNickname
-	hlcoord 10, 7
-	call Battle_DummyFunction
-	call PlaceHangulName
+	hlcoord 10, 8
+	bccoord 14, 8
+	call PlaceBattleHUDName
 
-	push bc
+	push hl
+	push af ; last logical name character, not its cached tile ID
 
 	ld a, [wCurBattleMon]
 	ld hl, wPartyMon1DVs
@@ -4679,12 +4680,18 @@ PrintPlayerHUD:
 	ld [wCurSpecies], a
 	call GetBaseData
 
+	pop af
 	pop hl
-	dec hl
+	cp '♂'
+	jr z, .print_status
+	cp '♀'
+	jr z, .print_status
 
 	ld a, TEMPMON
 	ld [wMonType], a
+	push hl
 	callfar GetGender
+	pop hl
 	ld a, ' '
 	jr c, .got_gender_char
 	ld a, '♂'
@@ -4692,13 +4699,12 @@ PrintPlayerHUD:
 	ld a, '♀'
 
 .got_gender_char
-	hlcoord 17, 8
-	ld [hl], a
-	hlcoord 14, 8
+	ld [hli], a
+.print_status
 	push af ; back up gender
 	push hl
 	ld de, wBattleMonStatus
-	predef PlaceNonFaintStatus
+	call PlaceBattleHUDStatus
 	pop hl
 	pop bc
 	ret nz
@@ -4738,12 +4744,11 @@ DrawEnemyHUD:
 	ld [wCurPartySpecies], a
 	call GetBaseData
 	ld de, wEnemyMonNickname
-	hlcoord 1, 0
-	call Battle_DummyFunction
-	call PlaceHangulName
-	ld h, b
-	ld l, c
-	dec hl
+	hlcoord 2, 1
+	bccoord 6, 1
+	call PlaceBattleHUDName
+	push af
+	push hl
 
 	ld hl, wEnemyMonDVs
 	ld de, wTempMonDVs
@@ -4760,7 +4765,16 @@ DrawEnemyHUD:
 
 	ld a, TEMPMON
 	ld [wMonType], a
+	pop hl
+	pop bc ; B = last logical name character
+	ld a, b
+	cp '♂'
+	jr z, .print_status
+	cp '♀'
+	jr z, .print_status
+	push hl
 	callfar GetGender
+	pop hl
 	ld a, ' '
 	jr c, .got_gender
 	ld a, '♂'
@@ -4768,14 +4782,12 @@ DrawEnemyHUD:
 	ld a, '♀'
 
 .got_gender
-	hlcoord 9, 1
-	ld [hl], a
-
-	hlcoord 6, 1
+	ld [hli], a
+.print_status
 	push af
 	push hl
 	ld de, wEnemyMonStatus
-	predef PlaceNonFaintStatus
+	call PlaceBattleHUDStatus
 	pop hl
 	pop bc
 	jr nz, .skip_level
@@ -4868,9 +4880,130 @@ UpdateHPPal:
 	ret z
 	jp FinishBattleAnim
 
-Battle_DummyFunction:
-; called before placing either battler's nickname in the HUD
+PlaceBattleHUDName:
+; DE = NAME_LENGTH-byte record; HL = Korean baseline; BC = long-name tail.
+; Return HL = gender/status position, A = final logical character.
+; Do not inspect cached tile IDs to detect a name's built-in gender sign.
+	push bc
+	call .CountName
+	push bc
+	ld a, b
+	cp 7
+	jr nc, .long_name
+	cp 5
+	jr nc, .aligned
+	inc hl
+	cp 4
+	jr nc, .aligned
+	inc hl
+.aligned
+	xor a
+	jr .place
+.long_name
+	ld bc, -SCREEN_WIDTH
+	add hl, bc
+	ld a, 1
+.place
+	push af
+	call PlaceHangulName
+	pop af
+	pop de ; D = count, E = last character
+	pop hl ; fallback tail for a long legacy name
+	and a
+	jr nz, .done
+	ld h, b
+	ld l, c
+.done
+	ld a, e
 	ret
+
+.CountName
+; Bounded packed (bank,index) / legacy (escape,bank,index) scanner.
+; B = logical length, C = final standard character or 0 for a Hangul glyph.
+	push hl
+	push de
+	ld a, [de]
+	dec a
+	cp $0b
+	ld h, 0
+	jr nc, .format_ready
+	inc h
+.format_ready
+	ld l, 0
+	lb bc, 0, NAME_LENGTH
+.next
+	ld a, c
+	and a
+	jr z, .invalid
+	ld a, [de]
+	inc de
+	dec c
+	cp '@'
+	jr z, .counted
+	ld l, a
+	inc b
+	ld a, h
+	and a
+	ld a, l
+	jr z, .legacy
+	cp $0c
+	jr nc, .next
+	ld a, c
+	cp 2
+	jr c, .invalid
+	inc de
+	dec c
+	jr .glyph
+.legacy
+	cp HANGUL_POC_ESCAPE
+	jr nz, .next
+	ld a, c
+	cp 3
+	jr c, .invalid
+	inc de
+	inc de
+	dec c
+	dec c
+.glyph
+	ld l, 0
+	jr .next
+.invalid
+	ld b, NAME_LENGTH - 1
+	ld l, 0
+.counted
+	ld c, l
+	pop de
+	pop hl
+	ret
+
+PlaceBattleHUDStatus:
+; Same NZ-on-status contract as PlaceNonFaintStatus, but cache-aware.
+	ld a, [de]
+	ld de, .poison
+	bit PSN, a
+	jr nz, .place
+	ld de, .burn
+	bit BRN, a
+	jr nz, .place
+	ld de, .freeze
+	bit FRZ, a
+	jr nz, .place
+	ld de, .paralysis
+	bit PAR, a
+	jr nz, .place
+	ld de, .sleep
+	and SLP_MASK
+	ret z
+.place
+	call PlaceString
+	ld a, 1
+	and a
+	ret
+.poison:    db "PSN@"
+.burn:      db "BRN@"
+.freeze:    db "FRZ@"
+.paralysis: db "PAR@"
+.sleep:     db "SLP@"
 
 BattleMenu:
 	xor a
@@ -4900,7 +5033,7 @@ BattleMenu:
 	ld a, [wInputType]
 	or a
 	jr z, .skip_dude_pack_select
-	farcall _DudeAutoInput_DownA
+	farcall _DudeAutoInput_BattlePack
 .skip_dude_pack_select
 	call LoadBattleMenu2
 	ret c
@@ -5352,37 +5485,36 @@ MoveSelectionScreen:
 	xor a
 	ldh [hBGMapMode], a
 
-	hlcoord 4, 17 - NUM_MOVES - 1
-	ld b, 4
-	ld c, 14
+	hlcoord 0, 8
+	lb bc, 8, 8
 	ld a, [wMoveSelectionMenuType]
 	cp $2
 	jr nz, .got_dims
-	hlcoord 4, 17 - NUM_MOVES - 1 - 4
-	ld b, 4
-	ld c, 14
+	hlcoord 10, 8
+	lb bc, 8, 8
 .got_dims
 	call Textbox
 
-	hlcoord 6, 17 - NUM_MOVES
+	hlcoord 2, 10
 	ld a, [wMoveSelectionMenuType]
 	cp $2
 	jr nz, .got_start_coord
-	hlcoord 6, 17 - NUM_MOVES - 4
+	hlcoord 12, 10
 .got_start_coord
-	ld a, SCREEN_WIDTH
+	ld a, 2 * SCREEN_WIDTH
 	ld [wListMovesLineSpacing], a
-	predef ListMoves
+	ld b, h
+	ld c, l
+	farcall BattleListMoves
 
-	ld b, 5
+	ld b, 1
 	ld a, [wMoveSelectionMenuType]
 	cp $2
-	ld a, 17 - NUM_MOVES
 	jr nz, .got_default_coord
-	ld b, 5
-	ld a, 17 - NUM_MOVES - 4
+	ld b, 11
 
 .got_default_coord
+	ld a, 10
 	ld [w2DMenuCursorInitY], a
 	ld a, b
 	ld [w2DMenuCursorInitX], a
@@ -5421,7 +5553,7 @@ MoveSelectionScreen:
 	ld [w2DMenuFlags1], a
 	xor a
 	ld [w2DMenuFlags2], a
-	ld a, $10
+	ld a, $20
 	ld [w2DMenuCursorOffsets], a
 .menu_loop
 	ld a, [wMoveSelectionMenuType]
@@ -5439,8 +5571,8 @@ MoveSelectionScreen:
 	ld a, [wSwappingMove]
 	and a
 	jr z, .interpret_joypad
-	hlcoord 5, 13
-	ld bc, SCREEN_WIDTH
+	hlcoord 1, 10
+	ld bc, 2 * SCREEN_WIDTH
 	dec a
 	call AddNTimes
 	ld [hl], '▷'
@@ -5638,9 +5770,8 @@ MoveInfoBox:
 	xor a
 	ldh [hBGMapMode], a
 
-	hlcoord 0, 8
-	ld b, 3
-	ld c, 9
+	hlcoord 9, 12
+	lb bc, 4, 9
 	call Textbox
 	call MobileTextBorder
 
@@ -5655,7 +5786,7 @@ MoveInfoBox:
 	cp b
 	jr nz, .not_disabled
 
-	hlcoord 1, 10
+	hlcoord 10, 15
 	ld de, .Disabled
 	call PlaceString
 	jr .done
@@ -5689,33 +5820,33 @@ MoveInfoBox:
 	ld [wStringBuffer1], a
 	call .PrintPP
 
-	hlcoord 1, 9
+	hlcoord 10, 15
 	ld de, .Type
 	call PlaceString
 
-	hlcoord 7, 11
+	hlcoord 14, 16
 	ld [hl], '/'
 
 	callfar UpdateMoveData
 	ld a, [wPlayerMoveStruct + MOVE_ANIM]
 	ld b, a
-	hlcoord 2, 10
-	predef PrintMoveType
+	bccoord 15, 16
+	farcall BattlePlaceMoveType
 
 .done
 	ret
 
 .Disabled:
-	db "Disabled!@"
+	db "봉쇄되어 있다!@"
 .Type:
-	db "TYPE/@"
+	db "기술타입@"
 
 .PrintPP:
-	hlcoord 5, 11
+	hlcoord 13, 13
 	ld a, [wLinkMode] ; What's the point of this check?
 	cp LINK_MOBILE
 	jr c, .ok
-	hlcoord 5, 11
+	hlcoord 13, 13
 .ok
 	push hl
 	ld de, wStringBuffer1

@@ -166,6 +166,9 @@ SECTION "Battle Core", ROMX
 INCLUDE "engine/battle/core.asm"
 INCLUDE "data/battle/effect_command_pointers.asm"
 
+SECTION "Korean Battle Move Text", ROMX
+INCLUDE "engine/battle/korean_move_text.asm"
+
 
 SECTION "bank10", ROMX
 

@@ -10,6 +10,10 @@ _DudeAutoInput_DownA:
 	ld hl, DudeAutoInput_DownA
 	jr _DudeAutoInput
 
+_DudeAutoInput_BattlePack:
+	ld hl, DudeAutoInput_BattlePack
+	jr _DudeAutoInput
+
 _DudeAutoInput:
 	ld a, BANK(DudeAutoInputs)
 	call StartAutoInput
@@ -35,6 +39,20 @@ DudeAutoInput_DownA:
 	db NO_INPUT, $fe
 	db NO_INPUT, $fe
 	db PAD_DOWN,   $00
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db PAD_A, $00
+	db NO_INPUT, $ff ; end
+
+DudeAutoInput_BattlePack:
+; Keep the original battle tutorial's wait times; only Pack's direction moved.
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db PAD_RIGHT, $00
 	db NO_INPUT, $fe
 	db NO_INPUT, $fe
 	db NO_INPUT, $fe
