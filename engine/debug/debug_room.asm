@@ -30,10 +30,8 @@ DEF DEBUGROOMMENU_NUM_PAGES EQU const_value
 	const DEBUGROOMMENUITEM_BT_BUG_POKE  ; 14
 
 _DebugRoom:
-	ldh a, [hJoyDown]
-	and PAD_SELECT | PAD_START
-	cp PAD_SELECT | PAD_START
-	ret nz
+	; This routine is only linked into the dedicated debug ROM, so the title
+	; menu's Debug Room item may enter directly with A.
 	ldh a, [hDebugRoomMenuPage]
 	push af
 	xor a
@@ -1596,7 +1594,10 @@ ComputeROMChecksum:
 	ld [hl], 'h'
 	pop de
 	pop bc
-	call ComputeROMXChecksum
+	; Keep this checksum worker in the Debug Room's ROMX section.  The former
+	; ROM0 helper duplicates the routine below and prevents debug builds from
+	; fitting after the Hangul support additions.
+	call .ComputeROMXChecksum
 	inc c
 	ld a, c
 	cp $80 ; number of banks

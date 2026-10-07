@@ -324,6 +324,8 @@ SECTION "Hangul PoC Buffer", WRAM0
 
 ; One 8x16 glyph after 1bpp-to-2bpp expansion.
 wHangulFontGfx:: ds 2 tiles
+; bit 0: dynamic cache active; bit 7: invert uploaded font pixels (Pokédex).
+; ResetHangulTiles clears both bits whenever LoadStandardFont is called.
 wHangulDynamicMode:: db
 
 
@@ -630,6 +632,14 @@ wSomeoneIsRampaging:: db
 wPlayerJustGotFrozen:: db
 wEnemyJustGotFrozen:: db
 wBattleEnd::
+
+
+SECTION "Capture Naming Battle Backup", WRAMX[$d200], BANK[$2]
+
+; Naming and battle data share the Miscellaneous WRAM0 union. Preserve the
+; live battle through capture naming without changing saved name records.
+; Pic Animations and the Hangul Tile Cache occupy bank 2 below $d200.
+wCaptureNamingBattleBackup:: ds wBattleEnd - wBattle
 
 
 SECTION UNION "Miscellaneous", WRAM0

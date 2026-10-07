@@ -142,6 +142,7 @@ GetPokemonName::
 	ld hl, wStringBuffer1 + MON_NAME_LENGTH - 1
 	ld [hl], '@'
 	pop de
+	call ExpandNicknameBuffer
 
 	pop hl
 	pop af

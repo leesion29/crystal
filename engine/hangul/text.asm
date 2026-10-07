@@ -64,11 +64,12 @@ _PlaceHangul::
 	ld a, BANK(wHangulAttributes)
 	ldh [rSVBK], a
 	ld a, [wHangulDynamicMode]
-	and a
+	and 1 ; bit 0: cache active; bit 7: inverted font
 	jr nz, .cache_ready
 	; Preserve static glyphs already present when this is the first Hangul.
 	call TrimHangulTiles
-	ld a, 1
+	ld a, [wHangulDynamicMode]
+	or 1 ; retain the Pokédex's inverted-font flag
 	ld [wHangulDynamicMode], a
 .cache_ready
 
@@ -364,6 +365,20 @@ CopyHangulGlyphToBuffer:
 	jr nz, .clear_second_tile
 	pop hl
 .copy_done
+	; Match the font polarity selected by Pokedex_LoadInvertedFont, including
+	; standard characters uploaded after the first Hangul glyph activates cache.
+	ld a, [wHangulDynamicMode]
+	bit 7, a
+	jr z, .restore
+	ld hl, wHangulFontGfx
+	ld b, 2 * TILE_SIZE
+.invert
+	ld a, [hl]
+	cpl
+	ld [hli], a
+	dec b
+	jr nz, .invert
+.restore
 	pop hl
 	pop bc
 	ret
@@ -399,14 +414,15 @@ HDMATransfer_HangulFontToVRAM::
 	jr z, .copy
 .wait_vblank
 	ldh a, [rLY]
-	cp SCREEN_HEIGHT
+	; LY counts pixel scanlines, not tilemap rows (SCREEN_HEIGHT = 18).
+	cp SCREEN_HEIGHT_PX
 	jr c, .wait_vblank
 	jr z, .copy
 	; Starting a 32-byte CPU copy late in VBlank can cross into Mode 3, where
 	; VRAM writes are ignored. Wait for the start of the next VBlank instead.
 .wait_next_frame
 	ldh a, [rLY]
-	cp SCREEN_HEIGHT
+	cp SCREEN_HEIGHT_PX
 	jr nc, .wait_next_frame
 	jr .wait_vblank
 

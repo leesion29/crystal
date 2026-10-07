@@ -305,7 +305,6 @@ ROMX $77
 	"Pokégear GFX"
 	"European Mail"
 ROMX $78
-	"Debug Room"
 	"Tileset Data 8"
 ROMX $7b
 	"Battle Tower Text"
@@ -317,6 +316,10 @@ ROMX $7d
 ROMX $7e
 	"Crystal Events"
 ROMX $7f
+	; Hangul Font Bank 4 occupies $4000-$4fff. Keep the debug-only menu in
+	; the free range before the fixed Stadium 2 checksum data at $7de0.
+	org $5000
+	"Debug Room"
 	org $7de0
 	"Stadium 2 Checksums"
 WRAM0

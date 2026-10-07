@@ -10,6 +10,47 @@ _NamingScreen:
 	call ReturnToMapWithSpeechTextbox
 	ret
 
+NamingScreenPreservingBattle:
+; Capture calls this with NamingScreen's B/DE arguments. The editor occupies
+; the battle's WRAM0 union, including Pay Day money and participation flags.
+; Party/SRAM nickname destinations are outside that union and stay committed.
+	push bc
+	push de
+	ld hl, wBattle
+	ld de, wCaptureNamingBattleBackup
+	ld bc, wBattleEnd - wBattle
+	call .CopyBattleState
+	pop de
+	pop bc
+	call NamingScreen
+	push af
+	push bc
+	push de
+	push hl
+	ld hl, wCaptureNamingBattleBackup
+	ld de, wBattle
+	ld bc, wBattleEnd - wBattle
+	call .CopyBattleState
+	pop hl
+	pop de
+	pop bc
+	pop af
+	ret
+
+.CopyBattleState:
+; Called only from the interrupt-enabled capture path. Keep bank 2 selected
+; only during this RAM copy; interrupt handlers must not see its WRAM window.
+	ldh a, [rSVBK]
+	push af
+	di
+	ld a, BANK(wCaptureNamingBattleBackup)
+	ldh [rSVBK], a
+	call CopyBytes
+	pop af
+	ldh [rSVBK], a
+	ei
+	ret
+
 NamingScreen:
 	ld hl, wNamingScreenDestinationPointer
 	ld [hl], e

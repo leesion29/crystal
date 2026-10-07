@@ -102,6 +102,9 @@ CheckReceivedDex::
 	and a
 	ret
 
+; These legacy field-debug helpers have no callers. Keep release builds
+; unchanged, but leave room for the name-display wrappers in debug ROM0.
+if !DEF(_DEBUG)
 CheckBPressedDebug:: ; unreferenced
 ; Used in debug ROMs to walk through walls and avoid encounters.
 
@@ -112,6 +115,7 @@ CheckBPressedDebug:: ; unreferenced
 	ldh a, [hJoyDown]
 	bit B_PAD_B, a
 	ret
+endc
 
 xor_a::
 	xor a
@@ -122,9 +126,11 @@ xor_a_dec_a::
 	dec a
 	ret
 
+if !DEF(_DEBUG)
 CheckFieldDebug:: ; unreferenced
 	push hl
 	ld hl, wDebugFlags
 	bit DEBUG_FIELD_F, [hl]
 	pop hl
 	ret
+endc

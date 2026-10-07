@@ -278,7 +278,7 @@ ENDM
 	cp HANGUL_POC_ESCAPE
 	jp z, PlaceHangul
 	ld a, [wHangulDynamicMode]
-	and a
+	and 1 ; inverted-font bit alone does not activate the dynamic cache
 	jr z, .static_font_char
 	ld a, [de]
 	cp $80

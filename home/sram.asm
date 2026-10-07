@@ -3,19 +3,15 @@ OpenSRAM::
 	cp NUM_SRAM_BANKS
 	jr c, .valid
 if DEF(_DEBUG)
+	; Keep a compact diagnostic for invalid SRAM-bank requests.  The detailed
+	; per-bank bitmask used to live in ROM0, which prevents the debug build from
+	; linking once the Hangul support is present.  A nonzero RAM: value still
+	; reports the invalid request without changing release builds.
 	push af
-	push bc
-	ld b, 1
-.loop
-	sla b
-	dec a
-	jr nz, .loop
 	ld a, BANK(sOpenedInvalidSRAM)
 	call OpenSRAM
-	ld a, [sOpenedInvalidSRAM]
-	or b
+	ld a, 1
 	ld [sOpenedInvalidSRAM], a
-	pop bc
 	pop af
 endc
 	jr CloseSRAM

@@ -1086,7 +1086,8 @@ Pokedex_DrawMainScreenBG:
 	call Pokedex_PlaceBorder
 	hlcoord 1, 11
 	ld de, String_SEEN
-	call Pokedex_PlaceString
+	; Hangul occupies rows 10-11; the count stays on row 12 below it.
+	call PlaceString
 	ld hl, wPokedexSeen
 	ld b, wEndPokedexSeen - wPokedexSeen
 	call CountSetBits
@@ -1096,7 +1097,8 @@ Pokedex_DrawMainScreenBG:
 	call PrintNum
 	hlcoord 1, 14
 	ld de, String_OWN
-	call Pokedex_PlaceString
+	; Hangul occupies rows 13-14; the count stays on row 15 below it.
+	call PlaceString
 	ld hl, wPokedexCaught
 	ld b, wEndPokedexCaught - wPokedexCaught
 	call CountSetBits
@@ -1127,9 +1129,9 @@ Pokedex_DrawMainScreenBG:
 	ret
 
 String_SEEN:
-	db "SEEN", -1
+	db "발견한 수@"
 String_OWN:
-	db "OWN", -1
+	db "잡은 수@"
 String_SELECT_OPTION:
 	db $3b, $48, $49, $4a, $44, $45, $46, $47 ; SELECT > OPTION
 	; fallthrough
@@ -2451,6 +2453,10 @@ Pokedex_LoadGFX:
 
 Pokedex_LoadInvertedFont:
 	call LoadStandardFont
+	; LoadStandardFont resets the cache and polarity. Dynamic glyph uploads
+	; must use the same inverted pixels as the static Pokédex font below.
+	ld a, $80
+	ld [wHangulDynamicMode], a
 	ld hl, vTiles1
 	ld bc, $80 tiles
 

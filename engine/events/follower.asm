@@ -257,38 +257,41 @@ StoreFollowerNickInBuffer:
 .done
 	ld de, wStringBuffer1
 	ld bc, MON_NAME_LENGTH
-	jp CopyBytes
+	call CopyBytes
+	; Expand the saved nickname for text_ram without changing the party record.
+	ld de, wStringBuffer1
+	jp ExpandNicknameBuffer
 
 
 ; Common Text Interactions:
 SeemsVeryHappyText:
 	text "@"
 	text_ram wStringBuffer1
-	text " seems"
-	line "to be very happy"
+	text "는(은)"
+	line "매우 행복해보인다!"
 	done
 
 ShookTheTowerText:
 	text "@"
 	text_ram wStringBuffer1
-	text " shook"
-	line "the tower with its"
-	cont "voice!"
+	text "는(은)"
+	line "목소리로 탑을"
+	cont "흔들어버렸다!"
 	done
 
 HowledLoudlyText:
 	text "@"
 	text_ram wStringBuffer1
-	text " howled"
-	line "very loudly!"
+	text "는(은)"
+	line "매우 크게 울부짖었다!"
 	done
 
 DancingHappilyText:
 	text "@"
 	text_ram wStringBuffer1
-	text " is"
-	line "dancing around"
-	cont "happily!"
+	text "는(은)"
+	line "신나서 주변을"
+	cont "춤추듯 돌아다녔다!"
 	done
 
 DefaultInteraction:
@@ -313,19 +316,19 @@ DefaultInteraction:
 .text
 	text "@"
 	text_ram wStringBuffer1
-	text " is"
-	line "happy to be with"
-	cont "you!"
+	text "는(은)"
+	line "당신과 함께 있는 것이"
+	cont "기쁜 것 같다!"
 	done
 
 .found_item
 	text "@"
 	text_ram wStringBuffer1
-	text " seems"
-	line "to have found"
-	cont "something."
+	text "(이)가"
+	line "무언가를 지니고"
+	cont "있는 것 같다"
 
-	para "Take it?"
+	para "가져오시겠습니까?"
 	done
 
 .followerjumptest:
@@ -345,9 +348,9 @@ SleepInteraction:
 .text:
 	text "@"
 	text_ram wStringBuffer1
-	text " is"
-	line "looking a little"
-	cont "sleepy."
+	text "는(은)"
+	line "어쩐지 조금"
+	cont "졸려 보인다."
 	done
 
 PoisonInteraction:
@@ -361,8 +364,8 @@ PoisonInteraction:
 .text:
 	text "@"
 	text_ram wStringBuffer1
-	text " looks"
-	line "rather ill."
+	text "는(은)"
+	line "어디가 아픈 모양이다."
 	done
 
 BurnInteraction:
@@ -376,9 +379,8 @@ BurnInteraction:
 .text:
 	text "@"
 	text_ram wStringBuffer1
-	text " seems"
-	line "to be in a little"
-	cont "pain."
+	text "는(은)"
+	line "조금 괴로워 보인다."
 	done
 
 FrozenInteraction:
@@ -392,8 +394,8 @@ FrozenInteraction:
 .text:
 	text "@"
 	text_ram wStringBuffer1
-	text " is"
-	line "covered in ice!"
+	text "는(은)"
+	line "꽁꽁 얼어붙어 있다!"
 	done
 
 ParalyzeInteraction:
@@ -404,9 +406,9 @@ ParalyzeInteraction:
 .text:
 	text "@"
 	text_ram wStringBuffer1
-	text " is"
-	line "looking a little"
-	cont "sluggish."
+	text "는(은)"
+	line "몸이 조금"
+	cont "무거워 보인다."
 	done
 
 ChikoritaRoute29Interaction:
@@ -426,17 +428,17 @@ ChikoritaRoute29Interaction:
 .waving_leaf:
 	text "@"
 	text_ram wStringBuffer1
-	text " is"
-	line "waving its leaf"
-	cont "around."
+	text "는(은)"
+	line "잎사귀를 살랑살랑"
+	cont "흔들고 있다!"
 	done
 
 .leaf_twitch:
 	text "@"
 	text_ram wStringBuffer1
-	text " is"
-	line "making its leaf"
-	cont "twitch."
+	text "는(은)"
+	line "잎사귀를 씰룩"
+	cont "거리고 있다!"
 	done
 
 TotodileRoute30Interaction:

@@ -593,7 +593,7 @@ PokeBallEffect:
 	xor a ; PARTYMON
 	ld [wMonType], a
 	ld b, NAME_MON
-	farcall NamingScreen
+	farcall NamingScreenPreservingBattle
 
 	call RotateThreePalettesRight
 
@@ -646,7 +646,7 @@ PokeBallEffect:
 	ld [wMonType], a
 	ld de, wMonOrItemNameBuffer
 	ld b, NAME_MON
-	farcall NamingScreen
+	farcall NamingScreenPreservingBattle
 
 	ld a, BANK(sBoxMonNicknames)
 	call OpenSRAM

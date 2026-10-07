@@ -761,9 +761,9 @@ if !DEF(_DEBUG)
 	para "학회에 제출할"
 	line "논문을 쓰고 있는데"
 
-	para "하지만 아직"
-	line "제대로 이해하지 못한"
-	cont "부분들이 좀 있어서 말이다"
+	para "아직 제대로 이해하지"
+	line "못한 부분들이 좀 있어서"
+	cont "말이다"
 
 	para "그래서!"
 
@@ -828,11 +828,11 @@ ElmText_MissionFromMrPokemon:
 	done
 
 ElmText_ChooseAPokemon:
-	para "물론 파트너가 될"
+	text "물론 파트너가 될"
 	line "포켓몬을 주겠다"
 
-	text "이 볼에 들어있는"
-	line "포켓몬 중 하나를"
+	para "이 볼에 들어있는"
+	line "포켓몬 중에 하나를"
 	cont "선택하렴"
 
 	para "네가 그 포켓몬의"
