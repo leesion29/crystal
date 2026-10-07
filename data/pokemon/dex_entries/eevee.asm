@@ -1,10 +1,6 @@
-	db "EVOLUTION@" ; species name
-	dw 100, 140 ; height, weight
+	db "진화@" ; species name
+	dw 3, 65 ; height (dm), weight (hg)
 
-	db   "Its ability to"
-	next "evolve into many"
-	next "forms allows it to"
-
-	page "adapt smoothly"
-	next "and perfectly to"
-	next "any environment.@"
+	db   "주변환경에 따라서"
+	next "몸의 구조를 바꿔나가는"
+	next "능력의 소유자@"

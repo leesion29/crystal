@@ -1,10 +1,6 @@
-	db "FAIRY@" ; species name
-	dw 200, 170 ; height, weight
+	db "요정@" ; species name
+	dw 6, 75 ; height (dm), weight (hg)
 
-	db   "Though rarely"
-	next "seen, it becomes"
-	next "easier to spot,"
-
-	page "for some reason,"
-	next "on the night of a "
-	next "full moon.@"
+	db   "등의 날개에 달빛을"
+	next "모으는 것으로 공중에"
+	next "떠오를 수 있다는 것 같다@"

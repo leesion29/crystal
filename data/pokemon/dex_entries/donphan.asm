@@ -1,10 +1,6 @@
-	db "ARMOR@" ; species name
-	dw 307, 2650 ; height, weight
+	db "갑옷@" ; species name
+	dw 11, 1200 ; height (dm), weight (hg)
 
-	db   "Because this"
-	next "#MON's skin is"
-	next "so tough, a normal"
-
-	page "attack won't even"
-	next "leave a scratch on"
-	next "it.@"
+	db   "잘 드는 단단한 송곳니랑"
+	next "더욱이 견고한 피부로 "
+	next "몸통박치기는 집을 무너뜨릴 정도다@"

@@ -1,10 +1,6 @@
-	db "INSECT@" ; species name
-	dw 303, 660 ; height, weight
+	db "곤충@" ; species name
+	dw 10, 300 ; height (dm), weight (hg)
 
-	db   "The small bugs it"
-	next "eats appear only"
-	next "at night, so it"
-
-	page "sleeps in a hole"
-	next "in a tree until"
-	next "night falls.@"
+	db   "양쪽 눈은 레이더 기능을"
+	next "가지고 있다  어둠에 숨어있는"
+	next "작은 벌레도 잡아먹는다@"

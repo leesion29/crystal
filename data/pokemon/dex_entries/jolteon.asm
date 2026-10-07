@@ -1,10 +1,6 @@
-	db "LIGHTNING@" ; species name
-	dw 207, 540 ; height, weight
+	db "번개@" ; species name
+	dw 8, 245 ; height (dm), weight (hg)
 
-	db   "The negatively"
-	next "charged ions"
-	next "generated in its"
-
-	page "fur create a"
-	next "constant sparking"
-	next "noise.@"
+	db   "세포가 발산하고 있는 약한"
+	next "전기를 한데 모아서"
+	next "강력한 전기를 만들어 낸다@"

@@ -43,10 +43,8 @@ PrintDexEntry:
 	ld a, [wPrinterQueueLength]
 	push af
 
-	ld hl, vTiles1
-	ld de, FontInversed
-	lb bc, BANK(FontInversed), $80
-	call Request1bpp
+	; The displayed entry already uses an inverted font. Reloading a static
+	; alphabet here would overwrite the live Hangul tile cache.
 
 	xor a
 	ldh [hPrinter], a
@@ -60,10 +58,11 @@ PrintDexEntry:
 	ldh [rIE], a
 
 	call Printer_StartTransmission
-	ln a, 1, 0
+	ln a, 1, 3 ; a single complete entry, including the bottom margin
 	ld [wPrinterMargins], a
 	farcall PrintPage1
-	call ClearTilemap
+	; Keep the entry visible and its glyphs resident while the printer reads
+	; wPrinterTilemapBuffer. The status hint uses fixed tiles on row 17 only.
 	ld a, %11100100
 	call DmgToCgbBGPals
 	call DelayFrame
@@ -76,25 +75,7 @@ PrintDexEntry:
 	ld a, 16 / 2
 	ld [wPrinterQueueLength], a
 	call Printer_ResetJoypadRegisters
-	call SendScreenToPrinter
-	jr c, .skip_second_page ; canceled or got an error
-
-	call Printer_CleanUpAfterSend
-	ld c, 12
-	call DelayFrames
-	xor a
-	ldh [hBGMapMode], a
-
-	call Printer_StartTransmission
-	ln a, 0, 3
-	ld [wPrinterMargins], a
-	farcall PrintPage2
-	call Printer_ResetJoypadRegisters
-	ld a, 8 / 2
-	ld [wPrinterQueueLength], a
-	call SendScreenToPrinter
-
-.skip_second_page
+	call SendDexEntryToPrinter
 	pop af
 	ldh [hVBlank], a
 	call Printer_CleanUpAfterSend
@@ -115,6 +96,75 @@ PrintDexEntry:
 	pop af
 	ld [wPrinterQueueLength], a
 	ret
+
+SendDexEntryToPrinter:
+; Unlike generic printer status text, these hints allocate no cached glyphs.
+.loop
+	call JoyTextDelay
+	call CheckCancelPrint
+	jr c, .cancel
+	ld a, [wJumptableIndex]
+	bit JUMPTABLE_EXIT_F, a
+	jr nz, .finished
+	call PrinterJumptableIteration
+	call CheckPrinterStatus
+	call PlaceDexPrinterHint
+	call DelayFrame
+	jr .loop
+.finished
+	and a
+	ret
+.cancel
+	scf
+	ret
+
+PlaceDexPrinterHint:
+	ld a, [wPrinterStatus]
+	and a
+	ret z
+	push af
+	hlcoord 1, 17
+	ld bc, SCREEN_WIDTH - 2
+	ld a, ' '
+	call ByteFill
+	pop af
+	cp PRINTER_ERROR_1 ; status 4-7 corresponds to printer error 1-4
+	jr c, .cancel_hint
+	sub PRINTER_ERROR_1
+	add '1'
+	push af
+	hlcoord 2, 17
+	ld [hl], $72 ; E
+	inc hl
+	ld a, $71 ; R
+	ld [hli], a
+	ld [hli], a
+	ld [hl], ' '
+	inc hl
+	pop af
+	ld [hli], a
+	ld [hl], ' '
+	inc hl
+	jr .place
+.cancel_hint
+	hlcoord 6, 17
+.place
+	ld de, .CancelHint
+.copy
+	ld a, [de]
+	cp $ff
+	jr z, .done
+	ld [hli], a
+	inc de
+	jr .copy
+.done
+	ld a, 1
+	ldh [hBGMapMode], a
+	xor a
+	ld [wPrinterStatus], a
+	ret
+.CancelHint:
+	db $78, $7f, $73, $70, $76, $73, $72, $6f, $ff ; B CANCEL
 
 PrintPCBox:
 	ld a, [wPrinterQueueLength]

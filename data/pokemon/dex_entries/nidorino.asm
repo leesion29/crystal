@@ -1,10 +1,6 @@
-	db "POISON PIN@" ; species name
-	dw 211, 430 ; height, weight
+	db "독침@" ; species name
+	dw 9, 195 ; height (dm), weight (hg)
 
-	db   "It is easily"
-	next "agitated and uses"
-	next "its horn for"
-
-	page "offense as soon as"
-	next "it notices an"
-	next "attacker.@"
+	db   "발달한 귀를 세워서"
+	next "주변의 상황을 살핀다"
+	next "뭔가 있으면 바로 힘차게 달려든다@"

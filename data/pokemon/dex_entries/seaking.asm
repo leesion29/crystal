@@ -1,10 +1,6 @@
-	db "GOLDFISH@" ; species name
-	dw 403, 860 ; height, weight
+	db "금붕어@" ; species name
+	dw 13, 390 ; height (dm), weight (hg)
 
-	db   "When autumn comes,"
-	next "the males patrol"
-	next "the area around"
-
-	page "their nests in"
-	next "order to protect"
-	next "their offspring.@"
+	db   "산란할 시기가 되면"
+	next "각지에서 왕콘치가 모여들어"
+	next "강물색깔을 빨갛게 물들인다@"

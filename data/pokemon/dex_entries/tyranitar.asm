@@ -1,10 +1,6 @@
-	db "ARMOR@" ; species name
-	dw 607, 4450 ; height, weight
+	db "갑옷@" ; species name
+	dw 20, 2020 ; height (dm), weight (hg)
 
-	db   "In just one of its"
-	next "mighty hands, it"
-	next "has the power to"
-
-	page "make the ground"
-	next "shake and moun-"
-	next "tains crumble.@"
+	db   "어떤 공격에도 꿈쩍도 하지 않는"
+	next "몸을 지니고 있기 때문에"
+	next "점점 승부를 걸어온다@"

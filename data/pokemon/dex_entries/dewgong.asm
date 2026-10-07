@@ -1,10 +1,6 @@
-	db "SEA LION@" ; species name
-	dw 507, 2650 ; height, weight
+	db "강치@" ; species name
+	dw 17, 1200 ; height (dm), weight (hg)
 
-	db   "It sleeps under"
-	next "shallow ocean"
-	next "waters during the"
-
-	page "day, then looks"
-	next "for food at night"
-	next "when it's cold.@"
+	db   "몸은 물의 저항이"
+	next "적은 유선형으로 되어있다"
+	next "추워질수록 기운이 솟아난다@"

@@ -1,10 +1,6 @@
-	db "SPIKE BALL@" ; species name
-	dw 100, 30 ; height, weight
+	db "바늘알@" ; species name
+	dw 3, 15 ; height (dm), weight (hg)
 
-	db   "It is considered"
-	next "to be a symbol of"
-	next "good luck. Its"
-
-	page "shell is said to"
-	next "be filled with"
-	next "happiness.@"
+	db   "껍질 안에 행복이 많이"
+	next "들어 있는 것 같아서 잘 대해주면"
+	next "행운을 나누어 준다고 말한다@"

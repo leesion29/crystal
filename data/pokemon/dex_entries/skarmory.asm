@@ -1,10 +1,6 @@
-	db "ARMOR BIRD@" ; species name
-	dw 507, 1110 ; height, weight
+	db "갑옷새@" ; species name
+	dw 17, 505 ; height (dm), weight (hg)
 
-	db   "The feathers that"
-	next "it sheds are very"
-	next "sharp. It is said"
-
-	page "that people once"
-	next "used the feathers"
-	next "as swords.@"
+	db   "튼튼한 날개는 무겁게 보이지만"
+	next "뼛속은 비어있어서 가볍기에"
+	next "자유롭게 높은 하늘을 날아다닌다@"

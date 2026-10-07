@@ -1,10 +1,6 @@
-	db "DRAGON@" ; species name
-	dw 311, 550 ; height, weight
+	db "드래곤@" ; species name
+	dw 12, 250 ; height (dm), weight (hg)
 
-	db   "The male raises"
-	next "the young. If it"
-	next "is approached, it"
-
-	page "uses its toxic"
-	next "spikes to fend off"
-	next "the intruder.@"
+	db   "세포를 조사해보면 쏘드라에게는"
+	next "없었던 새로운 유전자가"
+	next "발견되어 화제가 되고있다@"

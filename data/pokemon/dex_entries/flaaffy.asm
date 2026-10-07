@@ -1,10 +1,6 @@
-	db "WOOL@" ; species name
-	dw 207, 290 ; height, weight
+	db "솜털@" ; species name
+	dw 8, 133 ; height (dm), weight (hg)
 
-	db   "Because of its"
-	next "rubbery, electric-"
-	next "ity-resistant"
-
-	page "skin, it can store"
-	next "lots of electric-"
-	next "ity in its fur.@"
+	db   "전기를 너무 많이 모은 결과"
+	next "몸의 표면에 솜털조차"
+	next "자라지 않는 부분이 생겼다@"

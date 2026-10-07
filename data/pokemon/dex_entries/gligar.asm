@@ -1,10 +1,6 @@
-	db "FLYSCORPIO@" ; species name
-	dw 307, 1430 ; height, weight
+	db "날전갈@" ; species name
+	dw 11, 648 ; height (dm), weight (hg)
 
-	db   "It builds its nest"
-	next "on a steep cliff."
-	next "When it is done"
-
-	page "gliding, it hops"
-	next "along the ground"
-	next "back to its nest.@"
+	db   "안면을 노리고 덤벼든다"
+	next "붙어 있던 먹이가 놀라는"
+	next "순간에 독침을 찌른다@"

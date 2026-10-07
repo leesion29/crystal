@@ -1,10 +1,6 @@
-	db "PIG MONKEY@" ; species name
-	dw 303, 710 ; height, weight
+	db "돈숭이@" ; species name
+	dw 10, 320 ; height (dm), weight (hg)
 
-	db   "It will beat up"
-	next "anyone who makes"
-	next "it mad, even if it"
-
-	page "has to chase them"
-	next "until the end of"
-	next "the world.@"
+	db   "자고있을 때 다가가면"
+	next "잠든 채로 화를 내기 시작하여"
+	next "영문도 모른 채 덤벼든다@"

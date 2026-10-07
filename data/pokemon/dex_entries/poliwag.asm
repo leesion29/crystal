@@ -1,10 +1,6 @@
-	db "TADPOLE@" ; species name
-	dw 200, 270 ; height, weight
+	db "올챙이@" ; species name
+	dw 6, 124 ; height (dm), weight (hg)
 
-	db   "The swirl on its"
-	next "belly is its"
-	next "insides showing"
-
-	page "through the skin."
-	next "It looks clearer"
-	next "after it eats.@"
+	db   "생기기 시작한 다리로"
+	next "걸어다니기에는 힘들기에 항상"
+	next "물속을 헤엄치고 돌아다닌다@"

@@ -1,10 +1,6 @@
-	db "AQUARABBIT@" ; species name
-	dw 207, 630 ; height, weight
+	db "물토끼@" ; species name
+	dw 8, 285 ; height (dm), weight (hg)
 
-	db   "The bubble-like"
-	next "pattern on its"
-	next "stomach helps it"
-
-	page "camouflage itself"
-	next "when it's in the"
-	next "water.@"
+	db   "가만히 귀를 기울이면"
+	next "거세게 흐르는 강 안에"
+	next "무엇이 있는가 들어서 구별한다@"

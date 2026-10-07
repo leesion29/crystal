@@ -1,10 +1,6 @@
-	db "BUBBLE JET@" ; species name
-	dw 303, 640 ; height, weight
+	db "거품뿜기@" ; species name
+	dw 10, 290 ; height (dm), weight (hg)
 
-	db   "As it uses the"
-	next "fins on the tip"
-	next "of its tail to"
-
-	page "swim, it blends"
-	next "with the water"
-	next "perfectly.@"
+	db   "샤미드의 전신의 지느러미가"
+	next "빨리 움직이기 시작하는 것은"
+	next "몇 시간 뒤에 비가 내린다는 증거@"

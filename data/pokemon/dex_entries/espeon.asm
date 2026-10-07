@@ -1,10 +1,6 @@
-	db "SUN@" ; species name
-	dw 211, 580 ; height, weight
+	db "태양@" ; species name
+	dw 9, 265 ; height (dm), weight (hg)
 
-	db   "The tip of its"
-	next "forked tail"
-	next "quivers when it is"
-
-	page "predicting its"
-	next "opponent's next"
-	next "move.@"
+	db   "전신의 세밀한 털로"
+	next "공기의 흐름을 느껴서"
+	next "상대방의 행동을 예측한다@"

@@ -78,18 +78,20 @@ DoDexSearchSlowpokeFrame:
 
 DisplayDexEntry:
 	call GetPokemonName
-	hlcoord 9, 3
+	hlcoord 9, 2
 	call PlaceString ; mon species
 	ld a, [wTempSpecies]
 	ld b, a
 	call GetDexEntryPointer
 	ld a, b
 	push af
-	hlcoord 9, 5
+	hlcoord 9, 4
 	call PlaceFarString ; dex species
 	ld h, b
 	ld l, c
 	push de
+	ld de, .Pokemon
+	call PlaceString
 ; Print dex number
 	hlcoord 2, 8
 	ld a, $5c ; No
@@ -124,16 +126,16 @@ DisplayDexEntry:
 	jr z, .skip_height
 	push hl
 	push de
-; Print the height, with two of the four digits in front of the decimal point
+; The entry stores decimetres. Clear unknown digits before printing metres.
+	hlcoord 14, 6
+	ld de, .HeightValue
+	call PlaceString
 	ld hl, sp+0
 	ld d, h
 	ld e, l
-	hlcoord 12, 7
-	lb bc, 2, (2 << 4) | 4
+	hlcoord 14, 6
+	lb bc, 2, (2 << 4) | 3
 	call PrintNum
-; Replace the decimal point with a ft symbol
-	hlcoord 14, 7
-	ld [hl], $5e
 	pop af
 	pop hl
 
@@ -150,69 +152,40 @@ DisplayDexEntry:
 	or d
 	jr z, .skip_weight
 	push de
-; Print the weight, with four of the five digits in front of the decimal point
+; The entry stores hectograms. Display kilograms with one decimal place.
+	hlcoord 12, 8
+	ld de, .WeightValue
+	call PlaceString
 	ld hl, sp+0
 	ld d, h
 	ld e, l
-	hlcoord 11, 9
-	lb bc, 2, (4 << 4) | 5
+	hlcoord 12, 8
+	lb bc, 2, (3 << 4) | 4
 	call PrintNum
 	pop de
 
 .skip_weight
-; Page 1
-	lb bc, 5, SCREEN_WIDTH - 2
-	hlcoord 2, 11
-	call ClearBox
+; Gold's description is one page of three 8x16 lines (rows 10-15).
+	lb bc, 6, SCREEN_WIDTH - 2
 	hlcoord 1, 10
+	call ClearBox
+	hlcoord 1, 9
 	ld bc, SCREEN_WIDTH - 1
 	ld a, $61 ; horizontal divider
 	call ByteFill
-	; page number
-	hlcoord 1, 9
-	ld [hl], $55
-	inc hl
-	ld [hl], $55
-	hlcoord 1, 10
-	ld [hl], $56 ; P.
-	inc hl
-	ld [hl], $57 ; 1
 	pop de
 	inc de
 	pop af
-	hlcoord 2, 11
-	push af
-	call PlaceFarString
-	pop bc
-	ld a, [wPokedexStatus]
-	or a ; check for page 2
-	ret z
-
-; Page 2
-	push bc
-	push de
-	lb bc, 5, SCREEN_WIDTH - 2
-	hlcoord 2, 11
-	call ClearBox
-	hlcoord 1, 10
-	ld bc, SCREEN_WIDTH - 1
-	ld a, $61
-	call ByteFill
-	; page number
-	hlcoord 1, 9
-	ld [hl], $55
-	inc hl
-	ld [hl], $55
-	hlcoord 1, 10
-	ld [hl], $56 ; P.
-	inc hl
-	ld [hl], $58 ; 2
-	pop de
-	inc de
-	pop af
-	hlcoord 2, 11
+	hlcoord 1, 11
 	call PlaceFarString
 	ret
+
+.Pokemon:
+	db "포켓몬@"
+.HeightValue:
+	db "    m@"
+.WeightValue:
+	db "     kg@"
 
 POKeString: ; unreferenced
 	db "#@"
@@ -259,27 +232,24 @@ GetDexEntryPagePointer:
 	ld a, b
 	call GetFarByte
 	inc hl
+	cp HANGUL_POC_ESCAPE
+	jr z, .skip_glyph
 	cp '@'
 	jr nz, .loop1
 ; skip height and weight
 rept 4
 	inc hl
 endr
-; if c != 1: skip entry
-	dec c
-	jr z, .done
-; skip entry
-.loop2
-	ld a, b
-	call GetFarByte
-	inc hl
-	cp '@'
-	jr nz, .loop2
-
+; There is only one page. Legacy page selectors resolve to that same page.
 .done
 	ld d, h
 	ld e, l
 	pop hl
 	ret
+
+.skip_glyph
+	inc hl ; a glyph index may itself equal '@'
+	inc hl
+	jr .loop1
 
 INCLUDE "data/pokemon/dex_entry_pointers.asm"

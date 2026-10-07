@@ -1,10 +1,6 @@
-	db "POISON PIN@" ; species name
-	dw 207, 440 ; height, weight
+	db "독침@" ; species name
+	dw 8, 200 ; height (dm), weight (hg)
 
-	db   "It has a docile"
-	next "nature. If it is"
-	next "threatened with"
-
-	page "attack, it raises"
-	next "the barbs that are"
-	next "all over its body.@"
+	db   "새끼에게 먹이를 나누어줄 때"
+	next "어미가 씹어서 소화해놓은"
+	next "먹이를 토해서 준다@"

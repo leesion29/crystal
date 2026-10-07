@@ -1,10 +1,6 @@
-	db "SEED@" ; species name
-	dw 204, 150 ; height, weight
+	db "씨앗@" ; species name
+	dw 7, 69 ; height (dm), weight (hg)
 
-	db   "While it is young,"
-	next "it uses the"
-	next "nutrients that are"
-
-	page "stored in the"
-	next "seeds on its back"
-	next "in order to grow.@"
+	db   "등의 씨앗 안에는"
+	next "영양이 가득하다  씨앗은"
+	next "몸과함께 크게 자란다@"

@@ -1,10 +1,6 @@
-	db "COCOON@" ; species name
-	dw 204, 220 ; height, weight
+	db "번데기@" ; species name
+	dw 7, 99 ; height (dm), weight (hg)
 
-	db   "This is its pre-"
-	next "evolved form. At"
-	next "this stage, it can"
-
-	page "only harden, so it"
-	next "remains motionless"
-	next "to avoid attack.@"
+	db   "껍질 안은 진화의 준비로"
+	next "매우 부드럽고 부서지기 쉽다"
+	next "되도록이면 움직이지 않으려 한다@"

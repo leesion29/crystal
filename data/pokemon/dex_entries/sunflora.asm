@@ -1,10 +1,6 @@
-	db "SUN@" ; species name
-	dw 207, 190 ; height, weight
+	db "태양@" ; species name
+	dw 8, 85 ; height (dm), weight (hg)
 
-	db   "As the hot season"
-	next "approaches, the"
-	next "petals on this"
-
-	page "#MON's face"
-	next "become more vivid"
-	next "and lively.@"
+	db   "햇빛을 에너지로 바꾼다"
+	next "태양이 저물어 어두워지면"
+	next "꽃잎을 닫고 그자리에서 머문다@"

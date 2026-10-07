@@ -33,6 +33,8 @@ DecodeSizedHangulName::
 	inc de
 	cp '@'
 	jr z, .end
+	cp $0c
+	jr nc, .packed_standard
 	ld c, a
 	ld a, HANGUL_POC_ESCAPE
 	ld [hli], a
@@ -40,6 +42,10 @@ DecodeSizedHangulName::
 	ld [hli], a
 	ld a, [de]
 	inc de
+	ld [hli], a
+	jr .packed
+.packed_standard
+; Gold species names may end in a one-byte gender sign or digit.
 	ld [hli], a
 	jr .packed
 .legacy
@@ -82,7 +88,12 @@ DecodeSizedHangulName::
 	jr z, .padding
 	dec a
 	cp $0b
-	jr nc, .invalid
+	jr c, .packed_glyph
+	inc a
+	cp FIRST_REGULAR_TEXT_CHAR
+	jr c, .invalid
+	jr .packed_validate
+.packed_glyph
 	ld a, c
 	cp 2 ; index and at least one terminator byte must remain
 	jr c, .invalid

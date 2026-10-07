@@ -1,10 +1,6 @@
-	db "EGG@" ; species name
-	dw 307, 760 ; height, weight
+	db "알@" ; species name
+	dw 11, 346 ; height (dm), weight (hg)
 
-	db   "People try to"
-	next "catch it for its"
-	next "extremely"
-
-	page "nutritious eggs,"
-	next "but it rarely can"
-	next "be found.@"
+	db   "가지고 있는 알을"
+	next "깨지지 않도록 조심해서 걸어다닌다"
+	next "그러나 도망치는 것은 매우 빠르다@"

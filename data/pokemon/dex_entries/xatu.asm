@@ -1,10 +1,6 @@
-	db "MYSTIC@" ; species name
-	dw 411, 330 ; height, weight
+	db "정령@" ; species name
+	dw 15, 150 ; height (dm), weight (hg)
 
-	db   "Once it begins to"
-	next "meditate at sun-"
-	next "rise, the entire"
-
-	page "day will pass"
-	next "before it will"
-	next "move again.@"
+	db   "거의 움직이거나 울지도 않고"
+	next "가만히 있는 것은 과거와 미래를"
+	next "보고있기 때문이라고 믿어지고 있다@"

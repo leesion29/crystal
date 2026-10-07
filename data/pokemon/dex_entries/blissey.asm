@@ -1,10 +1,6 @@
-	db "HAPPINESS@" ; species name
-	dw 411, 1030 ; height, weight
+	db "행복@" ; species name
+	dw 15, 468 ; height (dm), weight (hg)
 
-	db   "Biting into one"
-	next "of the delicious"
-	next "eggs that BLISSEY"
-
-	page "provides will make"
-	next "everyone around"
-	next "smile with joy.@"
+	db   "해피너스가 낳은 알을"
+	next "한입이라도 먹은 사람은"
+	next "누구에게든지 상냥하게 되어진다@"

@@ -1,10 +1,6 @@
-	db "DARK@" ; species name
-	dw 200, 240 ; height, weight
+	db "다크@" ; species name
+	dw 6, 108 ; height (dm), weight (hg)
 
-	db   "Around dawn, its"
-	next "ominous howl"
-	next "echoes through the"
-
-	page "area to announce"
-	next "that this is its"
-	next "territory.@"
+	db   "동료에게 연락을 할 때랑"
+	next "먹이를 쫓을 때에는"
+	next "울음소리의 종류가 다르다@"

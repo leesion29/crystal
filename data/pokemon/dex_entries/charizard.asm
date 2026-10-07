@@ -1,10 +1,6 @@
-	db "FLAME@" ; species name
-	dw 507, 2000 ; height, weight
+	db "화염@" ; species name
+	dw 17, 905 ; height (dm), weight (hg)
 
-	db   "It uses its wings"
-	next "to fly high. The"
-	next "temperature of its"
-
-	page "fire increases as"
-	next "it gains exper-"
-	next "ience in battle.@"
+	db   "정말 화가 난 리자몽의"
+	next "꼬리 끝의 화염은"
+	next "푸른빛으로 불타오른다@"

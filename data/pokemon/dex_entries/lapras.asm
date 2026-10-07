@@ -1,10 +1,6 @@
-	db "TRANSPORT@" ; species name
-	dw 802, 4850 ; height, weight
+	db "탈것@" ; species name
+	dw 25, 2200 ; height (dm), weight (hg)
 
-	db   "This gentle"
-	next "#MON loves to"
-	next "give people rides"
-
-	page "and provides a ve-"
-	next "ry comfortable way"
-	next "to get around.@"
+	db   "부드러운 마음씨의 소유자"
+	next "좀처럼 싸우려 하지 않기 때문에"
+	next "많이 잡혀서 수가 줄었다@"

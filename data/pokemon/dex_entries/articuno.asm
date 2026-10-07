@@ -1,10 +1,6 @@
-	db "FREEZE@" ; species name
-	dw 507, 1220 ; height, weight
+	db "냉동@" ; species name
+	dw 17, 554 ; height (dm), weight (hg)
 
-	db   "Legendary bird"
-	next "#MON. As it"
-	next "flies through the"
-
-	page "sky, it cools the"
-	next "air, causing snow"
-	next "to fall.@"
+	db   "비쳐보이는 훌륭한 날개는"
+	next "얼음으로 되어있다고 전해지는"
+	next "전설의 포켓몬이다@"

@@ -1,10 +1,6 @@
-	db "COCONUT@" ; species name
-	dw 607, 2650 ; height, weight
+	db "야자열매@" ; species name
+	dw 20, 1200 ; height (dm), weight (hg)
 
-	db   "Living in a good"
-	next "environment makes"
-	next "it grow lots of"
-
-	page "heads. A head that"
-	next "drops off becomes"
-	next "an EXEGGCUTE.@"
+	db   "3개의 머리는 생각하는 것이"
+	next "따로따로 지만 사이가 좋기에"
+	next "싸우는 일은 없다는 것 같다@"

@@ -1,10 +1,6 @@
-	db "SNAKE@" ; species name
-	dw 607, 150 ; height, weight
+	db "뱀@" ; species name
+	dw 20, 69 ; height (dm), weight (hg)
 
-	db   "It flutters the"
-	next "tip of its tongue"
-	next "to seek out the"
-
-	page "scent of prey,"
-	next "then swallows the"
-	next "prey whole.@"
+	db   "자유롭게 턱을 뺄 수 있어서"
+	next "커다란 먹이라도 삼킬 수 있지만"
+	next "무거워져서 움직일 수 없게된다@"

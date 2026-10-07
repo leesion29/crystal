@@ -324,7 +324,7 @@ SECTION "Hangul PoC Buffer", WRAM0
 
 ; One 8x16 glyph after 1bpp-to-2bpp expansion.
 wHangulFontGfx:: ds 2 tiles
-; bit 0: dynamic cache active; bit 7: invert uploaded font pixels (Pokédex).
+; bit 0: cache active; bit 6: pin newly stored label tiles; bit 7: invert pixels.
 ; ResetHangulTiles clears both bits whenever LoadStandardFont is called.
 wHangulDynamicMode:: db
 
@@ -332,6 +332,7 @@ wHangulDynamicMode:: db
 SECTION "Hangul Tile Cache", WRAMX, BANK[$2]
 
 ; One source code pair per even-numbered tile pair from $80 through $ee.
+; The bank byte reserves bit 7 for USED and bit 6 for PINNED (Pokédex sidebar).
 wHangulAttributes:: ds MAX_HANGUL_TILE_COUNT * 2
 
 

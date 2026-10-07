@@ -1,10 +1,6 @@
-	db "SEED@" ; species name
-	dw 607, 2210 ; height, weight
+	db "씨앗@" ; species name
+	dw 20, 1000 ; height (dm), weight (hg)
 
-	db   "As it warms it-"
-	next "self and absorbs"
-	next "the sunlight, its"
-
-	page "flower petals"
-	next "release a pleasant"
-	next "fragrance.@"
+	db   "커다란 꽃잎을 펴서"
+	next "햇빛을 받고 있으면"
+	next "몸에 힘이 가득 넘쳐난다@"

@@ -1,10 +1,6 @@
-	db "HIBERNANT@" ; species name
-	dw 511, 2770 ; height, weight
+	db "동면@" ; species name
+	dw 18, 1258 ; height (dm), weight (hg)
 
-	db   "Although it has a"
-	next "large body, it is"
-	next "quite skilled at"
-
-	page "climbing trees. It"
-	next "eats and sleeps in"
-	next "the treetops.@"
+	db   "나무타기가 특기이지만"
+	next "앞발로 나무줄기를 꺾어서"
+	next "떨어진 열매를 먹는다@"

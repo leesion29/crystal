@@ -1,10 +1,6 @@
-	db "SEED@" ; species name
-	dw 303, 290 ; height, weight
+	db "씨앗@" ; species name
+	dw 10, 130 ; height (dm), weight (hg)
 
-	db   "The bulb on its"
-	next "back grows as it"
-	next "absorbs nutrients."
-
-	page "The bulb gives off"
-	next "a pleasant aroma"
-	next "when it blooms.@"
+	db   "햇빛을 받는만큼"
+	next "몸에 힘이 솟아 나와"
+	next "등의 꽃봉오리가 자라난다@"

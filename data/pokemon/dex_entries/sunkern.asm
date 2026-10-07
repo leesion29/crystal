@@ -1,10 +1,6 @@
-	db "SEED@" ; species name
-	dw 100, 40 ; height, weight
+	db "씨앗@" ; species name
+	dw 3, 18 ; height (dm), weight (hg)
 
-	db   "It is very weak."
-	next "Its only means of"
-	next "defense is to"
-
-	page "shake its leaves"
-	next "desperately at its"
-	next "attacker.@"
+	db   "어느 아침에 돌연 날려온다"
+	next "깨비참에 공격을 받으면 잎사귀를"
+	next "거세게 흔들어서 쫓아낸다@"

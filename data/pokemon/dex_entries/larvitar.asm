@@ -1,10 +1,6 @@
-	db "ROCK SKIN@" ; species name
-	dw 200, 1590 ; height, weight
+	db "바위표면@" ; species name
+	dw 6, 720 ; height (dm), weight (hg)
 
-	db   "Born deep under-"
-	next "ground, this"
-	next "#MON becomes a"
-
-	page "pupa after eating"
-	next "enough dirt to"
-	next "make a mountain.@"
+	db   "흙을 먹으며 살고있다"
+	next "커다란 산 하나를 먹어치우면"
+	next "성충이 되기 위해 잠들기 시작한다@"

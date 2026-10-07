@@ -1,10 +1,6 @@
-	db "MOLE@" ; species name
-	dw 8, 20 ; height, weight
+	db "두더지@" ; species name
+	dw 2, 8 ; height (dm), weight (hg)
 
-	db   "It digs under-"
-	next "ground and chews"
-	next "on tree roots,"
-
-	page "sticking its head"
-	next "out only when the"
-	next "sun isn't bright.@"
+	db   "피부가 매우 얇기 때문에"
+	next "빛에 쪼이게 되면 혈액이"
+	next "데워져서 약해져버린다@"

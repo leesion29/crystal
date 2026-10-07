@@ -1,10 +1,6 @@
-	db "ELECTRIC@" ; species name
-	dw 503, 1160 ; height, weight
+	db "전기@" ; species name
+	dw 16, 526 ; height (dm), weight (hg)
 
-	db   "Legendary bird"
-	next "#MON. They say"
-	next "lightning caused"
-
-	page "by the flapping of"
-	next "its wings causes"
-	next "summer storms.@"
+	db   "반짝이는 날개로 날갯짓을 하면"
+	next "극심한 번개가 발생하는"
+	next "전설의 포켓몬중 한마리다@"

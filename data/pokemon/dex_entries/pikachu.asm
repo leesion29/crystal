@@ -1,10 +1,6 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+	db "쥐@" ; species name
+	dw 4, 60 ; height (dm), weight (hg)
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
-
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+	db   "딱딱한 열매도 전기로"
+	next "구워서 부드럽게 만든 뒤에"
+	next "먹는 지혜를 가지고 있다@"

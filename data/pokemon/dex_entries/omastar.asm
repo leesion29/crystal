@@ -1,10 +1,6 @@
-	db "SPIRAL@" ; species name
-	dw 303, 770 ; height, weight
+	db "소용돌이@" ; species name
+	dw 10, 350 ; height (dm), weight (hg)
 
-	db   "Its heavy shell"
-	next "allowed it to"
-	next "reach only nearby"
-
-	page "food. This could"
-	next "be the reason it"
-	next "is extinct.@"
+	db   "껍질에 숨은 셀러도"
+	next "날카로운 이빨로 껍질을 깨서"
+	next "안을 빨아먹고 있었던 듯 하다@"

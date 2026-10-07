@@ -1,10 +1,6 @@
-	db "BONEKEEPER@" ; species name
-	dw 303, 990 ; height, weight
+	db "뼈다귀@" ; species name
+	dw 10, 450 ; height (dm), weight (hg)
 
-	db   "Somewhere in the"
-	next "world is a ceme-"
-	next "tery just for"
-
-	page "MAROWAK. It gets"
-	next "its bones from"
-	next "those graves.@"
+	db   "들고 있는 뼈로 돌을 두드려"
+	next "소리를 내서 동료에게 연락을 하는"
+	next "모습이 목격되었다@"

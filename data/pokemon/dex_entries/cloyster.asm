@@ -1,10 +1,6 @@
-	db "BIVALVE@" ; species name
-	dw 411, 2920 ; height, weight
+	db "두조개@" ; species name
+	dw 15, 1325 ; height (dm), weight (hg)
 
-	db   "Even a missile"
-	next "can't break the"
-	next "spikes it uses to"
-
-	page "stab opponents."
-	next "They're even hard-"
-	next "er than its shell.@"
+	db   "한번 껍질을 닫아버리면"
+	next "어떠한 괴력을 소유한 자도"
+	next "여는 것은 불가능하다@"

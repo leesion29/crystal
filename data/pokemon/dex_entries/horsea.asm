@@ -1,10 +1,6 @@
-	db "DRAGON@" ; species name
-	dw 104, 180 ; height, weight
+	db "드래곤@" ; species name
+	dw 4, 80 ; height (dm), weight (hg)
 
-	db   "When they're in a"
-	next "safe location,"
-	next "they can be seen"
-
-	page "playfully tangling"
-	next "their tails"
-	next "together.@"
+	db   "커다란 상대에게 공격을 받아도"
+	next "2개의 지느러미로 능숙하게"
+	next "수중을 자유롭게 도망친다@"

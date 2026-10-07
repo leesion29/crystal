@@ -1,10 +1,6 @@
-	db "LONG NOSE@" ; species name
-	dw 108, 740 ; height, weight
+	db "긴코@" ; species name
+	dw 5, 335 ; height (dm), weight (hg)
 
-	db   "During the desert-"
-	next "ed morning hours,"
-	next "it comes ashore"
-
-	page "where it deftly"
-	next "uses its trunk to"
-	next "take a shower.@"
+	db   "재롱을 부릴 생각으로"
+	next "코를 휘두르며 오지만"
+	next "굉장한 힘이 실려있어서 위험하다@"

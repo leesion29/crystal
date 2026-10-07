@@ -214,6 +214,7 @@ Pokedex_Exit:
 	ret
 
 Pokedex_InitMainScreen:
+	farcall ReleasePinnedHangulTiles
 	xor a
 	ldh [hBGMapMode], a
 	call ClearSprites
@@ -323,6 +324,7 @@ Pokedex_UpdateMainScreen:
 	ret
 
 Pokedex_InitDexEntryScreen:
+	farcall ReleasePinnedHangulTiles
 	call LowVolume
 	xor a ; page 1
 	ld [wPokedexStatus], a
@@ -383,17 +385,8 @@ Pokedex_UpdateDexEntryScreen:
 	ld [wJumptableIndex], a
 	ret
 
-Pokedex_Page:
-	ld a, [wPokedexStatus]
-	xor 1 ; toggle page
-	ld [wPokedexStatus], a
-	call Pokedex_GetSelectedMon
-	ld [wPrevDexEntry], a
-	farcall DisplayDexEntry
-	call WaitBGMap
-	ret
-
 Pokedex_ReinitDexEntryScreen:
+	farcall ReleasePinnedHangulTiles
 ; Reinitialize the Pokédex entry screen after changing the selected mon.
 	call Pokedex_BlackOutBG
 	xor a ; page 1
@@ -420,17 +413,13 @@ Pokedex_ReinitDexEntryScreen:
 	ret
 
 DexEntryScreen_ArrowCursorData:
-	db PAD_RIGHT | PAD_LEFT, 4
-	dwcoord 1, 17  ; PAGE
-	dwcoord 6, 17  ; AREA
-	dwcoord 11, 17 ; CRY
-	dwcoord 15, 17 ; PRNT
+	db PAD_RIGHT | PAD_LEFT, 2
+	dwcoord 4, 17  ; 분포
+	dwcoord 11, 17 ; 울음소리
 
 DexEntryScreen_MenuActionJumptable:
-	dw Pokedex_Page
 	dw .Area
 	dw .Cry
-	dw .Print
 
 .Area:
 	call Pokedex_BlackOutBG
@@ -473,34 +462,6 @@ DexEntryScreen_MenuActionJumptable:
 	call PlayCry
 	ret
 
-.Print:
-	call Pokedex_ApplyPrintPals
-	xor a
-	ldh [hSCX], a
-	ld a, [wPrevDexEntryBackup]
-	push af
-	ld a, [wPrevDexEntryJumptableIndex]
-	push af
-	ld a, [wJumptableIndex]
-	push af
-	farcall PrintDexEntry
-	pop af
-	ld [wJumptableIndex], a
-	pop af
-	ld [wPrevDexEntryJumptableIndex], a
-	pop af
-	ld [wPrevDexEntryBackup], a
-	call ClearBGPalettes
-	call DisableLCD
-	call Pokedex_LoadInvertedFont
-	call Pokedex_RedisplayDexEntry
-	call EnableLCD
-	call WaitBGMap
-	ld a, POKEDEX_SCX
-	ldh [hSCX], a
-	call Pokedex_ApplyUsualPals
-	ret
-
 Pokedex_RedisplayDexEntry:
 	call Pokedex_DrawDexEntryScreenBG
 	call Pokedex_GetSelectedMon
@@ -509,6 +470,7 @@ Pokedex_RedisplayDexEntry:
 	ret
 
 Pokedex_InitOptionScreen:
+	farcall ReleasePinnedHangulTiles
 	xor a
 	ldh [hBGMapMode], a
 	call ClearSprites
@@ -613,6 +575,7 @@ Pokedex_UpdateOptionScreen:
 	ret
 
 Pokedex_InitSearchScreen:
+	farcall ReleasePinnedHangulTiles
 	xor a
 	ldh [hBGMapMode], a
 	call ClearSprites
@@ -717,6 +680,7 @@ Pokedex_UpdateSearchScreen:
 	ret
 
 Pokedex_InitSearchResultsScreen:
+	farcall ReleasePinnedHangulTiles
 	xor a
 	ldh [hBGMapMode], a
 	xor a
@@ -798,6 +762,7 @@ Pokedex_UpdateSearchResultsScreen:
 	ret
 
 Pokedex_InitUnownMode:
+	farcall ReleasePinnedHangulTiles
 	call Pokedex_LoadUnownFont
 	call Pokedex_DrawUnownModeBG
 	xor a
@@ -1086,8 +1051,14 @@ Pokedex_DrawMainScreenBG:
 	call Pokedex_PlaceBorder
 	hlcoord 1, 11
 	ld de, String_SEEN
+	ld a, [wHangulDynamicMode]
+	or $40
+	ld [wHangulDynamicMode], a
 	; Hangul occupies rows 10-11; the count stays on row 12 below it.
 	call PlaceString
+	ld a, [wHangulDynamicMode]
+	and $bf
+	ld [wHangulDynamicMode], a
 	ld hl, wPokedexSeen
 	ld b, wEndPokedexSeen - wPokedexSeen
 	call CountSetBits
@@ -1097,8 +1068,14 @@ Pokedex_DrawMainScreenBG:
 	call PrintNum
 	hlcoord 1, 14
 	ld de, String_OWN
+	ld a, [wHangulDynamicMode]
+	or $40
+	ld [wHangulDynamicMode], a
 	; Hangul occupies rows 13-14; the count stays on row 15 below it.
 	call PlaceString
+	ld a, [wHangulDynamicMode]
+	and $bf
+	ld [wHangulDynamicMode], a
 	ld hl, wPokedexCaught
 	ld b, wEndPokedexCaught - wPokedexCaught
 	call CountSetBits
@@ -1139,6 +1116,12 @@ String_START_SEARCH:
 	db $3c, $3b, $41, $42, $43, $4b, $4c, $4d, $4e, $3c, -1 ; START > SEARCH
 
 Pokedex_DrawDexEntryScreenBG:
+	; $6a is shared with the search-results corner. Select the footer variant
+	; on every entry/redraw, including return from a search result.
+	ld de, Pokedex_FooterTopBlank
+	ld hl, vTiles2 tile $6a
+	lb bc, BANK(Pokedex_FooterTopBlank), 1
+	call Request2bpp
 	call Pokedex_FillBackgroundColor2
 	hlcoord 0, 0
 	lb bc, 15, 18
@@ -1150,21 +1133,22 @@ Pokedex_DrawDexEntryScreenBG:
 	ld b, 15
 	call Pokedex_FillColumn
 	ld [hl], $39
-	hlcoord 1, 10
+	hlcoord 1, 9
 	ld bc, 19
 	ld a, $61
 	call ByteFill
-	hlcoord 1, 17
-	ld bc, 18
-	ld a, ' '
-	call ByteFill
-	hlcoord 9, 7
+	; Keep the description's bottom border at row 16. The compact menu uses
+	; only row 17; its background outside the bar stays the frame color.
+	hlcoord 9, 6
 	ld de, .Height
-	call Pokedex_PlaceString
-	hlcoord 9, 9
+	call PlaceString
+	hlcoord 9, 8
 	ld de, .Weight
+	call PlaceString
+	hlcoord 4, 16
+	ld de, .MenuTop
 	call Pokedex_PlaceString
-	hlcoord 0, 17
+	hlcoord 3, 17
 	ld de, .MenuItems
 	call Pokedex_PlaceString
 	call Pokedex_PlaceFrontpicTopLeftCorner
@@ -1173,11 +1157,16 @@ Pokedex_DrawDexEntryScreenBG:
 .Number: ; unreferenced
 	db $5c, $5d, -1 ; No.
 .Height:
-	db "HT  ?", $5e, "??", $5f, -1 ; HT  ?'??"
+	db "키    ??<DOT>?m@"
 .Weight:
-	db "WT   ???lb", -1
+	db "무게 ???<DOT>?kg@"
 .MenuItems:
-	db $3b, " PAGE AREA CRY PRNT", -1
+	; Shifted footer: text x=5/12, ends x=3/17. SCX=5 gives center x=79.
+	db $75, $77, $6f, $70, $77, $77, $77, $77, $77, $71, $72, $73, $74, $77, $76, -1
+.MenuTop:
+	; Extend the black bar behind text, spaces and cursors by one pixel.
+	; The rounded ends retain their original frame-colored first pixel row.
+	db $6a, $6b, $6a, $6a, $6a, $6a, $6a, $6a, $6c, $6c, $6d, $6e, $6a, -1
 
 Pokedex_DrawOptionScreenBG:
 	call Pokedex_FillBackgroundColor2
@@ -1202,16 +1191,18 @@ Pokedex_DrawOptionScreenBG:
 	ret
 
 .Title:
-	db $3b, " OPTION ", $3c, -1
+	; Authored 옵션 pixels in the same four tiles as SELECT > OPTION.
+	; This is a raw tile string, not text rendered through the font cache.
+	db $3b, $44, $45, $46, $47, $3c, -1
 
 .Modes:
-	db   "NEW #DEX MODE"
-	next "OLD #DEX MODE"
-	next "A to Z MODE"
+	db   "신형 도감 모드"
+	next "구형 도감 모드"
+	next "가나다 순서 모드"
 	db   "@"
 
 .UnownMode:
-	db "UNOWN MODE@"
+	db "안농 도감 모드@"
 
 Pokedex_DrawSearchScreenBG:
 	call Pokedex_FillBackgroundColor2
@@ -1236,22 +1227,28 @@ Pokedex_DrawSearchScreenBG:
 	ret
 
 .Title:
-	db $3b, " SEARCH ", $3c, -1
+	; Authored 검색 pixels in the same four tiles as START > SEARCH.
+	db $3b, $4b, $4c, $4d, $4e, $3c, -1
 
 .TypeLeftRightArrows:
 	db $3d, "        ", $3e, -1
 
 .Types:
-	db   "TYPE1"
-	next "TYPE2"
+	db   "타입1"
+	next "타입2"
 	db   "@"
 
 .Menu:
-	db   "BEGIN SEARCH!!"
-	next "CANCEL"
+	db   "검색 시작!!"
+	next "그만두기"
 	db   "@"
 
 Pokedex_DrawSearchResultsScreenBG:
+	; Restore $6a before a screen that uses its original corner shape.
+	ld de, Pokedex_SearchResultsCorner
+	ld hl, vTiles2 tile $6a
+	lb bc, BANK(Pokedex_SearchResultsCorner), 1
+	call Request2bpp
 	call Pokedex_FillBackgroundColor2
 	hlcoord 0, 0
 	lb bc, 7, 7
@@ -1282,9 +1279,9 @@ Pokedex_DrawSearchResultsScreenBG:
 	ret
 
 .BottomWindowText:
-	db   "SEARCH RESULTS"
-	next "  TYPE"
-	next "    FOUND!"
+	db   "검색 결과"
+	next "  타입"
+	next "    종류 발견!"
 	db   "@"
 
 Pokedex_PlaceSearchResultsTypeStrings:
@@ -1734,20 +1731,20 @@ Pokedex_DisplayModeDescription:
 	dw .UnownMode
 
 .NewMode:
-	db   "<PK><MN> are listed by"
-	next "evolution type.@"
+	db   "포켓몬 진화형을"
+	next "기준으로 표시한다@"
 
 .OldMode:
-	db   "<PK><MN> are listed by"
-	next "official type.@"
+	db   "정식 번호를"
+	next "기준으로 표시한다@"
 
 .ABCMode:
-	db   "<PK><MN> are listed"
-	next "alphabetically.@"
+	db   "가나다 순서로"
+	next "포켓몬을 표시한다@"
 
 .UnownMode:
-	db   "UNOWN are listed"
-	next "in catching order.@"
+	db   "포획한 순으로"
+	next "안농을 표시한다@"
 
 Pokedex_DisplayChangingModesMessage:
 	xor a
@@ -1769,8 +1766,8 @@ Pokedex_DisplayChangingModesMessage:
 	ret
 
 String_ChangingModesPleaseWait:
-	db   "Changing modes."
-	next "Please wait.@"
+	db   "모드 변경 중"
+	next "기다려주세요@"
 
 Pokedex_UpdateSearchMonType:
 	ld a, [wDexArrowCursorPosIndex]
@@ -2228,7 +2225,7 @@ Pokedex_MoveArrowCursor:
 	and a
 	jr z, .no_action
 	call Pokedex_GetArrowCursorPos
-	ld [hl], ' '
+	call Pokedex_ClearArrowCursorTile
 	ld hl, wDexArrowCursorPosIndex
 	dec [hl]
 	jr .update_cursor_pos
@@ -2238,13 +2235,13 @@ Pokedex_MoveArrowCursor:
 	cp c
 	jr nc, .no_action
 	call Pokedex_GetArrowCursorPos
-	ld [hl], ' '
+	call Pokedex_ClearArrowCursorTile
 	ld hl, wDexArrowCursorPosIndex
 	inc [hl]
 
 .update_cursor_pos
 	call Pokedex_GetArrowCursorPos
-	ld [hl], '▶'
+	call Pokedex_DrawArrowCursorTile
 	ld a, 12
 	ld [wDexArrowCursorDelayCounter], a
 	xor a
@@ -2258,7 +2255,7 @@ Pokedex_MoveArrowCursor:
 
 .select
 	call Pokedex_GetArrowCursorPos
-	ld [hl], ' '
+	call Pokedex_ClearArrowCursorTile
 	ld a, [wDexArrowCursorPosIndex]
 	cp c
 	jr c, .update
@@ -2286,12 +2283,32 @@ Pokedex_BlinkArrowCursor:
 	and $8
 	jr z, .blink_on
 	call Pokedex_GetArrowCursorPos
-	ld [hl], ' '
+	call Pokedex_ClearArrowCursorTile
 	ret
 
 .blink_on
 	call Pokedex_GetArrowCursorPos
-	ld [hl], '▶'
+	call Pokedex_DrawArrowCursorTile
+	ret
+
+Pokedex_ClearArrowCursorTile:
+	ld a, [wJumptableIndex]
+	cp DEXSTATE_UPDATE_DEX_ENTRY_SCR
+	ld a, ' '
+	jr nz, .place
+	ld a, $77 ; shifted footer background
+.place
+	ld [hl], a
+	ret
+
+Pokedex_DrawArrowCursorTile:
+	ld a, [wJumptableIndex]
+	cp DEXSTATE_UPDATE_DEX_ENTRY_SCR
+	ld a, '▶'
+	jr nz, .place
+	ld a, $78 ; shifted footer cursor
+.place
+	ld [hl], a
 	ret
 
 Pokedex_ArrowCursorDelay:
@@ -2446,10 +2463,114 @@ Pokedex_LoadGFX:
 	ld hl, PokedexSlowpokeLZ
 	ld de, vTiles0
 	call Decompress
+	call Pokedex_LoadEntryMenuFont
 	ld a, 6
 	call SkipMusic
 	call EnableLCD
 	ret
+
+Pokedex_LoadEntryMenuFont:
+; Called with LCD off after the generic extra font / Pokedex graphics load.
+; $6b-$78 are outside both normal ($31-$6a at most) Pokedex graphics and
+; the footprint ($62-$65), and below the dynamic glyph pairs ($80-$eb).
+	ld hl, .Gfx
+	ld de, vTiles2 tile $6d
+	ld a, BANK(Pokedex_LoadEntryMenuFont)
+	ld bc, .GfxEnd - .Gfx
+	; The authored PNG is already white text on black, unlike the font.
+	; Copy its DMG-palette 2bpp pixels directly, without inversion.
+	call FarCopyBytes
+	; Move the entire footer up one pixel without editing the user's PNG.
+	; Four distinct first rows cover the current six authored text tiles.
+	ld hl, vTiles2 tile $73
+	ld de, vTiles2 tile $6b
+	call .MakeTop
+	ld hl, vTiles2 tile $75
+	ld de, vTiles2 tile $6c
+	call .MakeTop
+	ld hl, vTiles2 tile $77
+	ld de, vTiles2 tile $6d
+	call .MakeTop
+	ld hl, vTiles2 tile $78
+	ld de, vTiles2 tile $6e
+	call .MakeTop
+	; Destination is below source: forward copies cannot destroy unread tiles.
+	ld hl, vTiles2 tile $73 + 2
+	ld de, vTiles2 tile $6f
+	ld b, 6
+.shift_text
+	push bc
+	call .ShiftUp
+	inc hl
+	inc hl
+	pop bc
+	dec b
+	jr nz, .shift_text
+	ld hl, vTiles2 tile $3b + 2
+	ld de, vTiles2 tile $75
+	call .ShiftUp
+	ld hl, vTiles2 tile $3c + 2
+	ld de, vTiles2 tile $76
+	call .ShiftUp
+	ld hl, vTiles2 tile $7f + 2
+	ld de, vTiles2 tile $77
+	call .ShiftUp
+	ld hl, vTiles1 tile ('▶' - $80) + 2
+	ld de, vTiles2 tile $78
+	call .ShiftUp
+	; The arrow has ink on its first row. Merge its first two rows so the
+	; seven-pixel cursor keeps the tip instead of clipping it during the lift.
+	ld a, [vTiles1 tile ('▶' - $80)]
+	ld b, a
+	ld a, [vTiles1 tile ('▶' - $80) + 2]
+	and b ; inverted glyph: zero pixels are white ink
+	ld [vTiles2 tile $78], a
+	ld a, [vTiles1 tile ('▶' - $80) + 1]
+	ld b, a
+	ld a, [vTiles1 tile ('▶' - $80) + 3]
+	and b
+	ld [vTiles2 tile $78 + 1], a
+	ret
+
+.MakeTop:
+	push hl
+	ld hl, vTiles2 tile $39
+	ld bc, 14
+	call CopyBytes
+	pop hl
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	ret
+
+.ShiftUp:
+	ld bc, 14
+	call CopyBytes
+	; The last pixel row becomes the interface background, shortening the bar.
+	ld a, [vTiles2 tile $32]
+	ld [de], a
+	inc de
+	ld a, [vTiles2 tile $32 + 1]
+	ld [de], a
+	inc de
+	ret
+
+.Gfx:
+	INCBIN "gfx/pokedex/entry_menu.2bpp"
+.GfxEnd:
+	assert .GfxEnd - .Gfx == 12 * TILE_SIZE
+
+Pokedex_FooterTopBlank:
+	; Preserve the description border's first seven rows, extend black into
+	; the last. Normal and SGB border bytes are identical in this project.
+	INCBIN "gfx/pokedex/pokedex.2bpp", ($39 - $31) * TILE_SIZE, 14
+	db $ff, $ff
+
+Pokedex_SearchResultsCorner:
+	; Normal and SGB use the same $6a corner; avoid changing either PNG.
+	INCBIN "gfx/pokedex/pokedex.2bpp", ($6a - $31) * TILE_SIZE, TILE_SIZE
 
 Pokedex_LoadInvertedFont:
 	call LoadStandardFont

@@ -1,10 +1,6 @@
-	db "LIGHT@" ; species name
-	dw 311, 500 ; height, weight
+	db "라이트@" ; species name
+	dw 12, 225 ; height (dm), weight (hg)
 
-	db   "This #MON uses"
-	next "the bright part of"
-	next "its body, which"
-
-	page "changed from a"
-	next "dorsal fin, to"
-	next "lure prey.@"
+	db   "랜턴이 내는 빛은"
+	next "5000ㅍ의 깊이에서도"
+	next "수면까지 전해질 정도로 밝다@"

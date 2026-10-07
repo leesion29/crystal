@@ -1,10 +1,6 @@
-	db "MAGNET@" ; species name
-	dw 100, 130 ; height, weight
+	db "자석@" ; species name
+	dw 3, 60 ; height (dm), weight (hg)
 
-	db   "The electricity"
-	next "emitted by the"
-	next "units on each side"
-
-	page "of its body cause"
-	next "it to become a"
-	next "strong magnet.@"
+	db   "전파에 이끌리는 성질을 지녔다"
+	next "포켓기어를 사용하면"
+	next "가까이 다가오는 일도 있는 듯하다@"

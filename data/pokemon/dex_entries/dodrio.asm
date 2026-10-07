@@ -1,10 +1,6 @@
-	db "TRIPLEBIRD@" ; species name
-	dw 511, 1880 ; height, weight
+	db "세쌍둥이@" ; species name
+	dw 18, 852 ; height (dm), weight (hg)
 
-	db   "An enemy that"
-	next "takes its eyes off"
-	next "any of the three"
-
-	page "heads--even for a"
-	next "second--will get"
-	next "pecked severely.@"
+	db   "3배의 정보를 모아서 고도의"
+	next "작전을 짠다  가끔은 많은 생각을"
+	next "해서 움직이지 못하게 될 때도있다@"

@@ -146,7 +146,7 @@ TryGetHangulTileId:
 	ld a, [hli]
 	bit HANGUL_ATTR_USED_F, a
 	jr z, .next
-	res HANGUL_ATTR_USED_F, a
+	and $3f ; strip USED and PINNED, leaving the font bank
 	cp b
 	jr nz, .next
 	ld a, [hl]
@@ -162,6 +162,14 @@ TryGetHangulTileId:
 	scf
 	jr .done
 .found
+	; A sidebar label may reuse a glyph already loaded for the name list.
+	ld a, [wHangulDynamicMode]
+	bit 6, a
+	jr z, .tile_id
+	dec hl
+	set 6, [hl]
+	inc hl
+.tile_id
 	ld a, e
 	and a
 .done
@@ -201,7 +209,9 @@ StoreHangulGlyphId:
 	push af
 	push hl
 	call GetHangulAttributeAddress
-	ld a, b
+	ld a, [wHangulDynamicMode]
+	and $40 ; pin labels that remain visible in the other Pokédex BG map
+	or b
 	set HANGUL_ATTR_USED_F, a
 	ld [hli], a
 	ld a, c
@@ -225,7 +235,13 @@ TrimHangulTiles:
 	ld hl, wHangulAttributes
 	ld d, MAX_HANGUL_TILE_COUNT
 .clear_used
+	bit 6, [hl]
+	jr z, .unpin_slot
+	set HANGUL_ATTR_USED_F, [hl]
+	jr .next_slot
+.unpin_slot
 	res HANGUL_ATTR_USED_F, [hl]
+.next_slot
 	inc hl
 	inc hl
 	dec d
@@ -254,6 +270,29 @@ TrimHangulTiles:
 	pop hl
 	pop de
 	pop bc
+	ret
+
+ReleasePinnedHangulTiles::
+; Called when leaving/rebuilding the Pokédex list, before its next text draw.
+	ldh a, [hCGB]
+	and a
+	ret z
+	ldh a, [rSVBK]
+	push af
+	di
+	ld a, BANK(wHangulAttributes)
+	ldh [rSVBK], a
+	ld hl, wHangulAttributes
+	ld b, MAX_HANGUL_TILE_COUNT
+.loop
+	res 6, [hl]
+	inc hl
+	inc hl
+	dec b
+	jr nz, .loop
+	pop af
+	ldh [rSVBK], a
+	ei
 	ret
 
 CopyHangulGlyphToBuffer:

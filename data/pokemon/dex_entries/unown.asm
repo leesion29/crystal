@@ -1,10 +1,6 @@
-	db "SYMBOL@" ; species name
-	dw 108, 110 ; height, weight
+	db "심볼@" ; species name
+	dw 5, 50 ; height (dm), weight (hg)
 
-	db   "Because different"
-	next "types of UNOWN"
-	next "exist, it is said"
-
-	page "that they must"
-	next "have a variety of"
-	next "abilities.@"
+	db   "모습과 형태가 옛날 석판에"
+	next "새겨진 문자랑 닮아서 관계가"
+	next "있을 것이라는 소문이 돌고 있다@"

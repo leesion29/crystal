@@ -1,10 +1,6 @@
-	db "LEAF@" ; species name
-	dw 211, 140 ; height, weight
+	db "잎사귀@" ; species name
+	dw 9, 64 ; height (dm), weight (hg)
 
-	db   "It loves to bask"
-	next "in the sunlight."
-	next "It uses the leaf"
-
-	page "on its head to"
-	next "seek out warm"
-	next "places.@"
+	db   "머리의 잎사귀에서 몽롱한"
+	next "향기가 감돈다  얌전하고"
+	next "햇살을 받는 것을 매우 좋아한다@"

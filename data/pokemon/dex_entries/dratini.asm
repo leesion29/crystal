@@ -1,10 +1,6 @@
-	db "DRAGON@" ; species name
-	dw 511, 70 ; height, weight
+	db "드래곤@" ; species name
+	dw 18, 33 ; height (dm), weight (hg)
 
-	db   "It sheds many lay-"
-	next "ers of skin as it"
-	next "grows larger. Dur-"
-
-	page "ing this process,"
-	next "it is protected by"
-	next "a rapid waterfall.@"
+	db   "태어났을 때 부터 크다"
+	next "탈피를 반복해서"
+	next "점점 자라 길어진다@"

@@ -1,10 +1,6 @@
-	db "LEAF@" ; species name
-	dw 311, 350 ; height, weight
+	db "잎사귀@" ; species name
+	dw 12, 158 ; height (dm), weight (hg)
 
-	db   "The scent that"
-	next "wafts from the"
-	next "leaves on its neck"
-
-	page "causes anyone who"
-	next "smells it to"
-	next "become energetic.@"
+	db   "목 주변에서 나오는"
+	next "스파이스 같은 향기를 맡으면"
+	next "어쩐지 싸우고 싶어진다@"

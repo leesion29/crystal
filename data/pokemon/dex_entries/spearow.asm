@@ -1,10 +1,6 @@
-	db "TINY BIRD@" ; species name
-	dw 100, 40 ; height, weight
+	db "아기새@" ; species name
+	dw 3, 20 ; height (dm), weight (hg)
 
-	db   "To protect its"
-	next "territory, it"
-	next "flies around"
-
-	page "ceaselessly,"
-	next "making high-"
-	next "pitched cries.@"
+	db   "짧은 날개를 쳐서"
+	next "풀숲의 벌레를 나오게 하고"
+	next "짧은 부리로 쪼아먹는다@"

@@ -15,29 +15,8 @@ PrintPage1:
 	ld [hli], a
 	inc a ; $65
 	ld [hl], a
-	hlcoord 1, 9, wPrinterTilemapBuffer
-	ld a, ' '
-	ld [hli], a
-	ld [hl], a
-	hlcoord 1, 10, wPrinterTilemapBuffer
-	ld a, $61
-	ld [hli], a
-	ld [hl], a
-	hlcoord 2, 11, wPrinterTilemapBuffer
-	lb bc, 5, 18
-	call ClearBox
-	ld a, [wTempSpecies]
-	dec a
-	call CheckCaughtMon
-	push af
-	ld a, [wTempSpecies]
-	ld b, a
-	ld c, 1 ; get page 1
-	farcall GetDexEntryPagePointer
-	pop af
-	ld a, b
-	hlcoord 1, 11, wPrinterTilemapBuffer
-	call nz, PlaceFarString
+	; Keep the already-rendered description and its cached tile IDs intact.
+	; Redrawing into this separate buffer is not tracked by TrimHangulTiles.
 	hlcoord 19, 0, wPrinterTilemapBuffer
 	ld [hl], $35
 	ld de, SCREEN_WIDTH
@@ -49,55 +28,6 @@ PrintPage1:
 	dec b
 	jr nz, .column_loop
 	ld [hl], $3a
-	ret
-
-PrintPage2:
-	hlcoord 0, 0, wPrinterTilemapBuffer
-	ld bc, 8 * SCREEN_WIDTH
-	ld a, ' '
-	call ByteFill
-	hlcoord 0, 0, wPrinterTilemapBuffer
-	ld a, $36
-	ld b, 6
-	call .FillColumn
-	hlcoord 19, 0, wPrinterTilemapBuffer
-	ld a, $37
-	ld b, 6
-	call .FillColumn
-	hlcoord 0, 6, wPrinterTilemapBuffer
-	ld [hl], $38
-	inc hl
-	ld a, $39
-	ld bc, SCREEN_HEIGHT
-	call ByteFill
-	ld [hl], $3a
-	hlcoord 0, 7, wPrinterTilemapBuffer
-	ld bc, SCREEN_WIDTH
-	ld a, $32
-	call ByteFill
-	ld a, [wTempSpecies]
-	dec a
-	call CheckCaughtMon
-	push af
-	ld a, [wTempSpecies]
-	ld b, a
-	ld c, 2 ; get page 2
-	farcall GetDexEntryPagePointer
-	pop af
-	hlcoord 1, 1, wPrinterTilemapBuffer
-	ld a, b
-	call nz, PlaceFarString
-	ret
-
-.FillColumn:
-	push de
-	ld de, SCREEN_WIDTH
-.column_loop
-	ld [hl], a
-	add hl, de
-	dec b
-	jr nz, .column_loop
-	pop de
 	ret
 
 GBPrinterStrings: ; used only for BANK(GBPrinterStrings)

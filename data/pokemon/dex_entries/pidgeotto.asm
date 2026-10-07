@@ -1,10 +1,6 @@
-	db "BIRD@" ; species name
-	dw 307, 660 ; height, weight
+	db "새@" ; species name
+	dw 11, 300 ; height (dm), weight (hg)
 
-	db   "It slowly flies in"
-	next "a circular pat-"
-	next "tern, all the"
-
-	page "while keeping a"
-	next "sharp lookout for"
-	next "prey.@"
+	db   "매우 시력이 좋다"
+	next "아무리 높은 장소에서라도"
+	next "먹이의 움직이는 모습을 구별한다@"

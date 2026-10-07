@@ -1,10 +1,6 @@
-	db "SUPERPOWER@" ; species name
-	dw 503, 2870 ; height, weight
+	db "괴력@" ; species name
+	dw 16, 1300 ; height (dm), weight (hg)
 
-	db   "With four arms"
-	next "that react more"
-	next "quickly than it"
-
-	page "can think, it can"
-	next "execute many"
-	next "punches at once.@"
+	db   "4개의 팔을 재빠르게 움직여서"
+	next "모든 각도에서 쉬지않고"
+	next "펀치와 당수를 날려온다@"

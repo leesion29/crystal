@@ -1,10 +1,6 @@
-	db "GENETIC@" ; species name
-	dw 607, 2690 ; height, weight
+	db "유전@" ; species name
+	dw 20, 1220 ; height (dm), weight (hg)
 
-	db   "Said to rest qui-"
-	next "etly in an"
-	next "undiscovered cave,"
-
-	page "this #MON was"
-	next "created solely for"
-	next "battling.@"
+	db   "극한까지 전투능력을"
+	next "높이 올렸기 때문에 눈앞의 적을"
+	next "쓰러뜨릴 생각밖에 하지 않는다@"

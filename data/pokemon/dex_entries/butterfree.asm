@@ -1,10 +1,6 @@
-	db "BUTTERFLY@" ; species name
-	dw 307, 710 ; height, weight
+	db "나비@" ; species name
+	dw 11, 320 ; height (dm), weight (hg)
 
-	db   "It flits from"
-	next "flower to flower,"
-	next "collecting honey."
-
-	page "It can even"
-	next "identify distant"
-	next "flowers in bloom.@"
+	db   "매일 꿀을 모으러 다닌다"
+	next "다리의 털에 꿀을 모아"
+	next "집에 가지고 돌아가는 습성이 있다@"

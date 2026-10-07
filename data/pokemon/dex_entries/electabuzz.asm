@@ -1,10 +1,6 @@
-	db "ELECTRIC@" ; species name
-	dw 307, 660 ; height, weight
+	db "전기@" ; species name
+	dw 11, 300 ; height (dm), weight (hg)
 
-	db   "When two"
-	next "ELECTABUZZ touch,"
-	next "they control the"
-
-	page "electric currents"
-	next "to communicate"
-	next "their feelings.@"
+	db   "몸의 표면에는 전기가"
+	next "흐르고 있다  주위가 어두우면"
+	next "전신이 푸르스름하게 빛난다@"

@@ -1,10 +1,6 @@
-	db "WATER FISH@" ; species name
-	dw 407, 1650 ; height, weight
+	db "수어@" ; species name
+	dw 14, 750 ; height (dm), weight (hg)
 
-	db   "Its body is always"
-	next "slimy. It often"
-	next "bangs its head on"
-
-	page "the river bottom"
-	next "as it swims but"
-	next "seems not to care.@"
+	db   "태평한 성격으로"
+	next "제멋대로 헤엄치고는 항상"
+	next "배 밑에 머리를 부딪히고 있다@"

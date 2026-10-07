@@ -1,10 +1,6 @@
-	db "LAND SNAKE@" ; species name
-	dw 411, 310 ; height, weight
+	db "땅뱀@" ; species name
+	dw 15, 140 ; height (dm), weight (hg)
 
-	db   "It hides deep"
-	next "inside caves where"
-	next "no light ever"
-
-	page "reaches it and"
-	next "remains virtually"
-	next "motionless there.@"
+	db   "누군가에게 들키면"
+	next "꼬리로 땅을 파서"
+	next "뒤를 보이고 도망치기 시작한다@"

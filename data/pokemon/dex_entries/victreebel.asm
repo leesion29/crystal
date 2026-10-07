@@ -1,10 +1,6 @@
-	db "FLYCATCHER@" ; species name
-	dw 507, 340 ; height, weight
+	db "파리잡이@" ; species name
+	dw 17, 155 ; height (dm), weight (hg)
 
-	db   "Once ingested into"
-	next "this #MON's"
-	next "body, even the"
-
-	page "hardest object"
-	next "will melt into"
-	next "nothing.@"
+	db   "많은 먹이를 녹인"
+	next "용해액은 단맛이 많이 나서"
+	next "더욱 먹이를 모으기 쉽게된다@"

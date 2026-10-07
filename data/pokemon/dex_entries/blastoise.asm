@@ -1,10 +1,6 @@
-	db "SHELLFISH@" ; species name
-	dw 503, 1890 ; height, weight
+	db "껍질@" ; species name
+	dw 16, 855 ; height (dm), weight (hg)
 
-	db   "It firmly plants"
-	next "its feet on the"
-	next "ground before"
-
-	page "shooting water"
-	next "from the jets on"
-	next "its back.@"
+	db   "분사한 물의 위력에"
+	next "밀리지 않도록 특별히"
+	next "체중을 무겁게 불리고 있다@"

@@ -1,10 +1,6 @@
-	db "IRON SNAKE@" ; species name
-	dw 3002, 8820 ; height, weight
+	db "철뱀@" ; species name
+	dw 92, 4000 ; height (dm), weight (hg)
 
-	db   "The many small"
-	next "metal particles"
-	next "that cover this"
-
-	page "#MON's body"
-	next "reflect bright"
-	next "light well.@"
+	db   "깊은 땅속 아래서"
+	next "압축되어진 몸은"
+	next "다이아몬드보다 단단하다@"

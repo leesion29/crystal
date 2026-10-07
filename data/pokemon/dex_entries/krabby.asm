@@ -1,10 +1,6 @@
-	db "RIVER CRAB@" ; species name
-	dw 104, 140 ; height, weight
+	db "게@" ; species name
+	dw 4, 65 ; height (dm), weight (hg)
 
-	db   "If it is unable"
-	next "to find food, it"
-	next "will absorb"
-
-	page "nutrients by"
-	next "swallowing a"
-	next "mouthful of sand.@"
+	db   "위험이 닥치면 입에서 뿜어내는"
+	next "거품으로 전신을 감싸서"
+	next "몸을 크게 보이려고 한다@"

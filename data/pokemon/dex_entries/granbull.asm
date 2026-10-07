@@ -1,10 +1,6 @@
-	db "FAIRY@" ; species name
-	dw 407, 1070 ; height, weight
+	db "요정@" ; species name
+	dw 14, 487 ; height (dm), weight (hg)
 
-	db   "It can make most"
-	next "any #MON run"
-	next "away simply by"
-
-	page "opening its mouth"
-	next "wide to reveal its"
-	next "big fangs.@"
+	db   "정말은 겁쟁이라서 겁이 많다"
+	next "공격받으면 필사적으로 손발을"
+	next "흔들어 적을 쫓으려고 한다@"

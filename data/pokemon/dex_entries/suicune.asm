@@ -1,10 +1,6 @@
-	db "AURORA@" ; species name
-	dw 607, 4120 ; height, weight
+	db "오로라@" ; species name
+	dw 20, 1870 ; height (dm), weight (hg)
 
-	db   "This divine"
-	next "#MON blows"
-	next "around the world,"
-
-	page "always in search"
-	next "of a pure"
-	next "reservoir.@"
+	db   "일순간에 더럽고 탁한"
+	next "물도 맑게 하는 힘을 지녔다"
+	next "북풍이 새로 태어났다고 말한다@"

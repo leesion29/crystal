@@ -1,10 +1,6 @@
-	db "BAT@" ; species name
-	dw 503, 1210 ; height, weight
+	db "박쥐@" ; species name
+	dw 16, 550 ; height (dm), weight (hg)
 
-	db   "When it plunges"
-	next "its fangs into its"
-	next "prey, it instantly"
-
-	page "draws and gulps"
-	next "down more than ten"
-	next "ounces of blood.@"
+	db   "아무리 단단한 피부라도"
+	next "날카로운 송곳니로 뚫어서"
+	next "피를 듬뿍 빨아 마신다@"

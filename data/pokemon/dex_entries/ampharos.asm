@@ -1,10 +1,6 @@
-	db "LIGHT@" ; species name
-	dw 407, 1360 ; height, weight
+	db "라이트@" ; species name
+	dw 14, 615 ; height (dm), weight (hg)
 
-	db   "When it gets dark,"
-	next "the light from its"
-	next "bright, shiny tail"
-
-	page "can be seen from"
-	next "far away on the"
-	next "ocean's surface.@"
+	db   "꼬리 끝이 빛나며 반짝인다"
+	next "빛은 아주 먼 곳까지 닿아서"
+	next "길잃은 자들의 이정표가 된다@"

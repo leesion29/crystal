@@ -1,10 +1,6 @@
-	db "HUMANSHAPE@" ; species name
-	dw 407, 900 ; height, weight
+	db "인간형태@" ; species name
+	dw 14, 406 ; height (dm), weight (hg)
 
-	db   "It has several"
-	next "different cry pat-"
-	next "terns, each of"
-
-	page "which seems to"
-	next "have its own"
-	next "meaning.@"
+	db   "리드미컬하게 몸을 흔들고 있다"
+	next "그당시의 감정에 따라"
+	next "리듬은 바뀌는 것 같다@"

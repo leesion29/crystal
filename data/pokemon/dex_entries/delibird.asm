@@ -1,10 +1,6 @@
-	db "DELIVERY@" ; species name
-	dw 211, 350 ; height, weight
+	db "배달@" ; species name
+	dw 9, 160 ; height (dm), weight (hg)
 
-	db   "It always carries"
-	next "its food with it,"
-	next "wherever it goes."
-
-	page "If attacked, it"
-	next "throws its food at"
-	next "the opponent.@"
+	db   "하루종일 먹이를 운반한다"
+	next "조난당한 사람이 딜리버드의"
+	next "먹이로 살아난 이야기도 있다@"

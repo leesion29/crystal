@@ -1,10 +1,6 @@
-	db "MEGATON@" ; species name
-	dw 407, 6620 ; height, weight
+	db "메가톤@" ; species name
+	dw 14, 3000 ; height (dm), weight (hg)
 
-	db   "Its rock-like body"
-	next "is so durable,"
-	next "even high-powered"
-
-	page "dynamite blasts"
-	next "fail to scratch"
-	next "its rugged hide.@"
+	db   "1년에 한번 탈피를 한다"
+	next "탈피하고 남은 껍질은 바로 굳어"
+	next "금이가서 깨져 떨어진다@"

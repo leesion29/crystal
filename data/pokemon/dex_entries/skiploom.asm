@@ -1,10 +1,6 @@
-	db "COTTONWEED@" ; species name
-	dw 200, 20 ; height, weight
+	db "솜풀@" ; species name
+	dw 6, 10 ; height (dm), weight (hg)
 
-	db   "As soon as it"
-	next "rains, it closes"
-	next "its flower and"
-
-	page "hides in the shade"
-	next "of a tree to avoid"
-	next "getting wet.@"
+	db   "머리 위에 핀 꽃은"
+	next "기온에 의해 피거나"
+	next "지거나 하는 성질을 가지고 있다@"

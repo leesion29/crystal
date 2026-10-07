@@ -1,10 +1,6 @@
-	db "SCOUT@" ; species name
-	dw 207, 130 ; height, weight
+	db "망보기@" ; species name
+	dw 8, 60 ; height (dm), weight (hg)
 
-	db   "When acting as a"
-	next "lookout, it warns"
-	next "others of danger"
-
-	page "by screeching and"
-	next "hitting the ground"
-	next "with its tail.@"
+	db   "꼬리를 세워서 조금이라도"
+	next "먼곳의 상태를 살피고 있다"
+	next "경계심이 강한 포켓몬이다@"

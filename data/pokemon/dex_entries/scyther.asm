@@ -1,10 +1,6 @@
-	db "MANTIS@" ; species name
-	dw 411, 1230 ; height, weight
+	db "버마재비@" ; species name
+	dw 15, 560 ; height (dm), weight (hg)
 
-	db   "It's very proud of"
-	next "its speed. It"
-	next "moves so fast that"
-
-	page "its opponent does"
-	next "not even know what"
-	next "knocked it down.@"
+	db   "잘 들고 날카로운 낫을 사용하여"
+	next "풀숲을 베고 지나간다  매우 빠른"
+	next "움직임에 눈이 따라가지 못한다@"

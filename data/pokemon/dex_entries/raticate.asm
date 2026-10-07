@@ -1,10 +1,6 @@
-	db "RAT@" ; species name
-	dw 204, 410 ; height, weight
+	db "쥐@" ; species name
+	dw 7, 185 ; height (dm), weight (hg)
 
-	db   "The webs on its"
-	next "hind legs enable"
-	next "it to cross"
-
-	page "rivers. It search-"
-	next "es wide areas for"
-	next "food.@"
+	db   "단단한 앞니로 무엇이든 갉는다"
+	next "콘크리드로 만들어진 빌딩도"
+	next "갉아서 넘어뜨려버린다@"

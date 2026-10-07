@@ -1,10 +1,6 @@
-	db "STARSHAPE@" ; species name
-	dw 100, 70 ; height, weight
+	db "별@" ; species name
+	dw 3, 30 ; height (dm), weight (hg)
 
-	db   "If the impact site"
-	next "of a meteorite is"
-	next "found, this"
-
-	page "#MON is certain"
-	next "to be within the"
-	next "immediate area.@"
+	db   "별님같은 실루엣"
+	next "그 모습 때문에 유성을 타고"
+	next "나타난다고 믿어지고 있다@"

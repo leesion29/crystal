@@ -1,10 +1,6 @@
-	db "MOUSE@" ; species name
-	dw 207, 660 ; height, weight
+	db "쥐@" ; species name
+	dw 8, 300 ; height (dm), weight (hg)
 
-	db   "If its electric"
-	next "pouches run empty,"
-	next "it raises its tail"
-
-	page "to gather electri-"
-	next "city from the"
-	next "atmosphere.@"
+	db   "전기가 모이면"
+	next "근육이 자극되어 평상시보다"
+	next "공격적으로 되어버린다@"

@@ -1,10 +1,6 @@
-	db "HAPPINESS@" ; species name
-	dw 200, 70 ; height, weight
+	db "행복@" ; species name
+	dw 6, 32 ; height (dm), weight (hg)
 
-	db   "Although it does"
-	next "not flap its wings"
-	next "very much, it can"
-
-	page "stay up in the air"
-	next "as it tags along"
-	next "after its trainer.@"
+	db   "마음 좋은 사람 앞에"
+	next "행복을 가져다주기 위해"
+	next "모습을 나타낸다고 전해지고 있다@"

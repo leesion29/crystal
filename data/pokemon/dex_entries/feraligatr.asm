@@ -1,10 +1,6 @@
-	db "BIG JAW@" ; species name
-	dw 707, 1960 ; height, weight
+	db "큰턱@" ; species name
+	dw 23, 888 ; height (dm), weight (hg)
 
-	db   "Although it has a"
-	next "massive body, its"
-	next "powerful hind legs"
-
-	page "enable it to move"
-	next "quickly, even on"
-	next "the ground.@"
+	db   "크고 강력한 턱으로"
+	next "물어뜯으면 그대로 목을 흔들어"
+	next "상대를 산산조각 내버린다@"

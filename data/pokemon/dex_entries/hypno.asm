@@ -1,10 +1,6 @@
-	db "HYPNOSIS@" ; species name
-	dw 503, 1670 ; height, weight
+	db "최면@" ; species name
+	dw 16, 756 ; height (dm), weight (hg)
 
-	db   "The longer it"
-	next "swings its"
-	next "pendulum, the"
-
-	page "longer the effects"
-	next "of its hypnosis"
-	next "last.@"
+	db   "매우 배가 고파있을 때"
+	next "만난 인간을 강제로"
+	next "잠재워 꿈을 먹어치운다@"

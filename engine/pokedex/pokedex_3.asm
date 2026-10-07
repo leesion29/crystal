@@ -137,7 +137,9 @@ DrawDexEntryScreenRightEdge:
 	call Pokedex_FillColumn2
 	ld [hl], $68
 	hlcoord 19, 17
-	ld [hl], $3c
+	; This column is uploaded at BG x=20 and exposed by POKEDEX_SCX.
+	; The compact, centered footer no longer extends to the right edge.
+	ld [hl], $32
 	xor a
 	ld b, SCREEN_HEIGHT
 	hlcoord 19, 0, wAttrmap

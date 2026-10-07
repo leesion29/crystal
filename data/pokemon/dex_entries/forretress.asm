@@ -1,10 +1,6 @@
-	db "BAGWORM@" ; species name
-	dw 311, 2770 ; height, weight
+	db "도롱이벌레@" ; species name
+	dw 12, 1258 ; height (dm), weight (hg)
 
-	db   "Usually found"
-	next "hanging on to a"
-	next "fat tree trunk. It"
-
-	page "shoots out bits of"
-	next "its shell when it"
-	next "sees action.@"
+	db   "강철 같은 단단한 껍질로"
+	next "전신을 둘러싸고 있다"
+	next "안의 정체는 불명@"

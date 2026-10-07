@@ -1,10 +1,6 @@
-	db "BALLOON@" ; species name
-	dw 108, 90 ; height, weight
+	db "풍선@" ; species name
+	dw 5, 39 ; height (dm), weight (hg)
 
-	db   "When faced with a"
-	next "larger opponent,"
-	next "it swallows as"
-
-	page "much water as it"
-	next "can to match the"
-	next "opponent's size.@"
+	db   "전신의 독침을 날리기 위해"
+	next "10리터의 물을 한번에"
+	next "마시고 몸을 부풀려놓는다@"

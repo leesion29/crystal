@@ -1,10 +1,6 @@
-	db "HERMITCRAB@" ; species name
-	dw 503, 1730 ; height, weight
+	db "기생@" ; species name
+	dw 16, 785 ; height (dm), weight (hg)
 
-	db   "An attached"
-	next "SHELLDER won't let"
-	next "go because of the"
-
-	page "tasty flavor that"
-	next "oozes out of its"
-	next "tail.@"
+	db   "격한 싸움에서 꼬리를"
+	next "물고있는 셀러가 떨어지면"
+	next "원래의 야돈의 모습이 되어버린다@"

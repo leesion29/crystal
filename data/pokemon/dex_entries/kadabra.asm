@@ -1,10 +1,6 @@
-	db "PSI@" ; species name
-	dw 403, 1250 ; height, weight
+	db "초능력@" ; species name
+	dw 13, 565 ; height (dm), weight (hg)
 
-	db   "When it closes its"
-	next "eyes, twice as"
-	next "many alpha parti-"
-
-	page "cles come out of"
-	next "the surface of its"
-	next "body.@"
+	db   "강한 정신력의 소유자로"
+	next "궁지에 몰리면 몰릴수록"
+	next "능력이 높아져간다@"

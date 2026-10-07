@@ -1,10 +1,6 @@
-	db "FIVE STAR@" ; species name
-	dw 407, 780 ; height, weight
+	db "별다섯@" ; species name
+	dw 14, 356 ; height (dm), weight (hg)
 
-	db   "In the daytime"
-	next "when it gets warm,"
-	next "it curls up inside"
-
-	page "a big leaf and"
-	next "drifts off into"
-	next "a deep slumber.@"
+	db   "밤하늘의 별이 깜빡거릴 때"
+	next "반짝이는 가루를 흩뿌리며"
+	next "팔랑팔랑 날아간다@"

@@ -1,10 +1,6 @@
-	db "BALL@" ; species name
-	dw 108, 230 ; height, weight
+	db "볼@" ; species name
+	dw 5, 104 ; height (dm), weight (hg)
 
-	db   "During the study"
-	next "of this #MON,"
-	next "it was discovered"
-
-	page "that its compo-"
-	next "nents are not"
-	next "found in nature.@"
+	db   "굴러서 이동하기 때문에"
+	next "지면이 울퉁불퉁하면"
+	next "충격으로 폭발해버린다@"

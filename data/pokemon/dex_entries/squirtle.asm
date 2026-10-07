@@ -1,10 +1,6 @@
-	db "TINYTURTLE@" ; species name
-	dw 108, 200 ; height, weight
+	db "꼬마거북@" ; species name
+	dw 5, 90 ; height (dm), weight (hg)
 
-	db   "When it feels"
-	next "threatened, it"
-	next "draws its legs"
-
-	page "inside its shell"
-	next "and sprays water"
-	next "from its mouth.@"
+	db   "태어나서는 부드러운 껍질도"
+	next "곧 손으로 찌르면 뜅겨나갈 정도의"
+	next "탄력성을 지니도록 된다@"

@@ -292,34 +292,28 @@ CatchingTutorialRepeatText:
 	done
 
 Route29YoungsterText:
-	text "Yo. How are your"
-	line "#MON?"
+	text "어이"
+	line "네 포켓몬 건강하냐?"
 
-	para "If they're weak"
-	line "and not ready for"
+	para "포켓몬이 약해져서"
+	line "싸우게 하고싶지 않을 때는"
 
-	para "battle, keep out"
-	line "of the grass."
+	cont "될 수 있는 한 풀숲을 피해"
+	line "걸어가는 편이 좋아"
 	done
 
 Route29TeacherText:
-	text "See those ledges?"
-	line "It's scary to jump"
-	cont "off them."
+	text "거기에 언덕이 있지?"
 
-	para "But you can go to"
-	line "NEW BARK without"
+	para "뛰어내리는 것은 무서워도"
+	line "풀숲을 걸어가지 않고"
 
-	para "walking through"
-	line "the grass."
+	cont "연두마을까지 갈 수 있지!"
 	done
 
 Route29FisherText:
-	text "I wanted to take a"
-	line "break, so I saved"
-
-	para "to record my"
-	line "progress."
+	text "조금 쉬고싶어서"
+	line "레포트를 쓰고있었어"
 	done
 
 Route29CooltrainerMText_WaitingForDay: ; unreferenced
@@ -331,19 +325,13 @@ Route29CooltrainerMText_WaitingForDay: ; unreferenced
 	done
 
 Route29CooltrainerMText_WaitingForNight:
-	text "I'm waiting for"
-	line "#MON that"
-
-	para "appear only at"
-	line "night."
+	text "밤에만 나오는 포켓몬을"
+	line "잡기위해 여기서 기다린단다"
 	done
 
 Route29CooltrainerMText_WaitingForMorning:
-	text "I'm waiting for"
-	line "#MON that"
-
-	para "appear only in the"
-	line "morning."
+	text "아침에만 나오는 포켓몬을"
+	line "잡기위해 여기서 기다린단다"
 	done
 
 MeetTuscanyText:

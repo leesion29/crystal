@@ -1,10 +1,6 @@
-	db "PATIENT@" ; species name
-	dw 403, 630 ; height, weight
+	db "인내@" ; species name
+	dw 13, 285 ; height (dm), weight (hg)
 
-	db   "In order to con-"
-	next "ceal its black"
-	next "tail, it lives in"
-
-	page "a dark cave and"
-	next "only moves about"
-	next "at night.@"
+	db   "빛과 충격을 싫어함"
+	next "공격받으면 몸이 부풀어올라"
+	next "반격이 강력해진다@"

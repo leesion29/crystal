@@ -1,10 +1,6 @@
-	db "BALLOON@" ; species name
-	dw 100, 20 ; height, weight
+	db "풍선@" ; species name
+	dw 3, 10 ; height (dm), weight (hg)
 
-	db   "Instead of walking"
-	next "with its short"
-	next "legs, it moves"
-
-	page "around by bouncing"
-	next "on its soft,"
-	next "tender body.@"
+	db   "매우 부드러운 몸"
+	next "한번 구르면 탄성에 가속이 붙어"
+	next "전혀 멈출 수 없게된다@"

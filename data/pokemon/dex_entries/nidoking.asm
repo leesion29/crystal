@@ -1,10 +1,6 @@
-	db "DRILL@" ; species name
-	dw 407, 1370 ; height, weight
+	db "드릴@" ; species name
+	dw 14, 620 ; height (dm), weight (hg)
 
-	db   "It uses its thick"
-	next "arms, legs and"
-	next "tail to attack"
-
-	page "forcefully. Melee"
-	next "combat is its"
-	next "specialty.@"
+	db   "커다란 꼬리를 휘둘러"
+	next "상대의 기가 죽으면 튼튼한"
+	next "몸으로 돌진해온다@"

@@ -1,10 +1,6 @@
-	db "MYSTERIOUS@" ; species name
-	dw 307, 1760 ; height, weight
+	db "수수께끼@" ; species name
+	dw 11, 800 ; height (dm), weight (hg)
 
-	db   "It is said that it"
-	next "uses the seven-"
-	next "colored core of"
-
-	page "its body to send"
-	next "electric waves"
-	next "into outer space.@"
+	db   "몸의 중앙에 있는 코어라고"
+	next "불려지는 부분은 볼 때마다"
+	next "다른 색의 빛을 발산한다@"

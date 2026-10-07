@@ -1,10 +1,6 @@
-	db "FLOWER@" ; species name
-	dw 104, 130 ; height, weight
+	db "꽃@" ; species name
+	dw 4, 58 ; height (dm), weight (hg)
 
-	db   "When these dance"
-	next "together, their"
-	next "petals rub against"
-
-	page "each other,"
-	next "making pretty,"
-	next "relaxing sounds.@"
+	db   "가끔 아르코가 모여서"
+	next "춤을 추는 듯한 행동을 보인다"
+	next "태양을 부르는 의식이라 전해진다@"

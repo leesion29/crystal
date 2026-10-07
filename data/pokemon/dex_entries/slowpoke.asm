@@ -1,10 +1,6 @@
-	db "DOPEY@" ; species name
-	dw 311, 790 ; height, weight
+	db "얼간이@" ; species name
+	dw 12, 360 ; height (dm), weight (hg)
 
-	db   "It is always so"
-	next "absent-minded that"
-	next "it won't react,"
-
-	page "even if its"
-	next "flavorful tail is"
-	next "bitten.@"
+	db   "물가에서 멍하게 지내고 있다"
+	next "무언가가 꼬리를 깨물어도"
+	next "대략 하루정도 모르고 지낸다@"

@@ -1,10 +1,6 @@
-	db "MAGNET@" ; species name
-	dw 303, 1320 ; height, weight
+	db "자석@" ; species name
+	dw 10, 600 ; height (dm), weight (hg)
 
-	db   "When many"
-	next "MAGNETON gather"
-	next "together, the"
-
-	page "resulting magnetic"
-	next "storm disrupts"
-	next "radio waves.@"
+	db   "3개의 코일은 강한 자력으로"
+	next "묶여있다  가까이 다가가면"
+	next "강한 귀울림으로 공격받는다@"

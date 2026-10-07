@@ -1,10 +1,6 @@
-	db "TURTLE@" ; species name
-	dw 303, 500 ; height, weight
+	db "거북@" ; species name
+	dw 10, 225 ; height (dm), weight (hg)
 
-	db   "Its long, furry"
-	next "tail is a symbol"
-	next "of longevity,"
-
-	page "making it quite"
-	next "popular among"
-	next "older people.@"
+	db   "장수의 상징으로 여겨지고 있다"
+	next "껍질에 이끼가 붙어있는 것은"
+	next "특별히 장수를 한 거북이다@"

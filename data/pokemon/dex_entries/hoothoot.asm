@@ -1,10 +1,6 @@
-	db "OWL@" ; species name
-	dw 204, 470 ; height, weight
+	db "부엉이@" ; species name
+	dw 7, 212 ; height (dm), weight (hg)
 
-	db   "It begins to hoot"
-	next "at the same time"
-	next "every day. Some"
-
-	page "trainers use them"
-	next "in place of"
-	next "clocks.@"
+	db   "항상 한 개의 다리로 서있다"
+	next "다리를 바꾸는 순간은"
+	next "너무 빨라서 눈에 잘 띄지 않는다@"

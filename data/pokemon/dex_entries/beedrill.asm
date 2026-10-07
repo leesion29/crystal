@@ -1,10 +1,6 @@
-	db "POISON BEE@" ; species name
-	dw 303, 650 ; height, weight
+	db "독벌@" ; species name
+	dw 10, 295 ; height (dm), weight (hg)
 
-	db   "It uses sharp,"
-	next "poisonous stings"
-	next "to defeat prey,"
-
-	page "then takes the"
-	next "victim back to its"
-	next "nest for food.@"
+	db   "어떠한 상대라도 강력한"
+	next "독침으로 쏴 죽인다"
+	next "가끔은 집단적으로 공격해온다@"

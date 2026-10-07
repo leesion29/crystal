@@ -1,10 +1,6 @@
-	db "POISON GAS@" ; species name
-	dw 200, 20 ; height, weight
+	db "독가스@" ; species name
+	dw 6, 10 ; height (dm), weight (hg)
 
-	db   "If one gets close"
-	next "enough to it when"
-	next "it expels poison-"
-
-	page "ous gas, the gas"
-	next "swirling inside it"
-	next "can be seen.@"
+	db   "얇은 막과 같은 형상의 몸에는"
+	next "눈물과 기침과 콧물을 멈추게"
+	next "할 수 없는 가스가 가득하다@"

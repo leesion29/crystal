@@ -1,10 +1,6 @@
-	db "WILD DUCK@" ; species name
-	dw 207, 330 ; height, weight
+	db "천둥오리@" ; species name
+	dw 8, 150 ; height (dm), weight (hg)
 
-	db   "In order to pre-"
-	next "vent their"
-	next "extinction, more"
-
-	page "people have made"
-	next "an effort to breed"
-	next "these #MON.@"
+	db   "중요한 줄기가 나는 장소를"
+	next "빼앗으려 하는 녀석은 가지고 있는"
+	next "줄기를 사용하여 해치운다@"

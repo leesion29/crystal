@@ -1,10 +1,6 @@
-	db "VOLCANO@" ; species name
-	dw 507, 1750 ; height, weight
+	db "화산@" ; species name
+	dw 17, 795 ; height (dm), weight (hg)
 
-	db   "When heat from its"
-	next "body causes the"
-	next "air around it to"
-
-	page "shimmer, this is a"
-	next "sign that it is"
-	next "ready to battle.@"
+	db   "분노가 최고조에 달할 때"
+	next "건드린 자는 모두 일순간에"
+	next "불태워버릴 정도로 뜨겁다@"

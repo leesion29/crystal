@@ -1,10 +1,6 @@
-	db "VIRTUAL@" ; species name
-	dw 200, 720 ; height, weight
+	db "가상@" ; species name
+	dw 6, 325 ; height (dm), weight (hg)
 
-	db   "This manmade"
-	next "#MON evolved"
-	next "from the latest"
-
-	page "technology. It"
-	next "may have unprog-"
-	next "rammed reactions.@"
+	db   "혹성 개발을 할 수 있도록"
+	next "폴리곤을 버전업 했지만"
+	next "아직 하늘도 날지 못한다@"

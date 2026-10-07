@@ -1,10 +1,6 @@
-	db "WORM@" ; species name
-	dw 100, 60 ; height, weight
+	db "애벌레@" ; species name
+	dw 3, 29 ; height (dm), weight (hg)
 
-	db   "It crawls into"
-	next "foliage where it"
-	next "camouflages itself"
-
-	page "among leaves that"
-	next "are the same color"
-	next "as its body.@"
+	db   "머리의 더듬이로부터"
+	next "강렬한 냄새를 풍겨서"
+	next "적을 물리치고 몸을 보호한다@"

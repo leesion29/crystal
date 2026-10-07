@@ -1,10 +1,6 @@
-	db "DARKNESS@" ; species name
-	dw 108, 50 ; height, weight
+	db "어둠@" ; species name
+	dw 5, 21 ; height (dm), weight (hg)
 
-	db   "It hides any shiny"
-	next "object it finds in"
-	next "a secret location."
-
-	page "MURKROW and"
-	next "MEOWTH loot one"
-	next "another's stashes.@"
+	db   "밤에 모습을 발견하면"
+	next "불길한 일이 생긴다고 믿어져"
+	next "미움을 받고있는 포켓몬@"

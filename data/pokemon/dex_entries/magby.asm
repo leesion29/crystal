@@ -1,10 +1,6 @@
-	db "LIVE COAL@" ; species name
-	dw 204, 470 ; height, weight
+	db "불씨@" ; species name
+	dw 7, 214 ; height (dm), weight (hg)
 
-	db   "It naturally spits"
-	next "an 1100-degree"
-	next "flame. It is said"
-
-	page "when many appear,"
-	next "it heralds a"
-	next "volcanic eruption.@"
+	db   "숨을 쉬거나 뱉거나"
+	next "할 때마다 입과 코에서"
+	next "불꽃이 새어나와 버린다@"

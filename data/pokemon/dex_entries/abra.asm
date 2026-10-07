@@ -1,10 +1,6 @@
-	db "PSI@" ; species name
-	dw 211, 430 ; height, weight
+	db "초능력@" ; species name
+	dw 9, 195 ; height (dm), weight (hg)
 
-	db   "It hypnotizes"
-	next "itself so that it"
-	next "can teleport away"
-
-	page "when it senses"
-	next "danger, even"
-	next "if it is asleep.@"
+	db   "상대의 공격방향을 읽어서"
+	next "덤벼들기 직전에 "
+	next "순간이동으로 그 장소를 떠난다@"

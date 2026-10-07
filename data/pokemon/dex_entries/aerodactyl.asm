@@ -1,10 +1,6 @@
-	db "FOSSIL@" ; species name
-	dw 511, 1300 ; height, weight
+	db "화석@" ; species name
+	dw 18, 590 ; height (dm), weight (hg)
 
-	db   "In prehistoric"
-	next "times, this"
-	next "#MON flew"
-
-	page "freely and"
-	next "fearlessly through"
-	next "the skies.@"
+	db   "오랜 옛날의 사나운 포켓몬"
+	next "날개를 펼쳐서 하늘을"
+	next "미끄러지듯 날고 있었다고 한다@"

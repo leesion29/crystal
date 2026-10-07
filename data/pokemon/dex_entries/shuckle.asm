@@ -1,10 +1,6 @@
-	db "MOLD@" ; species name
-	dw 200, 450 ; height, weight
+	db "발효@" ; species name
+	dw 6, 205 ; height (dm), weight (hg)
 
-	db   "The fluid secreted"
-	next "by its toes carves"
-	next "holes in rocks for"
-
-	page "nesting and can be"
-	next "mixed with BERRIES"
-	next "to make a drink.@"
+	db   "항아리 같은 껍질 안에"
+	next "비축해놓은 열매는 녹아서"
+	next "질퍽한 액체가 된다고 한다@"
