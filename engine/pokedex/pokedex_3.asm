@@ -106,17 +106,40 @@ DrawPokedexSearchResultsWindow:
 	hlcoord 0, 12
 	lb bc, 5, 11
 	call ClearBox
-	ld de, .esults_D
-	hlcoord 0, 12
-	call PlaceString
+	farcall Pokedex_DrawSearchResultsSummary
+	; WX=$4a and SCX=5 align window column 0 with background column 9.
+	; Copy both halves of every Hangul glyph, not an English string fragment.
+	hlcoord 9, 11
+	decoord 0, 11
+	ld b, 7
+.summary_row
+	push bc
+	ld bc, 10
+	call CopyBytes
+	ld bc, SCREEN_WIDTH - 10
+	add hl, bc
+	ld a, e
+	add SCREEN_WIDTH - 10
+	ld e, a
+	jr nc, .next_row
+	inc d
+.next_row
+	pop bc
+	dec b
+	jr nz, .summary_row
+	; Keep the original window's right edge, rather than copying BG 0's edge.
+	hlcoord 10, 12
+	ld a, ' '
+	ld b, 5
+	call Pokedex_FillColumn2
+	hlcoord 11, 11
+	ld [hl], $66
+	hlcoord 11, 12
+	ld a, $67
+	ld b, 5
+	call Pokedex_FillColumn2
+	ld [hl], $68
 	ret
-
-.esults_D
-; (SEARCH R)
-	db   "ESULTS"
-	next ""
-; (### FOUN)
-	next "D!@"
 
 DrawDexEntryScreenRightEdge:
 	ldh a, [hBGMapAddress]

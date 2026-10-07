@@ -214,7 +214,7 @@ Pokedex_Exit:
 	ret
 
 Pokedex_InitMainScreen:
-	farcall ReleasePinnedHangulTiles
+	call Pokedex_BeginScreenRedraw
 	xor a
 	ldh [hBGMapMode], a
 	call ClearSprites
@@ -228,10 +228,13 @@ Pokedex_InitMainScreen:
 	call Pokedex_PlaceString
 	ld a, 7
 	ld [wDexListingHeight], a
-	call Pokedex_PrintListing
+	; Upload the list-map attributes first. Draw names only after the sidebar
+	; exists, so its glyphs can be pinned before the other BG map is rendered.
 	call Pokedex_SetBGMapMode_3ifDMG_4ifCGB
 	call Pokedex_ResetBGMapMode
+	call DisableLCD
 	call Pokedex_DrawMainScreenBG
+	call EnableLCD
 	ld a, POKEDEX_SCX
 	ldh [hSCX], a
 
@@ -247,10 +250,6 @@ Pokedex_InitMainScreen:
 	call WaitBGMap
 
 	call Pokedex_ResetBGMapMode
-	ld a, -1
-	ld [wCurPartySpecies], a
-	ld a, SCGB_POKEDEX
-	call Pokedex_GetSGBLayout
 	call Pokedex_UpdateCursorOAM
 	farcall DrawPokedexListWindow
 	hlcoord 0, 17
@@ -258,7 +257,14 @@ Pokedex_InitMainScreen:
 	call Pokedex_PlaceString
 	ld a, 7
 	ld [wDexListingHeight], a
-	call Pokedex_PrintListing
+	call Pokedex_RenderListing
+	; The final tile IDs must reach BG map 1 before the palettes reveal it.
+	call Pokedex_SetBGMapMode3
+	call Pokedex_ResetBGMapMode
+	ld a, -1
+	ld [wCurPartySpecies], a
+	ld a, SCGB_POKEDEX
+	call Pokedex_GetSGBLayout
 	call Pokedex_IncrementDexPointer
 	ret
 
@@ -324,7 +330,7 @@ Pokedex_UpdateMainScreen:
 	ret
 
 Pokedex_InitDexEntryScreen:
-	farcall ReleasePinnedHangulTiles
+	call Pokedex_BeginScreenRedraw
 	call LowVolume
 	xor a ; page 1
 	ld [wPokedexStatus], a
@@ -336,7 +342,7 @@ Pokedex_InitDexEntryScreen:
 	call Pokedex_InitArrowCursor
 	call Pokedex_GetSelectedMon
 	ld [wPrevDexEntry], a
-	farcall DisplayDexEntry
+	call Pokedex_RenderDexEntryText
 	call Pokedex_DrawFootprint
 	call WaitBGMap
 	ld a, $a7
@@ -386,9 +392,8 @@ Pokedex_UpdateDexEntryScreen:
 	ret
 
 Pokedex_ReinitDexEntryScreen:
-	farcall ReleasePinnedHangulTiles
+	call Pokedex_BeginScreenRedraw
 ; Reinitialize the Pokédex entry screen after changing the selected mon.
-	call Pokedex_BlackOutBG
 	xor a ; page 1
 	ld [wPokedexStatus], a
 	xor a
@@ -398,7 +403,7 @@ Pokedex_ReinitDexEntryScreen:
 	call Pokedex_LoadCurrentFootprint
 	call Pokedex_GetSelectedMon
 	ld [wPrevDexEntry], a
-	farcall DisplayDexEntry
+	call Pokedex_RenderDexEntryText
 	call Pokedex_DrawFootprint
 	call Pokedex_LoadSelectedMonTiles
 	call WaitBGMap
@@ -434,7 +439,7 @@ DexEntryScreen_MenuActionJumptable:
 	ld a, [wDexCurLocation]
 	ld e, a
 	predef Pokedex_GetArea
-	call Pokedex_BlackOutBG
+	call Pokedex_BeginScreenRedraw
 	call DelayFrame
 	xor a
 	ldh [hBGMapMode], a
@@ -465,12 +470,12 @@ DexEntryScreen_MenuActionJumptable:
 Pokedex_RedisplayDexEntry:
 	call Pokedex_DrawDexEntryScreenBG
 	call Pokedex_GetSelectedMon
-	farcall DisplayDexEntry
+	call Pokedex_RenderDexEntryText
 	call Pokedex_DrawFootprint
 	ret
 
 Pokedex_InitOptionScreen:
-	farcall ReleasePinnedHangulTiles
+	call Pokedex_BeginScreenRedraw
 	xor a
 	ldh [hBGMapMode], a
 	call ClearSprites
@@ -575,7 +580,7 @@ Pokedex_UpdateOptionScreen:
 	ret
 
 Pokedex_InitSearchScreen:
-	farcall ReleasePinnedHangulTiles
+	call Pokedex_BeginScreenRedraw
 	xor a
 	ldh [hBGMapMode], a
 	call ClearSprites
@@ -680,7 +685,7 @@ Pokedex_UpdateSearchScreen:
 	ret
 
 Pokedex_InitSearchResultsScreen:
-	farcall ReleasePinnedHangulTiles
+	call Pokedex_BeginScreenRedraw
 	xor a
 	ldh [hBGMapMode], a
 	xor a
@@ -689,14 +694,20 @@ Pokedex_InitSearchResultsScreen:
 	call ByteFill
 	call Pokedex_SetBGMapMode4
 	call Pokedex_ResetBGMapMode
+	; Both maps contain persistent result/type text. Protect it while names
+	; are rendered into the window map later in this initialization.
+	ld a, [wHangulDynamicMode]
+	or $40
+	ld [wHangulDynamicMode], a
 	farcall DrawPokedexSearchResultsWindow
-	call Pokedex_PlaceSearchResultsTypeStrings
 	ld a, 4
 	ld [wDexListingHeight], a
-	call Pokedex_PrintListing
 	call Pokedex_SetBGMapMode3
 	call Pokedex_ResetBGMapMode
 	call Pokedex_DrawSearchResultsScreenBG
+	ld a, [wHangulDynamicMode]
+	and $bf
+	ld [wHangulDynamicMode], a
 	ld a, POKEDEX_SCX
 	ldh [hSCX], a
 	ld a, $4a
@@ -706,7 +717,9 @@ Pokedex_InitSearchResultsScreen:
 	call WaitBGMap
 	call Pokedex_ResetBGMapMode
 	farcall DrawPokedexSearchResultsWindow
-	call Pokedex_PlaceSearchResultsTypeStrings
+	call Pokedex_RenderListing
+	call Pokedex_SetBGMapMode3
+	call Pokedex_ResetBGMapMode
 	call Pokedex_UpdateSearchResultsCursorOAM
 	ld a, -1
 	ld [wCurPartySpecies], a
@@ -1253,16 +1266,7 @@ Pokedex_DrawSearchResultsScreenBG:
 	hlcoord 0, 0
 	lb bc, 7, 7
 	call Pokedex_PlaceBorder
-	hlcoord 0, 11
-	lb bc, 5, 18
-	call Pokedex_PlaceBorder
-	hlcoord 1, 12
-	ld de, .BottomWindowText
-	call PlaceString
-	ld de, wDexSearchResultCount
-	hlcoord 1, 16
-	lb bc, 1, 3
-	call PrintNum
+	call Pokedex_DrawSearchResultsSummary
 	hlcoord 8, 0
 	ld [hl], $59
 	hlcoord 8, 1
@@ -1278,29 +1282,83 @@ Pokedex_DrawSearchResultsScreenBG:
 	call Pokedex_PlaceFrontpicTopLeftCorner
 	ret
 
-.BottomWindowText:
-	db   "검색 결과"
-	next "  타입"
-	next "    종류 발견!"
-	db   "@"
-
-Pokedex_PlaceSearchResultsTypeStrings:
+Pokedex_DrawSearchResultsSummary:
+; Compose the entire lower box before splitting it between BG 0 and BG 1.
+; Hangul occupies the baseline and the row above it, including at the seam.
+	hlcoord 0, 11
+	lb bc, 5, 18
+	call Pokedex_PlaceBorder
+	ld de, wStringBuffer3
 	ld a, [wDexSearchMonType1]
-	hlcoord 0, 14
-	call Pokedex_PlaceTypeString
+	call Pokedex_CopyResultTypeName
 	ld a, [wDexSearchMonType1]
 	ld b, a
 	ld a, [wDexSearchMonType2]
 	and a
-	jr z, .done
+	jr z, .single_type
 	cp b
-	jr z, .done
-	hlcoord 2, 15
-	call Pokedex_PlaceTypeString
-	hlcoord 1, 15
-	ld [hl], '/'
-.done
+	jr z, .single_type
+	push af
+	ld a, '/'
+	ld [de], a
+	inc de
+	pop af
+	call Pokedex_CopyResultTypeName
+	ld a, '@'
+	ld [de], a
+	ld de, wStringBuffer3
+	hlcoord 2, 13
+	call PlaceString
+	jr .count
+.single_type
+	ld a, '@'
+	ld [de], a
+	ld de, wStringBuffer3
+	hlcoord 2, 13
+	call PlaceString
+	ld h, b
+	ld l, c
+	ld de, .TypeSuffix
+	call PlaceString
+.count
+	ld de, wDexSearchResultCount
+	hlcoord 1, 16
+	lb bc, 1, 3
+	call PrintNum
+	hlcoord 4, 16
+	ld de, .CountSuffix
+	call PlaceString
 	ret
+
+.TypeSuffix:
+	db " 타입@"
+.CountSuffix:
+	db " 종류 발견!@"
+
+Pokedex_CopyResultTypeName:
+; A = search type index, DE = destination. Strip the search menu's padding.
+	push de
+	ld e, a
+	ld d, 0
+	ld hl, PokedexTypeSearchStrings
+rept POKEDEX_TYPE_STRING_LENGTH
+	add hl, de
+endr
+	pop de
+.skip_spaces
+	ld a, [hli]
+	cp ' '
+	jr z, .skip_spaces
+	dec hl
+.copy
+	ld a, [hli]
+	cp ' '
+	ret z
+	cp '@'
+	ret z
+	ld [de], a
+	inc de
+	jr .copy
 
 Pokedex_DrawUnownModeBG:
 	call Pokedex_FillBackgroundColor2
@@ -1458,7 +1516,12 @@ Pokedex_PlaceBorder:
 	jr .row_loop
 
 Pokedex_PrintListing:
+	call Pokedex_PrintListingText
+	jp Pokedex_LoadSelectedMonTiles
+
+Pokedex_PrintListingText:
 ; Prints the list of Pokémon on the main Pokédex screen.
+; Text-only: safe with LCD off. Picture loading uses frame-based requests.
 
 ; This check is completely useless.
 	ld a, [wCurDexMode]
@@ -1506,7 +1569,6 @@ Pokedex_PrintListing:
 	pop af
 	dec a
 	jr nz, .loop
-	call Pokedex_LoadSelectedMonTiles
 	ret
 
 .PrintEntry:
@@ -1530,13 +1592,16 @@ Pokedex_PrintNumberIfOldMode:
 	ret
 
 .printnum
+; Use the name baseline, reserving three columns before the caught marker.
+; Printing above it lets the Hangul upper tiles overwrite the digits.
 	push hl
-	ld de, -SCREEN_WIDTH
-	add hl, de
 	ld de, wTempSpecies
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
 	call PrintNum
 	pop hl
+	inc hl
+	inc hl
+	inc hl
 	ret
 
 Pokedex_PlaceCaughtSymbolIfCaught:
@@ -2357,6 +2422,38 @@ Pokedex_ApplyUsualPals:
 	ld a, $e0
 	call DmgToCgbObjPal0
 	ret
+
+Pokedex_BeginScreenRedraw:
+; Call only when rebuilding a screen (never while scrolling the live list).
+; Hide both maps before changing shared font tiles, then start a fresh cache.
+	call ClearSprites
+	call Pokedex_BlackOutBG
+	xor a
+	ldh [hBGMapMode], a
+	call DisableLCD
+	call Pokedex_LoadInvertedFont
+	call EnableLCD
+	; English drawn before the first Hangul must also use cached tile IDs.
+	; Otherwise later Hangul uploads can overwrite those static font tiles.
+	ld a, $81
+	ld [wHangulDynamicMode], a
+	hlcoord 0, 0
+	ld bc, SCREEN_AREA
+	ld a, ' '
+	call ByteFill
+	ret
+
+Pokedex_RenderDexEntryText:
+; VRAM is writable throughout this text draw, avoiding one VBlank per glyph.
+	call DisableLCD
+	farcall DisplayDexEntry
+	jp EnableLCD
+
+Pokedex_RenderListing:
+	call DisableLCD
+	call Pokedex_PrintListingText
+	call EnableLCD
+	jp Pokedex_LoadSelectedMonTiles
 
 Pokedex_LoadPointer:
 	ld e, a
