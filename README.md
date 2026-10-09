@@ -2,6 +2,14 @@
 
 This is a disassembly of Pokémon Crystal.
 
+The Korean patch sources are self-contained in this repository. Gold and
+OldGold are historical references, not build inputs; no sibling project
+folder is required. Species-name text is maintained in
+`data/pokemon/names.asm`, with its packed Hangul encoding in
+`constants/charmap_pokemon_names.asm`. See
+[the dependency audit](docs/self-contained-source.md) for the source boundary
+and rebuild verification.
+
 It builds the following ROMs:
 
 - Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `sha1: f4cd194bdee0d04ca4eac29e09b8e4e9d818c133`
