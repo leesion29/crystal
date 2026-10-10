@@ -30,12 +30,16 @@ StartMenu::
 	ld a, [wBattleMenuCursorPosition]
 	ld [wMenuCursorPosition], a
 	; Upload fonts before drawing names and other dynamically cached glyphs.
-	farcall LoadFonts_NoOAMUpdate
+	farcall LoadFonts_KeepWindow_NoOAMUpdate
 	call .DrawMenuAccount
 	call DrawVariableLengthMenuBox
 	call .DrawBugContestStatusBox
 	call SafeUpdateSprites
 	call HDMATransferTilemapAndAttrmap_Menu
+	; Publish only after both the cached glyphs and the completed menu exist.
+	ld a, $90
+	ldh [hWY], a
+	call DelayFrame
 	call .DrawBugContestStatus
 	call UpdateTimePals
 	jr .Select

@@ -77,6 +77,20 @@ LoadFonts_NoOAMUpdate::
 	call LoadStandardFont
 	ret
 
+LoadFonts_KeepWindow_NoOAMUpdate::
+	; START renders cached glyphs before publishing BGMap0. Keep the map's
+	; BGMap1 window visible until that completed menu has been transferred.
+	ldh a, [hOAMUpdate]
+	push af
+	ld a, $1
+	ldh [hOAMUpdate], a
+	call LoadFontsExtra
+	call SafeUpdateSprites
+	call LoadStandardFont
+	pop af
+	ldh [hOAMUpdate], a
+	ret
+
 HDMATransfer_FillBGMap0WithBlack:
 	ldh a, [rWBK]
 	push af

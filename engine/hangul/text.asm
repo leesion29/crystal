@@ -456,9 +456,14 @@ HDMATransfer_HangulFontToVRAM::
 	; LY counts pixel scanlines, not tilemap rows (SCREEN_HEIGHT = 18).
 	cp SCREEN_HEIGHT_PX
 	jr c, .wait_vblank
-	jr z, .copy
-	; Starting a 32-byte CPU copy late in VBlank can cross into Mode 3, where
-	; VRAM writes are ignored. Wait for the start of the next VBlank instead.
+	; The unrolled copy takes less than 1000 T-cycles from the LY read to
+	; return. Even at normal speed, starting on LY 150 leaves at least three
+	; complete scanlines (1368 dots). Use LY 144-150, not just LY 144: menus
+	; otherwise wait nearly a whole frame for every newly cached glyph.
+	; _PlaceHangul disables interrupts across this transfer.
+	cp SCREEN_HEIGHT_PX + 7
+	jr c, .copy
+	; Late VBlank still waits for the next frame; never risk a Mode 3 write.
 .wait_next_frame
 	ldh a, [rLY]
 	cp SCREEN_HEIGHT_PX
@@ -474,15 +479,13 @@ HDMATransfer_HangulFontToVRAM::
 	xor a
 	ldh [rVBK], a
 	ld de, wHangulFontGfx
-	ld bc, 2 * TILE_SIZE
 .copy_byte
+	REPT 2 * TILE_SIZE
 	ld a, [de]
 	inc de
 	ld [hli], a
-	dec bc
-	ld a, b
-	or c
-	jr nz, .copy_byte
+	ENDR
+	ld bc, 0 ; preserve the previous loop's return value
 	pop af
 	ldh [rVBK], a
 	ret
