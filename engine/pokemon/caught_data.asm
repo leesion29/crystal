@@ -40,10 +40,8 @@ CheckPartyFullAfterContest:
 	ld a, [wCurPartySpecies]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
-	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	farcall CopyDefaultPokemonName
 	call GiveANickname_YesNo
 	jr c, .Party_SkipNickname
 	ld a, [wPartyCount]
@@ -62,6 +60,7 @@ CheckPartyFullAfterContest:
 	ld d, h
 	ld e, l
 	ld hl, wMonOrItemNameBuffer
+	ld bc, MON_NAME_LENGTH
 	call CopyBytes
 	ld a, [wPartyCount]
 	dec a
@@ -107,8 +106,10 @@ CheckPartyFullAfterContest:
 	ld a, [wCurPartySpecies]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
+	ld de, wMonOrItemNameBuffer
+	farcall CopyDefaultPokemonName
 	call GiveANickname_YesNo
-	ld hl, wStringBuffer1
+	ld hl, wMonOrItemNameBuffer
 	jr c, .Box_SkipNickname
 	ld a, BOXMON
 	ld [wMonType], a

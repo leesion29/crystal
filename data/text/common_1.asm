@@ -1116,7 +1116,7 @@ _BuenaOffTheAirText::
 _EnemyWithdrewText::
 	text "<ENEMY>는(은)"
 	line "@"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text "를(을)"
 	cont "도로 불러 들였다!"
 	prompt
@@ -1124,7 +1124,7 @@ _EnemyWithdrewText::
 _EnemyUsedOnText::
 	text "<ENEMY>는(은)"
 	line "@"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text "에게"
 
 	para "@"

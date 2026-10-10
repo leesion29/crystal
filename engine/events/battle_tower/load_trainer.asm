@@ -179,11 +179,8 @@ LoadRandomBattleTowerMon:
 	add hl, bc
 	push hl
 	call GetPokemonName
-	ld h, d
-	ld l, e
 	pop de
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	farcall CopyDefaultPokemonName
 
 	pop de
 	pop af

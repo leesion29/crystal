@@ -168,8 +168,8 @@ FarCopyRadioText::
 	ld l, a
 	ld a, d
 	ld h, a
-	ld de, wRadioText
-	ld bc, 2 * SCREEN_WIDTH
+	ld de, wRadioTextBuffer
+	ld bc, RADIO_TEXT_BUFFER_LENGTH
 	call CopyBytes
 	pop af
 	ldh [hROMBank], a

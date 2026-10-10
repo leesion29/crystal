@@ -48,7 +48,8 @@ BattleListMoves:
 	ld a, b
 .empty_loop
 	push af
-	ld [hl], '-'
+	ld de, .EmptyMove
+	call PlaceString
 	ld a, [wListMovesLineSpacing]
 	ld c, a
 	ld b, 0
@@ -58,6 +59,9 @@ BattleListMoves:
 	cp NUM_MOVES
 	jr nz, .empty_loop
 	ret
+
+.EmptyMove:
+	db "-@"
 
 BattlePlaceMoveType:
 ; BC = output baseline; UpdateMoveData supplied the real Crystal type.

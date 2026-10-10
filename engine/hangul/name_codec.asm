@@ -155,6 +155,39 @@ ValidatePackedNickname::
 	pop bc
 	ret
 
+CopyDefaultPokemonName::
+; DE = an 11-byte nickname record, wNamedObjectIndex = species.
+; Copy the packed species table, never GetPokemonName's expanded display text.
+; Like CopyBytes, advance DE and return BC=0. No save/RAM layout changes.
+	push de
+	ld a, [wNamedObjectIndex]
+	dec a
+	ld c, a
+	ld b, 0
+	ld h, b
+	ld l, c
+	add hl, hl
+	add hl, hl
+	add hl, bc
+	add hl, hl
+	ld bc, PokemonNames
+	add hl, bc
+	pop de
+	ld c, MON_NAME_LENGTH - 1
+.copy
+	ld a, BANK(PokemonNames)
+	call GetFarByte
+	ld [de], a
+	inc de
+	inc hl
+	dec c
+	jr nz, .copy
+	ld a, '@'
+	ld [de], a
+	inc de
+	ld bc, 0
+	ret
+
 CopyCurNicknameToMonOrItemName::
 ; Keep this small buffer packed; display expansion never fits here.
 	ld a, [wCurPartyMon]

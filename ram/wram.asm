@@ -2780,7 +2780,8 @@ SECTION "Enemy Party", WRAMX
 UNION
 wPokedexShowPointerAddr:: dw
 wPokedexShowPointerBank:: db
-	ds 3
+wPokedexShowEnd:: db
+	ds 2
 wd271:: dw ; mobile
 
 NEXTU
@@ -2817,6 +2818,12 @@ for n, 1, PARTY_LENGTH + 1
 wOTPartyMon{d:n}Nickname:: ds MON_NAME_LENGTH
 endr
 wOTPartyDataEnd::
+
+NEXTU
+; Radio is not active during battles or link party exchange. This branch is
+; smaller than the existing party branch, so no following address moves.
+wRadioTextBuffer:: ds RADIO_TEXT_BUFFER_LENGTH
+	assert RADIO_TEXT_BUFFER_LENGTH <= wOTPartyDataEnd - wOTPartyMons
 
 NEXTU
 ; catch tutorial dude pack

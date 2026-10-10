@@ -272,11 +272,8 @@ ReadBTTrainerParty:
 	ld a, [wBT_OTTempMon1]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
-	ld l, e
-	ld h, d
 	ld de, wBT_OTTempMon1Name
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	farcall CopyDefaultPokemonName
 
 .skip_mon_1
 	ld de, wBT_OTTempMon2Name
@@ -286,11 +283,8 @@ ReadBTTrainerParty:
 	ld a, [wBT_OTTempMon2]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
-	ld l, e
-	ld h, d
 	ld de, wBT_OTTempMon2Name
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	farcall CopyDefaultPokemonName
 
 .skip_mon_2
 	ld de, wBT_OTTempMon3Name
@@ -300,11 +294,8 @@ ReadBTTrainerParty:
 	ld a, [wBT_OTTempMon3]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
-	ld l, e
-	ld h, d
 	ld de, wBT_OTTempMon3Name
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	farcall CopyDefaultPokemonName
 
 .skip_mon_3
 ; Add the terminator character to each of these names

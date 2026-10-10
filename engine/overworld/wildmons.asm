@@ -876,7 +876,7 @@ RandomPhoneWildMon:
 	call GetPokemonName
 	ld hl, wStringBuffer1
 	ld de, wStringBuffer4
-	ld bc, MON_NAME_LENGTH
+	ld bc, STRING_BUFFER_LENGTH
 	jp CopyBytes
 
 RandomPhoneMon:
@@ -959,7 +959,7 @@ RandomPhoneMon:
 	call GetPokemonName
 	ld hl, wStringBuffer1
 	ld de, wStringBuffer4
-	ld bc, MON_NAME_LENGTH
+	ld bc, STRING_BUFFER_LENGTH
 	jp CopyBytes
 
 INCLUDE "data/wild/johto_grass.asm"

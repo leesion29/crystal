@@ -29,12 +29,13 @@ StartMenu::
 	call .SetUpMenuItems
 	ld a, [wBattleMenuCursorPosition]
 	ld [wMenuCursorPosition], a
+	; Upload fonts before drawing names and other dynamically cached glyphs.
+	farcall LoadFonts_NoOAMUpdate
 	call .DrawMenuAccount
 	call DrawVariableLengthMenuBox
 	call .DrawBugContestStatusBox
 	call SafeUpdateSprites
 	call HDMATransferTilemapAndAttrmap_Menu
-	farcall LoadFonts_NoOAMUpdate
 	call .DrawBugContestStatus
 	call UpdateTimePals
 	jr .Select

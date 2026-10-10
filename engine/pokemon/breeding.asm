@@ -333,14 +333,20 @@ HatchEggs:
 	ld b, NAME_MON
 	farcall NamingScreen
 	pop hl
+	push hl
+	ld a, [wCurPartySpecies]
+	ld [wNamedObjectIndex], a
+	ld de, wStringBuffer1
+	farcall CopyDefaultPokemonName
+	pop hl
 	ld de, wStringBuffer1
 	call InitName
 	jr .next
 
 .nonickname
-	ld hl, wStringBuffer1
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	ld a, [wCurPartySpecies]
+	ld [wNamedObjectIndex], a
+	farcall CopyDefaultPokemonName
 
 .next
 	ld hl, wCurPartyMon

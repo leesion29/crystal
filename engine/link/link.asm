@@ -1708,10 +1708,8 @@ LinkTrade:
 	ld a, [hl]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
-	ld hl, wStringBuffer1
 	ld de, wBufferTrademonNickname
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	farcall CopyDefaultPokemonName
 	ld a, [wCurOTTradePartyMon]
 	ld hl, wOTPartySpecies
 	ld c, a

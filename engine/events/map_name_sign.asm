@@ -165,6 +165,12 @@ PlaceMapNameCenterAlign:
 	jr z, .stop
 	cp '<WBR>'
 	jr z, .loop
+	cp HANGUL_POC_ESCAPE
+	jr nz, .count
+	; The bank/index bytes are opaque data, not separate characters.
+	inc hl
+	inc hl
+.count
 	inc c
 	jr .loop
 .stop

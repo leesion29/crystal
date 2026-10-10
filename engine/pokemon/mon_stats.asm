@@ -387,14 +387,14 @@ FntString:
 	db "FNT@"
 
 CopyStatusString:
-	ld a, [de]
-	inc de
-	ld [hli], a
-	ld a, [de]
-	inc de
-	ld [hli], a
-	ld a, [de]
-	ld [hl], a
+	; FNT/PSN/etc are text, not immutable tile IDs in the Hangul cache.
+	push bc
+	call PlaceString
+	ld h, b
+	ld l, c
+	dec hl ; preserve the old three-character copy's HL/DE + 2 contract
+	dec de
+	pop bc
 	ret
 
 PlaceNonFaintStatus:
@@ -472,7 +472,8 @@ ListMoves:
 	ld a, b
 .nonmove_loop
 	push af
-	ld [hl], '-'
+	ld de, .EmptyMove
+	call PlaceString
 	ld a, [wListMovesLineSpacing]
 	ld c, a
 	ld b, 0
@@ -484,3 +485,6 @@ ListMoves:
 
 .done
 	ret
+
+.EmptyMove:
+	db "-@"

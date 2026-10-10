@@ -9,7 +9,7 @@ BattleText_PlayerPickedUpPayDayMoney:
 
 WildPokemonAppearedText:
 	text "Wild @"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text_start
 	line "appeared!"
 	prompt
@@ -17,20 +17,20 @@ WildPokemonAppearedText:
 HookedPokemonAttackedText:
 	text "The hooked"
 	line "@"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text_start
 	cont "attacked!"
 	prompt
 
 PokemonFellFromTreeText:
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text " fell"
 	line "out of the tree!"
 	prompt
 
 WildCelebiAppearedText:
 	text "Wild @"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text_start
 	line "appeared!"
 	prompt
@@ -42,14 +42,14 @@ WantsToBattleText::
 
 BattleText_WildFled:
 	text "Wild @"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text_start
 	line "fled!"
 	prompt
 
 BattleText_EnemyFled:
 	text "Enemy @"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text_start
 	line "fled!"
 	prompt
@@ -161,7 +161,7 @@ BattleText_TheSandstormSubsided:
 
 BattleText_EnemyMonFainted:
 	text "Enemy @"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text_start
 	line "fainted!"
 	prompt
@@ -206,7 +206,7 @@ UnusedRivalLossText: ; unreferenced
 	prompt
 
 BattleText_MonFainted:
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text_start
 	line "fainted!"
 	prompt
@@ -230,7 +230,7 @@ BattleText_EnemyIsAboutToUseWillPlayerChangeMon:
 	text "<ENEMY>"
 	line "is about to use"
 	cont "@"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text "."
 
 	para "Will <PLAYER>"
@@ -241,7 +241,7 @@ BattleText_EnemySentOut:
 	text "<ENEMY>"
 	line "sent out"
 	cont "@"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text "!"
 	done
 
@@ -308,13 +308,13 @@ BattleText_ItemsCantBeUsedHere:
 	prompt
 
 BattleText_MonIsAlreadyOut:
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text_start
 	line "is already out."
 	prompt
 
 BattleText_MonCantBeRecalled:
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text_start
 	line "can't be recalled!"
 	prompt
@@ -330,7 +330,7 @@ BattleText_TheMoveIsDisabled:
 	prompt
 
 BattleText_MonHasNoMovesLeft:
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text_start
 	line "has no moves left!"
 	done
@@ -353,14 +353,14 @@ BattleText_StringBuffer1GrewToLevel:
 
 BattleText_WildMonIsEating:
 	text "Wild @"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text_start
 	line "is eating!"
 	prompt
 
 BattleText_WildMonIsAngry:
 	text "Wild @"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text_start
 	line "is angry!"
 	prompt
@@ -516,37 +516,37 @@ DisabledMoveText:
 	prompt
 
 LoafingAroundText:
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text " is"
 	line "loafing around."
 	prompt
 
 BeganToNapText:
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text " began"
 	line "to nap!"
 	prompt
 
 WontObeyText:
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text " won't"
 	line "obey!"
 	prompt
 
 TurnedAwayText:
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text " turned"
 	line "away!"
 	prompt
 
 IgnoredOrdersText:
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text " ignored"
 	line "orders!"
 	prompt
 
 IgnoredSleepingText:
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text " ignored"
 	line "orders…sleeping!"
 	prompt

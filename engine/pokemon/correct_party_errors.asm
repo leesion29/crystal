@@ -121,15 +121,18 @@ CorrectPartyErrors: ; unreferenced
 	pop bc
 	ld a, [hl]
 	cp EGG
-	ld hl, .TAMAGO
-	jr z, .got_nickname
+	jr z, .egg_nickname
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
-	ld hl, wStringBuffer1
-.got_nickname
+	pop de
+	farcall CopyDefaultPokemonName
+	jr .copied_nickname
+.egg_nickname
+	ld hl, .TAMAGO
 	pop de
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
+.copied_nickname
 	pop bc
 
 .valid_nickname

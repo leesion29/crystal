@@ -135,12 +135,12 @@ _YourFoesWeakGetmMonText::
 	text_end
 
 _BattleMonNicknameText::
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text "!"
 	done
 
 _BattleMonNickCommaText::
-	text_ram wBattleMonNickname
+	text_buffer 6
 	text ",@"
 	text_end
 

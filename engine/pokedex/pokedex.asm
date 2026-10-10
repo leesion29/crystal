@@ -2755,6 +2755,12 @@ _NewPokedexEntry:
 	ld [wCurPartySpecies], a
 	call Pokedex_DrawDexEntryScreenBG
 	call Pokedex_DrawFootprint
+	; Capture entries have no footer controls. Restore the border too: the
+	; raised menu has its top pixel row in tilemap row 16, not only row 17.
+	hlcoord 1, 16
+	ld bc, SCREEN_WIDTH - 1
+	ld a, $39
+	call ByteFill
 	hlcoord 0, 17
 	ld [hl], $3b
 	inc hl

@@ -122,7 +122,7 @@ RadioJumptable:
 
 PrintRadioLine:
 	ld [wNextRadioLine], a
-	ld hl, wRadioText
+	ld hl, wRadioTextBuffer
 	ld a, [wNumRadioLinesPrinted]
 	cp 2
 	jr nc, .print
@@ -262,10 +262,8 @@ endr
 	ld [wNamedObjectIndex], a
 	ld [wCurPartySpecies], a
 	call GetPokemonName
-	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	farcall CopyDefaultPokemonName
 
 	; Now that we've chosen our wild Pokemon,
 	; let's recover the map index info and get its name.
@@ -695,54 +693,65 @@ PokedexShow2:
 	ld a, BANK(PokedexDataPointerTable)
 	call GetFarWord
 	call PokedexShow_GetDexEntryBank
-	push af
-	push hl
-	call CopyDexEntryPart1
-	dec hl
-	ld [hl], '<DONE>'
-	ld hl, wPokedexShowPointerAddr
-	call CopyRadioTextToRAM
-	pop hl
-	pop af
-	call CopyDexEntryPart2
+	ld [wPokedexShowPointerBank], a
+	; Skip the category as complete characters: a Hangul index can be '@'.
+.category
+	call PokedexShowReadByte
+	cp HANGUL_POC_ESCAPE
+	jr nz, .category_char
+	inc hl
+	inc hl
+	jr .category
+.category_char
+	cp '@'
+	jr nz, .category
 rept 4
 	inc hl
 endr
-	ld a, l
-	ld [wPokedexShowPointerAddr], a
-	ld a, h
-	ld [wPokedexShowPointerAddr + 1], a
+	call PokedexShowStorePointer
+	xor a
+	ld [wPokedexShowEnd], a
+	call CopyDexEntry
 	ld a, POKEDEX_SHOW_3
-	jp PrintRadioLine
+	jr PokedexShowPrintLine
 
 PokedexShow3:
 	call CopyDexEntry
 	ld a, POKEDEX_SHOW_4
-	jp PrintRadioLine
+	jr PokedexShowPrintLine
 
 PokedexShow4:
 	call CopyDexEntry
 	ld a, POKEDEX_SHOW_5
-	jp PrintRadioLine
+	jr PokedexShowPrintLine
 
 PokedexShow5:
 	call CopyDexEntry
 	ld a, POKEDEX_SHOW_6
-	jp PrintRadioLine
+	jr PokedexShowPrintLine
 
 PokedexShow6:
 	call CopyDexEntry
 	ld a, POKEDEX_SHOW_7
-	jp PrintRadioLine
+	jr PokedexShowPrintLine
 
 PokedexShow7:
 	call CopyDexEntry
 	ld a, POKEDEX_SHOW_8
-	jp PrintRadioLine
+	jr PokedexShowPrintLine
 
 PokedexShow8:
 	call CopyDexEntry
 	ld a, POKEDEX_SHOW
+	; Korean entries have one page and three lines, not six English lines.
+PokedexShowPrintLine:
+	ld b, a
+	ld a, [wPokedexShowEnd]
+	and a
+	ld a, b
+	jr z, .print
+	ld a, POKEDEX_SHOW
+.print
 	jp PrintRadioLine
 
 CopyDexEntry:
@@ -750,57 +759,65 @@ CopyDexEntry:
 	ld l, a
 	ld a, [wPokedexShowPointerAddr + 1]
 	ld h, a
-	ld a, [wPokedexShowPointerBank]
-	push af
-	push hl
-	call CopyDexEntryPart1
-	dec hl
-	ld [hl], '<DONE>'
-	ld hl, wPokedexShowPointerAddr
-	call CopyRadioTextToRAM
-	pop hl
-	pop af
-	call CopyDexEntryPart2
-	ret
-
-CopyDexEntryPart1:
-	ld de, wPokedexShowPointerBank
-	ld bc, SCREEN_WIDTH - 1
-	call FarCopyBytes
-	ld hl, wPokedexShowPointerAddr
-	ld [hl], TX_START
-	inc hl
-	ld [hl], '<LINE>'
-	inc hl
+	ld de, wRadioTextBuffer
+	ld a, TX_START
+	ld [de], a
+	inc de
+	ld a, '<LINE>'
+	ld [de], a
+	inc de
+	ld c, RADIO_TEXT_BUFFER_LENGTH - 3
 .loop
-	ld a, [hli]
+	ld a, c
+	and a
+	jr z, .finish
+	call PokedexShowReadByte
 	cp '@'
-	ret z
+	jr z, .end_entry
 	cp '<NEXT>'
-	ret z
+	jr z, .finish
 	cp '<DEXEND>'
-	ret z
+	jr z, .end_entry
+	cp HANGUL_POC_ESCAPE
+	jr nz, .single
+	ld a, c
+	cp 3
+	jr nc, .glyph
+	dec hl ; retry the entire glyph on the next line, never its payload
+	jr .finish
+.glyph
+	ld a, HANGUL_POC_ESCAPE
+	ld [de], a
+	inc de
+	dec c
+	call PokedexShowReadByte
+	ld [de], a
+	inc de
+	dec c
+	call PokedexShowReadByte
+.single
+	ld [de], a
+	inc de
+	dec c
 	jr .loop
-
-CopyDexEntryPart2:
-	ld d, a
-.loop
-	ld a, d
-	call GetFarByte
-	inc hl
-	cp '@'
-	jr z, .okay
-	cp '<NEXT>'
-	jr z, .okay
-	cp '<DEXEND>'
-	jr nz, .loop
-.okay
+.end_entry
+	ld a, 1
+	ld [wPokedexShowEnd], a
+.finish
+	ld a, '<DONE>'
+	ld [de], a
+	; Leave the source address pointing after the consumed line delimiter.
+PokedexShowStorePointer:
 	ld a, l
 	ld [wPokedexShowPointerAddr], a
 	ld a, h
 	ld [wPokedexShowPointerAddr + 1], a
-	ld a, d
-	ld [wPokedexShowPointerBank], a
+	ret
+
+PokedexShowReadByte:
+	ld a, [wPokedexShowPointerBank]
+	call GetFarByte
+	inc hl
 	ret
 
 PokedexShowText:
@@ -1789,8 +1806,8 @@ CopyRadioTextToRAM:
 	ld a, [hl]
 	cp TX_FAR
 	jp z, FarCopyRadioText
-	ld de, wRadioText
-	ld bc, 2 * SCREEN_WIDTH
+	ld de, wRadioTextBuffer
+	ld bc, RADIO_TEXT_BUFFER_LENGTH
 	jp CopyBytes
 
 StartRadioStation:

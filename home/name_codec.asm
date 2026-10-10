@@ -87,12 +87,17 @@ PlaceMonOrItemName::
 	jp c, PlaceHangulName
 	jp PlaceString
 
+PUSHS
+SECTION "Nickname Command Home", ROM0
+; Independent tail wrapper: neither adjacent routine falls through here.
+; Keep it in ROM0, but let the linker use the small tail gap in release builds.
 PlaceNicknameCommand::
 	call PlaceHangulName
 	ld h, b
 	ld l, c
 	pop de
 	jp NextChar
+POPS
 
 PUSHS
 SECTION "RAM Name Display Home", ROM0

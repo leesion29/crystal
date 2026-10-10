@@ -371,10 +371,9 @@ UpdateSpeciesNameIfNotNicknamed:
 	ld a, [wCurSpecies]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
-	ld hl, wStringBuffer1
 	pop de
-	ld bc, MON_NAME_LENGTH
-	jp CopyBytes
+	farcall CopyDefaultPokemonName
+	ret
 
 CancelEvolution:
 	ld hl, StoppedEvolvingText

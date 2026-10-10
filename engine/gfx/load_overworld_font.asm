@@ -1,4 +1,6 @@
 LoadOverworldFont::
+	; This overwrites the same VRAM range used by cached Hangul glyphs.
+	farcall ResetHangulTiles
 	ld de, .OverworldFontGFX
 	ld hl, vTiles1
 	lb bc, BANK(.OverworldFontGFX), $80

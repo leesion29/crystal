@@ -1158,7 +1158,7 @@ _BallSoCloseText::
 Text_BallCaught::
 	text "신난다!"
 	line "@"
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text "를(을)"
 	cont "잡았다!@"
 	sound_caught_mon
@@ -1180,7 +1180,7 @@ _BallSentToPCText::
 	prompt
 
 _NewDexDataText::
-	text_ram wEnemyMonNickname
+	text_buffer 5
 	text "의"
 	line "데이터가 새롭게"
 	cont "포켓몬 도감에 추가되었습니다!@"

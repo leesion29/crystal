@@ -62,9 +62,7 @@ TryAddMonToParty:
 	call SkipNames
 	ld d, h
 	ld e, l
-	ld hl, wStringBuffer1
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	farcall CopyDefaultPokemonName
 
 .skipnickname
 	ld hl, wPartyMon1Species
@@ -977,9 +975,7 @@ SendMonIntoBox:
 	call GetPokemonName
 
 	ld de, sBoxMonNicknames
-	ld hl, wStringBuffer1
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	farcall CopyDefaultPokemonName
 
 	ld hl, wEnemyMon
 	ld de, sBoxMon1
@@ -1675,10 +1671,8 @@ GivePoke::
 	ld [wNamedObjectIndex], a
 	ld [wTempEnemyMonSpecies], a
 	call GetPokemonName
-	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	farcall CopyDefaultPokemonName
 	pop af
 	and a
 	jp z, .wildmon
@@ -1813,6 +1807,12 @@ InitNickname:
 	push de
 	ld b, NAME_MON
 	farcall NamingScreen
+	pop hl
+	push hl
+	ld a, [wCurPartySpecies]
+	ld [wNamedObjectIndex], a
+	ld de, wStringBuffer1
+	farcall CopyDefaultPokemonName
 	pop hl
 	ld de, wStringBuffer1
 	call InitName

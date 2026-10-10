@@ -6523,10 +6523,8 @@ LoadEnemyMon:
 	ret z
 
 ; Update enemy nickname
-	ld hl, wStringBuffer1
 	ld de, wEnemyMonNickname
-	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	farcall CopyDefaultPokemonName
 
 ; Saw this mon
 	ld a, [wTempEnemyMonSpecies]
