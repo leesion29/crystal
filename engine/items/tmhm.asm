@@ -74,7 +74,7 @@ AskTeachTMHM:
 ChooseMonToLearnTMHM:
 	ld hl, wStringBuffer2
 	ld de, wTMHMMoveNameBackup
-	ld bc, STRING_BUFFER_LENGTH
+	ld bc, TMHM_MOVE_NAME_BUFFER_LENGTH
 	call CopyBytes
 	call ClearBGPalettes
 ChooseMonToLearnTMHM_NoRefresh:
@@ -98,7 +98,7 @@ ChooseMonToLearnTMHM_NoRefresh:
 	push bc
 	ld hl, wTMHMMoveNameBackup
 	ld de, wStringBuffer2
-	ld bc, STRING_BUFFER_LENGTH
+	ld bc, TMHM_MOVE_NAME_BUFFER_LENGTH
 	call CopyBytes
 	pop af ; now contains the original contents of af
 	ret

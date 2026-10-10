@@ -834,10 +834,9 @@ PrintText_UsedItemOn:
 	ld a, [wCurEnemyItem]
 	ld [wNamedObjectIndex], a
 	call GetItemName
-	ld hl, wStringBuffer1
-	ld de, wMonOrItemNameBuffer
-	ld bc, ITEM_NAME_LENGTH
-	call CopyBytes
+	ld de, wStringBuffer1
+	ld hl, wMonOrItemNameBuffer
+	call CopyName2
 	ld hl, EnemyUsedOnText
 	jp PrintText
 

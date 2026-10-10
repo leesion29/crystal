@@ -109,10 +109,10 @@ class CPU:
                 if o == 0xf1:
                     self.r[7], self.z, self.carry = n >> 8, bool(n & 0x80), bool(n & 0x10)
                 else: self.setpair((o >> 3) & 6, n)
-            elif o in (0xc6, 0xe6, 0xf6, 0xd6, 0xfe) or 0xa0 <= o <= 0xbf:
+            elif o in (0xc6, 0xe6, 0xf6, 0xd6, 0xfe) or 0x80 <= o <= 0x87 or 0xa0 <= o <= 0xbf:
                 a = self.r[7]
                 n = self.byte() if o in (0xc6, 0xe6, 0xf6, 0xd6, 0xfe) else self.get(o & 7)
-                if o == 0xc6:
+                if o == 0xc6 or 0x80 <= o <= 0x87:
                     self.carry = a + n > 255
                     a = (a + n) & 255
                 elif 0xa8 <= o <= 0xaf: a ^= n
@@ -124,7 +124,7 @@ class CPU:
                 self.z = a == 0
                 if o != 0xfe and not 0xb8 <= o <= 0xbf:
                     self.r[7] = a
-                    if o not in (0xd6, 0xc6): self.carry = False
+                    if o not in (0xd6, 0xc6) and not 0x80 <= o <= 0x87: self.carry = False
             elif o in (0x18, 0x20, 0x28, 0x30, 0x38):
                 n = self.byte()
                 condition = {0x18: True, 0x20: not self.z, 0x28: self.z, 0x30: not self.carry, 0x38: self.carry}[o]
@@ -134,6 +134,11 @@ class CPU:
                 if not self.special(p):
                     if o == 0xcd: self.stack.append(self.pc)
                     self.pc = p
+            elif o == 0xcf:  # rst FarCall; execute the real wrapper and callee.
+                self.stack.append(self.pc)
+                self.pc = 8
+            elif o == 0xe9:
+                self.pc = self.pair(4)
             elif o in (0xc9, 0xc0, 0xc8, 0xd0, 0xd8):
                 condition = {0xc9: True, 0xc0: not self.z, 0xc8: self.z, 0xd0: not self.carry, 0xd8: self.carry}[o]
                 if condition:
@@ -173,16 +178,20 @@ def verify(rom_path, sym_path):
     root = Path(__file__).resolve().parent.parent
     rom, sym = rom_path.read_bytes(), symbols(sym_path)
     names = read_names(rom, sym)
-    assert max(map(len, names)) <= 22
+    size = sym['wStringBuffer2'][1] - sym['wStringBuffer1'][1]
+    expected_size = int(re.search(r'DEF STRING_BUFFER_LENGTH EQU (\d+)',
+        (root / 'constants/script_constants.asm').read_text(encoding='utf-8'))[1])
+    assert size == expected_size
+    assert max(map(len, names)) <= size
     # Other ROM tables using the shared GetName copier also fit its buffer.
     for label, count in (('ItemNames', 256), ('TrainerClassNames', 67)):
-        assert max(map(len, read_names(rom, sym, label, count))) <= 22, label
+        assert max(map(len, read_names(rom, sym, label, count))) <= size, label
     # GetNthString still scans bytes: no current glyph may contain its delimiter.
     assert all(0x50 not in s[:-1] for s in names)
     cpu = CPU(rom, sym)
     start = sym['wStringBuffer1'][1]
     for i, name in enumerate(names, 1):
-        cpu.mem[start-1:start+23] = bytes([0xcc])*24
+        cpu.mem[start-1:start+size+1] = bytes([0xcc])*(size+2)
         cpu.mem[sym['wNamedObjectType'][1]] = 2
         cpu.mem[sym['wCurSpecies'][1]] = i
         cpu.setpair(0, 0x1234)
@@ -190,16 +199,15 @@ def verify(rom_path, sym_path):
         cpu.setpair(4, 0x9abc)
         cpu.run('GetName', caller_bank=127)
         assert cpu.mem[start:start+len(name)] == name, i
-        assert cpu.mem[start-1] == cpu.mem[start+22] == 0xcc, i
+        assert cpu.mem[start-1] == cpu.mem[start+size] == 0xcc, i
         assert (cpu.pair(0), cpu.pair(2), cpu.pair(4)) == (0x1234, 0x5678, 0x9abc)
         assert cpu.bank == 127
         cpu.setpair(2, start)
         cpu.run('CopyName1')
         other = sym['wStringBuffer2'][1]
         assert cpu.mem[other:other+len(name)] == name
-    assert sym['wStringBuffer2'][1] - start == 22
     for i in range(1, 5):
-        assert sym[f'wStringBuffer{i+1}'][1] - sym[f'wStringBuffer{i}'][1] == 22
+        assert sym[f'wStringBuffer{i+1}'][1] - sym[f'wStringBuffer{i}'][1] == size
     assert sym['wTMHMMoveNameBackup'] == sym['wUnusedMapBuffer']
     assert sym['wUnusedMapBufferEnd'][1] - sym['wTMHMMoveNameBackup'][1] == 24
     cpu.mem[sym['wTempTMHM'][1]] = 31
@@ -208,15 +216,19 @@ def verify(rom_path, sym_path):
     longest = max(names, key=len)
     other = sym['wStringBuffer2'][1]
     backup = sym['wTMHMMoveNameBackup'][1]
-    cpu.mem[other:other+22] = longest
-    cpu.mem[backup-1:backup+23] = bytes([0xcc])*24
+    backup_size = int(re.search(r'DEF TMHM_MOVE_NAME_BUFFER_LENGTH EQU (\d+)',
+        (root / 'constants/script_constants.asm').read_text(encoding='utf-8'))[1])
+    assert max(map(len, names)) <= backup_size <= 24
+    payload = longest + bytes([0xcc])*(backup_size-len(longest))
+    cpu.mem[other:other+backup_size] = payload
+    cpu.mem[backup-1:backup+backup_size+1] = bytes([0xcc])*(backup_size+2)
     for source, dest in ((other, backup), (backup, other)):
         cpu.setpair(4, source)
         cpu.setpair(2, dest)
-        cpu.setpair(0, 22)
+        cpu.setpair(0, backup_size)
         cpu.run('CopyBytes')
-    assert cpu.mem[other:other+22] == cpu.mem[backup:backup+22] == longest
-    assert cpu.mem[backup-1] == cpu.mem[backup+22] == 0xcc
+    assert cpu.mem[other:other+backup_size] == cpu.mem[backup:backup+backup_size] == payload
+    assert cpu.mem[backup-1] == cpu.mem[backup+backup_size] == 0xcc
     # Table prose: only ID 189 changed from the user's working baseline.
     before = root / '.verification/tmhm-20261010/names-before.asm'
     if before.exists():
@@ -234,10 +246,10 @@ def verify(rom_path, sym_path):
                 assert sym[label] == location, ('SRAM layout', label)
         for label in ('wUnusedMapBuffer', 'wUnusedMapBufferEnd'):
             assert sym[label] == old[label]
-    def routine(label, size):
+    def routine(label, length):
         bank, addr = sym[label]
         offset = addr if bank == 0 else bank * 0x4000 + addr - 0x4000
-        return rom[offset:offset+size]
+        return rom[offset:offset+length]
     def call(label):
         return bytes([0xcd]) + sym[label][1].to_bytes(2, 'little')
     index_flow = bytes([0xfa]) + sym['wTempTMHM'][1].to_bytes(2, 'little')
@@ -247,8 +259,8 @@ def verify(rom_path, sym_path):
     for label in ('AskTeachTMHM', 'TMHM_DisplayPocketItems.okay', 'PlaceMoveNameAfterTMHMName'):
         assert index_flow in routine(label, 64), ('TM/HM name input', label)
     # Inspect assembled consumers, including item-use and cancellation paths.
-    for label, size in (('BattleMenu_Pack.didnt_use_item', 60), ('BattleMenu_Pack.ball', 100)):
-        code = routine(label, size)
+    for label, length in (('BattleMenu_Pack.didnt_use_item', 60), ('BattleMenu_Pack.ball', 100)):
+        code = routine(label, length)
         chain = [call(x) for x in ('LoadStandardFont', '_LoadBattleFontsHPBar',
                                   'ExitMenu', 'EmptyBattleTextbox', 'UpdateBattleHUDs', 'WaitBGMap')]
         positions = [code.index(x) for x in chain]
@@ -297,7 +309,7 @@ def verify(rom_path, sym_path):
         for n,g in enumerate(glyphs):
             t = cache.mem[tilemap+48+n]
             assert t != 0x7f and cache.uploads[t-1] == g, redraw
-    print(f'{rom_path.name}: 251 compiled GetName/CopyName1 cases, bank/22-byte guards, TM31 mapping/name, backup round trip, unchanged SRAM layout, battle-return call order, 256 compiled cache redraws PASS. Upload/timing modeled; not emulator evidence.')
+    print(f'{rom_path.name}: 251 compiled GetName/CopyName1 cases, bank/{size}-byte buffer guards, TM31 mapping/name, backup round trip, unchanged SRAM layout, battle-return call order, 256 compiled cache redraws PASS. Upload/timing modeled; not emulator evidence.')
 
 
 if __name__ == '__main__':

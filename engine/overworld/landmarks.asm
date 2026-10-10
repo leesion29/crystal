@@ -29,14 +29,12 @@ GetLandmarkName::
 	ld h, [hl]
 	ld l, a
 
-	ld de, wStringBuffer1
-	ld c, 18
-.copy
-	ld a, [hli]
-	ld [de], a
-	inc de
-	dec c
-	jr nz, .copy
+	; Landmark entries are bounded by STRING_BUFFER_LENGTH at assembly time.
+	; CopyName2 treats Hangul bank/index bytes as data, even when they are '@'.
+	ld d, h
+	ld e, l
+	ld hl, wStringBuffer1
+	call CopyName2
 
 	pop bc
 	pop de

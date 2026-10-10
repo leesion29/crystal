@@ -292,7 +292,9 @@ ROMX $70
 ROMX $71
 	"Text 3"
 ROMX $72
-	"Miscellaneous Text"
+; Put the larger Korean item descriptions in a full bank. The remaining
+; Miscellaneous Text section floats into an existing gap below bank $80.
+	"Item Descriptions"
 ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74

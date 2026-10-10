@@ -916,8 +916,8 @@ SECTION "Unused Map Buffer", WRAM0
 wUnusedMapBuffer::
 ; TM/HM teaching owns this formerly unused scratch area until the party menu
 ; returns. Map entry clears it only after that workflow has finished.
-wTMHMMoveNameBackup:: ds STRING_BUFFER_LENGTH
-	ds 24 - STRING_BUFFER_LENGTH
+wTMHMMoveNameBackup:: ds TMHM_MOVE_NAME_BUFFER_LENGTH
+	assert TMHM_MOVE_NAME_BUFFER_LENGTH == 24
 wUnusedMapBufferEnd::
 
 
@@ -1883,8 +1883,9 @@ wBufferMonNickname:: ds MON_NAME_LENGTH
 wBufferMonOT:: ds NAME_LENGTH
 wBufferMon:: party_struct wBufferMon
 	ds 8
-wMonOrItemNameBuffer:: ds NAME_LENGTH
-	ds NAME_LENGTH
+; Packed nicknames retain their 11-byte record; item display strings need more.
+wMonOrItemNameBuffer:: ds STRING_BUFFER_LENGTH
+	assert STRING_BUFFER_LENGTH >= NAME_LENGTH
 
 
 SECTION UNION "Miscellaneous WRAM 1", WRAMX
@@ -1892,7 +1893,7 @@ SECTION UNION "Miscellaneous WRAM 1", WRAMX
 ; poke seer
 wSeerAction:: db
 wSeerNickname:: ds MON_NAME_LENGTH
-wSeerCaughtLocation:: ds 17
+wSeerCaughtLocation:: ds STRING_BUFFER_LENGTH
 wSeerTimeOfDay:: ds NAME_LENGTH
 wSeerOT:: ds NAME_LENGTH
 wSeerOTGrammar:: db
@@ -2287,6 +2288,19 @@ ENDU
 	ds 23
 
 
+; Two independent floating WRAM0 sections fit the existing 12- and 7-byte gaps.
+; Every consumer addresses these scratch variables by symbol; keep each
+; multi-byte field contiguous. No save record is relocated.
+SECTION "Menu Pointer Scratch", WRAM0
+wMenuScrollPosition:: ds 4
+wListPointer:: dw
+wUnusedNamesPointer:: dw
+wItemAttributesPointer:: dw
+
+SECTION "Queued Script Scratch", WRAM0
+wQueuedScriptBank:: db
+wQueuedScriptAddr:: dw
+
 SECTION "More WRAM 1", WRAMX
 
 wStringBuffer1:: ds STRING_BUFFER_LENGTH
@@ -2326,11 +2340,6 @@ wSwitchItem::
 wSwappingMove::
 wd0e3:: ; mobile
 	db
-
-wMenuScrollPosition:: ds 4
-
-wQueuedScriptBank:: db
-wQueuedScriptAddr:: dw
 
 wNumMoves:: db
 
@@ -2374,11 +2383,6 @@ wCurMessageIndex:: db
 wMailboxCount:: db
 wMailboxItems:: ds MAILBOX_CAPACITY
 ENDU
-
-wListPointer:: dw
-wUnusedNamesPointer:: dw
-
-wItemAttributesPointer:: dw
 
 wCurItem:: db
 wCurItemQuantity::

@@ -2,12 +2,21 @@ TownMap_ConvertLineBreakCharacters:
 	ld hl, wStringBuffer1
 .loop
 	ld a, [hl]
+	cp HANGUL_POC_ESCAPE
+	jr z, .hangul
 	cp '@'
 	jr z, .end
 	cp '<WBR>'
 	jr z, .line_feed
 	cp '<BSP>'
 	jr z, .line_feed
+	inc hl
+	jr .loop
+
+.hangul
+	; Only inspect character boundaries, never the bank/index payload.
+	inc hl
+	inc hl
 	inc hl
 	jr .loop
 

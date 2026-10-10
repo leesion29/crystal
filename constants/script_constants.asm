@@ -10,9 +10,12 @@ DEF LAST_TALKED EQU -2
 	const STRING_BUFFER_5 ; use wStringBuffer5
 DEF NUM_STRING_BUFFERS EQU const_value
 
-; Seven Hangul syllables use three bytes each, plus the terminator.
+; Eight Hangul syllables use 24 bytes, plus the terminator (REPEL).
+; Menu/pointer scratch moved to WRAM0 makes room in WRAM bank 1.
 ; MOVE_NAME_LENGTH remains the original record/display limit elsewhere.
-DEF STRING_BUFFER_LENGTH EQU 22
+DEF STRING_BUFFER_LENGTH EQU 25
+; Move names fit the existing 24-byte unused-map backup span independently.
+DEF TMHM_MOVE_NAME_BUFFER_LENGTH EQU 24
 
 ; checkmoney/takemoney accounts
 	const_def

@@ -1,4 +1,10 @@
+; Keep the direct pointer table and its consumer together in their own bank.
+; Korean descriptions no longer fit the shared Miscellaneous Text section.
+PUSHS
+SECTION "Item Descriptions", ROMX
+
 PrintItemDescription:
+	assert BANK(PrintItemDescription) <= $7f, "Item descriptions exceed MBC3 ROM banks"
 ; Print the description for item [wCurSpecies] at de.
 
 	ld a, [wCurSpecies]
@@ -30,3 +36,4 @@ PrintItemDescription:
 	jp PlaceString
 
 INCLUDE "data/items/descriptions.asm"
+POPS

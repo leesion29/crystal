@@ -80,7 +80,7 @@ ExpandNicknameBuffer::
 	ret
 
 PlaceMonOrItemName::
-; This dual-use 11-byte buffer can hold a packed nickname or an item string.
+; The shared buffer holds an 11-byte packed nickname or a full item string.
 	ld a, [de]
 	dec a
 	cp $0b

@@ -170,14 +170,19 @@ GetItemName::
 	call GetName
 	jr .Copied
 .TM:
-	call GetTMHMName
+	callfar GetTMHMName
 .Copied:
 	ld de, wStringBuffer1
 	pop bc
 	pop hl
 	ret
 
+; Keep the formatter and its localized prefixes together outside crowded ROM0.
+; GetItemName restores the caller's HL/BC, and callfar restores the ROM bank.
+PUSHS
+SECTION "TMHM Name Formatter", ROMX
 GetTMHMName::
+	assert BANK(GetTMHMName) <= $7f, "TM/HM name formatter exceeds MBC3 ROM banks"
 ; Get TM/HM name for item wNamedObjectIndex.
 
 	push hl
@@ -250,14 +255,15 @@ GetTMHMName::
 	ret
 
 .TMText:
-	db "TM"
+	db "기술머신"
 .TMTextEnd:
 	db "@"
 
 .HMText:
-	db "HM"
+	db "비전머신"
 .HMTextEnd:
 	db "@"
+POPS
 
 INCLUDE "home/hm_moves.asm"
 
