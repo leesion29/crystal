@@ -5126,10 +5126,15 @@ BattleMenu_Pack:
 .didnt_use_item
 	call ClearPalettes
 	call DelayFrame
+	; Pack text shares the Hangul/standard glyph cache with battle text.
+	; Restoring a saved tilemap alone cannot restore the glyphs it references.
+	call LoadStandardFont
 	call _LoadBattleFontsHPBar
 	call GetBattleMonBackpic
 	call GetEnemyMonFrontpic
 	call ExitMenu
+	call EmptyBattleTextbox
+	call UpdateBattleHUDs
 	call WaitBGMap
 	call FinishBattleAnim
 	call LoadTilemapToTempTilemap
@@ -5153,6 +5158,7 @@ BattleMenu_Pack:
 .ball
 	xor a
 	ldh [hBGMapMode], a
+	call LoadStandardFont
 	call _LoadBattleFontsHPBar
 	call ClearSprites
 	ld a, [wBattleType]
@@ -5165,6 +5171,7 @@ BattleMenu_Pack:
 	ld a, $1
 	ld [wMenuCursorY], a
 	call ExitMenu
+	call EmptyBattleTextbox
 	call UpdateBattleHUDs
 	call WaitBGMap
 	call LoadTilemapToTempTilemap
@@ -5245,14 +5252,22 @@ BattleMenuPKMN_Loop:
 
 Battle_StatsScreen:
 	call DisableLCD
+	ldh a, [rVBK]
+	push af
+	xor a
+	ldh [rVBK], a
 
+	; Preserve the whole 6x6 backpic, including stats' $42-$53 heading.
+	; The backup ends before $8800, where the shared Hangul cache begins.
+	assert $31 + 6 * 6 == $55
+	assert ($31 + 6 * 6) * TILE_SIZE <= $800
 	ld hl, vTiles2 tile $31
 	ld de, vTiles0
-	ld bc, $11 tiles
+	ld bc, 6 * 6 tiles
 	call CopyBytes
 
 	ld hl, vTiles2
-	ld de, vTiles0 tile $11
+	ld de, vTiles0 tile (6 * 6)
 	ld bc, $31 tiles
 	call CopyBytes
 
@@ -5266,17 +5281,21 @@ Battle_StatsScreen:
 	call MaxVolume
 
 	call DisableLCD
+	xor a
+	ldh [rVBK], a
 
 	ld hl, vTiles0
 	ld de, vTiles2 tile $31
-	ld bc, $11 tiles
+	ld bc, 6 * 6 tiles
 	call CopyBytes
 
-	ld hl, vTiles0 tile $11
+	ld hl, vTiles0 tile (6 * 6)
 	ld de, vTiles2
 	ld bc, $31 tiles
 	call CopyBytes
 
+	pop af
+	ldh [rVBK], a
 	call EnableLCD
 	ret
 

@@ -37,7 +37,11 @@ ENDM
 
 MACRO? li
 	assert STRFIND(\1, "@") == -1, "String terminator \"@\" in list entry: \1"
+.entry\@:
 	db \1, "@"
+	if DEF(LIST_ENTRY_MAX_BYTES)
+		assert @ - .entry\@ <= LIST_ENTRY_MAX_BYTES, "Name exceeds string buffer: \1"
+	endc
 	DEF list_index += 1
 ENDM
 

@@ -52,6 +52,7 @@ AskTeachTMHM:
 	call GetTMHMItemMove
 	ld a, [wTempTMHM]
 	ld [wPutativeTMHMMove], a
+	ld [wNamedObjectIndex], a
 	call GetMoveName
 	call CopyName1
 	ld hl, BootedTMText ; Booted up a TM
@@ -73,7 +74,7 @@ AskTeachTMHM:
 ChooseMonToLearnTMHM:
 	ld hl, wStringBuffer2
 	ld de, wTMHMMoveNameBackup
-	ld bc, MOVE_NAME_LENGTH - 1
+	ld bc, STRING_BUFFER_LENGTH
 	call CopyBytes
 	call ClearBGPalettes
 ChooseMonToLearnTMHM_NoRefresh:
@@ -97,7 +98,7 @@ ChooseMonToLearnTMHM_NoRefresh:
 	push bc
 	ld hl, wTMHMMoveNameBackup
 	ld de, wStringBuffer2
-	ld bc, MOVE_NAME_LENGTH - 1
+	ld bc, STRING_BUFFER_LENGTH
 	call CopyBytes
 	pop af ; now contains the original contents of af
 	ret
@@ -377,8 +378,9 @@ TMHM_DisplayPocketItems:
 	ld [wTempTMHM], a
 .okay
 	predef GetTMHMMove
-	ld a, [wNamedObjectIndex]
+	ld a, [wTempTMHM]
 	ld [wPutativeTMHMMove], a
+	ld [wNamedObjectIndex], a
 	call GetMoveName
 	pop hl
 	ld bc, 3
@@ -444,6 +446,7 @@ PlaceMoveNameAfterTMHMName: ; unreferenced
 	predef GetTMHMMove
 	ld a, [wTempTMHM]
 	ld [wPutativeTMHMMove], a
+	ld [wNamedObjectIndex], a
 	call GetMoveName
 	push hl
 	call PlaceString

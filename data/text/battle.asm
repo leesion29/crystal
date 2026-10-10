@@ -1,1108 +1,1108 @@
 BattleText:: ; used only for BANK(BattleText)
 
 BattleText_PlayerPickedUpPayDayMoney:
-	text "<PLAYER> picked up"
-	line "¥@"
+	text "<PLAYER>는(은)"
+	line " @"
 	text_decimal wPayDayMoney, 3, 6
-	text "!"
+	text "원 주웠다!"
 	prompt
 
 WildPokemonAppearedText:
-	text "Wild @"
+	text "앗! 야생의 @"
 	text_buffer 5
 	text_start
-	line "appeared!"
+	line "(이)가 튀어나왔다!"
 	prompt
 
 HookedPokemonAttackedText:
-	text "The hooked"
-	line "@"
+	text "낚아올린"
+	line " @"
 	text_buffer 5
 	text_start
-	cont "attacked!"
+	cont "(이)가 덤벼들었다!"
 	prompt
 
 PokemonFellFromTreeText:
 	text_buffer 5
-	text " fell"
-	line "out of the tree!"
+	text "(이)가"
+	line "흔든 나무로부터 떨어졌다!"
 	prompt
 
 WildCelebiAppearedText:
-	text "Wild @"
+	text "앗! 야생의 @"
 	text_buffer 5
 	text_start
-	line "appeared!"
+	line "(이)가 튀어나왔다!"
 	prompt
 
 WantsToBattleText::
 	text "<ENEMY>"
-	line "wants to battle!"
+	line "(이)가 승부를 걸어왔다!"
 	prompt
 
 BattleText_WildFled:
-	text "Wild @"
+	text "야생의 @"
 	text_buffer 5
 	text_start
-	line "fled!"
+	line "는(은) 도망쳤다!"
 	prompt
 
 BattleText_EnemyFled:
-	text "Enemy @"
+	text "적의 @"
 	text_buffer 5
 	text_start
-	line "fled!"
+	line "는(은) 도망쳤다!"
 	prompt
 
 HurtByPoisonText:
 	text "<USER>"
-	line "is hurt by poison!"
+	line "독의 데미지를 입고 있다!"
 	prompt
 
 HurtByBurnText:
-	text "<USER>'s"
-	line "hurt by its burn!"
+	text "<USER>"
+	line "는(은) 화상의 데미지를 입었다!"
 	prompt
 
 LeechSeedSapsText:
-	text "LEECH SEED saps"
-	line "<USER>!"
+	text "<USER>"
+	line "기생목에 체력을 빼앗겼다!"
 	prompt
 
 HasANightmareText:
 	text "<USER>"
-	line "has a NIGHTMARE!"
+	line "는(은) 악몽에 시달리고 있다!"
 	prompt
 
 HurtByCurseText:
-	text "<USER>'s"
-	line "hurt by the CURSE!"
+	text "<USER>"
+	line "는(은) 저주에 걸려있다!"
 	prompt
 
 SandstormHitsText:
-	text "The SANDSTORM hits"
-	line "<USER>!"
+	text "<USER>"
+	line "모래바람이 습격했다!"
 	prompt
 
 PerishCountText:
-	text "<USER>'s"
-	line "PERISH count is @"
+	text "<USER>의"
+	line "멸망의 카운트가 @"
 	text_decimal wTextDecimalByte, 1, 1
-	text "!"
+	text "(으)로 되었다"
 	prompt
 
 BattleText_TargetRecoveredWithItem:
 	text "<TARGET>"
-	line "recovered with"
-	cont "@"
+	line "는(은) 약간 회복했다!"
+	cont "(@"
 	text_ram wStringBuffer1
-	text "."
+	text ")"
 	prompt
 
 BattleText_UserRecoveredPPUsing:
 	text "<USER>"
-	line "recovered PP using"
-	cont "@"
+	line "는(은) PP를 회복했다!"
+	cont "(@"
 	text_ram wStringBuffer1
-	text "."
+	text ")"
 	prompt
 
 BattleText_TargetWasHitByFutureSight:
 	text "<TARGET>"
-	line "was hit by FUTURE"
-	cont "SIGHT!"
+	line "는(은) 미래예지의"
+	cont "공격을 받았다!"
 	prompt
 
 BattleText_SafeguardFaded:
-	text "<USER>'s"
-	line "SAFEGUARD faded!"
+	text "<USER>"
+	line "신비의 베일이 사라졌다!"
 	prompt
 
 BattleText_MonsLightScreenFell:
 	text_ram wStringBuffer1
-	text " #MON's"
-	line "LIGHT SCREEN fell!"
+	text "의 빛의 장막의"
+	line "효과가 떨어졌다!"
 	prompt
 
 BattleText_MonsReflectFaded:
 	text_ram wStringBuffer1
-	text " #MON's"
-	line "REFLECT faded!"
+	text "의 리플렉터의"
+	line "효과가 떨어졌다!"
 	prompt
 
 BattleText_RainContinuesToFall:
-	text "Rain continues to"
-	line "fall."
+	text "비가 계속"
+	line " 내리고 있다!"
 	prompt
 
 BattleText_TheSunlightIsStrong:
-	text "The sunlight is"
-	line "strong."
+	text "햇살이"
+	line " 강하다"
 	prompt
 
 BattleText_TheSandstormRages:
-	text "The SANDSTORM"
-	line "rages."
+	text "모래바람이"
+	line " 세차게 분다"
 	prompt
 
 BattleText_TheRainStopped:
-	text "The rain stopped."
+	text "비가 내리다가 그쳤다!"
 	prompt
 
 BattleText_TheSunlightFaded:
-	text "The sunlight"
-	line "faded."
+	text "햇살이"
+	line " 약해졌다!"
 	prompt
 
 BattleText_TheSandstormSubsided:
-	text "The SANDSTORM"
-	line "subsided."
+	text "모래바람이"
+	line " 가라앉았다!"
 	prompt
 
 BattleText_EnemyMonFainted:
-	text "Enemy @"
+	text "적의 @"
 	text_buffer 5
 	text_start
-	line "fainted!"
+	line "는(은) 쓰러졌다!"
 	prompt
 
 GotMoneyForWinningText:
-	text "<PLAYER> got ¥@"
+	text "<PLAYER>는(은) @"
 	text_decimal wBattleReward, 3, 6
 	text_start
-	line "for winning!"
+	line "원 상금을 손에 넣었다!"
 	prompt
 
 BattleText_EnemyWasDefeated:
 	text "<ENEMY>"
-	line "was defeated!"
+	line "와(과)의 승부에서 이겼다!"
 	prompt
 
 TiedAgainstText:
-	text "Tied against"
-	line "<ENEMY>!"
+	text "<ENEMY>"
+	line "와(과)의 승부에서 비겼다!"
 	prompt
 
 SentSomeToMomText:
-	text "<PLAYER> got ¥@"
+	text "<PLAYER>는(은) @"
 	text_decimal wBattleReward, 3, 6
 	text_start
-	line "for winning!"
-	cont "Sent some to MOM!"
+	line "원 상금을 손에 넣었다!"
+	cont "어머니에게 약간 송금했다!"
 	prompt
 
 SentHalfToMomText:
-	text "Sent half to MOM!"
+	text "어머니에게 반 송금했다!"
 	prompt
 
 SentAllToMomText:
-	text "Sent all to MOM!"
+	text "어머니에게 전부 송금했다!"
 	prompt
 
 UnusedRivalLossText: ; unreferenced
-	text "<RIVAL>: Huh? I"
-	line "should've chosen"
-	cont "your #MON!"
+	text "<RIVAL>『엥?"
+	line "너의 포켓몬으로"
+	cont "하는 것이 좋았을까?"
 	prompt
 
 BattleText_MonFainted:
 	text_buffer 6
 	text_start
-	line "fainted!"
+	line "는(은) 쓰러졌다!"
 	prompt
 
 BattleText_UseNextMon:
-	text "Use next #MON?"
+	text "다음 포켓몬을 사용하겠습니까?"
 	done
 
 UnusedRivalWinText: ; unreferenced
-	text "<RIVAL>: Yes!"
-	line "I guess I chose a"
-	cont "good #MON!"
+	text "<RIVAL>『됐어!"
+	line "좋은 포켓몬을"
+	cont " 골랐나보군!"
 	prompt
 
 LostAgainstText:
-	text "Lost against"
-	line "<ENEMY>!"
+	text "<ENEMY>"
+	line "와(과)의 승부에서 졌다!"
 	prompt
 
 BattleText_EnemyIsAboutToUseWillPlayerChangeMon:
 	text "<ENEMY>"
-	line "is about to use"
+	line "는(은) 포켓몬을 꺼내려 한다"
 	cont "@"
 	text_buffer 5
-	text "."
+	text "를(을)!"
 
-	para "Will <PLAYER>"
-	line "change #MON?"
+	para "<PLAYER>(이)도 포켓몬을"
+	line "바꾸겠습니까?"
 	done
 
 BattleText_EnemySentOut:
 	text "<ENEMY>"
-	line "sent out"
+	line "는(은) 포켓몬을 꺼냈다"
 	cont "@"
 	text_buffer 5
-	text "!"
+	text "를(을)!"
 	done
 
 BattleText_TheresNoWillToBattle:
-	text "There's no will to"
-	line "battle!"
+	text "싸울 기력이"
+	line " 없다!"
 	prompt
 
 BattleText_AnEGGCantBattle:
-	text "An EGG can't"
-	line "battle!"
+	text "알은"
+	line " 싸울 수 없다!"
 	prompt
 
 BattleText_CantEscape2:
-	text "Can't escape!"
+	text "도망칠 수 없다!"
 	prompt
 
 BattleText_TheresNoEscapeFromTrainerBattle:
-	text "No! There's no"
-	line "running from a"
-	cont "trainer battle!"
+	text "안 되!"
+	line "승부도중에"
+	cont "상대에게 등을 보일 수 없어!"
 	prompt
 
 BattleText_GotAwaySafely:
-	text "Got away safely!"
+	text "성공적으로 도망쳤다!"
 	prompt
 
 BattleText_UserFledUsingAStringBuffer1:
 	text "<USER>"
-	line "fled using a"
-	cont "@"
+	line "는(은) 도구로 도망쳤다"
+	cont "(@"
 	text_ram wStringBuffer1
-	text "!"
+	text ")"
 	prompt
 
 BattleText_CantEscape:
-	text "Can't escape!"
+	text "도망칠 수가 없다!"
 	prompt
 
 BattleText_UserHurtBySpikes:
-	text "<USER>'s"
-	line "hurt by SPIKES!"
+	text "<USER>"
+	line "압정 뿌리기의 데미지를 입었다!"
 	prompt
 
 RecoveredUsingText:
 	text "<TARGET>"
-	line "recovered using a"
-	cont "@"
+	line "는(은) 도구로 회복했다!"
+	cont "(@"
 	text_ram wStringBuffer1
-	text "!"
+	text ")"
 	prompt
 
 BattleText_UsersStringBuffer1Activated:
-	text "<USER>'s"
+	text "<USER>"
 	line "@"
 	text_ram wStringBuffer1
 	text_start
-	cont "activated!"
+	cont "(이)가 작동했다!"
 	prompt
 
 BattleText_ItemsCantBeUsedHere:
-	text "Items can't be"
-	line "used here."
+	text "여기서는 도구를"
+	line "사용할 수 없습니다"
 	prompt
 
 BattleText_MonIsAlreadyOut:
 	text_buffer 6
 	text_start
-	line "is already out."
+	line "는(은) 이미 나가 있습니다"
 	prompt
 
 BattleText_MonCantBeRecalled:
 	text_buffer 6
 	text_start
-	line "can't be recalled!"
+	line "를(을) 돌아오게 할 수 없다"
 	prompt
 
 BattleText_TheresNoPPLeftForThisMove:
-	text "There's no PP left"
-	line "for this move!"
+	text "기술의 남은"
+	line " 포인트가 없다!"
 	prompt
 
 BattleText_TheMoveIsDisabled:
-	text "The move is"
-	line "DISABLED!"
+	text "기술을"
+	line " 봉인 당해있다!"
 	prompt
 
 BattleText_MonHasNoMovesLeft:
 	text_buffer 6
 	text_start
-	line "has no moves left!"
+	line "는(은) 낼 기술이 없다!"
 	done
 
 BattleText_TargetsEncoreEnded:
-	text "<TARGET>'s"
-	line "ENCORE ended!"
+	text "<TARGET>의"
+	line "앵콜 상태가 풀렸다!"
 	prompt
 
 BattleText_StringBuffer1GrewToLevel:
 	text_ram wStringBuffer1
-	text " grew to"
-	line "level @"
+	text "는(은)"
+	line "레벨@"
 	text_decimal wCurPartyLevel, 1, 3
-	text "!@"
+	text "(으)로 올랐다!@"
 	sound_dex_fanfare_50_79
 	text_end
 
 	text_end ; unreferenced
 
 BattleText_WildMonIsEating:
-	text "Wild @"
+	text "야생의@"
 	text_buffer 5
 	text_start
-	line "is eating!"
+	line "는(은) 먹이를 먹고 있다!"
 	prompt
 
 BattleText_WildMonIsAngry:
-	text "Wild @"
+	text "야생의@"
 	text_buffer 5
 	text_start
-	line "is angry!"
+	line "는(은) 화가 나있다!"
 	prompt
 
 FastAsleepText:
 	text "<USER>"
-	line "is fast asleep!"
+	line "는(은) 쿨쿨 자고 있다"
 	prompt
 
 WokeUpText:
 	text "<USER>"
-	line "woke up!"
+	line "는(은) 눈을 떴다!"
 	prompt
 
 FrozenSolidText:
 	text "<USER>"
-	line "is frozen solid!"
+	line "는(은) 얼어서 움직일 수 없다!"
 	prompt
 
 FlinchedText:
 	text "<USER>"
-	line "flinched!"
+	line "는(은) 기가 죽었다"
 	prompt
 
 MustRechargeText:
 	text "<USER>"
-	line "must recharge!"
+	line "는(은) 반동으로 꼼짝못한다"
 	prompt
 
 DisabledNoMoreText:
-	text "<USER>'s"
-	line "disabled no more!"
+	text "<USER>의"
+	line "사슬묶기가 풀렸다!"
 	prompt
 
 IsConfusedText:
 	text "<USER>"
-	line "is confused!"
+	line "는(은) 혼란에 빠져있다!"
 	prompt
 
 HurtItselfText:
-	text "It hurt itself in"
-	line "its confusion!"
+	text "영문도 모르고"
+	line "자신을 공격했다!"
 	prompt
 
 ConfusedNoMoreText:
-	text "<USER>'s"
-	line "confused no more!"
+	text "<USER>"
+	line "는(은) 혼란이 풀렸다"
 	prompt
 
 BecameConfusedText:
 	text "<TARGET>"
-	line "became confused!"
+	line "는(은) 혼란해 있다!"
 	prompt
 
 BattleText_ItemHealedConfusion:
-	text "A @"
+	text "@"
 	text_ram wStringBuffer1
-	text " rid"
+	text "(으)로"
 	line "<TARGET>"
-	cont "of its confusion."
+	cont "의 혼란을 치료했다!"
 	prompt
 
 AlreadyConfusedText:
-	text "<TARGET>'s"
-	line "already confused!"
+	text "<TARGET>"
+	line "는(은) 이미 혼란에 빠져있다"
 	prompt
 
 BattleText_UsersHurtByStringBuffer1:
-	text "<USER>'s"
-	line "hurt by"
-	cont "@"
+	text "<USER>"
+	line "는(은) 데미지를 받고 있다"
+	cont "(@"
 	text_ram wStringBuffer1
-	text "!"
+	text ")"
 	prompt
 
 BattleText_UserWasReleasedFromStringBuffer1:
 	text "<USER>"
-	line "was released from"
-	cont "@"
+	line "는(은) 기술에서 풀려났다!"
+	cont "(@"
 	text_ram wStringBuffer1
-	text "!"
+	text ")"
 	prompt
 
 UsedBindText:
 	text "<USER>"
-	line "used BIND on"
+	line "조이기를 사용했다! 대상은"
 	cont "<TARGET>!"
 	prompt
 
 WhirlpoolTrapText:
 	text "<TARGET>"
-	line "was trapped!"
+	line "소용돌이 안에 감금되었다!"
 	prompt
 
 FireSpinTrapText:
 	text "<TARGET>"
-	line "was trapped!"
+	line "소용돌이 안에 감금되었다!"
 	prompt
 
 WrappedByText:
 	text "<TARGET>"
-	line "was WRAPPED by"
-	cont "<USER>!"
+	line "다음 상대에게 꽁꽁 감겨졌다!"
+	cont "(<USER>)"
 	prompt
 
 ClampedByText:
 	text "<TARGET>"
-	line "was CLAMPED by"
-	cont "<USER>!"
+	line "다음 상대의 껍데기에 꼈다"
+	cont "(<USER>)"
 	prompt
 
 StoringEnergyText:
 	text "<USER>"
-	line "is storing energy!"
+	line "는(은) 꼼짝않고 있다"
 	prompt
 
 UnleashedEnergyText:
-	text "<USER>"
-	line "unleashed energy!"
+	text "<USER>의"
+	line "참기가 풀렸다"
 	prompt
 
 HungOnText:
 	text "<TARGET>"
-	line "hung on with"
-	cont "@"
+	line "는(은) 도구로 견뎌냈다!"
+	cont "(@"
 	text_ram wStringBuffer1
-	text "!"
+	text ")"
 	prompt
 
 EnduredText:
 	text "<TARGET>"
-	line "ENDURED the hit!"
+	line "는(은) 공격을 참았다!"
 	prompt
 
 InLoveWithText:
 	text "<USER>"
-	line "is in love with"
+	line "헤롱헤롱한 상대는"
 	cont "<TARGET>!"
 	prompt
 
 InfatuationText:
-	text "<USER>'s"
-	line "infatuation kept"
-	cont "it from attacking!"
+	text "<USER>"
+	line "는(은) 헤롱헤롱"
+	cont "해서 기술을 펼칠 수 없었다!"
 	prompt
 
 DisabledMoveText:
-	text "<USER>'s"
-	line "@"
+	text "<USER>"
+	line "사슬묶기 때문에 @"
 	text_ram wStringBuffer1
-	text " is"
-	cont "DISABLED!"
+	text ""
+	cont "를(을) 낼 수 없다!"
 	prompt
 
 LoafingAroundText:
 	text_buffer 6
-	text " is"
-	line "loafing around."
+	text "는(은)"
+	line "게으름을 피우고 있다"
 	prompt
 
 BeganToNapText:
 	text_buffer 6
-	text " began"
-	line "to nap!"
+	text "는(은)"
+	line "낮잠자기 시작했다!"
 	prompt
 
 WontObeyText:
 	text_buffer 6
-	text " won't"
-	line "obey!"
+	text "는(은)"
+	line "말을 듣지 않는다!"
 	prompt
 
 TurnedAwayText:
 	text_buffer 6
-	text " turned"
-	line "away!"
+	text "는(은)"
+	line "외면했다"
 	prompt
 
 IgnoredOrdersText:
 	text_buffer 6
-	text " ignored"
-	line "orders!"
+	text "는(은)"
+	line "모르는 채했다"
 	prompt
 
 IgnoredSleepingText:
 	text_buffer 6
-	text " ignored"
-	line "orders…sleeping!"
+	text "는(은)"
+	line "잠든 채로 명령을 무시했다"
 	prompt
 
 NoPPLeftText:
-	text "But no PP is left"
-	line "for the move!"
+	text "그러나 기술 포인트가"
+	line "없었다!"
 	prompt
 
 HasNoPPLeftText:
 	text "<USER>"
-	line "has no PP left for"
-	cont "@"
+	line "는(은) 기술 포인트가 없다!"
+	cont "(@"
 	text_ram wStringBuffer2
-	text "!"
+	text ")"
 	prompt
 
 WentToSleepText:
 	text "<USER>"
-	line "went to sleep!"
+	line "는(은) 잠들기 시작했다!"
 	done
 
 RestedText:
 	text "<USER>"
-	line "fell asleep and"
-	cont "became healthy!"
+	line "는(은) 건강해져서"
+	cont " 잠자기 시작했다!"
 	done
 
 RegainedHealthText:
 	text "<USER>"
-	line "regained health!"
+	line "는(은) 체력을 회복했다!"
 	prompt
 
 AttackMissedText:
-	text "<USER>'s"
-	line "attack missed!"
+	text "<USER>의"
+	line "그러나 공격은 빗나갔다!"
 	prompt
 
 AttackMissed2Text:
-	text "<USER>'s"
-	line "attack missed!"
+	text "<USER>의"
+	line "공격은 빗나갔다!"
 	prompt
 
 CrashedText:
 	text "<USER>"
-	line "kept going and"
-	cont "crashed!"
+	line "는(은) 떠올랐다가 한계를 넘어"
+	cont "지면에 부딪쳤다!"
 	prompt
 
 UnaffectedText:
-	text "<TARGET>'s"
-	line "unaffected!"
+	text "<TARGET>"
+	line "에게는 전혀 효과가 없다!"
 	prompt
 
 DoesntAffectText:
-	text "It doesn't affect"
-	line "<TARGET>!"
+	text "<TARGET>"
+	line "에게는 효과가 없는 듯 하다……"
 	prompt
 
 CriticalHitText:
-	text "A critical hit!"
+	text "급소에 맞았다!"
 	prompt
 
 OneHitKOText:
-	text "It's a one-hit KO!"
+	text "일격필살!"
 	prompt
 
 SuperEffectiveText:
-	text "It's super-"
-	line "effective!"
+	text "효과는"
+	line " 뛰어났다!"
 	prompt
 
 NotVeryEffectiveText:
-	text "It's not very"
-	line "effective…"
+	text "효과는 조금"
+	line " 부족한 듯 하다"
 	prompt
 
 TookDownWithItText:
 	text "<TARGET>"
-	line "took down with it,"
-	cont "<USER>!"
+	line "<USER>"
+	cont "를(을) 길동무로 삼았다!"
 	prompt
 
 RageBuildingText:
-	text "<USER>'s"
-	line "RAGE is building!"
+	text "<USER>"
+	line "의 분노의 볼티지가 올라간다!"
 	prompt
 
 GotAnEncoreText:
 	text "<TARGET>"
-	line "got an ENCORE!"
+	line "는(은) 앵콜을 당했다!"
 	prompt
 
 SharedPainText:
-	text "The battlers"
-	line "shared pain!"
+	text "서로 체력을"
+	line "나누어 가졌다!"
 	prompt
 
 TookAimText:
 	text "<USER>"
-	line "took aim!"
+	line "는(은) 목표를 정했다!"
 	prompt
 
 SketchedText:
 	text "<USER>"
-	line "SKETCHED"
+	line "는(은) 기술을 스케치했다!"
 	cont "@"
 	text_ram wStringBuffer1
-	text "!"
+	text ""
 	prompt
 
 DestinyBondEffectText:
-	text "<USER>'s"
-	line "trying to take its"
-	cont "opponent with it!"
+	text "<USER>"
+	line "는(은) 상대를"
+	cont "길동무로 삼으려하고 있다"
 	prompt
 
 SpiteEffectText:
-	text "<TARGET>'s"
+	text "<TARGET>의"
 	line "@"
 	text_ram wStringBuffer1
-	text " was"
-	cont "reduced by @"
+	text "를(을)"
+	cont "@"
 	text_decimal wTextDecimalByte, 1, 1
-	text "!"
+	text " 깎았다!"
 	prompt
 
 BellChimedText:
-	text "A bell chimed!"
+	text "방울소리가 울려왔다!"
 	line ""
 	prompt
 
 FellAsleepText:
 	text "<TARGET>"
-	line "fell asleep!"
+	line "는(은) 잠들어버렸다!"
 	prompt
 
 AlreadyAsleepText:
-	text "<TARGET>'s"
-	line "already asleep!"
+	text "<TARGET>"
+	line "는(은) 이미 잠자고 있다!"
 	prompt
 
 WasPoisonedText:
 	text "<TARGET>"
-	line "was poisoned!"
+	line "는(은) 독을 뒤집어썼다"
 	prompt
 
 BadlyPoisonedText:
-	text "<TARGET>'s"
-	line "badly poisoned!"
+	text "<TARGET>"
+	line "는(은) 맹독을 뒤집어썼다!"
 	prompt
 
 AlreadyPoisonedText:
-	text "<TARGET>'s"
-	line "already poisoned!"
+	text "<TARGET>"
+	line "는(은) 이미 독에 걸려있다"
 	prompt
 
 SuckedHealthText:
-	text "Sucked health from"
-	line "<TARGET>!"
+	text "<TARGET>"
+	line "(으)로부터 체력을 흡수했다!"
 	prompt
 
 DreamEatenText:
-	text "<TARGET>'s"
-	line "dream was eaten!"
+	text "<TARGET>의"
+	line "꿈을 먹었다!"
 	prompt
 
 WasBurnedText:
 	text "<TARGET>"
-	line "was burned!"
+	line "는(은) 화상을 입었다!"
 	prompt
 
 DefrostedOpponentText:
-	text "<TARGET>"
-	line "was defrosted!"
+	text "<TARGET>의"
+	line "얼음이 녹았다!"
 	prompt
 
 WasFrozenText:
 	text "<TARGET>"
-	line "was frozen solid!"
+	line "는(은) 꽁꽁 얼어버렸다!"
 	prompt
 
 WontRiseAnymoreText:
-	text "<USER>'s"
+	text "<USER>의"
 	line "@"
 	text_ram wStringBuffer2
-	text " won't"
-	cont "rise anymore!"
+	text "는(은)"
+	cont "더 이상 오르지않는다"
 	prompt
 
 WontDropAnymoreText:
-	text "<TARGET>'s"
+	text "<TARGET>의"
 	line "@"
 	text_ram wStringBuffer2
-	text " won't"
-	cont "drop anymore!"
+	text "는(은)"
+	cont "더이상 내려가지않는다!"
 	prompt
 
 FledFromBattleText::
 	text "<USER>"
-	line "fled from battle!"
+	line "는(은) 전투에서 이탈했다!"
 	prompt
 
 FledInFearText:
 	text "<TARGET>"
-	line "fled in fear!"
+	line "는(은) 두려워져서 도망쳤다!"
 	prompt
 
 BlownAwayText:
 	text "<TARGET>"
-	line "was blown away!"
+	line "는(은) 내동댕이쳐졌다!"
 	prompt
 
 PlayerHitTimesText:
-	text "Hit @"
+	text "@"
 	text_decimal wPlayerDamageTaken, 1, 1
-	text " times!"
+	text "회 맞았다!"
 	prompt
 
 EnemyHitTimesText:
-	text "Hit @"
+	text "@"
 	text_decimal wEnemyDamageTaken, 1, 1
-	text " times!"
+	text "회 맞았다!"
 	prompt
 
 MistText:
-	text "<USER>'s"
-	line "shrouded in MIST!"
+	text "<USER>"
+	line "는(은) 흰안개에 둘러싸였다!"
 	prompt
 
 ProtectedByMistText:
-	text "<TARGET>'s"
-	line "protected by MIST."
+	text "<TARGET>"
+	line "는(은) 흰안개에 지켜지고 있다"
 	prompt
 
 GettingPumpedText:
 	text_pause
-	text "<USER>'s"
-	line "getting pumped!"
+	text "<USER>"
+	line "는(은) 힘이 넘치고 있다"
 	prompt
 
 RecoilText:
-	text "<USER>'s"
-	line "hit with recoil!"
+	text "<USER>"
+	line "는(은) 공격의 반동을 입었다!"
 	prompt
 
 MadeSubstituteText:
-	text "<USER>"
-	line "made a SUBSTITUTE!"
+	text "<USER>의"
+	line "분신이 나타났다"
 	prompt
 
 HasSubstituteText:
-	text "<USER>"
-	line "has a SUBSTITUTE!"
+	text "<USER>의"
+	line "그러나 대타출동은 이미 나와있다!"
 	prompt
 
 TooWeakSubText:
-	text "Too weak to make"
-	line "a SUBSTITUTE!"
+	text "그러나 분신을 불러내기에는"
+	line "체력이 부족했다!"
 	prompt
 
 SubTookDamageText:
-	text "The SUBSTITUTE"
-	line "took damage for"
+	text "분신이 공격을 받았다!"
+	line "다음 포켓몬을 대신해서"
 	cont "<TARGET>!"
 	prompt
 
 SubFadedText:
-	text "<TARGET>'s"
-	line "SUBSTITUTE faded!"
+	text "<TARGET>"
+	line "의 분신은 사라져버렸다……"
 	prompt
 
 MimicLearnedMoveText:
 	text "<USER>"
-	line "learned"
+	line "는(은)"
 	cont "@"
 	text_ram wStringBuffer1
-	text "!"
+	text "를(을) 배웠다"
 	prompt
 
 WasSeededText:
-	text "<TARGET>"
-	line "was seeded!"
+	text "<TARGET>에게"
+	line "씨를 심었다!"
 	prompt
 
 EvadedText:
 	text "<TARGET>"
-	line "evaded the attack!"
+	line "는(은) 공격을 피했다!"
 	prompt
 
 WasDisabledText:
-	text "<TARGET>'s"
+	text "<TARGET>의"
 	line "@"
 	text_ram wStringBuffer1
-	text " was"
-	cont "DISABLED!"
+	text "를(을)"
+	cont "봉해버렸다!"
 	prompt
 
 CoinsScatteredText:
-	text "Coins scattered"
-	line "everywhere!"
+	text "금화가 주변에"
+	line " 산산히 흩어졌다!"
 	prompt
 
 TransformedTypeText:
 	text "<USER>"
-	line "transformed into"
-	cont "the @"
+	line "는(은)"
+	cont "@"
 	text_ram wStringBuffer1
-	text "-type!"
+	text "타입이 되었다!"
 	prompt
 
 EliminatedStatsText:
-	text "All stat changes"
-	line "were eliminated!"
+	text "모든 스테이터스가"
+	line "원래대로 되돌아왔다!"
 	prompt
 
 TransformedText:
 	text "<USER>"
-	line "TRANSFORMED into"
-	cont "@"
+	line "는(은) 변신했다!"
+	cont "(@"
 	text_ram wStringBuffer1
-	text "!"
+	text ")"
 	prompt
 
 LightScreenEffectText:
-	text "<USER>'s"
-	line "SPCL.DEF rose!"
+	text "<USER>"
+	line "는(은) 빛의 장막을 펼쳤다!"
 	prompt
 
 ReflectEffectText:
-	text "<USER>'s"
-	line "DEFENSE rose!"
+	text "<USER>"
+	line "는(은) 리플렉터를 펼쳤다!"
 	prompt
 
 NothingHappenedText:
-	text "But nothing"
-	line "happened."
+	text "그러나 아무것도"
+	line " 일어나지 않는다!"
 	prompt
 
 ButItFailedText:
-	text "But it failed!"
+	text "그러나 기술이 잘 먹히지 않았다!"
 	prompt
 
 ItFailedText:
-	text "It failed!"
+	text "기술이 잘 먹히지 않았다!"
 	prompt
 
 DidntAffect1Text:
-	text "It didn't affect"
-	line "<TARGET>!"
+	text "<TARGET>에는"
+	line "그러나 듣지 않았다!"
 	prompt
 
 DidntAffect2Text:
-	text "It didn't affect"
-	line "<TARGET>!"
+	text "<TARGET>에는"
+	line "듣지 않았다!"
 	prompt
 
 HPIsFullText:
-	text "<USER>'s"
-	line "HP is full!"
+	text "<USER>의"
+	line "그러나 체력은 가득이다!"
 	prompt
 
 DraggedOutText:
 	text "<USER>"
-	line "was dragged out!"
+	line "전투에 억지로 끌어내어졌다!"
 	prompt
 
 ParalyzedText:
-	text "<TARGET>'s"
-	line "paralyzed! Maybe"
-	cont "it can't attack!"
+	text "<TARGET>"
+	line "는(은) 마비되어서"
+	cont "기술을 펼치기 힘들게되었다!"
 	prompt
 
 FullyParalyzedText:
-	text "<USER>'s"
-	line "fully paralyzed!"
+	text "<USER>"
+	line "몸이 감전되어 움직일 수 없다!"
 	prompt
 
 AlreadyParalyzedText:
-	text "<TARGET>'s"
-	line "already paralyzed!"
+	text "<TARGET>"
+	line "는(은) 이미 마비되어있다"
 	prompt
 
 ProtectedByText:
-	text "<TARGET>'s"
-	line "protected by"
-	cont "@"
+	text "<TARGET>"
+	line "는(은) 도구로 지켜지고 있다!"
+	cont "(@"
 	text_ram wStringBuffer1
-	text "!"
+	text ")"
 	prompt
 
 MirrorMoveFailedText:
-	text "The MIRROR MOVE"
-	next "failed!"
+	text "그러나 따라하기는"
+	next "실패로 끝났다!"
 	prompt
 
 StoleText:
 	text "<USER>"
-	line "stole @"
+	line "는(은) @"
 	text_ram wStringBuffer1
 	text_start
-	cont "from its foe!"
+	cont "를(을) 빼았았다!"
 	prompt
 
 CantEscapeNowText:
 	text "<TARGET>"
-	line "can't escape now!"
+	line "는(은) 도망칠 수 없다!"
 	prompt
 
 StartedNightmareText:
 	text "<TARGET>"
-	line "started to have a"
-	cont "NIGHTMARE!"
+	line "는(은) 악몽을"
+	cont " 꾸기 시작했다!"
 	prompt
 
 WasDefrostedText:
-	text "<USER>"
-	line "was defrosted!"
+	text "<USER>의"
+	line "얼음이 녹았다!"
 	prompt
 
 PutACurseText:
 	text "<USER>"
-	line "cut its own HP and"
+	line "자신의 체력을 깎아먹고"
 
-	para "put a CURSE on"
-	line "<TARGET>!"
+	para "<TARGET>"
+	line "에게 저주를 걸었다!"
 	prompt
 
 ProtectedItselfText:
 	text "<USER>"
-	line "PROTECTED itself!"
+	line "는(은) 방어태세에 들어갔다!"
 	prompt
 
 ProtectingItselfText:
-	text "<TARGET>'s"
-	line "PROTECTING itself!"
+	text "<TARGET>"
+	line "그러나 방어하고 있다!"
 	done
 
 SpikesText:
-	text "SPIKES scattered"
-	line "all around"
+	text "압정 뿌리기를 펼쳤다!"
+	line "발밑에 깔린 상대는"
 	cont "<TARGET>!"
 	prompt
 
 IdentifiedText:
 	text "<USER>"
-	line "identified"
+	line "정체를 간파한 상대는"
 	cont "<TARGET>!"
 	prompt
 
 StartPerishText:
-	text "Both #MON will"
-	line "faint in 3 turns!"
+	text "서로의 포켓몬은"
+	line "3턴후에 끝나버린다!"
 	prompt
 
 SandstormBrewedText:
-	text "A SANDSTORM"
-	line "brewed!"
+	text "모래바람이"
+	line " 불기 시작했다!"
 	prompt
 
 BracedItselfText:
 	text "<USER>"
-	line "braced itself!"
+	line "는(은) 견디기 태세에 들어갔다!"
 	prompt
 
 FellInLoveText:
 	text "<TARGET>"
-	line "fell in love!"
+	line "는(은) 해롱해롱해졌다!"
 	prompt
 
 CoveredByVeilText:
-	text "<USER>'s"
-	line "covered by a veil!"
+	text "<USER>"
+	line "는(은) 신비의 베일에 감싸였다!"
 	prompt
 
 SafeguardProtectText:
 	text "<TARGET>"
-	line "is protected by"
-	cont "SAFEGUARD!"
+	line "는(은) 신비의 베일에의해"
+	cont " 지켜지고 있다!"
 	prompt
 
 MagnitudeText:
-	text "Magnitude @"
+	text "매그니튜드@"
 	text_decimal wTextDecimalByte, 1, 1
-	text "!"
+	text "!!"
 	prompt
 
 ReleasedByText:
 	text "<USER>"
-	line "was released by"
+	line "공격에서 풀려났다! 상대는"
 	cont "<TARGET>!"
 	prompt
 
 ShedLeechSeedText:
 	text "<USER>"
-	line "shed LEECH SEED!"
+	line "는(은) 씨뿌리기 기술을 날렸다!"
 	prompt
 
 BlewSpikesText:
 	text "<USER>"
-	line "blew away SPIKES!"
+	line "는(은) 압정 뿌리기를 날렸다!"
 	prompt
 
 DownpourText:
-	text "A downpour"
-	line "started!"
+	text "큰 비가"
+	line " 되었다!"
 	prompt
 
 SunGotBrightText:
-	text "The sunlight got"
-	line "bright!"
+	text "햇살이"
+	line " 강해졌다!"
 	prompt
 
 BellyDrumText:
 	text "<USER>"
-	line "cut its HP and"
-	cont "maximized ATTACK!"
+	line "는(은) 체력을"
+	cont "깎아먹고 풀파워가 되었다!"
 	prompt
 
 CopiedStatsText:
 	text "<USER>"
-	line "copied the stat"
+	line "는(은)"
 
-	para "changes of"
-	line "<TARGET>!"
+	para "<TARGET>"
+	line "의 보조효과를 복사했다!"
 	prompt
 
 ForesawAttackText:
 	text "<USER>"
-	line "foresaw an attack!"
+	line "앞으로의 공격을 예지했다!"
 	prompt
 
 BeatUpAttackText:
 	text_ram wStringBuffer1
-	text "'s"
-	line "attack!"
+	text "의"
+	line " 공격!"
 	done
 
 PresentFailedText:
 	text "<TARGET>"
-	line "refused the gift!"
+	line "는(은) 프레젠트를 받지 않았다!"
 	prompt
 
 IgnoredOrders2Text:
 	text "<USER>"
-	line "ignored orders!"
+	line "는(은) 명령을 무시했다!"
 	prompt
 
 BattleText_LinkErrorBattleCanceled:
-	text "Link error…"
+	text "통신 에러……"
 
-	para "The battle has"
-	line "been canceled…"
+	para "승부가"
+	line " 취소되었다……"
 	prompt
 
 BattleText_NoTimeLeftToday: ; unreferenced
-	text "There is no time"
-	line "left today!"
+	text "오늘은 남은 시간이"
+	line " 없습니다!"
 	done

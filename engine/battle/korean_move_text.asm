@@ -1,4 +1,5 @@
-; Battle-only OldGold names. Do not change the common English MoveNames table.
+; Crystal-owned Korean names shared by battle and status screens.
+; Do not change the common English MoveNames table.
 ; ID order checked against both move_constants.asm files (251 moves).
 BattleListMoves:
 ; BC = first baseline coordinate. Render directly from ROM, no short name buffer.
@@ -67,6 +68,35 @@ BattlePlaceMoveType:
 ; BC = output baseline; UpdateMoveData supplied the real Crystal type.
 	push bc
 	ld a, [wPlayerMoveStruct + MOVE_TYPE]
+	ld hl, BattleMoveTypeNames
+	ld c, a
+	ld b, 0
+	add hl, bc
+	add hl, bc
+	ld a, [hli]
+	ld e, a
+	ld d, [hl]
+	pop hl
+	jp PlaceString
+
+; Status screens share the Crystal-owned type table, without changing battle data.
+; BC = first type baseline; the second Korean line is two tile rows lower.
+StatsScreenPlaceTypes:
+	ld h, b
+	ld l, c
+	push hl
+	ld a, [wBaseType1]
+	call .Print
+	pop hl
+	ld a, [wBaseType1]
+	ld b, a
+	ld a, [wBaseType2]
+	cp b
+	ret z
+	ld bc, SCREEN_WIDTH * 2
+	add hl, bc
+.Print:
+	push hl
 	ld hl, BattleMoveTypeNames
 	ld c, a
 	ld b, 0

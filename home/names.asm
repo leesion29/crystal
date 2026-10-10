@@ -52,9 +52,14 @@ GetName::
 	dec a
 	call GetNthString
 
-	ld de, wStringBuffer1
-	ld bc, ITEM_NAME_LENGTH
-	call CopyBytes
+	; Copy the complete string, including multibyte glyphs and its terminator.
+	; Move-table entries are bounded by STRING_BUFFER_LENGTH at build time.
+	ld d, h
+	ld e, l
+	ld hl, wStringBuffer1
+	call CopyName2
+	ld d, h
+	ld e, l
 
 .done
 	ld a, e

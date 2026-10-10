@@ -245,14 +245,17 @@ ListMovePP:
 	ld a, [wListMovesLineSpacing]
 	ld e, a
 	ld d, 0
+	ld a, c
+	and a
+	jr z, .no_move_labels
 	ld a, $3e ; P
 	call .load_loop
+.no_move_labels
 	ld a, b
 	and a
 	jr z, .skip
 	ld c, a
-	ld a, '-'
-	call .load_loop
+	call .load_empty_loop
 
 .skip
 	pop hl
@@ -322,6 +325,22 @@ ListMovePP:
 	dec c
 	jr nz, .load_loop
 	ret
+
+.load_empty_loop
+	push bc
+	push de
+	push hl
+	ld de, .EmptyPP
+	call PlaceString
+	pop hl
+	pop de
+	pop bc
+	add hl, de
+	dec c
+	jr nz, .load_empty_loop
+	ret
+.EmptyPP:
+	db "--@"
 
 ; "AP" is german for "PP"
 ; The german translation uses this instead of the loop above

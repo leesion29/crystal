@@ -1,3 +1,5 @@
+; Korean Gold is a reference only. All adopted data is owned by Crystal.
+INCLUDE "data/items/stats_names.asm"
 	const_def 1
 	const PINK_PAGE  ; 1
 	const GREEN_PAGE ; 2
@@ -424,32 +426,32 @@ StatsScreen_InitUpperHalf:
 	ld a, [wBaseDexNo]
 	ld [wTextDecimalByte], a
 	ld [wCurSpecies], a
-	hlcoord 8, 0
+	hlcoord 1, 0
 	ld [hl], '№'
 	inc hl
-	ld [hl], '.'
-	inc hl
-	hlcoord 10, 0
+	call StatsScreen_PlaceDot
+	hlcoord 3, 0
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
 	ld de, wTextDecimalByte
 	call PrintNum
-	hlcoord 14, 0
+	hlcoord 1, 8
 	call PrintLevel
 	ld hl, .NicknamePointers
 	call GetNicknamePointer
 	call CopyNickname
-	hlcoord 8, 2
+	hlcoord 1, 10
 	call PlaceHangulName
-	hlcoord 18, 0
+	hlcoord 5, 8
 	call .PlaceGenderChar
-	hlcoord 9, 4
-	ld a, '/'
-	ld [hli], a
+	hlcoord 1, 12
+	ld de, .Slash
+	call PlaceString
+	inc hl
 	ld a, [wBaseDexNo]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
 	call PlaceString
-	call StatsScreen_PlaceHorizontalDivider
+	call StatsScreen_PlaceVerticalDivider
 	call StatsScreen_PlacePageSwitchArrows
 	call StatsScreen_PlaceShinyIcon
 	ret
@@ -476,12 +478,15 @@ StatsScreen_InitUpperHalf:
 	farcall GetGender
 	pop hl
 	ret c
-	ld a, '♂'
+	ld de, .Male
 	jr nz, .got_gender
-	ld a, '♀'
+	ld de, .Female
 .got_gender
-	ld [hl], a
-	ret
+	jp PlaceString
+
+.Male: db "♂@"
+.Female: db "♀@"
+.Slash: db "/@"
 
 .NicknamePointers:
 	dw wPartyMonNicknames
@@ -489,8 +494,27 @@ StatsScreen_InitUpperHalf:
 	dw sBoxMonNicknames
 	dw wBufferMonNickname
 
-StatsScreen_PlaceVerticalDivider: ; unreferenced
-; The Japanese stats screen has a vertical divider.
+StatsScreen_PlaceDot:
+; $e8 is a source character, not a fixed CGB tile. Cache a single-height dot
+; even before the first Hangul. Avoid the DMG Hangul fallback's upper-row write.
+	ldh a, [hCGB]
+	and a
+	jr z, .static
+	ld b, 0
+	ld c, '.'
+	; Switch through ROM0: an inline homecall would switch out this ROMX code.
+	; FarCall_de also preserves HL, the glyph's destination coordinate.
+	ld de, _PlaceHangul
+	ld a, BANK(_PlaceHangul)
+	call FarCall_de
+	ret
+.static
+	ld [hl], '.'
+	inc hl
+	ret
+
+StatsScreen_PlaceVerticalDivider:
+; Korean Gold's left information column ends at x=6.
 	hlcoord 7, 0
 	ld bc, SCREEN_WIDTH
 	ld d, SCREEN_HEIGHT
@@ -502,7 +526,7 @@ StatsScreen_PlaceVerticalDivider: ; unreferenced
 	jr nz, .loop
 	ret
 
-StatsScreen_PlaceHorizontalDivider:
+StatsScreen_PlaceHorizontalDivider: ; unreferenced legacy layout
 	hlcoord 0, 7
 	ld b, SCREEN_WIDTH
 	ld a, $62 ; horizontal divider (empty HP/exp bar)
@@ -513,17 +537,23 @@ StatsScreen_PlaceHorizontalDivider:
 	ret
 
 StatsScreen_PlacePageSwitchArrows:
-	hlcoord 12, 6
-	ld [hl], '◀'
-	hlcoord 19, 6
-	ld [hl], '▶'
+; Fixed 8-pixel-high "◀페이지▶" tiles, owned by Crystal.
+	hlcoord 2, 16
+	ld a, $32
+	ld [hli], a
+	inc a
+	ld [hli], a
+	inc a
+	ld [hli], a
+	inc a
+	ld [hl], a
 	ret
 
 StatsScreen_PlaceShinyIcon:
 	ld bc, wTempMonDVs
 	farcall CheckShininess
 	ret nc
-	hlcoord 19, 0
+	hlcoord 6, 8
 	ld [hl], '⁂'
 	ret
 
@@ -551,16 +581,21 @@ StatsScreen_LoadGFX:
 	maskbits NUM_STAT_PAGES
 	ld c, a
 	call StatsScreen_LoadPageIndicators
-	hlcoord 0, 8
-	lb bc, 10, 20
+	hlcoord 8, 0
+	lb bc, SCREEN_HEIGHT, 12
 	call ClearBox
-	ret
+	jp StatsScreen_ClearPageAttrs
 
 .LoadPals:
 	ld a, [wStatsScreenFlags]
 	maskbits NUM_STAT_PAGES
 	ld c, a
 	farcall LoadStatsScreenPals
+	ldh a, [hCGB]
+	and a
+	jr z, .attrs_done
+	farcall ApplyAttrmap
+.attrs_done
 	call DelayFrame
 	ld hl, wStatsScreenFlags
 	set STATS_SCREEN_ANIMATE_MON, [hl]
@@ -582,14 +617,33 @@ StatsScreen_LoadGFX:
 	dw LoadBluePage
 	assert_table_length NUM_STAT_PAGES
 
+StatsScreen_ClearPageAttrs:
+; Each page owns the entire right column. Keep the mon, HP and page icons
+; on the left untouched, and do not carry the exp palette to other pages.
+	ldh a, [hCGB]
+	and a
+	ret z
+	hlcoord 8, 0, wAttrmap
+	lb bc, SCREEN_HEIGHT, 12
+	xor a ; stats background/HP palette 0
+	call FillBoxWithByte
+	ld a, [wStatsScreenFlags]
+	and STAT_PAGE_MASK
+	cp PINK_PAGE
+	ret nz
+	hlcoord 9, 16, wAttrmap
+	ld bc, 10
+	ld a, 2 ; exp bar, including its two end caps
+	jp ByteFill
+
 LoadPinkPage:
-	hlcoord 0, 9
+	hlcoord 10, 1
 	ld b, $0
 	predef DrawPlayerHP
-	hlcoord 8, 9
+	hlcoord 18, 1
 	ld [hl], $41 ; right HP/exp bar end cap
 	ld de, .Status_Type
-	hlcoord 0, 12
+	hlcoord 9, 4
 	call PlaceString
 	ld a, [wTempMonPokerusStatus]
 	ld b, a
@@ -598,67 +652,62 @@ LoadPinkPage:
 	ld a, b
 	and $f0
 	jr z, .NotImmuneToPkrs
-	hlcoord 8, 8
-	ld [hl], '.' ; Pokérus immunity dot
+	hlcoord 19, 9
+	call StatsScreen_PlaceDot ; same cache contract as the number prefix
 .NotImmuneToPkrs:
 	ld a, [wMonType]
 	cp BOXMON
 	jr z, .StatusOK
-	hlcoord 6, 13
+	hlcoord 14, 4
 	push hl
 	ld de, wTempMonStatus
-	predef PlaceStatusString
+	call StatsScreen_PlaceStatus
 	pop hl
 	jr nz, .done_status
 	jr .StatusOK
 .HasPokerus:
 	ld de, .PkrsStr
-	hlcoord 1, 13
+	hlcoord 14, 4
 	call PlaceString
 	jr .done_status
 .StatusOK:
+	hlcoord 14, 4
 	ld de, .OK_str
 	call PlaceString
 .done_status
-	hlcoord 1, 15
-	predef PrintMonTypes
-	hlcoord 9, 8
-	ld de, SCREEN_WIDTH
-	ld b, 10
-	ld a, $31 ; vertical divider
-.vertical_divider
-	ld [hl], a
-	add hl, de
-	dec b
-	jr nz, .vertical_divider
+	bccoord 14, 6
+	farcall StatsScreenPlaceTypes
+	hlcoord 8, 10
+	lb bc, 6, 10
+	call TextboxBorder
 	ld de, .ExpPointStr
-	hlcoord 10, 9
+	hlcoord 9, 10
 	call PlaceString
-	hlcoord 17, 14
+	hlcoord 16, 15
 	call .PrintNextLevel
-	hlcoord 13, 10
+	hlcoord 12, 11
 	lb bc, 3, 7
 	ld de, wTempMonExp
 	call PrintNum
 	call .CalcExpToNextLevel
-	hlcoord 13, 13
+	hlcoord 12, 13
 	lb bc, 3, 7
 	ld de, wExpToNextLevel
 	call PrintNum
 	ld de, .LevelUpStr
-	hlcoord 10, 12
+	hlcoord 9, 13
 	call PlaceString
 	ld de, .ToStr
-	hlcoord 14, 14
+	hlcoord 9, 15
 	call PlaceString
-	hlcoord 11, 16
+	hlcoord 10, 16
 	ld a, [wTempMonLevel]
 	ld b, a
 	ld de, wTempMonExp + 2
 	predef FillInExpBar
-	hlcoord 10, 16
+	hlcoord 9, 16
 	ld [hl], $40 ; left exp bar end cap
-	hlcoord 19, 16
+	hlcoord 18, 16
 	ld [hl], $41 ; right exp bar end cap
 	ret
 
@@ -706,93 +755,145 @@ LoadPinkPage:
 	ret
 
 .Status_Type:
-	db   "STATUS/"
-	next "TYPE/@"
+	db   "상태/"
+	next "타입/@"
 
 .OK_str:
-	db "OK @"
+	db "보통@"
 
 .ExpPointStr:
-	db "EXP POINTS@"
+	db "경험치@"
 
 .LevelUpStr:
-	db "LEVEL UP@"
+	db "앞으로@"
 
 .ToStr:
-	db "TO@"
+	db "에서@"
 
 .PkrsStr:
-	db "#RUS@"
+	db "포케러스@"
+
+StatsScreen_PlaceStatus:
+; Status-screen-only 8x16 labels; preserve the shared battle/party abbreviations.
+; DE = status followed by unused byte then HP. Return NZ for a displayed status.
+	push de
+	inc de
+	inc de
+	ld a, [de]
+	ld b, a
+	inc de
+	ld a, [de]
+	or b
+	pop de
+	push de
+	ld de, .Fainted
+	jr z, .place
+	pop de
+	push de
+	ld a, [de]
+	ld de, .Poison
+	bit PSN, a
+	jr nz, .place
+	ld de, .Burn
+	bit BRN, a
+	jr nz, .place
+	ld de, .Freeze
+	bit FRZ, a
+	jr nz, .place
+	ld de, .Paralysis
+	bit PAR, a
+	jr nz, .place
+	ld de, .Sleep
+	and SLP_MASK
+	jr z, .done
+.place
+	call PlaceString
+	ld a, TRUE
+	and a
+.done
+	pop de
+	ret
+.Fainted:   db "기절@"
+.Poison:    db "독@"
+.Burn:      db "화상@"
+.Freeze:    db "얼음@"
+.Paralysis: db "마비@"
+.Sleep:     db "잠듦@"
 
 LoadGreenPage:
 	ld de, .Item
-	hlcoord 0, 8
+	hlcoord 8, 1
 	call PlaceString
-	call .GetItemName
-	hlcoord 8, 8
-	call PlaceString
-	ld de, .Move
-	hlcoord 0, 10
-	call PlaceString
+	bccoord 12, 2
+	farcall StatsScreenPlaceHeldItem
+	hlcoord 8, 4
+	lb bc, 12, 10
+	call TextboxBorder
+	call .PlaceMoveHeading
 	ld hl, wTempMonMoves
 	ld de, wListMoves_MoveIndicesBuffer
 	ld bc, NUM_MOVES
 	call CopyBytes
-	hlcoord 8, 10
-	ld a, SCREEN_WIDTH * 2
+	ld a, $ff ; ListMovePP also handles the zero-move case.
+	ld [wNumMoves], a
+	ld a, SCREEN_WIDTH * 3
 	ld [wListMovesLineSpacing], a
-	predef ListMoves
-	hlcoord 12, 11
-	ld a, SCREEN_WIDTH * 2
+	bccoord 9, 6
+	farcall BattleListMoves
+	hlcoord 11, 7
+	ld a, SCREEN_WIDTH * 3
 	ld [wListMovesLineSpacing], a
 	predef ListMovePP
 	ret
 
-.GetItemName:
-	ld de, .ThreeDashes
-	ld a, [wTempMonItem]
-	and a
-	ret z
-	ld b, a
-	farcall TimeCapsule_ReplaceTeruSama
-	ld a, b
-	ld [wNamedObjectIndex], a
-	call GetItemName
+.Item:
+	db "소지품@"
+
+.PlaceMoveHeading:
+; This fixed nine-cell title uses $42-$53, between the stats tiles ($31-$41)
+; and the exp bar ($55-$5c), so four long Korean moves do not exhaust the cache.
+	ld de, StatsScreenMoveHeadingGFX
+	ld hl, vTiles2 tile $42
+	lb bc, BANK(StatsScreenMoveHeadingGFX), 18
+	call Get1bppViaHDMA
+	hlcoord 9, 3
+	ld bc, SCREEN_WIDTH
+	ld d, 9
+	ld a, $42
+.heading_loop
+	ld [hl], a
+	inc a
+	push hl
+	add hl, bc
+	ld [hl], a
+	pop hl
+	inc hl
+	inc a
+	dec d
+	jr nz, .heading_loop
 	ret
 
-.Item:
-	db "ITEM@"
-
-.ThreeDashes:
-	db "---@"
-
-.Move:
-	db "MOVE@"
+StatsScreenMoveHeadingGFX:
+INCLUDE "gfx/stats/korean_move_heading.asm"
+assert @ - StatsScreenMoveHeadingGFX == 18 * TILE_1BPP_SIZE
+assert $42 + 18 <= $55
 
 LoadBluePage:
 	call .PlaceOTInfo
-	hlcoord 10, 8
-	ld de, SCREEN_WIDTH
-	ld b, 10
-	ld a, $31 ; vertical divider
-.vertical_divider
-	ld [hl], a
-	add hl, de
-	dec b
-	jr nz, .vertical_divider
-	hlcoord 11, 8
-	ld bc, 6
-	predef PrintTempMonStats
+	hlcoord 8, 6
+	lb bc, 10, 10
+	call TextboxBorder
+	call StatsScreen_PrintStats
 	ret
 
 .PlaceOTInfo:
 	ld de, IDNoString
-	hlcoord 0, 9
+	hlcoord 9, 1
 	call PlaceString
 	ld de, OTString
-	hlcoord 0, 12
+	hlcoord 8, 3
 	call PlaceString
-	hlcoord 2, 10
+	hlcoord 12, 1
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
 	ld de, wTempMonID
 	call PrintNum
@@ -800,7 +901,7 @@ LoadBluePage:
 	call GetNicknamePointer
 	call CopyNickname
 	farcall CorrectNickErrors
-	hlcoord 2, 13
+	hlcoord 12, 3
 	call PlaceHangulName
 	ld a, [wTempMonCaughtGender]
 	and a
@@ -808,12 +909,12 @@ LoadBluePage:
 	cp $7f
 	jr z, .done
 	and CAUGHT_GENDER_MASK
-	ld a, '♂'
+	ld de, StatsScreen_InitUpperHalf.Male
 	jr z, .got_gender
-	ld a, '♀'
+	ld de, StatsScreen_InitUpperHalf.Female
 .got_gender
-	hlcoord 9, 13
-	ld [hl], a
+	hlcoord 18, 3
+	call PlaceString
 .done
 	ret
 
@@ -827,7 +928,39 @@ IDNoString:
 	db "<ID>№.@"
 
 OTString:
-	db "OT/@"
+	db "어버이/@"
+
+StatsScreen_PrintStats:
+; Gold's number baselines coincide with Hangul label baselines.
+	hlcoord 9, 8
+	ld de, .Names
+	call PlaceString
+	hlcoord 15, 8
+	ld de, wTempMonAttack
+	call .PrintStat
+	ld de, wTempMonDefense
+	call .PrintStat
+	ld de, wTempMonSpclAtk
+	call .PrintStat
+	ld de, wTempMonSpclDef
+	call .PrintStat
+	ld de, wTempMonSpeed
+	lb bc, 2, 3
+	jp PrintNum
+.PrintStat
+	push hl
+	lb bc, 2, 3
+	call PrintNum
+	pop hl
+	ld bc, SCREEN_WIDTH * 2
+	add hl, bc
+	ret
+.Names:
+	db   "공격"
+	next "방어"
+	next "특수공격"
+	next "특수방어"
+	next "스피드@"
 
 StatsScreen_PlaceFrontpic:
 	ld hl, wTempMonDVs
@@ -861,14 +994,14 @@ StatsScreen_PlaceFrontpic:
 	ld a, [wCurPartySpecies]
 	cp UNOWN
 	jr z, .unown
-	hlcoord 0, 0
+	hlcoord 0, 1
 	call PrepMonFrontpic
 	ret
 
 .unown
 	xor a
 	ld [wBoxAlignment], a
-	hlcoord 0, 0
+	hlcoord 0, 1
 	call _PrepMonFrontpic
 	ret
 
@@ -894,7 +1027,7 @@ StatsScreen_PlaceFrontpic:
 	call StatsScreen_LoadTextboxSpaceGFX
 	ld de, vTiles2 tile $00
 	predef GetAnimatedFrontpic
-	hlcoord 0, 0
+	hlcoord 0, 1
 	ld d, $0
 	ld e, ANIM_MON_MENU
 	predef LoadMonAnimation
@@ -1000,21 +1133,21 @@ EggStatsScreen:
 	call SetHPPal
 	ld b, SCGB_STATS_SCREEN_HP_PALS
 	call GetSGBLayout
-	call StatsScreen_PlaceHorizontalDivider
+	call StatsScreen_PlaceVerticalDivider
 	ld de, EggString
-	hlcoord 8, 1
+	hlcoord 3, 9
 	call PlaceString
 	ld de, IDNoString
-	hlcoord 8, 3
+	hlcoord 9, 1
 	call PlaceString
 	ld de, OTString
-	hlcoord 8, 5
+	hlcoord 8, 3
 	call PlaceString
 	ld de, FiveQMarkString
-	hlcoord 11, 3
+	hlcoord 12, 1
 	call PlaceString
 	ld de, FiveQMarkString
-	hlcoord 11, 5
+	hlcoord 12, 3
 	call PlaceString
 if DEF(_DEBUG)
 	ld de, .PushStartString
@@ -1039,13 +1172,13 @@ endc
 	jr c, .picked
 	ld de, EggALotMoreTimeString
 .picked
-	hlcoord 1, 9
+	hlcoord 8, 6
 	call PlaceString
 	ld hl, wStatsScreenFlags
 	set STATS_SCREEN_ANIMATE_MON, [hl]
 	call SetDefaultBGPAndOBP
 	call DelayFrame
-	hlcoord 0, 0
+	hlcoord 0, 1
 	call PrepMonFrontpic
 	farcall HDMATransferTilemapToWRAMBank3
 	call StatsScreen_AnimateEgg
@@ -1058,31 +1191,32 @@ endc
 	ret
 
 EggString:
-	db "EGG@"
+	db "알@"
 
 FiveQMarkString:
 	db "?????@"
 
 EggSoonString:
-	db   "It's making sounds"
-	next "inside. It's going"
-	next "to hatch soon!@"
+	db   "안에서 소리가"
+	next "들려온다  이제"
+	next "곧 태어날것 같다!@"
 
 EggCloseString:
-	db   "It moves around"
-	next "inside sometimes."
-	next "It must be close"
-	next "to hatching.@"
+	db   "가끔씩 안에서"
+	next "움직이고 있는듯 하다"
+	next "태어나기 전 까지 얼마"
+	next "남지 않았나?@"
 
 EggMoreTimeString:
-	db   "Wonder what's"
-	next "inside? It needs"
-	next "more time, though.@"
+	db   "무엇이 태어나"
+	next "줄까 궁금한데?"
+	next "태어날 때 까지는"
+	next "조금더 걸릴 것 같다@"
 
 EggALotMoreTimeString:
-	db   "This EGG needs a"
-	next "lot more time to"
-	next "hatch.@"
+	db   "이 알은"
+	next "태어날 때 까지 꽤나"
+	next "시간이 걸릴 것 같다@"
 
 StatsScreen_AnimateEgg:
 	call StatsScreen_GetAnimationParam
@@ -1104,7 +1238,7 @@ StatsScreen_AnimateEgg:
 	ld de, vTiles2 tile $00
 	predef GetAnimatedFrontpic
 	pop de
-	hlcoord 0, 0
+	hlcoord 0, 1
 	ld d, $0
 	predef LoadMonAnimation
 	ld hl, wStatsScreenFlags
@@ -1112,23 +1246,23 @@ StatsScreen_AnimateEgg:
 	ret
 
 StatsScreen_LoadPageIndicators:
-	hlcoord 13, 5
+	hlcoord 1, 14
 	ld a, $36 ; first of 4 small square tiles
 	call .load_square
-	hlcoord 15, 5
+	hlcoord 3, 14
 	ld a, $36 ; " " " "
 	call .load_square
-	hlcoord 17, 5
+	hlcoord 5, 14
 	ld a, $36 ; " " " "
 	call .load_square
 	ld a, c
 	cp GREEN_PAGE
 	ld a, $3a ; first of 4 large square tiles
-	hlcoord 13, 5 ; PINK_PAGE (< GREEN_PAGE)
+	hlcoord 1, 14 ; PINK_PAGE (< GREEN_PAGE)
 	jr c, .load_square
-	hlcoord 15, 5 ; GREEN_PAGE (= GREEN_PAGE)
+	hlcoord 3, 14 ; GREEN_PAGE (= GREEN_PAGE)
 	jr z, .load_square
-	hlcoord 17, 5 ; BLUE_PAGE (> GREEN_PAGE)
+	hlcoord 5, 14 ; BLUE_PAGE (> GREEN_PAGE)
 .load_square
 	push bc
 	ld [hli], a

@@ -913,7 +913,11 @@ SECTION "Unused Map Buffer", WRAM0
 
 ; This was a buffer for map-related pointers in the 1997 G/S prototype.
 ; See wMapBuffer in pokegold-spaceworld's wram.asm.
-wUnusedMapBuffer:: ds 24
+wUnusedMapBuffer::
+; TM/HM teaching owns this formerly unused scratch area until the party menu
+; returns. Map entry clears it only after that workflow has finished.
+wTMHMMoveNameBackup:: ds STRING_BUFFER_LENGTH
+	ds 24 - STRING_BUFFER_LENGTH
 wUnusedMapBufferEnd::
 
 
@@ -2284,8 +2288,6 @@ ENDU
 
 
 SECTION "More WRAM 1", WRAMX
-
-wTMHMMoveNameBackup:: ds MOVE_NAME_LENGTH
 
 wStringBuffer1:: ds STRING_BUFFER_LENGTH
 wStringBuffer2:: ds STRING_BUFFER_LENGTH

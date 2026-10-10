@@ -144,4 +144,13 @@ LoadStatsScreenPageTilesGFX:
 	ld hl, vTiles2 tile $31
 	lb bc, BANK(StatsScreenPageTilesGFX), 17
 	call Get2bppViaHDMA
+	; Replace only the four page-guide tiles with the Korean reference artwork.
+	ld de, StatsScreenKoreanPageGuideGFX
+	ld hl, vTiles2 tile $32
+	lb bc, BANK(StatsScreenKoreanPageGuideGFX), 4
+	call Get2bppViaHDMA
 	ret
+
+StatsScreenKoreanPageGuideGFX:
+INCLUDE "gfx/stats/korean_page_guide.asm"
+assert @ - StatsScreenKoreanPageGuideGFX == 4 tiles

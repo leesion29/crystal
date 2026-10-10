@@ -15,6 +15,7 @@ gfx/pokemon/*/frames.asm
 !gfx/pokemon/unown/frames.asm
 
 # compiled roms
+.verification/
 *.gbc
 *.gb
 *.patch

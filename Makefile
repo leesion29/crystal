@@ -335,6 +335,10 @@ gfx/battle/dude.2bpp: RGBGFXFLAGS += --columns
 
 gfx/font/unused_bold_font.1bpp: tools/gfx += --trim-whitespace
 
+# The Hangul loader consumes adjacent top/bottom tiles for each 8x16 glyph.
+# PNG tile-row order must be interleaved, including on a fresh graphics build.
+gfx/font/font_hangul.1bpp: tools/gfx += --interleave --png=$<
+
 gfx/sgb/sgb_border.2bpp: tools/gfx += --trim-whitespace
 gfx/sgb/sgb_border.sgb.tilemap: gfx/sgb/sgb_border.bin ; tr < $< -d '\000' > $@
 

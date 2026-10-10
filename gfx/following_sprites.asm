@@ -1,5 +1,6 @@
 SECTION "PokemonSprites1", ROMX
 PokemonSprites1::
+assert BANK(PokemonSprites1) <= $7f, "Following sprites exceed MBC3 ROM banks"
 BulbasaurFollowingSprite::  INCBIN "gfx/following/bulbasaur.2bpp.lz"
 IvysaurFollowingSprite::    INCBIN "gfx/following/ivysaur.2bpp.lz"
 VenusaurFollowingSprite::   INCBIN "gfx/following/venusaur.2bpp.lz"
@@ -46,6 +47,7 @@ GolbatFollowingSprite::     INCBIN "gfx/following/golbat.2bpp.lz"
 
 SECTION "PokemonSprites2", ROMX
 PokemonSprites2::
+assert BANK(PokemonSprites2) <= $7f, "Following sprites exceed MBC3 ROM banks"
 OddishFollowingSprite::     INCBIN "gfx/following/oddish.2bpp.lz"
 GloomFollowingSprite::      INCBIN "gfx/following/gloom.2bpp.lz"
 VileplumeFollowingSprite::  INCBIN "gfx/following/vileplume.2bpp.lz"
@@ -92,6 +94,7 @@ DoduoFollowingSprite::      INCBIN "gfx/following/doduo.2bpp.lz"
 
 SECTION "PokemonSprites3", ROMX
 PokemonSprites3::
+assert BANK(PokemonSprites3) <= $7f, "Following sprites exceed MBC3 ROM banks"
 DodrioFollowingSprite::     INCBIN "gfx/following/dodrio.2bpp.lz"
 SeelFollowingSprite::       INCBIN "gfx/following/seel.2bpp.lz"
 DewgongFollowingSprite::    INCBIN "gfx/following/dewgong.2bpp.lz"
@@ -138,6 +141,7 @@ MagmarFollowingSprite::     INCBIN "gfx/following/magmar.2bpp.lz"
 
 SECTION "PokemonSprites4", ROMX
 PokemonSprites4::
+assert BANK(PokemonSprites4) <= $7f, "Following sprites exceed MBC3 ROM banks"
 PinsirFollowingSprite::     INCBIN "gfx/following/pinsir.2bpp.lz"
 TaurosFollowingSprite::     INCBIN "gfx/following/tauros.2bpp.lz"
 MagikarpFollowingSprite::   INCBIN "gfx/following/magikarp.2bpp.lz"
@@ -184,6 +188,7 @@ AriadosFollowingSprite::    INCBIN "gfx/following/ariados.2bpp.lz"
 
 SECTION "PokemonSprites5", ROMX
 PokemonSprites5::
+assert BANK(PokemonSprites5) <= $7f, "Following sprites exceed MBC3 ROM banks"
 CrobatFollowingSprite::     INCBIN "gfx/following/crobat.2bpp.lz"
 ChinchouFollowingSprite::   INCBIN "gfx/following/chinchou.2bpp.lz"
 LanturnFollowingSprite::    INCBIN "gfx/following/lanturn.2bpp.lz"
@@ -202,6 +207,11 @@ MarillFollowingSprite::     INCBIN "gfx/following/marill.2bpp.lz"
 AzumarillFollowingSprite::  INCBIN "gfx/following/azumarill.2bpp.lz"
 SudowoodoFollowingSprite::  INCBIN "gfx/following/sudowoodo.2bpp.lz"
 PolitoedFollowingSprite::   INCBIN "gfx/following/politoed.2bpp.lz"
+; Split the large section so debug builds can use the smaller free ROMX gaps.
+; Keep each asset intact: all consumers obtain its bank from the pointer table.
+SECTION "PokemonSprites5b", ROMX
+PokemonSprites5b::
+assert BANK(PokemonSprites5b) <= $7f, "Following sprites exceed MBC3 ROM banks"
 HoppipFollowingSprite::     INCBIN "gfx/following/hoppip.2bpp.lz"
 SkiploomFollowingSprite::   INCBIN "gfx/following/skiploom.2bpp.lz"
 JumpluffFollowingSprite::   INCBIN "gfx/following/jumpluff.2bpp.lz"
@@ -230,6 +240,7 @@ GranbullFollowingSprite::   INCBIN "gfx/following/granbull.2bpp.lz"
 
 SECTION "PokemonSprites6", ROMX
 PokemonSprites6::
+assert BANK(PokemonSprites6) <= $7f, "Following sprites exceed MBC3 ROM banks"
 QwilfishFollowingSprite::  INCBIN "gfx/following/qwilfish.2bpp.lz"
 ScizorFollowingSprite::    INCBIN "gfx/following/scizor.2bpp.lz"
 ShuckleFollowingSprite::   INCBIN "gfx/following/shuckle.2bpp.lz"
@@ -274,12 +285,14 @@ CelebiFollowingSprite::    INCBIN "gfx/following/celebi.2bpp.lz"
 
 
 SECTION "MiscSprites", ROMX
+assert BANK(@) <= $7f, "Following sprites exceed MBC3 ROM banks"
 EggSprite::
 EggFollowingSprite:: INCBIN "gfx/following/egg.2bpp.lz"
 
 
 SECTION "UnownSprites", ROMX
 UnownSprites::
+assert BANK(UnownSprites) <= $7f, "Following sprites exceed MBC3 ROM banks"
 UNOWN_AFollowingSprite:: INCBIN "gfx/following/UNOWN_A.2bpp.lz"
 UNOWN_BFollowingSprite:: INCBIN "gfx/following/UNOWN_B.2bpp.lz"
 UNOWN_CFollowingSprite:: INCBIN "gfx/following/UNOWN_C.2bpp.lz"

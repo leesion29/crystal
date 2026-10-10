@@ -33,7 +33,7 @@ BlkPacket_Battle:
 
 BlkPacket_StatsScreen:
 	attr_blk 1
-	attr_blk_data %111, 1,1,0, 00,01, 07,07 ; mon: pal 1
+	attr_blk_data %111, 1,1,0, 00,01, 06,07 ; mon: pal 1
 	ds 8, 0
 
 BlkPacket_MoveList:
