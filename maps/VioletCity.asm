@@ -178,16 +178,12 @@ VioletCitySpinningEarl_MovementData:
 	step_end
 
 Text_EarlAsksIfYouBeatFalkner:
-	text "하-이 당신"
-	line "트레이너로군요"
-
-	para "체육관 관장에게는"
-	line "이겼습니까?"
+	text "하-이 당신 트레이너로군요"
+	line "체육관 관장에게는 이겼습니까?"
 	done
 
 Text_VeryNiceIndeed:
-	text "그것은"
-	line "대단하군요!"
+	text "그것은 대단하군요!"
 	done
 
 Text_FollowEarl:
@@ -198,82 +194,61 @@ Text_FollowEarl:
 
 Text_HereTeacherIAm:
 	text "나는 이곳의 선생님!"
-	line "그대는 여기서"
-	cont "공부를 한다면 좋겠군"
+
+	para "그대는 여기서"
+	line "공부를 한다면 좋겠군"
 	done
 
 VioletCityLassText:
-	text "모다피의 탑은"
-	line "밤이되면 귀신이"
-	cont "나온다는 소문이야"
+	text "모다피의 탑은 밤이되면"
+	line "귀신이 나온다는 소문이야"
 
-	para "그래서 포켓몬을"
-	line "싸우게 시켜도"
-
-	para "노말타입의 기술로는"
-	line "전혀 효과가 없었대"
+	para "그래서 포켓몬을 싸우게 시켜도"
+	line "노말타입의 기술로는"
+	cont "전혀 효과가 없었대"
 	done
 
 VioletCitySuperNerdText:
-	text "오옷 포켓몬"
-	line "트레이너인가?"
+	text "오옷 포켓몬 트레이너인가?"
 
-	para "이 마을의 체육관"
-	line "관장을 이겼다면"
-
-	para "트레이너로서도"
-	line "제 구실을 하는 것이군"
+	para "이 마을의 체육관 관장을 이겼다면"
+	line "트레이너로서도"
+	cont "제 구실을 하는 것이군"
 	done
 
 VioletCityGrampsText:
-	text "도라지시티"
-	line "포켓몬 체육관의"
+	text "도라지시티 포켓몬 체육관의"
+	line "비상은 뛰어난 솜씨의 트레이너!"
 
-	para "비상은 뛰어난"
-	line "솜씨의 트레이너!"
-
-	para "아버지의 뒤를"
-	line "이어서 훌륭한"
-
-	para "체육관을"
-	line "지키고 있단다!"
+	para "아버지의 뒤를 이어서"
+	line "훌륭한 체육관을 지키고 있단다!"
 	done
 
 VioletCityYoungsterText:
-	text "이 앞에 움직이는"
-	line "나무를 봤다!"
+	text "이 앞에 움직이는 나무를 봤다!"
 
-	para "만지면 흔들흔들"
-	line "춤추기 시작한다"
-	cont "엄청나게 재미있어"
+	para "만지면 흔들흔들 춤추기 시작한다"
+	line "엄청나게 재미있어"
 	done
 
 VioletCitySignText:
 	text "이곳은 도라지시티"
-
-	para "그리운 향기가"
-	line "나는 마을"
+	line "그리운 향기가 나는 마을"
 	done
 
 VioletGymSignText:
-	text "도라지시티"
-	line "포켓몬 체육관"
-	cont "관장 비상"
-
-	para "화려한"
-	line "비행포켓몬 조련사!"
+	text "도라지시티 포켓몬 체육관"
+	line "관장 비상"
+	cont "화려한 비행포켓몬 조련사!"
 	done
 
 SproutTowerSignText:
 	text "이곳은 모다피의 탑"
-
-	para "포켓몬의"
-	line "수행을 하시오"
+	line "포켓몬의 수행을 하시오"
 	done
 
 EarlsPokemonAcademySignText:
-	text "다배워선생님의"
-	line "포켓몬 학원"
+	text "다배워선생님의 포켓몬 학원"
 	done
 
 VioletCity_MapEvents:

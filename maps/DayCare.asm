@@ -74,83 +74,64 @@ DayCareBookshelf:
 	jumpstd DifficultBookshelfScript
 
 Text_GrampsLookingForYou:
-	text "Gramps was looking"
-	line "for you."
+	text "할아버지가"
+	line "너를 찾고있단다"
 	done
 
 Text_DayCareManTalksAboutEggTicket: ; unreferenced
-	text "I'm the DAY-CARE"
-	line "MAN."
+	text "나는 보모 할아버지다"
 
-	para "There's something"
-	line "new in GOLDENROD"
+	para "금빛시티에 새로운 곳이 생겼는데"
+	line "교환 코너라고 하더구나"
 
-	para "called the TRADE"
-	line "CORNER."
+	para "이상한 알로 바꿀 수 있는"
+	line "알티켓을 받았단다"
 
-	para "I was given an EGG"
-	line "TICKET that can be"
-
-	para "traded in for a"
-	line "ODD EGG."
-
-	para "But since we run a"
-	line "DAY-CARE, we don't"
-
-	para "need it. You may"
-	line "as well have it."
+	para "하지만 우리는 보모 일을 하고"
+	line "있어서 필요가 없으니 네가"
+	cont "가지려무나"
 	done
 
 DayCareManText_GiveOddEgg:
-	text "I'm the DAY-CARE"
-	line "MAN."
+	text "나는 보모 할아버지다 알에 대해"
+	line "알고 있니?"
 
-	para "Do you know about"
-	line "EGGS?"
+	para "할머니와 함께 포켓몬을 돌보고"
+	line "있었는데 알이 있어서 깜짝"
+	cont "놀랐단다!"
 
-	para "I was raising"
-	line "#MON with my"
-	cont "wife, you see."
+	para "정말 신기한 일이지 않니?"
 
-	para "We were shocked to"
-	line "find an EGG!"
-
-	para "How incredible is"
-	line "that?"
-
-	para "Well, wouldn't you"
-	line "like this EGG?"
-
-	para "Then fine, this is"
-	line "yours to keep!"
+	para "이 알을 갖고 싶으니? 좋아 그럼"
+	line "네가 가지려무나!"
 	done
 
 DayCareText_ComeAgain: ; unreferenced
-	text "Come again."
+	text "또 오너라"
 	done
 
 DayCareText_GotOddEgg:
-	text "<PLAYER> received"
-	line "ODD EGG!"
+	text "<PLAYER>는(은)"
+	line "이상한 알을 받았다!"
 	done
 
 DayCareText_DescribeOddEgg:
-	text "I found that when"
-	line "I was caring for"
+	text "전에 어떤 사람의"
+	line "포켓몬을"
 
-	para "someone's #MON"
-	line "before."
+	para "돌봐주던 중에"
+	line "발견한 알이란다"
 
-	para "But the trainer"
-	line "didn't want the"
+	para "그런데 그 트레이너가"
+	line "알을 원하지 않아서"
 
-	para "EGG, so I'd kept"
-	line "it around."
+	para "내가 이렇게"
+	line "보관하고 있었단다"
 	done
 
 DayCareText_PartyFull:
-	text "You've no room for"
-	line "this."
+	text "이것을 받을"
+	line "자리가 없구나"
 	done
 
 DayCare_MapEvents:

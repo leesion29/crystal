@@ -6,7 +6,6 @@ INCLUDE "maps/GoldenrodHappinessRater.asm"
 INCLUDE "maps/BillsFamilysHouse.asm"
 INCLUDE "maps/GoldenrodMagnetTrainStation.asm"
 INCLUDE "maps/GoldenrodFlowerShop.asm"
-INCLUDE "maps/GoldenrodPPSpeechHouse.asm"
 INCLUDE "maps/GoldenrodNameRater.asm"
 INCLUDE "maps/GoldenrodDeptStore1F.asm"
 INCLUDE "maps/GoldenrodDeptStore2F.asm"
@@ -382,7 +381,6 @@ INCLUDE "maps/Route31VioletGate.asm"
 SECTION "Map Scripts 19", ROMX
 
 INCLUDE "maps/AzaleaTown.asm"
-INCLUDE "maps/GoldenrodCity.asm"
 INCLUDE "maps/SaffronCity.asm"
 INCLUDE "maps/MahoganyRedGyaradosSpeechHouse.asm"
 INCLUDE "maps/MahoganyGym.asm"
@@ -494,5 +492,13 @@ ENDSECTION
 SECTION "Map Scripts 26", ROMX
 
 INCLUDE "maps/ElmsLab.asm"
+
+ENDSECTION
+
+
+SECTION "Goldenrod Overflow Map Scripts", ROMX
+
+INCLUDE "maps/GoldenrodPPSpeechHouse.asm"
+INCLUDE "maps/GoldenrodCity.asm"
 
 ENDSECTION

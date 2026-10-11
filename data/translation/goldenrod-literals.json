@@ -1,0 +1,371 @@
+[
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "symbol": "MoveTutorScript.MenuData",
+    "original": [
+      "FLAMETHROWER@",
+      "THUNDERBOLT@",
+      "ICE BEAM@",
+      "CANCEL@"
+    ],
+    "rows": [
+      "화염방사@",
+      "10만볼트@",
+      "냉동빔@",
+      "그만두다@"
+    ],
+    "width": 13,
+    "source": "original-gold",
+    "prefix": [
+      128,
+      4
+    ],
+    "state": "development-needs-human-review",
+    "reference_mode": "name-only",
+    "references": [
+      {
+        "file": "data/moves/names.asm",
+        "value": "화염방사"
+      },
+      {
+        "file": "data/moves/names.asm",
+        "value": "10만볼트"
+      },
+      {
+        "file": "data/moves/names.asm",
+        "value": "냉동빔"
+      },
+      {
+        "file": "maps/GoldenrodGameCorner.asm",
+        "value": "그만두다@"
+      }
+    ]
+  },
+  {
+    "file": "maps/GoldenrodGameCorner.asm",
+    "symbol": "GoldenrodGameCornerTMVendorMenuHeader.MenuData",
+    "original": [
+      "TM25    5500@",
+      "TM14    5500@",
+      "TM38    5500@",
+      "CANCEL@"
+    ],
+    "rows": [
+      "기술머신25  5500@",
+      "기술머신14  5500@",
+      "기술머신38  5500@",
+      "그만두다@"
+    ],
+    "width": 13,
+    "source": "original-gold",
+    "prefix": [
+      128,
+      4
+    ],
+    "state": "development-needs-human-review",
+    "ref_file": "maps/GoldenrodGameCorner.asm",
+    "reference_strings": [
+      "기술머신25  5500@",
+      "기술머신14  5500@",
+      "기술머신38  5500@",
+      "그만두다@"
+    ]
+  },
+  {
+    "file": "maps/GoldenrodGameCorner.asm",
+    "symbol": "GoldenrodGameCornerPrizeMonVendorScript.MenuData",
+    "original": [
+      "ABRA        100@",
+      "CUBONE      800@",
+      "WOBBUFFET  1500@",
+      "CANCEL@"
+    ],
+    "rows": [
+      "캐이시       100@",
+      "탕구리       800@",
+      "마자용      1500@",
+      "그만두다@"
+    ],
+    "width": 15,
+    "source": "original-gold",
+    "prefix": [
+      128,
+      4
+    ],
+    "state": "development-needs-human-review",
+    "reference_mode": "name-only",
+    "references": [
+      {
+        "file": "data/pokemon/names.asm",
+        "value": "캐이시"
+      },
+      {
+        "file": "data/pokemon/names.asm",
+        "value": "탕구리"
+      },
+      {
+        "file": "data/pokemon/names.asm",
+        "value": "마자용"
+      },
+      {
+        "file": "maps/GoldenrodGameCorner.asm",
+        "value": "그만두다@"
+      }
+    ]
+  },
+  {
+    "file": "maps/GoldenrodDeptStore6F.asm",
+    "symbol": "GoldenrodVendingMachine.MenuData",
+    "original": [
+      "FRESH WATER  ¥{d:GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE}@",
+      "SODA POP     ¥{d:GOLDENRODDEPTSTORE6F_SODA_POP_PRICE}@",
+      "LEMONADE     ¥{d:GOLDENRODDEPTSTORE6F_LEMONADE_PRICE}@",
+      "CANCEL@"
+    ],
+    "rows": [
+      "맛있는 물   ¥{d:GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE}@",
+      "미네랄 사이다 ¥{d:GOLDENRODDEPTSTORE6F_SODA_POP_PRICE}@",
+      "후르츠 밀크  ¥{d:GOLDENRODDEPTSTORE6F_LEMONADE_PRICE}@",
+      "그만두다@"
+    ],
+    "width": 17,
+    "source": "original-gold",
+    "prefix": [
+      128,
+      4
+    ],
+    "state": "development-needs-human-review",
+    "ref_file": "maps/GoldenrodDeptStore6F.asm",
+    "reference_mode": "name-with-crystal-price",
+    "note": "명칭 재사용. 통화 기호는 Crystal의 기존 ¥를 유지하며 미등록 ₩ 매핑을 추가하지 않는다.",
+    "reference_strings": [
+      "맛있는 물   {d:GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE}₩@",
+      "미네랄 사이다 {d:GOLDENRODDEPTSTORE6F_SODA_POP_PRICE}₩@",
+      "후르츠 밀크  {d:GOLDENRODDEPTSTORE6F_LEMONADE_PRICE}₩@",
+      "그만두다@"
+    ]
+  },
+  {
+    "file": "maps/PokecomCenterAdminOfficeMobile.asm",
+    "symbol": "PokecomCenterAdminOfficeMobileComputer1.MenuData",
+    "row_sources": ["new", "new", "original-gold"],
+    "row_references": [null, null, {"file":"maps/GoldenrodGameCorner.asm", "value":"그만두다@"}],
+    "original": [
+      "#　つうしん　クラブ@",
+      "モバイルセンター@",
+      "やめる@"
+    ],
+    "rows": [
+      "포켓몬통신 클럽@",
+      "모바일 센터@",
+      "그만두다@"
+    ],
+    "width": 13,
+    "source": "new",
+    "prefix": [
+      128,
+      3
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/PokecomCenterAdminOfficeMobile.asm",
+    "symbol": "PokecomCenterAdminOfficeMobileComputer2.MenuData",
+    "original": [
+      "でんわ<WO>つかうとき@",
+      "でんわ<GA>つながらないとき@",
+      "やめる@"
+    ],
+    "rows": [
+      "전화<WO>사용할 때@",
+      "전화가 연결되지 않을 때@",
+      "그만두다@"
+    ],
+    "width": 13,
+    "source": "new",
+    "prefix": [
+      128,
+      3
+    ],
+    "state": "development-needs-human-review",
+    "printable_japanese_tokens": [
+      "<GA>"
+    ],
+    "row_sources": ["new", "new", "original-gold"],
+    "row_references": [null, null, {"file":"maps/GoldenrodGameCorner.asm", "value":"그만두다@"}],
+    "note": "<WO>은 현재 소비자에서 공백으로 유지. <GA>는 일본어 가나 축약/영문 PKMN 고정 글자 토큰이며 변수·대기·줄바꿈이 아니므로 한국어 조사로 번역."
+  },
+  {
+    "file": "engine/events/std_scripts.asm",
+    "symbol": "CoinVendor_IntroScript.MenuData",
+    "original": [
+      " 50 :  ¥1000@",
+      "500 : ¥10000@",
+      "CANCEL@"
+    ],
+    "rows": [
+      " 50개  ¥1000@",
+      "500개 ¥10000@",
+      "그만두다@"
+    ],
+    "width": 13,
+    "source": "original-gold",
+    "prefix": [
+      128,
+      3
+    ],
+    "state": "development-needs-human-review",
+    "ref_file": "engine/events/std_scripts.asm",
+    "reference_mode": "name-with-crystal-price",
+    "reference_strings": [
+      " 50개  1000₩@",
+      "500개 10000₩@",
+      "그만두다@"
+    ]
+  },
+  {
+    "file": "engine/events/elevator.asm",
+    "symbol": "Elevator_CurrentFloorText",
+    "original": [
+      "Now on:@"
+    ],
+    "rows": [
+      "현재의 층@"
+    ],
+    "width": 8,
+    "source": "original-gold",
+    "prefix": [],
+    "state": "development-needs-human-review",
+    "ref_file": "engine/events/elevator.asm",
+    "reference_strings": [
+      "현재의 층@"
+    ]
+  },
+  {
+    "file": "engine/events/buena.asm",
+    "symbol": "PrintBlueCardBalance.Points_string",
+    "original": [
+      "Points@"
+    ],
+    "rows": [
+      "포인트@"
+    ],
+    "width": 6,
+    "source": "new",
+    "prefix": [],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "engine/pokegear/radio.asm",
+    "symbol": "BuenasPasswordChannelName",
+    "original": [
+      "BUENA'S PASSWORD@"
+    ],
+    "rows": [
+      "부에나의 암호@"
+    ],
+    "width": 18,
+    "source": "new",
+    "prefix": [],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "engine/pokegear/pokegear.asm",
+    "symbol": "BuenasPasswordName",
+    "original": [
+      "BUENA'S PASSWORD@"
+    ],
+    "rows": [
+      "부에나의 암호@"
+    ],
+    "width": 18,
+    "source": "new",
+    "prefix": [],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "data/radio/buenas_passwords.asm",
+    "symbol": "BuenasPasswordTable.JohtoTowns",
+    "original": [
+      "NEW BARK TOWN@",
+      "CHERRYGROVE CITY@",
+      "AZALEA TOWN@"
+    ],
+    "rows": [
+      "연두마을@",
+      "무궁시티@",
+      "고동마을@"
+    ],
+    "width": 16,
+    "source": "original-gold",
+    "prefix": [
+      3,
+      16
+    ],
+    "state": "development-needs-human-review",
+    "raw_byte_terminator": true,
+    "ref_file": "data/maps/landmarks.asm",
+    "reference_strings": [
+      "연두마을@",
+      "무궁시티@",
+      "고동마을@"
+    ]
+  },
+  {
+    "file": "data/radio/buenas_passwords.asm",
+    "symbol": "BuenasPasswordTable.Types",
+    "original": [
+      "FLYING@",
+      "BUG@",
+      "GRASS@"
+    ],
+    "rows": [
+      "비행@",
+      "벌레@",
+      "풀@"
+    ],
+    "width": 6,
+    "source": "original-gold",
+    "prefix": [
+      3,
+      6
+    ],
+    "state": "development-needs-human-review",
+    "raw_byte_terminator": true,
+    "ref_file": "data/types/names.asm",
+    "reference_strings": [
+      "비행@",
+      "벌레@",
+      "풀@"
+    ]
+  },
+  {
+    "file": "data/radio/buenas_passwords.asm",
+    "symbol": "BuenasPasswordTable.RadioStations",
+    "original": [
+      "#MON Talk@",
+      "#MON Music@",
+      "Lucky Channel@"
+    ],
+    "rows": [
+      "포켓몬 강좌@",
+      "포켓몬 뮤직@",
+      "럭키채널@"
+    ],
+    "width": 13,
+    "source": "new",
+    "prefix": [
+      3,
+      13
+    ],
+    "state": "development-needs-human-review",
+    "raw_byte_terminator": true,
+    "note": "원문의 짧은 방송명 유지. 강좌에는 오박사 명칭을 추가하지 않음. 뮤직·럭키채널은 original-gold의 동일 이름 재사용.",
+    "row_sources": [
+      "new",
+      "original-gold",
+      "original-gold"
+    ],
+    "row_references": [null, {"file":"engine/pokegear/pokegear.asm", "value":"포켓몬 뮤직@"}, {"file":"engine/pokegear/pokegear.asm", "value":"럭키채널@"}]
+  }
+]

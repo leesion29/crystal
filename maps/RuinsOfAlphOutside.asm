@@ -157,19 +157,13 @@ RuinsOfAlphOutsideScientistText:
 
 	para "아니!!"
 
-	para "이"
-	line "포켓몬은?"
+	para "이 포켓몬은?"
 
-	para "유적의 벽에"
-	line "그려져 있는"
+	para "유적의 벽에 그려져 있는"
+	line "수수께끼의 문양과 닮아있군……"
 
-	para "수수께끼의 문양과"
-	line "닮아있군……"
-
-	para "그 모양이"
-	line "포켓몬이라고 한다면"
-	cont "더욱더 많이"
-	cont "있을 텐데……"
+	para "그 모양이 포켓몬이라고 한다면"
+	line "더욱더 많이 있을 텐데……"
 
 	para "좋아! 내가 너의 도감을"
 	line "파워업해서 줄께!"
@@ -183,28 +177,20 @@ SuperNerdStanSeenText:
 	done
 
 SuperNerdStanBeatenText:
-	text "미안…… 제대로"
-	line "아는 것이"
-
-	para "없어서"
+	text "미안…… 제대로 아는 것이 없어서"
 	line "답답했어……"
 	done
 
 SuperNerdStanAfterBattleText:
-	text "유적은 대략"
-	line "1500년"
-	cont "전에 만들어졌어"
+	text "유적은 대략 1500년 전에"
+	line "만들어졌어"
 
-	para "누가 만들었는지는"
-	line "아무도 몰라"
+	para "누가 만들었는지는 아무도 몰라"
 
-	para "포켓몬"
-	line "석상에"
-	cont "어떤 의미가"
-	cont "있는지도 몰라"
+	para "포켓몬 석상에 어떤 의미가"
+	line "있는지도 몰라"
 
-	para "전부"
-	line "수수께끼투성이야……"
+	para "전부 수수께끼투성이야……"
 	done
 
 PsychicNathanSeenText:
@@ -222,8 +208,7 @@ PsychicNathanAfterBattleText:
 	done
 
 RuinsOfAlphOutsideMysteryChamberSignText:
-	text "수수께끼"
-	line "석판의 방"
+	text "수수께끼 석판의 방"
 	done
 
 RuinsOfAlphSignText:
@@ -232,11 +217,8 @@ RuinsOfAlphSignText:
 	done
 
 RuinsOfAlphResearchCenterSignText:
-	text "알프의"
-	line "유적 연구소"
-
-	para "유적의 질문"
-	line "접수중!"
+	text "알프의 유적 연구소"
+	line "유적의 질문 접수중!"
 	done
 
 RuinsOfAlphOutsideFisherText1:

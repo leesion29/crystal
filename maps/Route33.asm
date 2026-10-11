@@ -143,53 +143,49 @@ Route33FruitTree:
 	fruittree FRUITTREE_ROUTE_33
 
 HikerAnthony2SeenText:
-	text "I came through the"
-	line "tunnel, but I"
-
-	para "still have plenty"
-	line "of energy left."
+	text "동굴을 지금 막 벗어났지만"
+	line "아직 힘이 남아돌아!"
 	done
 
 HikerAnthony2BeatenText:
-	text "Whoa! You've got"
-	line "more zip than me!"
+	text "오옷!"
+	line "꼬마쪽이 힘이 넘치는군!"
 	done
 
 HikerAnthony2AfterText:
-	text "We HIKERS are at"
-	line "our best in the"
-	cont "mountains."
+	text "등산가는 산에 있으면"
+	line "힘이 100배 된다는 것이다!"
 	done
 
 HikerAnthonyDunsparceText:
-	text "Hey, did you get a"
-	line "DUNSPARCE?"
+	text "어이 노고치는"
+	line "잡았니?"
 
-	para "I caught one too."
+	para "나도 한 마리 잡았단다"
 
-	para "Take a look at it"
-	line "in the light. It's"
-	cont "got a funny face!"
+	para "밝은 곳에서"
+	line "한번 잘 보거라"
+	cont "정말 재미있는 얼굴이야!"
 	done
 
 Route33LassText:
-	text "Pant, pant…"
+	text "하아 하아……"
 
-	para "I finally got"
-	line "through that cave."
+	para "겨우 그 동굴을"
+	line "빠져나왔어"
 
-	para "It was much bigger"
-	line "than I'd expected."
+	para "생각했던 것보다"
+	line "훨씬 넓더라구"
 
-	para "I got too tired to"
-	line "explore the whole"
+	para "전부 돌아보기엔"
+	line "너무 지쳐서"
 
-	para "thing, so I came"
-	line "outside."
+	para "이렇게 밖으로"
+	line "나왔어"
 	done
 
 Route33SignText:
-	text "ROUTE 33"
+	text "이곳은 33번 도로"
 	done
 
 Route33_MapEvents:

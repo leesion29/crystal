@@ -37,27 +37,23 @@ SproutTower2FXAccuracy:
 	itemball X_ACCURACY
 
 SageNicoSeenText:
-	text "우리들이 큰 소란을"
-	line "쳐도 이 탑은 꿈쩍도"
-	cont "하지않을 것이오!"
+	text "우리들이 큰 소란을 쳐도"
+	line "이 탑은 꿈쩍도 하지않을 것이오!"
 	done
 
 SageNicoBeatenText:
-	text "소란을 친 것치곤"
-	line "다행일세……!"
+	text "소란을 친 것치곤 다행일세……!"
 	done
 
 SageNicoAfterBattleText:
 	text "엄청난 지진일지라도"
 	line "흔들리는 기둥덕분에"
-
-	para "무너지지 않는"
-	line "것이외다……!"
+	cont "무너지지 않는 것이외다……!"
 	done
 
 SageEdmondSeenText:
-	text "바람에 흔들리고"
-	line "있소 나뭇잎처럼……!"
+	text "바람에 흔들리고 있소"
+	line "나뭇잎처럼……!"
 	done
 
 SageEdmondBeatenText:
@@ -65,20 +61,13 @@ SageEdmondBeatenText:
 	done
 
 SageEdmondAfterBattleText:
-	text "모다피의"
-	line "아름다운 움직임을"
-
-	para "싸움에도"
-	line "받아들였소이다만……"
-
-	para "수행이"
-	line "부족한 듯 하구려"
+	text "모다피의 아름다운 움직임을"
+	line "싸움에도 받아들였소이다만……"
+	cont "수행이 부족한 듯 하구려"
 	done
 
 SproutTower2FStatueText:
-	text "포켓몬이 받들어"
-
-	para "모셔지고 있군……"
+	text "포켓몬이 받들어 모셔지고 있군……"
 	line "어딘가 장엄한 분위기야"
 	done
 

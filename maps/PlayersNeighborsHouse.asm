@@ -54,7 +54,7 @@ PlayersNeighborsDaughterText:
 	para "역시 포켓몬 진화의"
 	line "연구에서는 유명한 박사님"
 
-	para "하아……나도 그런"
+	para "하아…… 나도 그런"
 	line "훌륭한 연구자가 되고싶어"
 	done
 

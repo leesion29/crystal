@@ -21,8 +21,7 @@ _NameRaterHelloText::
 
 _NameRaterWhichMonText::
 	text "어느 포켓몬의"
-	line "별명을"
-	cont "점 칠텐가?"
+	line "별명을 점 칠텐가?"
 	prompt
 
 _NameRaterBetterNameText::
@@ -42,15 +41,12 @@ _NameRaterBetterNameText::
 
 _NameRaterWhatNameText::
 	text "그래? 그럼"
-	line "어떤 별명으로"
-	cont "해 볼까"
+	line "어떤 별명으로 해 볼까"
 	prompt
 
 _NameRaterFinishedText::
-	text "전 보다도"
-	line "좋은 이름이지 않은가"
-
-	para "잘되었네!"
+	text "전 보다도 좋은 이름이지 않은가"
+	line "잘되었네!"
 	done
 
 _NameRaterComeAgainText::
@@ -77,13 +73,9 @@ _NameRaterEggText::
 	done
 
 _NameRaterSameNameText::
-	text "전이랑 비슷하게"
-	line "보이겠지만"
-
-	para "이쪽이 단연"
-	line "뛰어나지!"
-
-	para "잘 되었지!"
+	text "전이랑 비슷하게 보이겠지만"
+	line "이쪽이 단연 뛰어나지!"
+	cont "잘 되었지!"
 	done
 
 _NameRaterNamedText::
@@ -101,9 +93,8 @@ Text_Gained::
 
 _BoostedExpPointsText::
 ; BUG: Five-digit experience gain is printed incorrectly (see docs/bugs_and_glitches.md)
-	text_start
-	line "많은 양의"
-	cont "@"
+	text "많은 양의"
+	line "@"
 	text_decimal wStringBuffer2, 2, 4
 	text " 경험치를 얻었다!"
 	prompt
@@ -160,7 +151,7 @@ _GoodComeBackText::
 	text_end
 
 _ComeBackText::
-	text " "
+	text_start
 	line "돌아와!"
 	done
 
@@ -214,13 +205,11 @@ _ReceivedTMHMText::
 	prompt
 
 _MysteryGiftCanceledText::
-	text "통신을"
-	line "중지했습니다"
+	text "통신을 중지했습니다"
 	prompt
 
 _MysteryGiftCommErrorText::
-	text "통신"
-	line "에러"
+	text "통신 에러"
 	prompt
 
 _RetrieveMysteryGiftText::
@@ -229,13 +218,12 @@ _RetrieveMysteryGiftText::
 	prompt
 
 _YourFriendIsNotReadyText::
-	text "상대의 준비가"
-	line "되어있지 않습니다"
+	text "상대의 준비가 되어있지 않습니다"
 	prompt
 
 _MysteryGiftFiveADayText::
-	text "이상한 소포는 하루에"
-	line "5번밖에는 되지 않습니다!"
+	text "이상한 소포는"
+	line "하루에 5번밖에는 되지 않습니다!"
 	prompt
 
 _MysteryGiftOneADayText::
@@ -283,13 +271,11 @@ _NameCardNotRegisteredCardText::
 	prompt
 
 _NameCardLinkCancelledText::
-	text "통신을"
-	line "중지했습니다"
+	text "통신을 중지했습니다"
 	prompt
 
 _NameCardLinkCommErrorText::
-	text "통신"
-	line "에러"
+	text "통신 에러"
 	prompt
 
 _BadgeRequiredText::
@@ -298,8 +284,7 @@ _BadgeRequiredText::
 	prompt
 
 _CantUseItemText::
-	text "이곳에서는"
-	line "사용할 수 없습니다"
+	text "이곳에서는 사용할 수 없습니다"
 	prompt
 
 _UseCutText::
@@ -329,7 +314,7 @@ _UsedSurfText::
 
 _CantSurfText::
 	text "여기서는 타는 기술을"
-	line "사용할 수 없습니다"
+	next "사용할 수 없습니다"
 	prompt
 
 _AlreadySurfingText::
@@ -370,8 +355,7 @@ _UseEscapeRopeText::
 	done
 
 _CantUseDigText::
-	text "여기서는"
-	line "사용할 수 없습니다!"
+	text "여기서는 사용할 수 없습니다!"
 	done
 
 _TeleportReturnText::
@@ -380,8 +364,7 @@ _TeleportReturnText::
 	done
 
 _CantUseTeleportText::
-	text "여기서는"
-	line "사용할 수 없습니다!"
+	text "여기서는 사용할 수 없습니다!"
 
 	para ""
 	done
@@ -407,8 +390,7 @@ _AskStrengthText::
 	text "커다란 바위지만……"
 	line "포켓몬의 기술로 밀 수 있을지도?"
 
-	para "괴력을"
-	line "사용하겠습니까?"
+	para "괴력을 사용하겠습니까?"
 	done
 
 _BouldersMoveText::
@@ -428,8 +410,7 @@ _UseWhirlpoolText::
 	prompt
 
 _MayPassWhirlpoolText::
-	text "세차게"
-	line "소용돌이치고 있다"
+	text "세차게 소용돌이치고 있다"
 
 	para "……포켓몬의 기술로"
 	line "어떻게 될지도 몰라"
@@ -439,8 +420,7 @@ _AskWhirlpoolText::
 	text "앞길을 거친 소용돌이가"
 	line "가로막고 있다!"
 
-	para "소용돌이를"
-	line "사용하겠습니까?"
+	para "소용돌이를 사용하겠습니까?"
 	done
 
 _UseHeadbuttText::
@@ -457,8 +437,7 @@ _AskHeadbuttText::
 	text "이런 나무에는"
 	line "포켓몬이 있을지도…"
 
-	para "박치기를"
-	line "사용하겠습니까?"
+	para "박치기를 사용하겠습니까?"
 	done
 
 _UseRockSmashText::
@@ -473,11 +452,8 @@ _MaySmashText::
 	done
 
 _AskRockSmashText::
-	text "포켓몬의 기술로"
-	line "부술 수 있겠다!"
-
-	para "……바위깨기를"
-	line "사용하겠습니까?"
+	text "포켓몬의 기술로 부술 수 있겠다!"
+	line "……바위깨기를 사용하겠습니까?"
 	done
 
 _RodBiteText::
@@ -495,8 +471,7 @@ _UnusedNothingHereText::
 	prompt
 
 _CantGetOffBikeText::
-	text "이곳에서는"
-	line "내릴 수 없다!"
+	text "이곳에서는 내릴 수 없다!"
 	done
 
 _GotOnBikeText::
@@ -534,8 +509,7 @@ _FoundItemText::
 
 _CantCarryItemText::
 	text "그러나 <PLAYER>는(은)"
-	line "더 이상 도구를"
-	cont "지닐 수 없다!"
+	line "더 이상 도구를 지닐 수 없다!"
 	done
 
 _WhitedOutText::
@@ -605,8 +579,7 @@ _PackNoItemText::
 	done
 
 _AskThrowAwayText::
-	text "몇 개"
-	line "버리시겠습니까?"
+	text "몇 개 버리시겠습니까?"
 	done
 
 _AskQuantityThrowAwayText::
@@ -750,8 +723,7 @@ _UsedMove2Text::
 	text_end
 
 _UsedInsteadText::
-	text "명령을 무시하고"
-	cont "@"
+	text "명령을 무시하고@"
 	text_end
 
 _MoveNameText::
@@ -824,8 +796,7 @@ _LeftWithDayCareManText::
 	done
 
 _BreedBrimmingWithEnergyText::
-	text "기운이"
-	line "넘친다!"
+	text "기운이 넘친다!"
 	prompt
 
 _BreedNoInterestText::
@@ -931,9 +902,7 @@ _PCWhatText::
 _PCMonHoldingMailText::
 	text "메일을 가지고 있는"
 	line "포켓몬이 있습니다"
-
-	para "메일을"
-	line "받아주세요"
+	cont "메일을 받아주세요"
 	prompt
 
 _PCNoSingleMonText::
@@ -986,8 +955,7 @@ _ContestJudging_FirstPlaceText::
 _ContestJudging_FirstPlaceScoreText::
 	text_start
 
-	para "득점은"
-	line "@"
+	para "득점은 @"
 	text_decimal wBugContestFirstPlaceScore, 2, 3
 	text "점 입니다!"
 	prompt
@@ -1007,8 +975,7 @@ _ContestJudging_SecondPlaceText::
 _ContestJudging_SecondPlaceScoreText::
 	text_start
 
-	para "득점은"
-	line "@"
+	para "득점은 @"
 	text_decimal wBugContestSecondPlaceScore, 2, 3
 	text "점 입니다!"
 	prompt
@@ -1028,8 +995,7 @@ _ContestJudging_ThirdPlaceText::
 _ContestJudging_ThirdPlaceScoreText::
 	text_start
 
-	para "득점은"
-	line "@"
+	para "득점은 @"
 	text_decimal wBugContestThirdPlaceScore, 2, 3
 	text "점 입니다!"
 	prompt
@@ -1101,13 +1067,11 @@ _PlayersPCTurnOnText::
 	prompt
 
 _PlayersPCAskWhatDoText::
-	text "무엇을"
-	line "하겠습니까?"
+	text "무엇을 하겠습니까?"
 	done
 
 _PlayersPCHowManyWithdrawText::
-	text "몇 개를"
-	line "꺼내겠습니까?"
+	text "몇 개를 꺼내겠습니까?"
 	done
 
 _PlayersPCWithdrewItemsText::
@@ -1125,12 +1089,12 @@ _PlayersPCNoRoomWithdrawText::
 	prompt
 
 _PlayersPCNoItemsText::
-	text "도구를 하나도 가지고 있지 않아!"
+	text "도구를 하나도"
+	line "가지고 있지 않아!"
 	prompt
 
 _PlayersPCHowManyDepositText::
-	text "몇 개를"
-	line "맡기겠습니까?"
+	text "몇 개를 맡기겠습니까?"
 	done
 
 _PlayersPCDepositItemsText::
@@ -1157,8 +1121,7 @@ _PokecenterPCWhoseText::
 	done
 
 _PokecenterBillsPCText::
-	text "이수재의 컴퓨터와"
-	line "연결했다!"
+	text "이수재의 컴퓨터와 연결했다!"
 
 	para "포켓몬 맡김 시스템을"
 	line "불러냈습니다!"
@@ -1172,8 +1135,7 @@ _PokecenterPlayersPCText::
 	prompt
 
 _PokecenterOaksPCText::
-	text "오박사의 컴퓨터와"
-	line "연결했다!"
+	text "오박사의 컴퓨터와 연결했다!"
 
 	para "포켓몬 도감"
 	line "평가 시스템을 불러냈습니다!"
@@ -1212,32 +1174,24 @@ _OakRating01::
 
 _OakRating02::
 	text "움! 몬스터볼의"
-	line "사용방법은"
-	cont "알고있는 것 같군!"
+	line "사용방법은 알고있는 것 같군!"
 	done
 
 _OakRating03::
-	text "그럭저럭"
-	line "적응된 것 같구나"
-
-	para "하지만 아직도"
-	line "갈 길은 멀단다!"
+	text "그럭저럭 적응된 것 같구나"
+	line "하지만 아직도 갈 길은 멀단다!"
 	done
 
 _OakRating04::
-	text "포켓몬 도감으로는"
-	line "아직 양이 부족해!"
-
-	para "여러 종류의"
-	line "포켓몬을 잡도록 하거라!"
+	text "포켓몬 도감으로는 아직"
+	line "양이 부족해! 여러"
+	cont "종류의 포켓몬을 잡도록 하거라!"
 	done
 
 _OakRating05::
-	text "후움, 열심히"
-	line "하고 있군"
-
-	para "그런대로 포켓몬 도감"
-	line "답게 되어가고 있단다!"
+	text "후움, 열심히 하고 있군"
+	line "그런대로 포켓몬 도감"
+	cont "답게 되어가고 있단다!"
 	done
 
 _OakRating06::
@@ -1263,17 +1217,13 @@ _OakRating08::
 	done
 
 _OakRating09::
-	text "정해진 시간대밖에"
-	line "움직이지 않는"
-
-	para "포켓몬이"
-	line "있다고 한다"
+	text "정해진 시간대밖에 움직이지"
+	line "않는 포켓몬이 있다고 한다"
 	done
 
 _OakRating10::
 	text "페이지도 늘어난 것 같구나!"
-	line "그 상태로 더욱"
-	cont "열심히 하거라!"
+	line "그 상태로 더욱 열심히 하거라!"
 	done
 
 _OakRating11::
@@ -1291,19 +1241,14 @@ _OakRating12::
 	done
 
 _OakRating13::
-	text "옷! 생각해보면"
-	line "저번에 조사했을 때보다도"
-
-	para "많은 포켓몬이"
-	line "발견되었었지"
+	text "옷! 생각해보면 저번에"
+	line "조사했을 때보다도"
+	cont "많은 포켓몬이 발견되었었지"
 	done
 
 _OakRating14::
-	text "친구들과"
-	line "교환하고 있는가?"
-
-	para "혼자서는"
-	line "매우 힘들테니까"
+	text "친구들과 교환하고 있는가?"
+	line "혼자서는 매우 힘들테니까"
 	done
 
 _OakRating15::
@@ -1329,19 +1274,14 @@ _OakRating17::
 	done
 
 _OakRating18::
-	text "여기까지 도감이"
-	line "만들어졌다면"
-
-	para "이미"
-	line "프로의 경지다!"
+	text "여기까지 도감이 만들어졌다면"
+	line "이미 프로의 경지다!"
 	done
 
 _OakRating19::
 	text "오옷 꿈에서도 그리던"
 	line "퍼펙트한 도감의"
-
-	para "완성이구나!"
-	line "…… 축하한다!"
+	cont "완성이구나!…… 축하한다!"
 	done
 
 _OakPCText4::
@@ -1557,9 +1497,8 @@ _OakText4::
 	text "사람은 포켓몬들과"
 	line "정답게 지내거나"
 	cont "함께 싸우거나…………"
-
-	para "서로 도와가며"
-	line "살아가고 있단다"
+	cont "서로 도와가며"
+	cont "살아가고 있단다"
 	prompt
 
 _OakText5::

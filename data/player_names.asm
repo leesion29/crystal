@@ -11,9 +11,9 @@ ChrisNameMenuHeader:
 	db "스스로 결정하다@"
 MalePlayerNameArray:
 	db "골드@"
-	db "수호@"
-	db "인산@"
-	db "강산@"
+	db "심향@"
+	db "은진@"
+	db "동수@"
 	db 2 ; title indent
 	db " 이름 후보 @" ; title
 
@@ -31,7 +31,7 @@ KrisNameMenuHeader:
 FemalePlayerNameArray:
 	db "크리스@"
 	db "금선@"
-	db "은아@"
+	db "은애@"
 	db "동주@"
 	db 2 ; title indent
 	db " 이름 후보 @" ; title

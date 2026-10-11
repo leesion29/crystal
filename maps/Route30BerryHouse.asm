@@ -31,17 +31,13 @@ Route30BerrySpeechHouseMonEatBerriesText:
 	line "너 알고있니?"
 
 	para "우리집의 포켓몬은"
-	line "나무열매를 먹으면"
-	cont "건강해진다"
-
-	para "그래! 너에게도"
-	line "나누어줄께"
+	line "나무열매를 먹으면 건강해진다"
+	cont "그래! 너에게도 나누어줄께"
 	done
 
 Route30BerrySpeechHouseCheckTreesText:
 	text "나무를 조사하면"
-	line "나무열매가"
-	cont "떨어질꺼야"
+	line "나무열매가 떨어질꺼야"
 	done
 
 Route30BerryHouse_MapEvents:

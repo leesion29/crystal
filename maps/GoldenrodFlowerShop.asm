@@ -83,75 +83,60 @@ FlowerShopRadio: ; unreferenced
 	jumpstd Radio2Script
 
 GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute36Text:
-	text "Have you seen that"
-	line "wiggly tree that's"
+	text "그 꿈틀꿈틀 움직이는 나무를"
+	line "보았니?"
 
-	para "growing on ROUTE"
-	line "36?"
+	para "36번 도로에서 자라고 있단다"
 
-	para "My little sister"
-	line "got all excited"
+	para "내 동생이 잔뜩 신이 나서 그"
+	line "나무를 보러 가버렸어……"
 
-	para "and went to see"
-	line "it…"
-
-	para "I'm worried… Isn't"
-	line "it dangerous?"
+	para "걱정이 되는구나…… 위험하지"
+	line "않을까?"
 	done
 
 GoldenrodFlowerShopTeacherAskWantToBorrowWaterBottleText:
-	text "Do you want to"
-	line "borrow the water"
+	text "너도 물뿌리개를 빌리고 싶니?"
 
-	para "bottle too?"
-	line "I don't want you"
-
-	para "doing anything"
-	line "dangerous with it."
+	para "하지만 그걸로 위험한 짓을 하지"
+	line "않았으면 좋겠구나"
 	done
 
 GoldenrodFlowerShopTeacherHeresTheSquirtbottleText:
-	text "Oh, you're better"
-	line "than WHITNEY…"
+	text "응? 너"
+	line "꼭두보다 강하구나"
 
-	para "You'll be OK,"
-	line "then. Here's the"
-	cont "SQUIRTBOTTLE!"
+	para "그럼 걱정 없겠네!"
+	line "자 여기"
+	cont "꼬부기 물뿌리개야!"
 	done
 
 GoldenrodFlowerShopTeacherDontDoAnythingDangerousText:
-	text "Don't do anything"
-	line "too dangerous!"
+	text "너무 위험한 짓은"
+	line "하지 말아라!"
 	done
 
 GoldenrodFlowerShopTeacherLalalaHavePlentyOfWaterText:
-	text "Lalala lalalala."
-	line "Have plenty of"
-	cont "water, my lovely!"
+	text "라라라 라라라라"
+	line "듬뿍 물을 줄께"
 	done
 
 GoldenrodFlowerShopFloriaWonderIfSisWillLendWaterBottleText:
-	text "When I told my sis"
-	line "about the jiggly"
+	text "언니에게 움직이는 나무 이야기를"
+	line "했더니 위험하다고 하더라"
 
-	para "tree, she told me"
-	line "it's dangerous."
-
-	para "If I beat WHITNEY,"
-	line "I wonder if she'll"
-
-	para "lend me her water"
-	line "bottle…"
+	para "내가 꼭두에게 이기면 언니가"
+	line "나한테 물뿌리개를 빌려줄까……"
 	done
 
 GoldenrodFlowerShopFloriaYouBeatWhitneyText:
-	text "Wow, you beat"
-	line "WHITNEY? Cool!"
+	text "와아 꼭두에게 이겼어?"
+	line "굉장하다!"
 	done
 
 GoldenrodFlowerShopFloriaItReallyWasAMonText:
-	text "So it really was a"
-	line "#MON!"
+	text "역시"
+	line "포켓몬이었구나!"
 	done
 
 GoldenrodFlowerShop_MapEvents:

@@ -19,15 +19,11 @@ Kyle:
 	end
 
 VioletKylesHousePokefanMText:
-	text "다른 사람이랑"
-	line "교환한 포켓몬은"
-	cont "성장이 빠르다!"
+	text "다른 사람이랑 교환한 포켓몬은"
+	line "성장이 빠르다!"
 
-	para "하지만 체육관배지를"
-	line "지니지 않으면"
-
-	para "말하는 것을"
-	line "듣지 않게 된단다"
+	para "하지만 체육관배지를 지니지 않으면"
+	line "말하는 것을 듣지 않게 된단다"
 	done
 
 VioletKylesHouse_MapEvents:

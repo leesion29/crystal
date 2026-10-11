@@ -129,16 +129,12 @@ RuinsOfAlphHoOhChamberWallHoleText:
 
 RuinsOfAlphHoOhChamberAncientReplicaText:
 	text "옛날의 포켓몬을"
-	line "흉내내서"
-	cont "만들어진 것"
+	line "흉내내서 만들어진 것"
 	done
 
 RuinsOfAlphHoOhChamberDescriptionText:
-	text "무지개 빛으로"
-	line "빛나는 날개로 넓은"
-
-	para "하늘을 우아하게"
-	line "나는 포켓몬"
+	text "무지개 빛으로 빛나는 날개로"
+	line "넓은 하늘을 우아하게 나는 포켓몬"
 	done
 
 RuinsOfAlphHoOhChamber_MapEvents:

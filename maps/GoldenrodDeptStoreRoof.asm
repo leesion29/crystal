@@ -93,120 +93,95 @@ PokeDollVendingMachine:
 	jumptext PokeDollVendingMachineText
 
 GoldenrodDeptStoreRoofPokefanFText:
-	text "Whew, I'm tired."
+	text "휴우 피곤하구나"
 
-	para "I sometimes come"
-	line "up to the rooftop"
-
-	para "to take a break"
-	line "from shopping."
+	para "가끔 쇼핑을 하다가 쉬고 싶을 때"
+	line "옥상에 올라온단다"
 	done
 
 GoldenrodDeptStoreRoofFisherText:
-	text "Pardon? Who says"
-	line "an adult can't get"
-	cont "into this?"
+	text "뭐라고? 어른은 이런 것에 빠지면"
+	line "안된다고 누가 그래?"
 
-	para "I'm going to be"
-	line "back every day to"
-
-	para "collect all the"
-	line "dolls!"
+	para "나는 날마다 와서 인형을 전부"
+	line "모을꺼야!"
 	done
 
 GoldenrodDeptStoreRoofTwinText:
-	text "They have bargain"
-	line "sales here every"
-	cont "so often."
+	text "여기서는 가끔"
+	line "특가 판매를"
+	cont "한단다"
 	done
 
 GoldenrodDeptStoreRoofSuperNerdOhWowText:
-	text "Oh, wow!"
+	text "오오 굉장하다!"
 	done
 
 GoldenrodDeptStoreRoofSuperNerdQuitBotheringMeText:
-	text "Will you quit"
-	line "bothering me?"
+	text "나 좀 그만"
+	line "방해해줄래?"
 	done
 
 GoldenrodDeptStoreRoofPokefanMText:
-	text "There's something"
-	line "I really want, but"
+	text "정말로 갖고 싶은 것이 있는데 살"
+	line "돈이 부족하구나……"
 
-	para "I don't have the"
-	line "necessary cash…"
-
-	para "Maybe I'll sell"
-	line "off the BERRIES"
-	cont "I've collected…"
+	para "모아둔 나무열매라도 팔아볼까……"
 	done
 
 GoldenrodDeptStoreRoofTeacherText:
-	text "Oh, everything is"
-	line "so cheap!"
+	text "어머 모두"
+	line "정말 싸구나!"
 
-	para "I bought so much,"
-	line "my PACK's crammed!"
+	para "너무 많이 샀더니"
+	line "가방이 꽉 찼어!"
 	done
 
 GoldenrodDeptStoreRoofBugCatcherText:
-	text "My #MON always"
-	line "get paralyzed or"
+	text "내 포켓몬은 꼭 곤란한 순간에"
+	line "마비되거나 독에 걸리더라……"
 
-	para "poisoned when the"
-	line "chips are down…"
-
-	para "So I came to buy"
-	line "some FULL HEAL."
-
-	para "I wonder if"
-	line "there's any left?"
+	para "그래서 만병통치제를 사러 왔어"
+	line "아직 남아 있을까?"
 	done
 
 Binoculars1Text:
-	text "These binoculars"
-	line "let me see far"
+	text "망원경으로"
+	line "멀리까지 보이는구나"
 
-	para "away. Maybe I can"
-	line "see my own house."
+	para "우리 집도"
+	line "보이지 않을까?"
 
-	para "Is it the one with"
-	line "the green roof?"
+	para "초록색 지붕의"
+	line "저 집일까?"
 	done
 
 Binoculars2Text:
-	text "Hey! Some trainers"
-	line "are battling on"
-	cont "the road!"
+	text "앗! 트레이너들이 도로에서 싸우고"
+	line "있어!"
 
-	para "A #MON fired a"
-	line "flurry of leaves!"
-
-	para "That makes me feel"
-	line "like battling"
-	cont "right now!"
+	para "포켓몬이 잎사귀를 마구 날렸어!"
+	line "나도 당장 싸우고 싶은 기분이"
+	cont "드는걸!"
 	done
 
 Binoculars3Text:
-	text "A FISHER caught a"
-	line "lot of MAGIKARP…"
+	text "낚시꾼이 잉어킹을 잔뜩"
+	line "잡았구나……"
 
-	para "They're SPLASHing"
-	line "at the same time!"
-
-	para "Look at the water"
-	line "going everywhere!"
+	para "다같이 튀어오르기를 하고 있어!"
+	line "물이 사방으로 튀잖아!"
 	done
 
 PokeDollVendingMachineText:
-	text "A vending machine"
-	line "for #MON dolls?"
+	text "포켓몬 인형"
+	line "자동판매기인가?"
 
-	para "Insert money, then"
-	line "turn the crank…"
+	para "돈을 넣고"
+	line "손잡이를 돌리면……"
 
-	para "But it's almost"
-	line "empty…"
+	para "하지만 거의"
+	line "텅 비어있구나……"
 	done
 
 GoldenrodDeptStoreRoof_MapEvents:

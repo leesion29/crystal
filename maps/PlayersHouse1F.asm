@@ -93,7 +93,7 @@ MeetMomTalkedScript:
 	sjump MeetMomScript
 
 PokegearName:
-	db "#GEAR@"
+	db "포켓기어@"
 
 PlayersHouse1FReceiveItemStd:
 	jumpstd ReceiveItemScript
@@ -200,16 +200,12 @@ MomWalksBackMovement:
 	step_end
 
 ElmsLookingForYouText:
-	text "아, <PLAYER>!"
-	line "옆집의 공박사님이"
-	cont "찾아왔었단다"
+	text "아, <PLAYER>! 옆집의"
+	line "공박사님이 찾아왔었단다 뭔가"
+	cont "너에게 부탁할 것이 있다고 하셔서"
 
-	para "뭔가 너에게"
-	line "부탁할 것이 있다고 하셔서"
-
-	para "그래! 잊어먹을 뻔 했네"
-	line "수리를 보냈던 포켓몬 기어가"
-	cont "돌아왔단다"
+	para "그래! 잊어먹을 뻔 했네 수리를"
+	line "보냈던 포켓몬 기어가 돌아왔단다"
 
 	para "여기!"
 	done
@@ -261,7 +257,7 @@ SoWhatWasProfElmsErrandText:
 	text "공박사님의"
 	line "용무는 무엇이었니?"
 
-	para "<……><……><……>"
+	para "…… …… …… "
 
 	para "그래 아주 힘들겠구나"
 	line "그래도 다른사람에게 부탁을 받는건"

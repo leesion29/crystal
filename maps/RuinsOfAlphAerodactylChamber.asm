@@ -127,17 +127,13 @@ RuinsOfAlphAerodactylChamberWallHoleText:
 	done
 
 RuinsOfAlphAerodactylChamberAncientReplicaText:
-	text "오래전의"
-	line "포켓몬을 흉내내서"
-	cont "만들어진 포켓몬"
+	text "오래전의 포켓몬을"
+	line "흉내내서 만들어진 포켓몬"
 	done
 
 RuinsOfAlphAerodactylChamberDescriptionText:
-	text "톱같이"
-	line "생긴 이빨로"
-
-	para "사냥감을 덮치던"
-	line "하늘의 포켓몬"
+	text "톱같이 생긴 이빨로"
+	line "사냥감을 덮치던 하늘의 포켓몬"
 	done
 
 RuinsOfAlphAerodactylChamber_MapEvents:

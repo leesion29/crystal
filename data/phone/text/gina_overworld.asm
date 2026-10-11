@@ -1,67 +1,59 @@
 GinaAskNumber1Text:
-	text "Whenever I see a"
-	line "strong trainer, I"
+	text "강한 트레이너를 보면 응원해주고"
+	line "싶어져!"
 
-	para "want to be their"
-	line "cheerleader."
+	para "산책을 하다 보면 가끔 도구를"
+	line "줍기도 하거든"
 
-	para "When I'm on my"
-	line "walk, I sometimes"
-	cont "pick up items."
+	para "뭔가 발견하면 너에게 줄께!"
 
-	para "If I get anything,"
-	line "you can have it!"
+	para "전화번호를 알려줄래?"
 
-	para "Want to give me"
-	line "your number?"
-
-	para "I'll call as soon"
-	line "as I get anything."
+	para "뭔가 주우면 바로 전화할께!"
 	done
 
 GinaAskNumber2Text:
-	text "If I find an item,"
-	line "you can have it!"
+	text "도구를 발견하면"
+	line "너에게 줄께!"
 
-	para "Want to give me"
-	line "your number?"
+	para "전화번호를"
+	line "알려줄래?"
 	done
 
 GinaNumberAcceptedText:
-	text "I'll call as soon"
-	line "as I get anything!"
+	text "뭔가 주우면"
+	line "바로 전화할께!"
 	done
 
 GinaNumberDeclinedText:
-	text "Is that so? Well,"
-	line "I'll still be"
-	cont "rooting for you!"
+	text "그러니? 그래도"
+	line "나는 계속"
+	cont "너를 응원할께!"
 	done
 
 GinaPhoneFullText:
-	text "But your phone is"
-	line "all filled up!"
+	text "그런데 전화번호가"
+	line "벌써 가득 찼구나!"
 	done
 
 GinaRematchText:
-	text "I've been waiting!"
+	text "기다리고 있었어!"
 
-	para "I've gotten a bit"
-	line "better at this!"
+	para "나도 조금은"
+	line "실력이 늘었거든!"
 	done
 
 GinaGiftText:
-	text "So you're finally"
-	line "here!"
+	text "드디어 왔구나!"
 
-	para "I think this will"
-	line "make you happy."
+	para "이것을 보면"
+	line "기뻐할 거야!"
 	done
 
 GinaPackFullText:
-	text "Your PACK looks"
-	line "completely full."
+	text "가방이 완전히"
+	line "가득 찬 것 같네"
 
-	para "I'll have to hold"
-	line "on to this."
+	para "당분간 내가"
+	line "갖고 있어야겠어"
 	done

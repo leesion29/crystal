@@ -388,7 +388,7 @@ GuideGentPokecenterText:
 	done
 
 GuideGentMartText:
-	text "이곳은 프렌들리숍"
+	text "이곳은 프렌들리 숍"
 	line "포켓몬을 잡는 볼이라든지"
 	cont "여러 물건들을 팔고 있단다!"
 	done
@@ -407,7 +407,7 @@ GuideGentSeaText:
 	done
 
 GuideGentGiftText:
-	text "이곳은<……>"
+	text "이곳은……"
 
 	para "내 집이란다"
 	line "상대해줘서 고맙다"
@@ -429,20 +429,19 @@ GuideGentPokegearText:
 	done
 
 GuideGentNoText:
-	text "그런가<……>"
-	line "내 부탁이었는데<……>"
-
+	text "그런가……"
+	line "내 부탁이었는데……"
 	cont "뭐 좋다싶은 생각이 들면 오너라"
 	done
 
 CherrygroveRivalText_Seen:
-	text "<……> <……> <……>"
+	text "…… …… ……"
 
 	para "너 연구소에서"
 	line "포켓몬을 얻었구나"
 	cont "약해빠진 주제에 아깝게도"
 
-	para "<……> <……> <……>"
+	para "…… …… ……"
 
 	para "뭐야 무엇을 말하고 있는지"
 	line "모르겠냐"
@@ -453,11 +452,11 @@ CherrygroveRivalText_Seen:
 	done
 
 RivalCherrygroveWinText:
-	text "<……> 흥!"
+	text "…… 흥!"
 	line "이겨서 기쁘냐?"
 	done
 CherrygroveRivalText_YouLost:
-	text "<……> <……> <……>"
+	text "…… …… ……"
 
 	para "내 이름은 ???"
 
@@ -466,12 +465,12 @@ CherrygroveRivalText_YouLost:
 	done
 
 RivalCherrygroveLossText:
-	text "<……> 흥!"
+	text "…… 흥!"
 	line "시간만 낭비한 것 같군"
 	done
 
 CherrygroveRivalText_YouWon:
-	text "<……> <……> <……>"
+	text "…… …… ……"
 
 	para "내 이름은 ???"
 
@@ -522,7 +521,7 @@ MysticWaterGuyTextAfter:
 
 CherrygroveCitySignText:
 	text "이곳은 무궁시티"
-	para "아름다운 꽃의 향기가 그윽한 마을"
+	line "아름다운 꽃의 향기가 그윽한 마을"
 	done
 
 GuideGentsHouseSignText:

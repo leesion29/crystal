@@ -26,52 +26,47 @@ AzaleaPokecenter1FPokefanFScript:
 	jumptextfaceplayer AzaleaPokecenter1FPokefanFText
 
 AzaleaPokecenter1FGentlemanText:
-	text "Do your #MON"
-	line "know HM moves?"
+	text "너의 포켓몬은"
+	line "비전을 알고 있니?"
 
-	para "Those moves can"
-	line "be used even if"
+	para "그 기술은 포켓몬이"
+	line "빈사상태가"
 
-	para "your #MON has"
-	line "fainted."
+	para "되어도 사용할"
+	line "수 있단다"
 	done
 
 AzaleaPokecenter1FUnusedText: ; unreferenced
-	text "This BILL guy"
-	line "created the system"
+	text "이수재라는 사람이"
+	line "컴퓨터에"
 
-	para "for storing"
-	line "#MON in a PC."
+	para "포켓몬을 맡기는"
+	line "시스템을 만들었단다"
 
-	para "BILL's PC can"
-	line "store up to 20"
-	cont "#MON per BOX."
+	para "이수재의 컴퓨터를 사용하면"
+	line "1개의 박스에 20마리까지"
+	cont "포켓몬을 맡길 수 있다!"
 	done
 
 AzaleaPokecenter1FFishingGuruText:
-	text "BILL's PC can"
-	line "store up to 20"
-	cont "#MON per BOX."
+	text "이수재의 컴퓨터를 사용하면"
+	line "1개의 박스에 20마리까지"
+	cont "포켓몬을 맡길 수 있다!"
 	done
 
 AzaleaPokecenter1FPokefanFText:
-	text "Do you know about"
-	line "APRICORNS?"
+	text "너 규토리라는 것 알고 있니?"
 
-	para "Crack one open,"
-	line "hollow it out and"
+	para "규토리의 열매를 쪼개서"
+	line "내용물을 제거하면"
+	cont "특수한 장치를 만들어낸단다"
 
-	para "fit it with a"
-	line "special device."
+	para "그럼 포켓몬을 잡는 것을"
+	line "할 수 있도록 된단다!"
 
-	para "Then you can catch"
-	line "#MON with it."
-
-	para "Before # BALLS"
-	line "were invented,"
-
-	para "everyone used"
-	line "APRICORNS."
+	para "몬스터볼이 팔릴 때까지"
+	line "모두 규토리를 사용해서"
+	cont "포켓몬을 잡았단다"
 	done
 
 AzaleaPokecenter1F_MapEvents:

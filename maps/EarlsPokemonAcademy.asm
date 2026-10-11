@@ -162,13 +162,10 @@ AcademyEarlSpinMovement:
 
 AcademyEarlIntroText:
 	text "다배워입니다!"
-
-	para "포켓몬은"
-	line "대단하지요!"
+	line "포켓몬은 대단하지요!"
 
 	para "나는 강해지기 위해"
-	line "여러가지"
-	cont "가르쳐주지요"
+	line "여러가지 가르쳐주지요"
 
 	para "무엇이 알고싶은지?"
 	line "어떡게 해야 강해질까"
@@ -179,16 +176,15 @@ AcademyEarlTeachHowToWinText:
 	text "그렇다면 내가"
 	line "가르쳐주지요!"
 
-	para "승부할 때 포켓몬 리스트의"
-	line "제일 위의 포켓몬이"
+	para "승부할 때"
+	line "포켓몬 리스트의"
+	cont "제일 위의 포켓몬이"
 	cont "먼저 출전합니다"
 
 	para "리스트의 순서를 바꾸면"
-	line "승부에 유리하게"
-	cont "될지도 모르지!"
+	line "승부에 유리하게 될지도 모르지!"
 
-	para "그 밖에도 듣고싶은"
-	line "것이 있는가?"
+	para "그 밖에도 듣고싶은 것이 있는가?"
 	done
 
 AcademyEarlTeachMoreText:
@@ -201,27 +197,21 @@ AcademyEarlTeachHowToRaiseWellText:
 	text "그렇다면 내가"
 	line "가르쳐주지요!"
 
-	para "승부할 때 한번이라도"
-	line "얼굴을 내민 포켓몬은"
-
-	para "경험치를"
-	line "얻을 수 있습니다!"
+	para "승부할 때"
+	line "한번이라도 얼굴을 내민 포켓몬은"
+	cont "경험치를 얻을 수 있습니다!"
 
 	para "약한 포켓몬을"
 	line "리스트의 위로 하고"
+	cont "승부할 때에 바로 교대"
 
-	para "승부할 때에"
-	line "바로 교대"
-
-	para "이것으로"
-	line "약한 포켓몬도"
-	cont "키울만하지요!"
+	para "이것으로 약한 포켓몬도"
+	line "키울만하지요!"
 	done
 
 AcademyEarlNoMoreToTeachText:
 	text "오- 그대는 우등생!"
-	line "가르칠 것이"
-	cont "없을 것 같군요!"
+	line "가르칠 것이 없을 것 같군요!"
 
 	para "잡은 포켓몬이랑"
 	line "사이좋게 지내시길!"
@@ -229,34 +219,28 @@ AcademyEarlNoMoreToTeachText:
 
 EarlsPokemonAcademyYoungster1Text:
 	text "선생님의 말씀"
-	line "공책에 써서"
-	cont "외운단다!"
+	line "공책에 써서 외운단다!"
 
-	para "칠판에 써 있는"
-	line "것도 공책에"
-	cont "옮겨놔야지……"
+	para "칠판에 써 있는 것도"
+	line "공책에 옮겨놔야지……"
 	done
 
 EarlsPokemonAcademyGameboyKid1Text:
 	text "옆의 아이에게"
-	line "내가 좋아하는"
-	cont "포켓몬을 보냈어!"
+	line "내가 좋아하는 포켓몬을 보냈어!"
 	done
 
 EarlsPokemonAcademyGameboyKid2Text:
 	text "엥? 보내진 포켓몬"
-	line "뭔가"
-	cont "가지고 있어!?"
+	line "뭔가 가지고 있어!?"
 	done
 
 EarlsPokemonAcademyYoungster2Text:
-	text "…포켓몬에게"
-	line "나무열매를 지니게하면"
-	cont "자기 혼자서 체력을 회복한다"
+	text "…포켓몬에게 나무열매를 지니게하면"
+	line "자기 혼자서 체력을 회복한다"
 
 	para "포켓몬이 지닐 수 있는 도구는"
-	line "그 밖에도"
-	cont "많이 있다……"
+	line "그 밖에도 많이 있다……"
 
 	para "공책에 잘 적는 것은"
 	line "힘들구나……"
@@ -265,9 +249,8 @@ EarlsPokemonAcademyYoungster2Text:
 AcademyBlackboardText:
 	text "칠판에"
 	line "포켓몬이 싸우고 있을 때"
-
-	para "일어나는 몸의"
-	line "변화에 대해서 써져 있다"
+	cont "일어나는 몸의"
+	cont "변화에 대해서 써져 있다"
 	done
 
 AcademyBlackboardText2: ; unreferenced
@@ -275,24 +258,17 @@ AcademyBlackboardText2: ; unreferenced
 	done
 
 AcademyPoisonText:
-	text "독에"
-	line "당하면"
-	cont "체력이 줄어갑니다"
+	text "독에 당하면"
+	line "체력이 줄어갑니다"
 
-	para "승부 뒤에도"
-	line "독은 남아서"
-
-	para "걸어다닐 때도"
-	line "체력이 줄어듭니다"
-
-	para "해독제로"
-	line "치료를 합시다"
+	para "승부 뒤에도 독은 남아서"
+	line "걸어다닐 때도 체력이 줄어듭니다"
+	cont "해독제로 치료를 합시다"
 	done
 
 AcademyParalysisText:
 	text "마비되면 스피드가 떨어지고"
-	line "가끔 기술을"
-	cont "쓸 수 없게됩니다"
+	line "가끔 기술을 쓸 수 없게됩니다"
 
 	para "싸움이 끝이나도"
 	line "마비된채로 있게됩니다"
@@ -301,110 +277,83 @@ AcademyParalysisText:
 
 AcademySleepText:
 	text "잠들어버리면"
-	line "그동안에는"
-	cont "공격을 할 수 없습니다"
+	line "그동안에는 공격을 할 수 없습니다"
 
 	para "승부가 끝나도"
-	line "잠들어버린 채로"
-	cont "있습니다"
-
-	para "잠깨는 약으로"
-	line "깨워줍시다"
+	line "잠들어버린 채로 있습니다"
+	cont "잠깨는 약으로 깨워줍시다"
 	done
 
 AcademyBurnText:
-	text "화상은"
-	line "체력이 줄어들고"
-
-	para "공격력이"
-	line "떨어집니다"
+	text "화상은 체력이 줄어들고"
+	line "공격력이 떨어집니다"
 
 	para "승부가 끝났을 때에도"
 	line "화상을 입은 채로 있습니다"
-
-	para "화상 치료제로"
-	line "치료해줍시다"
+	cont "화상 치료제로 치료해줍시다"
 	done
 
 AcademyFreezeText:
 	text "얼어버리면"
-	line "아무것도 할 수"
-	cont "없게 됩니다"
+	line "아무것도 할 수 없게 됩니다"
 
 	para "승부가 끝나도"
 	line "얼어버린 채로 있습니다"
-
-	para "얼음상태 치료제로"
-	line "몸을 녹여줍시다"
+	cont "얼음상태 치료제로 몸을 녹여줍시다"
 	done
 
 AcademyNotebookText:
-	text "이 아이의"
-	line "공책이다 ……"
+	text "이 아이의 공책이다 ……"
 
 	para "포켓몬은"
 	line "몬스터볼로 잡아서 동시에"
-
-	para "6마리를 데리고"
-	line "다닐 수 있다"
+	cont "6마리를 데리고 다닐 수 있다"
 
 	para "다음도 읽을까?"
 	done
 
 AcademyNotebookText1:
-	text "몬스터볼을"
-	line "던질 때에는"
-	cont "포켓몬의 기술로"
-
-	para "독이라든가"
-	line "화상이라든가를 쓰면"
+	text "몬스터볼을 던질 때에는"
+	line "포켓몬의 기술로"
+	cont "독이라든가 화상이라든가를 쓰면"
 	cont "잡기 쉽다!"
 
 	para "계속해서 읽을까?"
 	done
 
 AcademyNotebookText2:
-	text "그 밖에도 포켓몬의"
-	line "기술로 곤란해질 때가 있다"
+	text "그 밖에도 포켓몬의 기술로"
+	line "곤란해질 때가 있다"
 
 	para "곤란해지면"
 	line "가끔 틀려서"
 	cont "자신을 공격해버린다"
 
-	para "한번이라도 승부에서"
-	line "발을 빼면"
-	cont "원래대로 돌아온다……"
+	para "한번이라도 승부에서 발을 빼면"
+	line "원래대로 돌아온다……"
 
 	para "다음도 읽을까?"
 	done
 
 AcademyNotebookText3:
-	text "그렇게해서 잡은"
-	line "포켓몬을"
-
-	para "키워서 싸움을 시키는"
-	line "사람을 포켓몬 트레이너라고 한다"
+	text "그렇게해서 잡은 포켓몬을"
+	line "키워서 싸움을 시키는 사람을"
+	cont "포켓몬 트레이너라고 한다"
 
 	para "트레이너의 목표는"
-	line "각지의 포켓몬"
-
-	para "체육관에 있는 강한"
-	line "트레이너를 이기는 것!"
+	line "각지의 포켓몬 체육관에 있는"
+	cont "강한 트레이너를 이기는 것!"
 
 	para "다음은……"
 	line "글이 써있지 않다!"
 
 	para "소년『에헤헤……"
-
-	para "다음은 아무 것도"
-	line "안 적었어……"
+	line "다음은 아무 것도 안 적었어……"
 	done
 
 AcademyStickerMachineText:
-	text "여러가지 데이터를"
-	line "스티커로 만들 수"
-
-	para "있는 대단한 기계!"
+	text "여러가지 데이터를 스티커로"
+	line "만들 수 있는 대단한 기계!"
 	done
 
 EarlsPokemonAcademy_MapEvents:

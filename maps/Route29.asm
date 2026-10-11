@@ -360,12 +360,12 @@ TuscanyNotTuesdayText:
 
 Route29Sign1Text:
 	text "이곳은 29번 도로"
-	line "무궁시티 <……> 연두마을"
+	line "무궁시티 …… 연두마을"
 	done
 
 Route29Sign2Text:
 	text "이곳은 29번 도로"
-	line "무궁시티 <……> 연두마을"
+	line "무궁시티 …… 연두마을"
 	done
 
 Route29_MapEvents:

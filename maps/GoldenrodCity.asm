@@ -101,10 +101,10 @@ MoveTutorScript:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "FLAMETHROWER@"
-	db "THUNDERBOLT@"
-	db "ICE BEAM@"
-	db "CANCEL@"
+	db "화염방사@"
+	db "10만볼트@"
+	db "냉동빔@"
+	db "그만두다@"
 
 .Refused:
 	writetext GoldenrodCityMoveTutorAwwButTheyreAmazingText
@@ -282,266 +282,214 @@ GoldenrodCityMoveTutorWalkAroundPlayerThenEnterGameCornerMovement:
 	step_end
 
 GoldenrodCityPokefanMText:
-	text "They built the new"
-	line "RADIO TOWER to"
-
-	para "replace the old,"
-	line "creaky one."
+	text "이곳은 탑이 낡아서"
+	line "쓰러질 것 처럼 된 것을"
+	cont "최신 라디오 방송국으로 만들었단다"
 	done
 
 GoldenrodCityYoungster1Text:
-	text "I know there's a"
-	line "new BIKE SHOP, but"
-
-	para "I can't find it"
-	line "anywhere."
+	text "자전거 가게가 새로 생겼는데"
+	line "어디에 있지?"
+	cont "전혀 어디 있는지 찾을 수 없네"
 	done
 
 GoldenrodCityCooltrainerF1Text:
-	text "Is that man in"
-	line "black dressed up"
-
-	para "like a TEAM ROCKET"
-	line "member? How silly!"
+	text "그 검은색 투성의 사람들"
+	line "로켓단의 흉내를 내고 있는걸까?"
+	cont "괴상한 사람들!"
 	done
 
 GoldenrodCityCooltrainerF1Text_ClearedRadioTower:
-	text "Was that man in"
-	line "black really part"
-
-	para "of TEAM ROCKET? I"
-	line "can't believe it!"
+	text "그 검은색 투성의 사람들"
+	line "정말 로켓단이었어?"
+	cont "지금도 믿지 못하겠네"
 	done
 
 GoldenrodCityCooltrainerF2Text:
-	text "The RADIO TOWER in"
-	line "GOLDENROD CITY is"
-	cont "a landmark."
+	text "금빛시티라고 하면 라디오타워"
 
-	para "They're running a"
-	line "promotional cam- "
-	cont "paign right now."
-
-	para "They'll modify"
-	line "your #GEAR,"
-
-	para "so it can also"
-	line "serve as a radio."
+	para "지금이라면 캠페인에서"
+	line "포켓기어로 라디오를 들을 수 있게"
+	cont "서비스를 받을 수 있데!"
 	done
 
 GoldenrodCityCooltrainerF2Text_GotRadioCard:
-	text "Oh, your #GEAR"
-	line "works as a radio!"
+	text "와아 너의 포켓기어"
+	line "라디오를 들을 수 있구나!"
 	done
 
 GoldenrodCityYoungster2Text:
-	text "E-he-he-he…"
-
-	para "I got in trouble"
-	line "for playing in the"
-
-	para "basement of the"
-	line "DEPT.STORE."
+	text "헤헤헤……"
+	line "백화점의 지하 창고에서"
+	cont "숨바꼭질을 하다가 혼났어"
 	done
 
 GoldenrodCityLassText:
-	text "The man at that"
-	line "house rates your"
-	cont "#MON names."
+	text "그쪽 집에서"
+	line "포켓몬의 이름으로"
+	cont "점을 쳐준단다"
 
-	para "He can even rename"
-	line "your #MON."
+	para "포켓몬에게 좋은 이름을"
+	line "다시 지어주는 것도 가능하데"
 	done
 
 GoldenrodCityGrampsText:
-	text "Whew! This is one"
-	line "big town. I don't"
-
-	para "know where any-"
-	line "thing is."
+	text "그런데 엄청 큰 마을이구나!"
+	line "너무 넓어서 무엇이 있나"
+	cont "전혀 모르겠구나"
 	done
 
 GoldenrodCityRocketScoutText1:
-	text "So this is the"
-	line "RADIO TOWER…"
+	text "여기가 라디오타워인가……"
 	done
 
 GoldenrodCityRocketScoutText2:
-	text "What do you want,"
-	line "you pest? Scram!"
+	text "뭐야 임마 너 저리 꺼져!"
 	done
 
 GoldenrodCityRocket1Text:
-	text "Stay out of the"
-	line "way! Beat it!"
+	text "어이 어슬렁거리지마!"
+	line "방해하지 말라고!"
 	done
 
 GoldenrodCityRocket2Text:
-	text "Take over the"
-	line "RADIO TOWER…"
+	text "라디오타워를 빼앗아서……"
 
-	para "What? It's none of"
-	line "your business!"
+	para "뭐야!"
+	line "꼬맹이에게는 관계 없다!"
 	done
 
 GoldenrodCityRocket3Text:
-	text "#MON? They're"
-	line "nothing more than"
-
-	para "tools for making"
-	line "money!"
+	text "포켓몬?"
+	line "돈벌이에 사용하는 도구잖아!"
 	done
 
 GoldenrodCityRocket4Text:
-	text "Our dream will"
-	line "soon come true…"
-
-	para "It was such a long"
-	line "struggle…"
+	text "이제 곧 우리들의 야망이……"
+	line "여기까지 오는데 참 길었군……"
 	done
 
 GoldenrodCityRocket5Text:
-	text "Hey, brat! You"
-	line "don't belong here!"
-	cont "Get lost!"
+	text "임마!"
+	line "꼬맹이가 무슨 용무냐!?"
+	cont "저리 꺼져!"
 	done
 
 GoldenrodCityRocket6Text:
-	text "Come taste the"
-	line "true terror of"
-	cont "TEAM ROCKET!"
+	text "너도 로켓단의"
+	line "무서움을 아는 것이 좋을꺼다"
 	done
 
 GoldenrodCityStationSignText:
-	text "GOLDENROD CITY"
-	line "STATION"
+	text "이곳은 금빛시티 역"
 	done
 
 GoldenrodCityRadioTowerSignText:
-	text "GOLDENROD CITY"
-	line "RADIO TOWER"
+	text "금빛시티 라디오타워"
 	done
 
 GoldenrodDeptStoreSignText:
-	text "Full Selection of"
-	line "#MON Goods!"
-
-	para "GOLDENROD CITY"
-	line "DEPT.STORE"
+	text "포켓몬 제품이라면"
+	line "무엇이든지 있는 금빛시티 백화점"
 	done
 
 GoldenrodGymSignText:
-	text "GOLDENROD CITY"
-	line "#MON GYM"
-	cont "LEADER: WHITNEY"
-
-	para "The Incredibly"
-	line "Pretty Girl!"
+	text "금빛시티 포켓몬 체육관"
+	line "관장 꼭두"
+	cont "다이너마이트 프리티 걸!"
 	done
 
 GoldenrodCitySignText:
-	text "GOLDENROD CITY"
-
-	para "The Festive City"
-	line "of Opulent Charm"
+	text "이곳은 금빛시티"
+	line "휘황찬란"
+	cont "금빛빤짝 생기 있는 아름다운 마을"
 	done
 
 GoldenrodCityBikeShopSignText:
-	text "The World is a"
-	line "Cycle Path!"
-	cont "BIKE SHOP"
+	text "어느 곳이든 씽씽!"
+
+	para "자전거에 대한 것이라면"
+	line "여기 미라클 싸이클로!"
 	done
 
 GoldenrodCityGameCornerSignText:
-	text "Your Playground!"
-
-	para "GOLDENROD CITY"
-	line "GAME CORNER"
+	text "모두의 유락시설!"
+	line "…… 금빛시티 게임코너"
 	done
 
 GoldenrodCityNameRaterSignText:
-	text "NAME RATER"
-
-	para "Get Your #MON"
-	line "Nicknames Rated"
+	text "이곳은 작명가의 집"
+	line "포켓몬의 이름으로 점을 봅니다"
 	done
 
 GoldenrodCityUndergroundSignNorthText:
-	text "UNDERGROUND"
-	line "ENTRANCE"
+	text "여기서부터 지하통로"
 	done
 
 GoldenrodCityUndergroundSignSouthText:
-	text "UNDERGROUND"
-	line "ENTRANCE"
+	text "여기서부터 지하통로"
 	done
 
 GoldenrodCityPokeComCenterSignText: ; unreferenced
-	text "For Mobile Tips!"
-	line "#COM CENTER"
+	text "모바일 통신 안내!"
+	line "포켓몬통신센터"
 	done
 
 GoldenrodCityFlowerShopSignText:
-	text "Blooming Beautiful"
-	line "FLOWER SHOP"
+	text "아름다운 꽃이 피는"
+	line "꽃가게"
 	done
 
 GoldenrodCityMoveTutorAskTeachAMoveText:
-	text "I can teach your"
-	line "#MON amazing"
+	text "원한다면 너의 포켓몬에게 굉장한"
+	line "기술을 가르쳐줄 수 있단다 어떻게"
+	cont "할래?"
 
-	para "moves if you'd"
-	line "like."
-
-	para "Should I teach a"
-	line "new move?"
+	para "새로운 기술을 가르쳐줄까?"
 	done
 
 GoldenrodCityMoveTutorAsk4000CoinsOkayText:
-	text "It will cost you"
-	line "4000 coins. Okay?"
+	text "동전 4000개가 필요한데"
+	line "괜찮겠니?"
 	done
 
 GoldenrodCityMoveTutorAwwButTheyreAmazingText:
-	text "Aww… But they're"
-	line "amazing…"
+	text "아아…… 그렇게"
+	line "굉장한 기술인데……"
 	done
 
 GoldenrodCityMoveTutorWhichMoveShouldITeachText:
-	text "Wahahah! You won't"
-	line "regret it!"
+	text "와하하하!"
+	line "후회하지 않을꺼야!"
 
-	para "Which move should"
-	line "I teach?"
+	para "어느 기술을"
+	line "가르쳐줄까?"
 	done
 
 GoldenrodCityMoveTutorHmTooBadText:
-	text "Hm, too bad. I'll"
-	line "have to get some"
-	cont "cash from home…"
+	text "음 아쉽군"
+	line "집에서 돈을 좀"
+	cont "가져와야겠어……"
 	done
 
 GoldenrodCityMoveTutorIfYouUnderstandYouveMadeItText:
-	text "If you understand"
-	line "what's so amazing"
-
-	para "about this move,"
-	line "you've made it as"
-	cont "a trainer."
+	text "이 기술이 얼마나 굉장한지"
+	line "알겠다면 너도 이제 어엿한"
+	cont "트레이너가 된 것이란다"
 	done
 
 GoldenrodCityMoveTutorFarewellKidText:
-	text "Wahahah!"
-	line "Farewell, kid!"
+	text "와하하하!"
+	line "잘 있거라 꼬마야!"
 	done
 
 GoldenrodCityMoveTutorBButText:
-	text "B-but…"
+	text "그 그렇지만……"
 	done
 
 GoldenrodCityMoveTutorYouDontHaveEnoughCoinsText:
-	text "…You don't have"
-	line "enough coins here…"
+	text "……동전이"
+	line "부족한 것 같구나……"
 	done
 
 GoldenrodCityMoveTutorMoveText:

@@ -217,30 +217,25 @@ MrPokemonIntroText1:
 
 MrPokemonIntroText2:
 	text "이것이 공박사에게"
-	line "조사를 의뢰하고싶은"
-	cont "것이란다!"
+	line "조사를 의뢰하고싶은 것이란다!"
 	done
 
 MrPokemonsHouse_GotEggText:
-	text "<PLAYER>는(은) 포켓몬 할아"
-	line "버지로부터 이상한 알을 맡았다!"
+	text "<PLAYER>는(은)"
+	line "포켓몬 할아버지로부터"
+	cont "이상한 알을 맡았다!"
 	done
 
 MrPokemonIntroText3:
-	text "포켓몬을 맡아"
-	line "기르고 있는"
-	cont "부부가 있는데"
+	text "포켓몬을 맡아 기르고 있는"
+	line "부부가 있는데"
+	cont "거기서 얻은 것이란다"
 
-	para "거기서 얻은"
-	line "것이란다"
+	para "혹시 그렇다면…… 라고 생각해서"
+	line "공박사에게 메일을 보냈단다"
 
-	para "혹시 그렇다면……"
-	line "라고 생각해서"
-	cont "공박사에게 메일을 보냈단다"
-
-	para "포켓몬 진화의"
-	line "연구라면"
-	cont "공박사가 최고니까!"
+	para "포켓몬 진화의 연구라면"
+	line "공박사가 최고니까!"
 	done
 
 MrPokemonIntroText4:
@@ -250,8 +245,7 @@ MrPokemonIntroText4:
 
 MrPokemonIntroText5:
 	text "내 상상이 맞았는가……"
-	line "공박사라면"
-	cont "알고있을 터"
+	line "공박사라면 알고있을 터"
 	done
 
 MrPokemonsHouse_MrPokemonHealText:
@@ -259,21 +253,16 @@ MrPokemonsHouse_MrPokemonHealText:
 	line "돌아갈 작정인가?"
 
 	para "약간 포켓몬을"
-	line "쉬게 하는 것이"
-	cont "좋겠지!"
+	line "쉬게 하는 것이 좋겠지!"
 	done
 
 MrPokemonText_ImDependingOnYou:
-	text "그럼 잘"
-	line "부탁한다!"
+	text "그럼 잘 부탁한다!"
 	done
 
 MrPokemonText_AlwaysNewDiscoveries:
-	text "이 세상은"
-	line "참 재미있구나!"
-
-	para "여러가지 발견이"
-	line "있으니까!"
+	text "이 세상은 참 재미있구나!"
+	line "여러가지 발견이 있으니까!"
 	done
 
 MrPokemonsHouse_OakText1:
@@ -295,53 +284,38 @@ MrPokemonsHouse_OakText1:
 	done
 
 MrPokemonsHouse_OakText1_Part2:
-	text "호오-!"
-	line "진귀한 포켓몬을 가지고 있구나!"
+	text "호오-! 진귀한 포켓몬을 가지고"
+	line "있구나!"
 
 	para "게다가…… ……"
 
 	para "흐음 역시!"
 
-	para "공박사가"
-	line "포켓몬을 줘서"
+	para "공박사가 포켓몬을 줘서 너에게"
+	line "심부름을 부탁한 이유를 잘"
+	cont "알겠구나!"
 
-	para "너에게 심부름을 부탁한"
-	line "이유를 잘 알겠구나!"
+	para "나와 공박사같은 연구가에게 있어서"
+	line "포켓몬은 소중한 친구이기"
+	cont "때문이란다!"
 
-	para "나와 공박사같은"
-	line "연구가에게 있어서"
-
-	para "포켓몬은 소중한"
-	line "친구이기 때문이란다!"
-
-	para "너라면 포켓몬을"
-	line "소중하게"
-
-	para "키울 것 이라"
-	line "생각한단다!"
+	para "너라면 포켓몬을 소중하게 키울 것"
+	line "이라 생각한단다!"
 	done
 
 MrPokemonsHouse_OakText1_Part3:
 	text "…… 그렇구나!"
 
-	para "너에게 기대를"
-	line "걸고 나도"
-
-	para "한가지"
+	para "너에게 기대를 걸고 나도 한가지"
 	line "부탁을 할까!"
 
-	para "실은……"
-	line "이것!"
-	cont "이 포켓몬 도감이란다!"
+	para "실은…… 이것! 이 포켓몬"
+	line "도감이란다!"
 
-	para "발견한 포켓몬의"
-	line "데이터가"
-
-	para "자동적으로 기록되어져"
-	line "페이지가 늘어간다고 하는"
-
-	para "하이테크"
-	line "도감이란다"
+	para "발견한 포켓몬의 데이터가"
+	line "자동적으로 기록되어져 페이지가"
+	cont "늘어간다고 하는 하이테크"
+	cont "도감이란다"
 	done
 
 MrPokemonsHouse_GetDexText:
@@ -384,9 +358,8 @@ MrPokemonText_GimmeTheScale:
 	done
 
 MrPokemonText_Disappointed:
-	text "그런가"
-	line "그것 참 유감이구나"
-	cont "꽤나 희귀한 것인데……"
+	text "그런가 그것 참 유감이구나"
+	line "꽤나 희귀한 것인데……"
 	done
 
 MrPokemonsHouse_ForeignMagazinesText:
@@ -399,16 +372,13 @@ MrPokemonsHouse_ForeignMagazinesText:
 
 MrPokemonsHouse_BrokenComputerText:
 	text "커다란 컴퓨터!"
-	line "……고장나있는"
-	cont "것 같다"
+	line "……고장나있는 것 같다"
 	done
 
 MrPokemonsHouse_StrangeCoinsText:
 	text "본적도 없는 동전이"
-	line "가득"
-
-	para "흩어져있다"
-	line "어느 나라의 돈일까?"
+	line "가득 흩어져있다"
+	cont "어느 나라의 돈일까?"
 	done
 
 MrPokemonsHouse_MapEvents:

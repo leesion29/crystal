@@ -225,19 +225,16 @@ Text_WhatDoYouThinkYoureDoing:
 	done
 
 Text_ItsDangerousToGoAlone:
-	text "포켓몬을 지니지 않고"
-	line "마을 밖으로 나가는 건"
-	cont "위험해!"
+	text "포켓몬을 지니지 않고 마을 밖으로"
+	line "나가는 건 위험해!"
 
-	para "근처의 마을까지는"
-	line "야생 포켓몬이 튀어 나오는"
-
-	para "풀숲만 있으니까"
+	para "근처의 마을까지는 야생 포켓몬이"
+	line "튀어 나오는 풀숲만 있으니까"
 	done
 
 Text_YourMonIsAdorable:
 	text "우와! 귀여운 포켓몬!"
-	line "나도 가지고 싶어"
+	line "나도 가지고싶어"
 	done
 
 Text_TellMomIfLeaving:
@@ -271,7 +268,7 @@ NewBarkTownRivalText1:
 	done
 
 NewBarkTownRivalText2:
-	text "……뭐야"
+	text "…… 뭐야"
 	line "사람을 뚫어지게 쳐다보고"
 	done
 

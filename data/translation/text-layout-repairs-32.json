@@ -1,0 +1,3 @@
+[
+  {"file":"data/text/common_1.asm","label":"_OakTimeWhatHoursText","reason":"restore missing string @ before TX_END; preserve the caller's hour/question continuation","allow_string_terminator":true,"before":"\ttext \"뭐야!\"\n\ttext_end\n","after":"\ttext \"뭐야!@\"\n\ttext_end\n"}
+]

@@ -420,73 +420,53 @@ UsedSquirtbottleText:
 
 SudowoodoAttackedText:
 	text "이상한 나무는"
-	line "꼬부기 물뿌리개를"
-	cont "싫어하고 있다"
+	line "꼬부기 물뿌리개를 싫어하고 있다"
 
-	para "이상한 나무가"
-	line "덤벼들었다"
+	para "이상한 나무가 덤벼들었다"
 	done
 
 FloriaText1:
-	text "난 꽃집의"
-	line "플로리아야!"
+	text "난 꽃집의 플로리아야!"
 
 	para "있잖아 있잖아!"
 
-	para "움직이는 나무에게"
-	line "물을 주니까"
+	para "움직이는 나무에게 물을 주니까"
+	line "놀라서 뛰어올랐단다"
 
-	para "놀라서"
-	line "뛰어올랐단다"
+	para "틀림없이 포켓몬이라고 생각하는데"
 
-	para "틀림없이 포켓몬이라고"
-	line "생각하는데"
+	para "물을 듬뿍 뿌리면 깜짝 놀라서"
+	line "나무인 척하는 걸 그만둘 거야!"
 
-	para "물을 듬뿍 뿌리면"
-	line "깜짝 놀라서"
-
-	para "나무인 척하는"
-	line "걸 그만둘 거야!"
-
-	para "맞아! 언니에게"
-	line "말해서 꼬부기"
-	cont "물뿌리개를 빌려야지!"
+	para "맞아! 언니에게 말해서 꼬부기"
+	line "물뿌리개를 빌려야지!"
 	done
 
 FloriaText2:
-	text "언니에게 움직이는"
-	line "나무에 대해 말했더니"
+	text "언니에게 움직이는 나무에 대해"
+	line "말했더니 위험하다고 하더라"
 
-	para "위험하다고"
-	line "하더라"
-
-	para "꼭두를"
-	line "이기면 언니가"
-
-	para "꼬부기 물뿌리개를"
-	line "빌려줄까……?"
+	para "꼭두를 이기면 언니가 꼬부기"
+	line "물뿌리개를 빌려줄까……?"
 	done
 
 RockSmashGuyText1:
 	text "우-쒸!"
 
 	para "나의 강렬한 때려부수기로"
-	line "나무 한그루랑 두그루를"
-
-	para "뚝 하고 부러뜨려볼까"
-	line "하고 생각했는데……"
+	line "나무 한그루랑 두그루를 뚝 하고 "
+	cont "부러뜨려볼까 하고 생각했는데……"
 
 	para "통하지도 않지!"
 	line "분하기도 하지!"
 	done
 
 RockSmashGuyText2:
-	text "그대가 저"
-	line "방해되는 나무를"
+	text "그대가 저 방해되는 나무를"
+	line "치워주셨는가?"
 
-	para "치워주셨는가?"
-	line "고맙다고 말하지!"
-	cont "이것을 드리지!"
+	para "고맙다고 말하지!"
+	line "이것을 드리지!"
 	done
 
 Text_ReceivedTM08: ; unreferenced
@@ -495,56 +475,37 @@ Text_ReceivedTM08: ; unreferenced
 	done
 
 RockSmashGuyText3:
-	text "내용물은 필살"
-	line "바위깨기!"
-
-	para "이것이 있으면"
-	line "돌덩어리등을"
-
-	para "한방에"
-	line "부술 수 있지"
+	text "내용물은 필살 바위깨기!"
+	line "이것이 있으면"
+	cont "돌덩어리등을 한방에 부술 수 있지"
 
 	para "방해되는 돌덩어리는"
-	line "부수는게 좋다고"
-	cont "생각하지!"
+	line "부수는게 좋다고 생각하지!"
 	done
 
 UnusedOddTreeText: ; unreferenced
-	text "이상한 나무가"
-	line "생겨서 금빛시티로"
-	cont "갈 수 없어"
+	text "이상한 나무가 생겨서 금빛시티로"
+	line "갈 수 없어"
 
-	para "새로 문을"
-	line "연 커다란"
-
-	para "포켓몬센터에"
+	para "새로 문을 연 커다란 포켓몬센터에"
 	line "가보고 싶었는데……"
 	done
 
 Route36LassText:
-	text "이상한 나무가"
-	line "생겨서"
-	cont "금빛시티에"
-
-	para "쇼핑하러"
-	line "갈 수 없어"
-
-	para "누가 어떻게든"
-	line "해주었음 좋겠는데"
+	text "이상한 나무가 생겨서"
+	line "금빛시티에 쇼핑하러 갈 수 없어"
+	cont "누가 어떻게든 해주었음 좋겠는데"
 	done
 
 Route36LassText_ClearedSudowoodo:
-	text "마치 없어진"
-	line "것 처럼"
-	cont "이상한 나무가"
+	text "마치 없어진 것 처럼"
+	line "이상한 나무가 사라져버렸다……"
 
-	para "사라져버렸다……"
-	line "엥? 포켓몬이었다고?"
+	para "엥? 포켓몬이었다고?"
 	done
 
 PsychicMarkSeenText:
-	text "너의 생각을"
-	line "맞춰보겠다"
+	text "너의 생각을 맞춰보겠다"
 	done
 
 PsychicMarkBeatenText:
@@ -552,17 +513,13 @@ PsychicMarkBeatenText:
 	done
 
 PsychicMarkAfterBattleText:
-	text "상대방의"
-	line "생각을 읽고"
-
-	para "공격을 할 수"
-	line "있으면 강할텐데"
+	text "상대방의 생각을 읽고"
+	line "공격을 할 수 있으면 강할텐데"
 	done
 
 SchoolboyAlan1SeenText:
-	text "어떤 포켓몬을"
-	line "상대로해도 확실히"
-	cont "예습은 해놓았지!"
+	text "어떤 포켓몬을 상대로해도"
+	line "확실히 예습은 해놓았지!"
 	done
 
 SchoolboyAlan1BeatenText:
@@ -571,33 +528,26 @@ SchoolboyAlan1BeatenText:
 	done
 
 SchoolboyAlanBooksText:
-	text "우으으으으 매일"
-	line "5시간씩 공부를"
+	text "우으으으으 매일 5시간씩"
+	line "공부를 했었는데……"
 
-	para "했었는데……"
-	line "교과서만으로는 모르는"
-	cont "것이 많이 있구나"
+	para "교과서만으로는"
+	line "모르는 것이 많이 있구나"
 	done
 
 MeetArthurText:
-	text "목인『넌"
-	line "누구냐?"
+	text "목인『넌 누구냐?"
 
-	para "나는 목요일의"
-	line "목인"
+	para "나는 목요일의 목인"
 	done
 
 ArthurGivesGiftText:
-	text "자"
-	line "이걸줄께!"
+	text "자 이걸줄께!"
 	done
 
 ArthurGaveGiftText:
-	text "목인『바위타입의"
-	line "사용하는"
-
-	para "포켓몬에게"
-	line "지니게해봐"
+	text "목인『바위타입의 사용하는"
+	line "포켓몬에게 지니게해봐"
 
 	para "바위타입 기술의"
 	line "공격력이 상승할테니까"
@@ -606,9 +556,7 @@ ArthurGaveGiftText:
 ArthurThursdayText:
 	text "목인『나는"
 	line "목요일의 목인!"
-
-	para "7남매의"
-	line "차남이야!"
+	cont "7남매의 차남이야!"
 	done
 
 ArthurNotThursdayText:
@@ -629,18 +577,11 @@ RuinsOfAlphNorthSignText:
 Route36TrainerTips1Text:
 	text "득이 되는 게시판!"
 
-	para "같은 종류의"
-	line "포켓몬이라도"
-	cont "강한 정도는"
+	para "같은 종류의 포켓몬이라도"
+	line "강한 정도는 여러가지"
 
-	para "여러가지"
-	line "처음은"
-
-	para "거의"
-	line "같아도"
-
-	para "키움에따라"
-	line "크게 바뀝니다"
+	para "처음은 거의 같아도"
+	line "키움에따라 크게 바뀝니다"
 	done
 
 Route36TrainerTips2Text:
@@ -650,11 +591,9 @@ Route36TrainerTips2Text:
 	line "기술을 사용하면 순간"
 	cont "입구까지 돌아올 수 있습니다"
 
-	para "동굴등을"
-	line "탐험할 때"
-
-	para "그 기술을 배운 포켓몬이"
-	line "한마리 있으면 편리하겠죠"
+	para "동굴등을 탐험할 때"
+	line "그 기술을 배운 포켓몬이"
+	cont "한마리 있으면 편리하겠죠"
 	done
 
 Route36_MapEvents:

@@ -15,14 +15,12 @@ Route31VioletGateCooltrainerFScript:
 
 Route31VioletGateOfficerText:
 	text "어이 소년"
-	line "모다피의 탑"
-	cont "견학은 했니?"
+	line "모다피의 탑 견학은 했니?"
 	done
 
 Route31VioletGateCooltrainerFText:
 	text "꽤나 멀리도 왔다!"
-	line "집에"
-	cont "전화 해야지!"
+	line "집에 전화 해야지!"
 	done
 
 Route31VioletGate_MapEvents:

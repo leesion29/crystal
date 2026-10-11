@@ -276,8 +276,7 @@ GreatBallDesc:
 	next "몬스터볼보다 고성능이다@"
 
 PokeBallDesc:
-	db   "포켓몬을 잡기 "
-	next "위한 도구@"
+	db   "포켓몬을 잡기 위한 도구@"
 
 TeruSama1Desc:
 	db   "?@"

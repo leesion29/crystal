@@ -19,29 +19,20 @@ Route32RuinsOfAlphGateYoungsterScript:
 
 Route32RuinsOfAlphGateOfficerText:
 	text "보고 만질 수 있는"
+	line "알프의 유적 관광!"
 
-	para "알프의 유적 관광!"
-	line "움직일 수 있는 돌"
-
-	para "아래를 꼭 손으로"
-	line "만져봐 주세요"
+	para "움직일 수 있는 돌 아래를"
+	line "꼭 손으로 만져봐 주세요"
 	done
 
 Route32RuinsOfAlphGatePokefanMText:
-	text "옷 유적의"
-	line "공부인가?"
-
-	para "장래희망은"
-	line "박사로군!"
+	text "옷 유적의 공부인가?"
+	line "장래희망은 박사로군!"
 	done
 
 Route32RuinsOfAlphGateYoungsterText:
-	text "돌 아래에"
-	line "그림이 그려져"
-
-	para "있다! 움직여"
-	line "보았지만 그건"
-	cont "무엇일까?"
+	text "돌 아래에 그림이 그려져 있다!"
+	line "움직여 보았지만 그건 무엇일까?"
 	done
 
 Route32RuinsOfAlphGate_MapEvents:

@@ -5,7 +5,7 @@ NurseMornText:
 
 NurseDayText:
 	text "안녕하세요!"
-	line "포켓몬센터입니다!"
+	line "포켓몬 센터입니다!"
 	done
 
 NurseNiteText:
@@ -53,7 +53,7 @@ NurseAskHealText:
 	done
 
 NurseTakePokemonText:
-	text "그럼 "
+	text "그럼"
 	line "맡아놓겠습니다!"
 	done
 
@@ -105,8 +105,7 @@ DifficultBookshelfText:
 	done
 
 PictureBookshelfText:
-	text "포켓몬 그림책이"
-	line "모여져있군!"
+	text "포켓몬 그림책이 모여져있군!"
 	done
 
 MagazineBookshelfText:

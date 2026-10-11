@@ -10,3 +10,4 @@ DEF HANGUL_POC_ESCAPE EQU $17
 	charmap "한", HANGUL_POC_ESCAPE, $0a, $71
 	charmap "가", HANGUL_POC_ESCAPE, $01, $01
 	charmap "각", HANGUL_POC_ESCAPE, $01, $02
+	charmap "~", HANGUL_POC_ESCAPE, $0b, $69

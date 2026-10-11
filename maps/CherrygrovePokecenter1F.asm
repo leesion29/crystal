@@ -35,7 +35,7 @@ CherrygrovePokecenter1FTeacherScript:
 	end
 
 CherrygrovePokecenter1FFisherText:
-	text "포켓몬을 몇 마리든 맡겨도"
+	text "포켓몬을 몇 마리든 맡겨도 "
 	line "공짜인 것은 기분좋지"
 	done
 

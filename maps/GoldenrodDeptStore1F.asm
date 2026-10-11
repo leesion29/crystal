@@ -28,52 +28,45 @@ GoldenrodDeptStore1FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 GoldenrodDeptStore1FReceptionistText:
-	text "Welcome to GOLDEN-"
-	line "ROD DEPT.STORE."
+	text "어서오세요!"
+	line "금빛시티 백화점입니다"
 	done
 
 GoldenrodDeptStore1FGentlemanText:
-	text "The DEPT.STORE"
-	line "has a decent se-"
-	cont "lection."
+	text "금빛시티 백화점에는"
+	line "여러가지 물건이 진열되어 있다"
 
-	para "But some items"
-	line "are only available"
-
-	para "as GAME CORNER"
-	line "prizes."
+	para "하지만 이 마을의"
+	line "게임코너 경품이 아니면"
+	cont "손에 넣을 수 없는 것도 있단다"
 	done
 
 GoldenrodDeptStore1FPokefanFText:
-	text "I'm raring to shop"
-	line "again today!"
+	text "자 오늘도"
+	line "많이 쇼핑을 해야지!"
 	done
 
 GoldenrodDeptStore1FBugCatcherText:
-	text "Mom's good at"
-	line "bargain hunting."
+	text "엄마는 쇼핑을 아주 잘하셔"
 
-	para "She always buys"
-	line "stuff at lower"
-	cont "prices."
+	para "약간 싼 가격에"
+	line "도구를 사오신다"
 	done
 
 GoldenrodDeptStore1FDirectoryText:
-	text "1F SERVICE COUNTER"
+	text "1층……서비스 카운터"
 
-	para "2F TRAINER'S"
-	line "   MARKET"
+	para "2층…… 트레이너즈 마켓"
 
-	para "3F BATTLE"
-	line "   COLLECTION"
+	para "3층…… 배틀 컬렉션"
 
-	para "4F MEDICINE BOX"
+	para "4층……메디신 박스"
 
-	para "5F TM CORNER"
+	para "5층……기술머신 코너"
 
-	para "6F TRANQUIL SQUARE"
+	para "6층……휴식의 광장"
 
-	para "ROOFTOP LOOKOUT"
+	para "옥상……전망대"
 	done
 
 GoldenrodDeptStore1F_MapEvents:

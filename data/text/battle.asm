@@ -131,18 +131,15 @@ BattleText_MonsReflectFaded:
 	prompt
 
 BattleText_RainContinuesToFall:
-	text "비가 계속"
-	line " 내리고 있다!"
+	text "비가 계속 내리고 있다!"
 	prompt
 
 BattleText_TheSunlightIsStrong:
-	text "햇살이"
-	line " 강하다"
+	text "햇살이 강하다"
 	prompt
 
 BattleText_TheSandstormRages:
-	text "모래바람이"
-	line " 세차게 분다"
+	text "모래바람이 세차게 분다"
 	prompt
 
 BattleText_TheRainStopped:
@@ -150,13 +147,11 @@ BattleText_TheRainStopped:
 	prompt
 
 BattleText_TheSunlightFaded:
-	text "햇살이"
-	line " 약해졌다!"
+	text "햇살이 약해졌다!"
 	prompt
 
 BattleText_TheSandstormSubsided:
-	text "모래바람이"
-	line " 가라앉았다!"
+	text "모래바람이 가라앉았다!"
 	prompt
 
 BattleText_EnemyMonFainted:
@@ -217,8 +212,7 @@ BattleText_UseNextMon:
 
 UnusedRivalWinText: ; unreferenced
 	text "<RIVAL>『됐어!"
-	line "좋은 포켓몬을"
-	cont " 골랐나보군!"
+	line "좋은 포켓몬을 골랐나보군!"
 	prompt
 
 LostAgainstText:
@@ -246,13 +240,11 @@ BattleText_EnemySentOut:
 	done
 
 BattleText_TheresNoWillToBattle:
-	text "싸울 기력이"
-	line " 없다!"
+	text "싸울 기력이 없다!"
 	prompt
 
 BattleText_AnEGGCantBattle:
-	text "알은"
-	line " 싸울 수 없다!"
+	text "알은 싸울 수 없다!"
 	prompt
 
 BattleText_CantEscape2:
@@ -320,13 +312,11 @@ BattleText_MonCantBeRecalled:
 	prompt
 
 BattleText_TheresNoPPLeftForThisMove:
-	text "기술의 남은"
-	line " 포인트가 없다!"
+	text "기술의 남은 포인트가 없다!"
 	prompt
 
 BattleText_TheMoveIsDisabled:
-	text "기술을"
-	line " 봉인 당해있다!"
+	text "기술을 봉인 당해있다!"
 	prompt
 
 BattleText_MonHasNoMovesLeft:
@@ -615,13 +605,11 @@ OneHitKOText:
 	prompt
 
 SuperEffectiveText:
-	text "효과는"
-	line " 뛰어났다!"
+	text "효과는 뛰어났다!"
 	prompt
 
 NotVeryEffectiveText:
-	text "효과는 조금"
-	line " 부족한 듯 하다"
+	text "효과는 조금 부족한 듯 하다"
 	prompt
 
 TookDownWithItText:
@@ -676,7 +664,6 @@ SpiteEffectText:
 
 BellChimedText:
 	text "방울소리가 울려왔다!"
-	line ""
 	prompt
 
 FellAsleepText:
@@ -846,8 +833,7 @@ WasDisabledText:
 	prompt
 
 CoinsScatteredText:
-	text "금화가 주변에"
-	line " 산산히 흩어졌다!"
+	text "금화가 주변에 산산히 흩어졌다!"
 	prompt
 
 TransformedTypeText:
@@ -882,8 +868,7 @@ ReflectEffectText:
 	prompt
 
 NothingHappenedText:
-	text "그러나 아무것도"
-	line " 일어나지 않는다!"
+	text "그러나 아무것도 일어나지 않는다!"
 	prompt
 
 ButItFailedText:
@@ -1003,8 +988,7 @@ StartPerishText:
 	prompt
 
 SandstormBrewedText:
-	text "모래바람이"
-	line " 불기 시작했다!"
+	text "모래바람이 불기 시작했다!"
 	prompt
 
 BracedItselfText:
@@ -1051,13 +1035,11 @@ BlewSpikesText:
 	prompt
 
 DownpourText:
-	text "큰 비가"
-	line " 되었다!"
+	text "큰 비가 되었다!"
 	prompt
 
 SunGotBrightText:
-	text "햇살이"
-	line " 강해졌다!"
+	text "햇살이 강해졌다!"
 	prompt
 
 BellyDrumText:

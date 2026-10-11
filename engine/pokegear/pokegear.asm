@@ -1610,7 +1610,7 @@ LoadStation_BuenasPassword:
 	ld de, BuenasPasswordName
 	ret
 
-BuenasPasswordName:    db "BUENA'S PASSWORD@"
+BuenasPasswordName:    db "부에나의 암호@"
 NotBuenasPasswordName: db "@"
 
 LoadStation_UnownRadio:

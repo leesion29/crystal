@@ -1,0 +1,1964 @@
+{
+  "state": "source-corrected-build-blocked",
+  "criterion": "docs/text_commands.md + current Korean consumer and caller producers",
+  "asm_files": 381,
+  "changed_asm_files": 91,
+  "unchanged_asm_files": 290,
+  "korean_dialogue_blocks": 2152,
+  "corrected_blocks": 825,
+  "preserved_blocks": 1327,
+  "repair_records": 831,
+  "reference_restorations": 729,
+  "checks": {
+    "source_preservation": "PASS",
+    "korean_literal_encodings": 8930,
+    "pokedex_18x3_pages": 251,
+    "item_description_18cols_rows": 357,
+    "fixtures": 12,
+    "normal_debug_au_branches": "PASS except explicitly deferred radio width",
+    "item_text_source": "PASS 256 names / 198 descriptions / 255 pointers",
+    "landmarks_source": "PASS 102 names / 111 models",
+    "git_diff_check": "PASS"
+  },
+  "build": {
+    "normal": "FAIL at link; assembly PASS",
+    "debug": "FAIL at link; assembly PASS",
+    "error": "Events bank $25:$66b0 exceeds bank by 7 bytes (layout.link:116)",
+    "previous_events_bytes": 6470,
+    "pocket_names_head_bytes": 45,
+    "pocket_names_current_bytes": 62,
+    "previous_free_bytes": 10,
+    "fresh_rom": false,
+    "existing_roms_are_stale": true
+  },
+  "deferred": [
+    "automatic radio _BenFernText1: 4 + WEDNESDAY 9 + suffix 9 = 22/18; no blocking cont/para added",
+    "_SentTrophyHomeText: text_ram wPlayerName does not dispatch to packed name decoder",
+    "TradeAnim_GetNicknamename: decoded names for 54 species need 13..16 bytes including @, copied into 11-byte buffer",
+    "trade sender packed-name buffers are passed to plain text_ram"
+  ],
+  "ledger_files": [
+    "data/translation/text-layout-repairs-00.json",
+    "data/translation/text-layout-repairs-01.json",
+    "data/translation/text-layout-repairs-02.json",
+    "data/translation/text-layout-repairs-03.json",
+    "data/translation/text-layout-repairs-04.json",
+    "data/translation/text-layout-repairs-05.json",
+    "data/translation/text-layout-repairs-06.json",
+    "data/translation/text-layout-repairs-07.json",
+    "data/translation/text-layout-repairs-08.json",
+    "data/translation/text-layout-repairs-20.json",
+    "data/translation/text-layout-repairs-21.json",
+    "data/translation/text-layout-repairs-22.json",
+    "data/translation/text-layout-repairs-30.json",
+    "data/translation/text-layout-repairs-31.json",
+    "data/translation/text-layout-repairs-32.json"
+  ],
+  "files": [
+    {
+      "file": "data/items/descriptions.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/items/names.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/items/pocket_names.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/items/stats_names.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/maps/landmarks.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/moves/names.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/phone/text/anthony_overworld.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 6
+    },
+    {
+      "file": "data/phone/text/gina_overworld.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 8
+    },
+    {
+      "file": "data/phone/text/liz_overworld.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 6
+    },
+    {
+      "file": "data/phone/text/ralph_overworld.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 6
+    },
+    {
+      "file": "data/phone/text/todd_overworld.asm",
+      "corrected_blocks": 4,
+      "korean_dialogues": 7
+    },
+    {
+      "file": "data/player_names.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/abra.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/aerodactyl.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/aipom.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/alakazam.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ampharos.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/arbok.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/arcanine.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ariados.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/articuno.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/azumarill.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/bayleef.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/beedrill.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/bellossom.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/bellsprout.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/blastoise.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/blissey.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/bulbasaur.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/butterfree.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/caterpie.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/celebi.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/chansey.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/charizard.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/charmander.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/charmeleon.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/chikorita.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/chinchou.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/clefable.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/clefairy.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/cleffa.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/cloyster.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/corsola.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/crobat.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/croconaw.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/cubone.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/cyndaquil.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/delibird.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dewgong.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/diglett.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ditto.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dodrio.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/doduo.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/donphan.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dragonair.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dragonite.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dratini.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/drowzee.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dugtrio.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dunsparce.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/eevee.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ekans.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/electabuzz.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/electrode.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/elekid.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/entei.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/espeon.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/exeggcute.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/exeggutor.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/farfetch_d.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/fearow.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/feraligatr.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/flaaffy.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/flareon.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/forretress.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/furret.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/gastly.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/gengar.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/geodude.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/girafarig.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/gligar.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/gloom.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/golbat.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/goldeen.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/golduck.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/golem.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/granbull.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/graveler.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/grimer.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/growlithe.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/gyarados.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/haunter.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/heracross.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hitmonchan.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hitmonlee.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hitmontop.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ho_oh.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hoothoot.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hoppip.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/horsea.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/houndoom.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/houndour.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hypno.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/igglybuff.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ivysaur.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/jigglypuff.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/jolteon.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/jumpluff.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/jynx.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kabuto.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kabutops.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kadabra.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kakuna.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kangaskhan.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kingdra.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kingler.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/koffing.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/krabby.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/lanturn.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/lapras.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/larvitar.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ledian.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ledyba.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/lickitung.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/lugia.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/machamp.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/machoke.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/machop.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magby.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magcargo.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magikarp.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magmar.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magnemite.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magneton.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mankey.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mantine.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mareep.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/marill.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/marowak.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/meganium.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/meowth.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/metapod.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mew.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mewtwo.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/miltank.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/misdreavus.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/moltres.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mr__mime.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/muk.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/murkrow.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/natu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidoking.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidoqueen.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidoran_f.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidoran_m.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidorina.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidorino.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ninetales.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/noctowl.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/octillery.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/oddish.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/omanyte.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/omastar.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/onix.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/paras.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/parasect.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/persian.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/phanpy.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pichu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pidgeot.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pidgeotto.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pidgey.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pikachu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/piloswine.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pineco.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pinsir.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/politoed.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/poliwag.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/poliwhirl.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/poliwrath.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ponyta.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/porygon.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/porygon2.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/primeape.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/psyduck.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pupitar.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/quagsire.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/quilava.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/qwilfish.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/raichu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/raikou.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/rapidash.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/raticate.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/rattata.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/remoraid.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/rhydon.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/rhyhorn.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sandshrew.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sandslash.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/scizor.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/scyther.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/seadra.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/seaking.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/seel.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sentret.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/shellder.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/shuckle.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/skarmory.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/skiploom.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/slowbro.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/slowking.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/slowpoke.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/slugma.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/smeargle.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/smoochum.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sneasel.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/snorlax.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/snubbull.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/spearow.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/spinarak.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/squirtle.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/stantler.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/starmie.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/staryu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/steelix.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sudowoodo.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/suicune.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sunflora.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sunkern.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/swinub.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tangela.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tauros.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/teddiursa.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tentacool.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tentacruel.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/togepi.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/togetic.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/totodile.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/typhlosion.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tyranitar.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tyrogue.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/umbreon.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/unown.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ursaring.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/vaporeon.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/venomoth.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/venonat.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/venusaur.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/victreebel.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/vileplume.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/voltorb.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/vulpix.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/wartortle.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/weedle.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/weepinbell.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/weezing.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/wigglytuff.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/wobbuffet.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/wooper.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/xatu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/yanma.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/zapdos.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/zubat.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/pokemon/names.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/radio/buenas_passwords.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "data/text/battle.asm",
+      "corrected_blocks": 18,
+      "korean_dialogues": 193
+    },
+    {
+      "file": "data/text/common_1.asm",
+      "corrected_blocks": 5,
+      "korean_dialogues": 237
+    },
+    {
+      "file": "data/text/common_2.asm",
+      "corrected_blocks": 47,
+      "korean_dialogues": 234
+    },
+    {
+      "file": "data/text/common_3.asm",
+      "corrected_blocks": 9,
+      "korean_dialogues": 213
+    },
+    {
+      "file": "data/text/std_text.asm",
+      "corrected_blocks": 3,
+      "korean_dialogues": 41
+    },
+    {
+      "file": "engine/battle/core.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/battle/korean_move_text.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/battle/menu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/events/buena.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/events/elevator.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/events/follower.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 12
+    },
+    {
+      "file": "engine/events/std_scripts.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/items/mart.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/menus/init_gender.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/menus/intro_menu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/menus/main_menu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/menus/options_menu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/menus/start_menu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/pokedex/pokedex.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/pokedex/pokedex_2.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/pokegear/pokegear.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/pokegear/radio.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/pokemon/stats_screen.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "engine/rtc/timeset.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "home/menu.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "home/names.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "home/text.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 0
+    },
+    {
+      "file": "maps/AzaleaGym.asm",
+      "corrected_blocks": 19,
+      "korean_dialogues": 23
+    },
+    {
+      "file": "maps/AzaleaMart.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 2
+    },
+    {
+      "file": "maps/AzaleaPokecenter1F.asm",
+      "corrected_blocks": 1,
+      "korean_dialogues": 4
+    },
+    {
+      "file": "maps/AzaleaTown.asm",
+      "corrected_blocks": 15,
+      "korean_dialogues": 22
+    },
+    {
+      "file": "maps/BillsFamilysHouse.asm",
+      "corrected_blocks": 12,
+      "korean_dialogues": 14
+    },
+    {
+      "file": "maps/CharcoalKiln.asm",
+      "corrected_blocks": 6,
+      "korean_dialogues": 7
+    },
+    {
+      "file": "maps/CherrygroveCity.asm",
+      "corrected_blocks": 9,
+      "korean_dialogues": 23
+    },
+    {
+      "file": "maps/CherrygroveEvolutionSpeechHouse.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 2
+    },
+    {
+      "file": "maps/CherrygroveGymSpeechHouse.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 2
+    },
+    {
+      "file": "maps/CherrygroveMart.asm",
+      "corrected_blocks": 1,
+      "korean_dialogues": 3
+    },
+    {
+      "file": "maps/CherrygrovePokecenter1F.asm",
+      "corrected_blocks": 1,
+      "korean_dialogues": 4
+    },
+    {
+      "file": "maps/DayCare.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 7
+    },
+    {
+      "file": "maps/EarlsPokemonAcademy.asm",
+      "corrected_blocks": 19,
+      "korean_dialogues": 21
+    },
+    {
+      "file": "maps/ElmsHouse.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 3
+    },
+    {
+      "file": "maps/ElmsLab.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 58
+    },
+    {
+      "file": "maps/GoldenrodBikeShop.asm",
+      "corrected_blocks": 6,
+      "korean_dialogues": 7
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "corrected_blocks": 28,
+      "korean_dialogues": 38
+    },
+    {
+      "file": "maps/GoldenrodDeptStore1F.asm",
+      "corrected_blocks": 5,
+      "korean_dialogues": 5
+    },
+    {
+      "file": "maps/GoldenrodDeptStore2F.asm",
+      "corrected_blocks": 6,
+      "korean_dialogues": 6
+    },
+    {
+      "file": "maps/GoldenrodDeptStore3F.asm",
+      "corrected_blocks": 3,
+      "korean_dialogues": 3
+    },
+    {
+      "file": "maps/GoldenrodDeptStore4F.asm",
+      "corrected_blocks": 3,
+      "korean_dialogues": 4
+    },
+    {
+      "file": "maps/GoldenrodDeptStore5F.asm",
+      "corrected_blocks": 9,
+      "korean_dialogues": 10
+    },
+    {
+      "file": "maps/GoldenrodDeptStore6F.asm",
+      "corrected_blocks": 7,
+      "korean_dialogues": 7
+    },
+    {
+      "file": "maps/GoldenrodDeptStoreB1F.asm",
+      "corrected_blocks": 3,
+      "korean_dialogues": 4
+    },
+    {
+      "file": "maps/GoldenrodDeptStoreRoof.asm",
+      "corrected_blocks": 6,
+      "korean_dialogues": 12
+    },
+    {
+      "file": "maps/GoldenrodFlowerShop.asm",
+      "corrected_blocks": 4,
+      "korean_dialogues": 8
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "corrected_blocks": 12,
+      "korean_dialogues": 17
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "corrected_blocks": 14,
+      "korean_dialogues": 23
+    },
+    {
+      "file": "maps/GoldenrodHappinessRater.asm",
+      "corrected_blocks": 8,
+      "korean_dialogues": 9
+    },
+    {
+      "file": "maps/GoldenrodMagnetTrainStation.asm",
+      "corrected_blocks": 5,
+      "korean_dialogues": 7
+    },
+    {
+      "file": "maps/GoldenrodPPSpeechHouse.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 2
+    },
+    {
+      "file": "maps/GoldenrodPokecenter1F.asm",
+      "corrected_blocks": 22,
+      "korean_dialogues": 66
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "corrected_blocks": 22,
+      "korean_dialogues": 34
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "corrected_blocks": 20,
+      "korean_dialogues": 30
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "corrected_blocks": 10,
+      "korean_dialogues": 12
+    },
+    {
+      "file": "maps/GuideGentsHouse.asm",
+      "corrected_blocks": 0,
+      "korean_dialogues": 1
+    },
+    {
+      "file": "maps/IlexForest.asm",
+      "corrected_blocks": 11,
+      "korean_dialogues": 18
+    },
+    {
+      "file": "maps/IlexForestAzaleaGate.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 2
+    },
+    {
+      "file": "maps/KurtsHouse.asm",
+      "corrected_blocks": 14,
+      "korean_dialogues": 24
+    },
+    {
+      "file": "maps/MrPokemonsHouse.asm",
+      "corrected_blocks": 12,
+      "korean_dialogues": 19
+    },
+    {
+      "file": "maps/NewBarkTown.asm",
+      "corrected_blocks": 3,
+      "korean_dialogues": 14
+    },
+    {
+      "file": "maps/PlayersHouse1F.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 17
+    },
+    {
+      "file": "maps/PlayersNeighborsHouse.asm",
+      "corrected_blocks": 1,
+      "korean_dialogues": 6
+    },
+    {
+      "file": "maps/PokecomCenterAdminOfficeMobile.asm",
+      "corrected_blocks": 10,
+      "korean_dialogues": 10
+    },
+    {
+      "file": "maps/RadioTower1F.asm",
+      "corrected_blocks": 21,
+      "korean_dialogues": 29
+    },
+    {
+      "file": "maps/RadioTower2F.asm",
+      "corrected_blocks": 27,
+      "korean_dialogues": 43
+    },
+    {
+      "file": "maps/RadioTower3F.asm",
+      "corrected_blocks": 19,
+      "korean_dialogues": 24
+    },
+    {
+      "file": "maps/RadioTower4F.asm",
+      "corrected_blocks": 16,
+      "korean_dialogues": 20
+    },
+    {
+      "file": "maps/RadioTower5F.asm",
+      "corrected_blocks": 15,
+      "korean_dialogues": 16
+    },
+    {
+      "file": "maps/Route29.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 17
+    },
+    {
+      "file": "maps/Route30.asm",
+      "corrected_blocks": 9,
+      "korean_dialogues": 19
+    },
+    {
+      "file": "maps/Route30BerryHouse.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 2
+    },
+    {
+      "file": "maps/Route31.asm",
+      "corrected_blocks": 13,
+      "korean_dialogues": 16
+    },
+    {
+      "file": "maps/Route31VioletGate.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 2
+    },
+    {
+      "file": "maps/Route32.asm",
+      "corrected_blocks": 36,
+      "korean_dialogues": 51
+    },
+    {
+      "file": "maps/Route32Pokecenter1F.asm",
+      "corrected_blocks": 4,
+      "korean_dialogues": 6
+    },
+    {
+      "file": "maps/Route32RuinsOfAlphGate.asm",
+      "corrected_blocks": 3,
+      "korean_dialogues": 3
+    },
+    {
+      "file": "maps/Route33.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 6
+    },
+    {
+      "file": "maps/Route34.asm",
+      "corrected_blocks": 28,
+      "korean_dialogues": 37
+    },
+    {
+      "file": "maps/Route34IlexForestGate.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 5
+    },
+    {
+      "file": "maps/Route35GoldenrodGate.asm",
+      "corrected_blocks": 10,
+      "korean_dialogues": 11
+    },
+    {
+      "file": "maps/Route36.asm",
+      "corrected_blocks": 19,
+      "korean_dialogues": 27
+    },
+    {
+      "file": "maps/Route36NationalParkGate.asm",
+      "corrected_blocks": 36,
+      "korean_dialogues": 41
+    },
+    {
+      "file": "maps/Route36RuinsOfAlphGate.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 2
+    },
+    {
+      "file": "maps/RuinsOfAlphAerodactylChamber.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 6
+    },
+    {
+      "file": "maps/RuinsOfAlphAerodactylItemRoom.asm",
+      "corrected_blocks": 1,
+      "korean_dialogues": 1
+    },
+    {
+      "file": "maps/RuinsOfAlphHoOhChamber.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 6
+    },
+    {
+      "file": "maps/RuinsOfAlphHoOhItemRoom.asm",
+      "corrected_blocks": 1,
+      "korean_dialogues": 1
+    },
+    {
+      "file": "maps/RuinsOfAlphInnerChamber.asm",
+      "corrected_blocks": 5,
+      "korean_dialogues": 5
+    },
+    {
+      "file": "maps/RuinsOfAlphKabutoChamber.asm",
+      "corrected_blocks": 4,
+      "korean_dialogues": 11
+    },
+    {
+      "file": "maps/RuinsOfAlphKabutoItemRoom.asm",
+      "corrected_blocks": 1,
+      "korean_dialogues": 1
+    },
+    {
+      "file": "maps/RuinsOfAlphOmanyteChamber.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 6
+    },
+    {
+      "file": "maps/RuinsOfAlphOmanyteItemRoom.asm",
+      "corrected_blocks": 1,
+      "korean_dialogues": 1
+    },
+    {
+      "file": "maps/RuinsOfAlphOutside.asm",
+      "corrected_blocks": 5,
+      "korean_dialogues": 13
+    },
+    {
+      "file": "maps/RuinsOfAlphResearchCenter.asm",
+      "corrected_blocks": 13,
+      "korean_dialogues": 19
+    },
+    {
+      "file": "maps/SlowpokeWellB1F.asm",
+      "corrected_blocks": 11,
+      "korean_dialogues": 17
+    },
+    {
+      "file": "maps/SlowpokeWellB2F.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 2
+    },
+    {
+      "file": "maps/SproutTower1F.asm",
+      "corrected_blocks": 6,
+      "korean_dialogues": 8
+    },
+    {
+      "file": "maps/SproutTower2F.asm",
+      "corrected_blocks": 6,
+      "korean_dialogues": 7
+    },
+    {
+      "file": "maps/SproutTower3F.asm",
+      "corrected_blocks": 12,
+      "korean_dialogues": 19
+    },
+    {
+      "file": "maps/UnionCave1F.asm",
+      "corrected_blocks": 10,
+      "korean_dialogues": 16
+    },
+    {
+      "file": "maps/UnionCaveB1F.asm",
+      "corrected_blocks": 9,
+      "korean_dialogues": 12
+    },
+    {
+      "file": "maps/UnionCaveB2F.asm",
+      "corrected_blocks": 6,
+      "korean_dialogues": 9
+    },
+    {
+      "file": "maps/VioletCity.asm",
+      "corrected_blocks": 11,
+      "korean_dialogues": 12
+    },
+    {
+      "file": "maps/VioletGym.asm",
+      "corrected_blocks": 12,
+      "korean_dialogues": 14
+    },
+    {
+      "file": "maps/VioletKylesHouse.asm",
+      "corrected_blocks": 1,
+      "korean_dialogues": 1
+    },
+    {
+      "file": "maps/VioletMart.asm",
+      "corrected_blocks": 2,
+      "korean_dialogues": 2
+    },
+    {
+      "file": "maps/VioletNicknameSpeechHouse.asm",
+      "corrected_blocks": 1,
+      "korean_dialogues": 3
+    },
+    {
+      "file": "maps/VioletPokecenter1F.asm",
+      "corrected_blocks": 6,
+      "korean_dialogues": 10
+    }
+  ]
+}

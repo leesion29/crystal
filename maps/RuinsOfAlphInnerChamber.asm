@@ -40,38 +40,28 @@ RuinsOfAlphInnerChamberStatue:
 	jumptext RuinsOfAlphInnerChamberStatueText
 
 RuinsOfAlphStrangePresenceText:
-	text "뭔가의 기미가"
-	line "느껴진다……"
+	text "뭔가의 기미가 느껴진다……"
 	done
 
 RuinsOfAlphInnerChamberFisherText:
 	text "넓은 방이지만"
-	line "아무것도"
-	cont "없잖아"
+	line "아무것도 없잖아"
 	done
 
 RuinsOfAlphInnerChamberTeacherText:
-	text "장엄하다고들"
-	line "말하던"
-	cont "곳인가?"
-
-	para "신비한"
-	line "장소네"
+	text "장엄하다고들 말하던 곳인가?"
+	line "신비한 장소네"
 	done
 
 RuinsOfAlphInnerChamberGrampsText:
-	text "아주 오래전의"
-	line "건물이라고 말하니까"
-	cont "임금님의 무덤을"
-
-	para "연상해 피라미드라던가"
-	line "고분이라던가……"
+	text "아주 오래전의 건물이라고 말하니까"
+	line "임금님의 무덤을 연상해"
+	cont "피라미드라던가 고분이라던가……"
 	done
 
 RuinsOfAlphInnerChamberStatueText:
-	text "오래전의"
-	line "포켓몬을 흉내내서"
-	cont "만들어진 것"
+	text "오래전의 포켓몬을"
+	line "흉내내서 만들어진 것"
 	done
 
 RuinsOfAlphInnerChamber_MapEvents:

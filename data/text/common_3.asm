@@ -213,7 +213,7 @@ _WindowAreaExceededErrorText:: ; unreferenced
 
 _WindowPoppingErrorText::
 	text "켜질 창이"
-	line "없습니다!"
+	next "없습니다!"
 	done
 
 _CorruptedEventText:: ; unreferenced
@@ -236,8 +236,7 @@ _ReceivedItemText::
 	text "<PLAYER>는(은)"
 	line "@"
 	text_ram wStringBuffer4
-	text "를(을)"
-	cont "얻었다"
+	text "를(을) 얻었다"
 	done
 
 _PutItemInPocketText::
@@ -422,11 +421,10 @@ _CongratulationsYourPokemonText::
 
 _EvolvedIntoText::
 	text_start
-
-	para "@"
+	line "@"
 	text_ram wStringBuffer1
 	text "(으)로"
-	line "진화했다!"
+	cont "진화했다!"
 	done
 
 _StoppedEvolvingText::
@@ -441,8 +439,7 @@ _EvolvingText::
 	text "…… 오잉!?"
 	line "@"
 	text_ram wStringBuffer2
-	text "의"
-	cont "상태가……!"
+	text "의 상태가……!"
 	done
 
 _MartHowManyText::
@@ -588,7 +585,7 @@ _PharmacyComeAgainText::
 
 _NothingToSellText::
 	text "도구를 한개도"
-	line "지니고 있지 않습니다!"
+	next "지니고 있지 않습니다!"
 	prompt
 
 _MartSellHowManyText::
@@ -627,6 +624,8 @@ _MartPackFullText::
 _MartCantBuyText::
 	text "그 도구를"
 	line "사들일 수는 없습니다!"
+
+	para ""
 	prompt
 
 _MartComeAgainText::
@@ -1006,7 +1005,7 @@ _GearEllipseText::
 	done
 
 _GearOutOfServiceText::
-	text "이곳은 범위 밖 같군……"
+	text "이곳은  범위 밖 같군……"
 	prompt
 
 _PokegearAskWhoCallText::
@@ -1326,7 +1325,7 @@ _BallDontBeAThiefText::
 
 _NoCyclingText::
 	text "여기서는 자전거에"
-	line "탈 수 없습니다"
+	next "탈 수 없습니다"
 	prompt
 
 _ItemCantGetOnText::
@@ -1344,7 +1343,8 @@ _BallBoxFullText::
 	prompt
 
 _ItemUsedText::
-	text "<PLAYER>는(은)@"
+	text "<PLAYER>는(은)"
+	line "@"
 	text_low
 	text_ram wStringBuffer2
 	text "를(을)"

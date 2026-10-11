@@ -744,202 +744,155 @@ IlexForestFollowerMoves:
 	step_end
 
 IlexForestApprenticeIntroText:
-	text "Oh, man… My boss"
-	line "is going to be"
-	cont "steaming…"
+	text "어떡한담!"
+	line "스승님한테 혼나겠어!"
 
-	para "The FARFETCH'D"
-	line "that CUTS trees"
+	para "숯의 재료가 될"
+	line "나무를 베는 파오리가"
+	cont "행방불명이 되 버렸어!"
 
-	para "for charcoal took"
-	line "off on me."
-
-	para "I can't go looking"
-	line "for it here in the"
-	cont "ILEX FOREST."
-
-	para "It's too big, dark"
-	line "and scary for me…"
+	para "어둡고도 넓은 너도밤나무 숲에"
+	line "혼자서는 무서워서 갈 수 없어"
 	done
 
 IlexForestApprenticeAfterText:
-	text "Wow! Thanks a"
-	line "whole bunch!"
+	text "고마워!"
 
-	para "My boss's #MON"
-	line "won't obey me be-"
-	cont "cause I don't have"
-	cont "a BADGE."
+	para "난 배지를 가지고 있지 않으니까"
+	line "스승님의 포켓몬이"
+	cont "내가 말하는 것을 듣지않아!"
 	done
 
 Text_ItsTheMissingPokemon:
-	text "It's the missing"
-	line "#MON!"
+	text "길잃은 포켓몬이다!"
 	done
 
 Text_Kwaaaa:
-	text "FARFETCH'D: Kwaa!"
+	text "파오리『파오-리"
 	done
 
 Text_CharcoalMasterIntro:
-	text "Ah! My FARFETCH'D!"
+	text "오오! 파오리!"
+	line "어린 자네가 찾아주었는가?"
 
-	para "You found it for"
-	line "us, kid?"
+	para "나무를 벨 이 녀석이 없으면"
+	line "우리들은 숯을 만들 수 없단다!"
 
-	para "Without it, we"
-	line "wouldn't be able"
+	para "고맙구나!"
+	line "답례를 하지 않으면 안되겠군……"
 
-	para "to CUT trees for"
-	line "charcoal."
-
-	para "Thanks, kid!"
-
-	para "Now, how can I"
-	line "thank you…"
-
-	para "I know! Here, take"
-	line "this."
+	para "그래! 이것을 가지고 가거라!"
 	done
 
 Text_CharcoalMasterOutro:
-	text "That's the CUT HM."
-	line "Teach that to a"
+	text "그것은 비전 풀베기!!"
+	line "포켓몬에게 가르치면"
+	cont "가는 나무들을 벤단다!"
 
-	para "#MON to clear"
-	line "small trees."
-
-	para "Of course, you"
-	line "have to have the"
-
-	para "GYM BADGE from"
-	line "AZALEA to use it."
+	para "다만 고동마을의 체육관 배지를"
+	line "지니지 않으면 쓸 수 없단다"
 	done
 
 Text_CharcoalMasterTalkAfter:
-	text "Do you want to"
-	line "apprentice as a"
-
-	para "charcoal maker"
-	line "with me?"
-
-	para "You'll be first-"
-	line "rate in ten years!"
+	text "내가 있는 곳에서 수행을 할껀가?"
+	line "10년이 되어야 제몫을 할수있다!"
 	done
 
 Text_HeadbuttIntro:
-	text "What am I doing?"
+	text "뭘 하고 있느냐구?"
 
-	para "I'm shaking trees"
-	line "using HEADBUTT."
-
-	para "It's fun. Here,"
-	line "you try it too!"
+	para "박치기로 나무를 흔들고 있어"
+	line "재미 있으니까"
+	cont "너도 한번 해봐!"
 	done
 
 Text_HeadbuttOutro:
-	text "Rattle trees with"
-	line "HEADBUTT. Some-"
-	cont "times, sleeping"
-	cont "#MON fall out."
+	text "나무를 박치기로 흔들면"
+	line "가끔 자고 있는"
+	cont "포켓몬이 떨어질꺼야"
 	done
 
 Text_IlexForestLass:
-	text "Did something"
-	line "happen to the"
-	cont "forest's guardian?"
+	text "숲의 신에게"
+	line "무슨 일이라도"
+	cont "생긴 걸까?"
 	done
 
 IlexForestSignpostText:
-	text "ILEX FOREST is"
-	line "so overgrown with"
+	text "이 너도밤나무 숲은"
+	line "나무가 울창하고 무성해서"
+	cont "하늘도 보이지 않을정도입니다"
 
-	para "trees that you"
-	line "can't see the sky."
-
-	para "Please watch out"
-	line "for items that may"
-	cont "have been dropped."
+	para "어두컴컴하기에 주변의"
+	line "분실물에 주의 해 주세요"
 	done
 
 Text_IlexForestShrine:
-	text "ILEX FOREST"
-	line "SHRINE…"
-
-	para "It's in honor of"
-	line "the forest's"
-	cont "protector…"
+	text "너도밤나무 숲의 사당……"
+	line "숲의 신을 받들어 모시는 곳이다"
 	done
 
 Text_ShrineCelebiEvent:
-	text "ILEX FOREST"
-	line "SHRINE…"
+	text "너도밤나무 숲의 사당…… 숲의"
+	line "신을 받들어 모시는 곳이다"
 
-	para "It's in honor of"
-	line "the forest's"
-	cont "protector…"
+	para "어? 이것은 뭐지?"
 
-	para "Oh? What is this?"
+	para "구멍이 있다 GS볼이 안에 들어갈"
+	line "것 같다"
 
-	para "It's a hole."
-	line "It looks like the"
-
-	para "GS BALL would fit"
-	line "inside it."
-
-	para "Want to put the GS"
-	line "BALL here?"
+	para "GS볼을 여기에 넣어볼까?"
 	done
 
 Text_InsertGSBall:
-	text "<PLAYER> put in the"
-	line "GS BALL."
+	text "<PLAYER>"
+	line "GS볼을 넣었다!"
 	done
 
 Text_KurtCaughtCelebi:
-	text "Whew, wasn't that"
-	line "something!"
+	text "휴 정말"
+	line "대단했구나!"
 
-	para "<PLAYER>, that was"
-	line "fantastic. Thanks!"
+	para "<PLAYER>! 정말"
+	line "훌륭했단다 고맙구나!"
 
-	para "The legends about"
-	line "that SHRINE were"
-	cont "real after all."
+	para "역시 사당에"
+	line "전해지는 전설은"
+	cont "사실이었구나"
 
-	para "I feel inspired by"
-	line "what I just saw."
+	para "방금 본 덕분에"
+	line "의욕이 솟는구나"
 
-	para "It motivates me to"
-	line "make better BALLS!"
+	para "더 좋은 볼을"
+	line "만들고 싶어졌단다!"
 
-	para "I'm going!"
+	para "그럼 나는 가보마!"
 	done
 
 BugCatcherWayneSeenText:
-	text "Don't sneak up on"
-	line "me like that!"
+	text "그렇게 몰래"
+	line "다가오지 말라구!"
 
-	para "You frightened a"
-	line "#MON away!"
+	para "놀라서 포켓몬이"
+	line "도망가버렸잖아!"
 	done
 
 BugCatcherWayneBeatenText:
-	text "I hadn't seen that"
-	line "#MON before…"
+	text "처음 보는"
+	line "포켓몬이었는데……"
 	done
 
 BugCatcherWayneAfterBattleText:
-	text "A #MON I've"
-	line "never seen before"
+	text "한번도 본 적 없는"
+	line "포켓몬이"
 
-	para "fell out of the"
-	line "tree when I used"
-	cont "HEADBUTT."
+	para "박치기를 사용했더니"
+	line "나무에서"
+	cont "떨어졌어"
 
-	para "I ought to use"
-	line "HEADBUTT in other"
-	cont "places too."
+	para "다른 곳에서도"
+	line "박치기를"
+	cont "사용해봐야겠어"
 	done
 
 IlexForest_MapEvents:

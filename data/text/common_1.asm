@@ -24,13 +24,13 @@ _NothingHereText::
 	done
 
 _WhichApricornText::
-	text "Which APRICORN"
-	line "should I use?"
+	text "어떤 규토리를"
+	line "사용할까?"
 	done
 
 _HowManyShouldIMakeText::
-	text "How many should I"
-	line "make?"
+	text "몇 개를"
+	line "만들까?"
 	done
 
 _RecoveredSomeHPText::
@@ -172,7 +172,7 @@ _OakTimeWhatTimeIsItText::
 	done
 
 _OakTimeWhatHoursText::
-	text "뭐야!"
+	text "뭐야!@"
 	text_end
 
 _OakTimeHoursQuestionMarkText::
@@ -184,7 +184,7 @@ _OakTimeHowManyMinutesText::
 	done
 
 _OakTimeWhoaMinutesText::
-	text "뭐라!@"
+	text "뭐라! @"
 	text_end
 
 _OakTimeMinutesQuestionMarkText::
@@ -940,7 +940,7 @@ _PnP_WeirdText::
 
 _PnP_RightForMeText::
 	text_start
-	line "나에 대해 어떻게 생각하고 있을까?"
+	line "나에대해 어떻게 생각하고 있을까?"
 	done
 
 _PnP_OddText::
@@ -1025,17 +1025,17 @@ _RocketRadioText10::
 
 _BuenaRadioText1::
 	text_start
-	line "BUENA: BUENA here!"
+	line "부에나『부에나입니다!"
 	done
 
 _BuenaRadioText2::
 	text_start
-	line "Today's password!"
+	line "오늘의 암호!"
 	done
 
 _BuenaRadioText3::
 	text_start
-	line "Let me think… It's"
+	line "어디 보자…… 바로"
 	done
 
 _BuenaRadioText4::
@@ -1047,61 +1047,61 @@ _BuenaRadioText4::
 
 _BuenaRadioText5::
 	text_start
-	line "Don't forget it!"
+	line "잊지 말아줘!"
 	done
 
 _BuenaRadioText6::
 	text_start
-	line "I'm in GOLDENROD's"
+	line "나는 금빛시티의"
 	done
 
 _BuenaRadioText7::
 	text_start
-	line "RADIO TOWER!"
+	line "라디오타워에 있어!"
 	done
 
 _BuenaRadioMidnightText1::
 	text_start
-	line "BUENA: Oh my…"
+	line "부에나『어머……"
 	done
 
 _BuenaRadioMidnightText2::
 	text_start
-	line "It's midnight! I"
+	line "벌써 자정이네!"
 	done
 
 _BuenaRadioMidnightText3::
 	text_start
-	line "have to shut down!"
+	line "방송을 마칠 시간이야!"
 	done
 
 _BuenaRadioMidnightText4::
 	text_start
-	line "Thanks for tuning"
+	line "끝까지 방송을"
 	done
 
 _BuenaRadioMidnightText5::
 	text_start
-	line "in to the end! But"
+	line "들어줘서 고마워!"
 	done
 
 _BuenaRadioMidnightText6::
 	text_start
-	line "don't stay up too"
+	line "너무 늦게까지"
 	done
 
 _BuenaRadioMidnightText7::
 	text_start
-	line "late! Presented to"
+	line "깨어있지는 말아줘!"
 	done
 
 _BuenaRadioMidnightText8::
 	text_start
-	line "you by DJ BUENA!"
+	line "지금까지 DJ 부에나였습니다!"
 	done
 
 _BuenaRadioMidnightText9::
-	text "I'm outta here!"
+	text "그럼 이만!"
 	done
 
 _BuenaRadioMidnightText10::
@@ -1114,16 +1114,16 @@ _BuenaOffTheAirText::
 	done
 
 _EnemyWithdrewText::
-	text "<ENEMY>는(은)"
-	line "@"
+	text "<ENEMY>"
+	line "는(은) @"
 	text_buffer 5
-	text "를(을)"
-	cont "도로 불러 들였다!"
+	text ""
+	cont "를(을) 도로 불러 들였다!"
 	prompt
 
 _EnemyUsedOnText::
-	text "<ENEMY>는(은)"
-	line "@"
+	text "<ENEMY>"
+	line "는(은) @"
 	text_buffer 5
 	text "에게"
 

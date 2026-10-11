@@ -129,16 +129,12 @@ RuinsOfAlphOmanyteChamberWallHoleText:
 
 RuinsOfAlphOmanyteChamberAncientReplicaText:
 	text "옛날의 포켓몬을"
-	line "흉내내서"
-	cont "만들어낸 것"
+	line "흉내내서 만들어낸 것"
 	done
 
 RuinsOfAlphOmanyteChamberDescriptionText:
-	text "10개의"
-	line "다리를 휘어"
-
-	para "굽혀서 바다를"
-	line "떠다녔던 포켓몬"
+	text "10개의 다리를 휘어 굽혀서"
+	line "바다를 떠다녔던 포켓몬"
 	done
 
 RuinsOfAlphOmanyteChamber_MapEvents:

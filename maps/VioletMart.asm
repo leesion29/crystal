@@ -21,29 +21,19 @@ VioletMartCooltrainerMScript:
 	jumptextfaceplayer VioletMartCooltrainerMText
 
 VioletMartGrannyText:
-	text "잡은지 얼마"
-	line "안 되었어도"
-	cont "약한 포켓몬도"
+	text "잡은지 얼마 안 되었어도"
+	line "약한 포켓몬도 키우면"
+	cont "언젠가 강해질 것입니다"
 
-	para "키우면"
-	line "언젠가 강해질"
-	cont "것입니다"
-
-	para "중요한 것은"
-	line "포켓몬에 대한"
-	cont "애정이라고 생각합니다"
+	para "중요한 것은 포켓몬에 대한"
+	line "애정이라고 생각합니다"
 	done
 
 VioletMartCooltrainerMText:
-	text "포켓몬도"
-	line "도구를 지니고 있지만"
-	cont "상처약이라든가 해독제라든가"
-
-	para "사람이 만든"
-	line "도구는"
-
-	para "사용방법을"
-	line "모르는 것 같다"
+	text "포켓몬도 도구를 지니고 있지만"
+	line "상처약이라든가 해독제라든가"
+	cont "사람이 만든 도구는"
+	cont "사용방법을 모르는 것 같다"
 	done
 
 VioletMart_MapEvents:

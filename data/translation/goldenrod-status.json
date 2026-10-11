@@ -1,0 +1,94 @@
+{
+  "state": "source-translated-build-and-static-verified-needs-human-review",
+  "distribution_eligible": false,
+  "selected_text_plan": "data/translation/union-route34-goldenrod.json",
+  "selected_literal_plan": "data/translation/goldenrod-literals.json",
+  "scope": "data/translation/union-route34-goldenrod-scope.json",
+  "baseline_dir": ".verification/union-route34-goldenrod-20261011/baseline",
+  "counts": {
+    "goldenrod_map_text_blocks": {"original-gold": 323, "oldgold": 0, "new": 148},
+    "goldenrod_shared_radio_blocks": {"original-gold": 0, "oldgold": 0, "new": 15},
+    "goldenrod_display_literal_rows": {"original-gold": 30, "oldgold": 0, "new": 8},
+    "goldenrod_preserved_korean_blocks": 25,
+    "previous_union_route34_blocks_preserved": 96,
+    "previous_five_regions_blocks_preserved": 200
+  },
+  "approved_non_string_change": {
+    "file": "constants/charmap_hangul_poc.asm",
+    "mapping": "charmap ~, HANGUL_POC_ESCAPE, $0b, $69",
+    "bytes": "170b69",
+    "glyph_index": 2665,
+    "glyph_bytes": "0000000000000000000060920c000000",
+    "new_font_asset": false,
+    "buffer_or_renderer_change": false,
+    "checks": ["normal/debug pre-translation build PASS", "both built ROM glyph bytes PASS", "HomepageText encoding PASS", "previous 200-block source and both ROM checks PASS"]
+  },
+  "static_checks": {
+    "whole_file_string_only_transform_against_snapshots": "PASS",
+    "commands_labels_variables_control_tokens": "PASS",
+    "dialogue_width_18_columns_player_name_7_gender_suffix_1": "PASS",
+    "all_new_characters_mapped": "PASS",
+    "literal_menu_width_counts_numbers_terminators": "PASS",
+    "buena_raw_password_25_byte_buffer_no_embedded_50": "PASS",
+    "existing_korean_move_names_unchanged": "PASS",
+    "git_diff_check": "PASS",
+    "final_goldenrod_rom_checks": "PASS: normal/debug, 582 dialogue blocks, 38 display rows, 402 same-bank text references",
+    "previous_200_blocks_source_and_both_roms": "PASS",
+    "all_map_attribute_bank_pointer_sets": "PASS: 388 per ROM",
+    "moved_map_callback_event_pointers": "PASS: 34 per ROM",
+    "existing_regressions": "PASS: following_sprites, stats_transitions, tmhm_text, item_text, landmark_names, start_menu_window, start_menu_return, pack_clear, hangul_upload_timing; both ROMs",
+    "emulator_display_event_checks": "NOT RUN: user tests final ROM"
+  },
+  "build": {
+    "normal": "PASS",
+    "debug_map_object": "PASS",
+    "debug_rom": "PASS",
+    "rom_bytes_each": 2097152,
+    "rom_expanded": false,
+    "cartridge_header_and_checksums": "PASS: unchanged MBC3+TIMER+RAM+BATTERY, ROM size 06, RAM size 03; header/global checksums",
+    "final_roms_sha256": {
+      "pokecrystal.gbc":"e8b96851fefce3ed6eef46f5c3a4accabd30c33a3d4da90bc1e0eaf0e9f42eaf",
+      "pokecrystal_debug.gbc":"7d2268cb41c8386419b36f43d90fa2f052b8a3935e7edfe66776515378b9f733"
+    },
+    "previous_failed_build_sections": [
+      {"name":"Map Scripts 1", "before_bytes":13098, "after_bytes":16391, "limit":16384, "over_bytes":7},
+      {"name":"Map Scripts 19", "before_bytes":15743, "after_bytes":16464, "limit":16384, "over_bytes":80}
+    ],
+    "other_affected_map_sections": [
+      {"name":"Map Scripts 3", "after_bytes":14534, "remaining_bytes":1850},
+      {"name":"Map Scripts 4", "after_bytes":15941, "remaining_bytes":443},
+      {"name":"Violet Academy Map Scripts", "after_bytes":3752, "remaining_bytes":12632},
+      {"name":"Map Scripts 10", "after_bytes":15053, "remaining_bytes":1331}
+    ],
+    "size_evidence":"last successful map size + exact active normal/debug string-byte deltas; two overflow values match assembler diagnostics",
+    "historical_pre_goldenrod_roms_sha256": {
+      "pokecrystal.gbc":"cbbc30bd63c6d06a0eb4349b0491cde6c1a857e45cc58dfb2af23b8d77fba2bd",
+      "pokecrystal_debug.gbc":"eb5327e69afd6d35b97842d846293d811342d73f3c60754f6523596b793c5b63"
+    }
+  },
+  "approved_structural_change": {
+    "authority": "User approved section split, then explicitly allowed ROM expansion if needed. No further approval requested for routine allocation.",
+    "file":"data/maps/scripts.asm",
+    "method":"move entire GoldenrodPPSpeechHouse.asm and GoldenrodCity.asm includes to one new floating ROMX section",
+    "section": "Goldenrod Overflow Map Scripts",
+    "linked_bytes":{"GoldenrodPPSpeechHouse":330,"GoldenrodCity":3362,"new_section_total":3692},
+    "source_section_bytes":{"Map Scripts 1":16061,"Map Scripts 19":13102},
+    "source_section_growth_headroom_bytes":{"Map Scripts 1":323,"Map Scripts 19":3282},
+    "normal_placement":{"bank":32,"start":"70f5","end_exclusive":"7f61"},
+    "debug_placement":{"bank":32,"start":"7102","end_exclusive":"7f6e"},
+    "evidence":"map_attributes emits BANK(map_MapScripts); entire-map moves preserve internal same-bank text/event relations. Candidate symbols were not found in other map scripts.",
+    "verified":"actual linker packing, all 388 map attribute bank/pointer sets, moved-map 34 callback/event pointers, local near-reference banks, 582+200 dialogue blocks, 38 display rows and nine existing regressions; both ROMs",
+    "verification_tool":"tools/verify_goldenrod_layout.py ROM SYM",
+    "game_structure_modified": true,
+    "gameplay_logic_changed": false,
+    "runtime_verification": "NOT RUN; user tests final ROM"
+  },
+  "notes": [
+    "Gold's unmapped won symbol is not inserted; Crystal's existing yen symbol and exact prices remain.",
+    "Mobile menu WO remains as the actual consumer's space token; Japanese GA fixed printable contraction is translated to Korean text, not a variable/event/wait command.",
+    "Latin BUENA is newly transliterated as 부에나 consistently; wording remains a development draft for human review.",
+    "RadioTower1F dots, Buena dynamic password/ellipsis/off-air text, empty move-tutor text, fixed gift-mail/nickname/OT records remain unchanged.",
+    "Approved section split is applied; no new game feature, mobile activation, buffer/renderer/font change, ROM expansion, reference-directory edit or additional document deletion was performed.",
+    "New layout checker initially had an extra zero in its expected glyph-byte literal; the checker-only fixture was corrected and all checks rerun. Game/font bytes were unchanged."
+  ]
+}

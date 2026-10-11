@@ -52,12 +52,12 @@ CherrygroveMartCooltrainerMText_PokeBallsInStock:
 
 CherrygroveMartYoungsterText:
 	text "풀숲을 지나가다가"
-	line "벌레 포켓몬에게 독을 쏘였었다!"
+	line "벌레포켓몬에게 독을 쏘였었다!"
 
 	para "그런데 그대로 걸어가다가"
 	line "포켓몬이 쓰러졌었다!"
 
-	para "해독제는 가지고 가는 편이 좋아"
+	para "해독제는 가지고 가는편이 좋아"
 	done
 
 CherrygroveMart_MapEvents:

@@ -620,8 +620,6 @@ MenuHeader_Buy:
 	ld d, h
 	ld e, l
 	pop hl
-	ld bc, SCREEN_WIDTH
-	add hl, bc
 	ld c, PRINTNUM_LEADINGZEROS | PRINTNUM_MONEY | 3
 	call PrintBCDNumber
 	ret
@@ -817,16 +815,18 @@ MartWelcomeText:
 
 MenuHeader_BuySell:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 7, 8
+	; Cursor uses column 1 and text starts at column 2.  The longest Korean
+	; option is 9 columns, so keep columns 2-10 inside the right border.
+	menu_coords 0, 0, 11, 7
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData
 	db STATICMENU_CURSOR ; strings
 	db 3 ; items
-	db "BUY@"
-	db "SELL@"
-	db "QUIT@"
+	db "사러 왔다@"
+	db "팔러 왔다@"
+	db "아무것도 아닙니다@"
 
 MartThanksText:
 	text_far _MartThanksText

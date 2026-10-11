@@ -694,4 +694,11 @@ ENDM
 	map_attributes CherrygroveEvolutionSpeechHouse, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, $00, 0
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
+
+; Keep the Events bank within its limit without shortening Korean pocket names.
+; Map headers already store BANK(MapAttributes) alongside the address.
+PUSHS
+SECTION "Map Attributes Overflow", ROMX
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+	assert @ - Route31VioletGate_MapAttributes == 12
+POPS

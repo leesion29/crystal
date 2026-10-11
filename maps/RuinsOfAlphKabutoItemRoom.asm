@@ -26,8 +26,7 @@ RuinsOfAlphKabutoItemRoomAncientReplica:
 
 RuinsOfAlphKabutoItemRoomAncientReplicaText:
 	text "옛날의 포켓몬을"
-	line "모방해서"
-	cont "만들어진 것"
+	line "모방해서 만들어진 것"
 	done
 
 RuinsOfAlphKabutoItemRoom_MapEvents:

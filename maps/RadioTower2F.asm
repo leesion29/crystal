@@ -344,370 +344,303 @@ RadioTower2FPlayerWalksToMicrophoneMovement:
 	step_end
 
 RadioTower2FSuperNerdText:
-	text "You can listen to"
-	line "the radio any-"
-	cont "where. Tune in!"
+	text "어디서든 라디오 청취가 가능하니까"
+	line "어디서든 라디오를 들어주세요!"
 	done
 
 RadioTower2FTeacherText:
-	text "Lullabies on the"
-	line "radio may make"
-	cont "#MON sleep."
+	text "라디오에서 흘러나오는 자장가라도"
+	line "포켓몬은 잠들어버리거든"
 	done
 
 RadioTower2FTeacherText_Rockets:
-	text "Why would they"
-	line "want to take over"
-	cont "the RADIO TOWER?"
+	text "라디오 방송국을 점령해서"
+	line "어떡게 할 작정일까……?"
 	done
 
 RadioTowerJigglypuffText:
-	text "JIGGLYPUFF:"
-	line "Jiggly…"
+	text "푸린『푸우…… 푸린……"
 	done
 
 RadioTower2FBlackBelt1Text:
-	text "Sorry. Authorized"
-	line "personnel only"
-	cont "beyond this point."
+	text "여기부터 윗층은 관계자 외"
+	line "출입금지란다……"
 
-	para "It wasn't that way"
-	line "before."
-
-	para "There's something"
-	line "wrong with the"
-	cont "DIRECTOR…"
+	para "예전에는 그런 일이 없었는데"
+	line "지금 국장은 좀 이상해"
 	done
 
 RadioTower2FBlackBelt2Text:
-	text "Feel free to look"
-	line "around anywhere."
-
-	para "The DIRECTOR is"
-	line "nice again, just"
-	cont "as he was before."
+	text "어디든 견학 OK 란다"
+	line "예전처럼 상냥한"
+	cont "국장으로 되돌아왔단다"
 	done
 
 GruntM4SeenText:
-	text "Three years ago,"
-	line "TEAM ROCKET was"
-	cont "forced to disband."
+	text "3년전 로켓단은"
+	line "해산에 몰리게 되었다……"
 
-	para "But we're making a"
-	line "comeback here!"
+	para "그러나 우리들은"
+	line "이곳에서 부활하는 것이다!"
 	done
 
 GruntM4BeatenText:
-	text "Gwah! Don't get"
-	line "cute!"
+	text "크윽-"
+	line "정떨어지는 놈"
 	done
 
 GruntM4AfterBattleText:
-	text "We won't let you"
-	line "ruin our plans"
-	cont "for our comeback!"
+	text "너같은 녀석에게"
+	line "부활의 방해를 받을 순 없지!"
 	done
 
 GruntM5SeenText:
-	text "We're TEAM ROCKET,"
-	line "the exploiters of"
-	cont "#MON!"
+	text "우리들은"
+	line "포켓몬의 마피아 로켓단이다!"
+	cont "나쁜 짓을 무척 좋아하지"
 
-	para "We love being"
-	line "evil! Scared?"
+	para "오호-  겁먹었냐?"
 	done
 
 GruntM5BeatenText:
-	text "You think you're a"
-	line "hero?"
+	text "정의의 편에 설 작정이냐?"
 	done
 
 GruntM5AfterBattleText:
-	text "We're not always"
-	line "evil. We just do"
-	cont "whatever we like."
+	text "특별히 우리들은"
+	line "나쁜 짓을 하려는건 아니구"
+	cont "단지 좋아하는 것을 하려는거야"
 	done
 
 GruntM6SeenText:
-	text "Hey, hey! Keep out"
-	line "of our way!"
+	text "이봐 이봐!"
+	line "우리들을 방해해서는 않되지!"
 	done
 
 GruntM6BeatenText:
-	text "Arggh. I give up."
+	text "우우…… 졌다"
 	done
 
 GruntM6AfterBattleText:
-	text "Our EXECUTIVES are"
-	line "trying to take"
-	cont "this place over."
-
-	para "They have some big"
-	line "plan. I wonder"
-	cont "what that is?"
+	text "간부들은 이곳을 점령하려고"
+	line "엄청난 일을 벌일 것 같아"
+	cont "그건 그렇고 이제 뭘 할까나?"
 	done
 
 GruntF2SeenText:
-	text "Hahaha!"
+	text "호호호!"
+	line "너무나 간단하게 점령되어서"
+	cont "싫증이 났지뭐야!"
 
-	para "How boring."
-	line "It was far too"
-
-	para "easy to take over"
-	line "this place!"
-
-	para "Come on, keep me"
-	line "amused!"
+	para "니가 날 즐겁게 해주겠어?"
 	done
 
 GruntF2BeatenText:
-	text "Wh-who are you?"
+	text "네 녀석은 어떤 놈이냐!?"
 	done
 
 GruntF2AfterBattleText:
-	text "You beat me, and"
-	line "I won't forget it!"
+	text "나보다 강하다니……"
+
+	para "용서할 수 없어!"
 	done
 
 RadioTower2FBuenaShowIntroductionText:
-	text "BUENA: Hi! I'm"
-	line "BUENA!"
+	text "부에나『안녕! 나는 부에나라고"
+	line "해!"
 
-	para "Do you know about"
-	line "a radio program"
-	cont "called PASSWORD?"
+	para "암호라는 라디오 방송을 알고"
+	line "있니?"
 
-	para "If you can tell me"
-	line "the password from"
+	para "방송에서 나온 암호를 나에게"
+	line "알려주면 포인트를 받을 수 있어"
 
-	para "the program, you"
-	line "will earn points."
+	para "그 포인트를 모아서 저기 있는"
+	line "친절한 아가씨에게 가져가면 멋진"
+	cont "경품과 바꿔준단다!"
 
-	para "Save up those"
-	line "points and trade"
+	para "자 여기!"
 
-	para "them to that sweet"
-	line "young lady over"
-
-	para "there for some"
-	line "choice prizes!"
-
-	para "Here you go!"
-
-	para "It's your very own"
-	line "point card!"
+	para "너만의 포인트 카드야!"
 	done
 
 RadioTower2FBuenaTuneInToMyShowText:
-	text "BUENA: Tune in to"
-	line "my PASSWORD SHOW!"
+	text "부에나『내 암호 방송"
+	line "꼭 들어줘!"
 	done
 
 RadioTower2FBuenaDoYouKnowPasswordText:
-	text "BUENA: Hi!"
-	line "Did you tune in to"
-	cont "my radio show?"
+	text "부에나『안녕!"
+	line "내 라디오 방송"
+	cont "들었니?"
 
-	para "Do you remember"
-	line "today's password?"
+	para "오늘의 암호를"
+	line "기억하고 있어?"
 	done
 
 RadioTower2FBuenaJoinTheShowText:
-	text "BUENA: Oh, wow!"
-	line "Thank you!"
+	text "부에나『와아!"
+	line "고마워!"
 
-	para "What was your name"
-	line "again?"
+	para "이름이"
+	line "뭐라고 했지?"
 
-	para "…<PLAY_G>, OK!"
+	para "……<PLAY_G> 맞구나!"
 
-	para "Come on, <PLAY_G>."
-	line "Join the show."
+	para "자 <PLAY_G>!"
+	line "방송에 참가해줘"
 	done
 
 RadioTower2FBuenaEveryoneSayPasswordText:
-	text "BUENA: Everyone"
-	line "ready?"
+	text "부에나『여러분 준비됐나요?"
 
-	para "I want to hear you"
-	line "shout out today's"
-
-	para "password for"
-	line "<PLAY_G>!"
+	para "오늘의 암호를 크게 외쳐주세요"
+	line "<PLAY_G>를(을) 위해서!"
 	done
 
 RadioTower2FBuenaComeBackAfterListeningText:
-	text "BUENA: Come back"
-	line "after you listen"
-
-	para "to my show, OK?"
-	line "Catch ya later!"
+	text "부에나『내 방송을 들어본 뒤에"
+	line "다시 찾아와줘 그럼 또 보자!"
 	done
 
 RadioTower2FBuenaAlreadyPlayedText:
-	text "BUENA: Sorry…"
+	text "부에나『미안해……"
 
-	para "You get just one"
-	line "chance each day."
+	para "하루에 한 번만"
+	line "참가할 수 있단다"
 
-	para "Come back tomorrow"
-	line "for another try!"
+	para "내일 다시"
+	line "도전해줘!"
 	done
 
 RadioTower2FBuenaCorrectAnswerText:
-	text "BUENA: YIPPEE!"
-	line "That's right!"
+	text "부에나『야호!"
+	line "정답이야!"
 
-	para "You did tune in!"
-	line "I'm so happy!"
+	para "방송을 들어줬구나!"
+	line "정말 기뻐!"
 
-	para "You earned one"
-	line "point! Congrats!"
+	para "1포인트 획득!"
+	line "축하해!"
 	done
 
 RadioTower2FBuenaDidYouForgetText:
-	text "BUENA: Aww…"
-	line "That's not it…"
+	text "부에나『아아……"
+	line "그게 아닌데……"
 
-	para "Did you forget the"
-	line "password?"
+	para "암호를"
+	line "잊어버렸니?"
 	done
 
 RadioTower2FBuenaThanksForComingText:
-	text "BUENA: Yup! Our"
-	line "contestant was"
+	text "부에나『네! 오늘의 참가자는"
+	line "<PLAY_G>였습니다!"
+	cont "참가해줘서 고마워!"
 
-	para "<PLAY_G>."
-	line "Thanks for coming!"
-
-	para "I hope all you"
-	line "listeners will"
-
-	para "come too!"
-	line "I'll be waiting!"
+	para "방송을 듣고 있는 여러분도 꼭"
+	line "찾아와주세요! 기다릴께요!"
 	done
 
 RadioTower2FBuenaPasswordIsHelpText:
-	text "BUENA: Huh?"
-	line "Today's password?"
+	text "부에나『응?"
+	line "오늘의 암호?"
 
-	para "HELP, of course!"
+	para "물론 도와주세요!"
 	done
 
 RadioTower2FBuenaCardIsFullText:
-	text "BUENA: Your BLUE"
-	line "CARD's full."
+	text "부에나『블루카드가"
+	line "가득 찼구나"
 
-	para "Trade it in for a"
-	line "fabulous prize!"
+	para "멋진 경품과"
+	line "교환해봐!"
 	done
 
 RadioTower2FBuenaTuneInAfterSixText:
-	text "BUENA: Tune in to"
-	line "PASSWORD every"
+	text "부에나『암호 방송은 매일 밤"
+	line "6시부터 자정까지야!"
 
-	para "night from six to"
-	line "midnight!"
-
-	para "Tune in, then drop"
-	line "in for a visit!"
+	para "방송을 듣고 나서 나를 만나러"
+	line "와줘!"
 	done
 
 RadioTower2FBuenaNoBlueCardText:
-	text "BUENA: Oh? You"
-	line "forgot to bring"
-	cont "your BLUE CARD?"
+	text "부에나『어라?"
+	line "블루카드를"
+	cont "두고 왔니?"
 
-	para "I can't give you"
-	line "points if you"
-	cont "don't have it."
+	para "카드가 없으면"
+	line "포인트를"
+	cont "줄 수 없단다"
 	done
 
 RadioTower2FBuenaOfferPhoneNumberText:
-	text "BUENA: Oh! Your"
-	line "BLUE CARD reached"
+	text "부에나『와아! 오늘 블루카드가"
+	line "{d:BLUE_CARD_POINT_CAP}포인트가 되었구나! 정말"
+	cont "대단해!"
 
-	para "{d:BLUE_CARD_POINT_CAP} points today!"
-	line "That's so wild!"
+	para "음…… {d:BLUE_CARD_POINT_CAP}포인트를 모은 경품은"
+	line "없지만……"
 
-	para "Hmm… There isn't a"
-	line "prize for hitting"
-	cont "{d:BLUE_CARD_POINT_CAP} points, but…"
+	para "이렇게 자주 와줬으니"
+	line "<PLAY_G>에게 특별한 선물을"
+	cont "해줄께!"
 
-	para "You came by so"
-	line "often, <PLAY_G>."
-
-	para "I'll make you a"
-	line "special deal!"
-
-	para "How would you like"
-	line "my phone number?"
+	para "내 전화번호를 알려줄까?"
 	done
 
 RadioTower2FBuenaOfferNumberAgainText:
-	text "BUENA: <PLAY_G>,"
-	line "do you want to"
-
-	para "register my phone"
-	line "number?"
+	text "부에나『<PLAY_G> 내"
+	line "전화번호를 등록하고 싶니?"
 	done
 
 RadioTower2FRegisteredBuenasNumberText:
-	text "<PLAYER> registered"
-	line "BUENA's number."
+	text "<PLAYER>는(은) 부에나의"
+	line "전화번호를 등록했다"
 	done
 
 RadioTower2FBuenaCallMeText:
-	text "BUENA: I look"
-	line "forward to hearing"
-	cont "from you!"
+	text "부에나『너의 전화를 기다리고"
+	line "있을께!"
 	done
 
 RadioTower2FBuenaSadRejectedText:
-	text "BUENA: Aww… It's a"
-	line "special prize…"
+	text "부에나『아아……"
+	line "특별한 선물인데……"
 	done
 
 RadioTower2FBuenaYourPhoneIsFullText:
-	text "BUENA: <PLAY_G>,"
-	line "your phone list"
-
-	para "has no room left"
-	line "for me…"
+	text "부에나『<PLAY_G> 전화번호"
+	line "수첩에 내 번호를 넣을 자리가"
+	cont "없구나……"
 	done
 
 RadioTower2FBuenaReceptionistPointsForPrizesText:
-	text "You can cash in"
-	line "your saved points"
-
-	para "for a lovely prize"
-	line "of your choice!"
+	text "모아둔 포인트로 마음에 드는 멋진"
+	line "경품을 교환할 수 있단다!"
 	done
 
 RadioTower2FBuenaReceptionistNoCardText:
-	text "You can't trade in"
-	line "points without"
-	cont "your BLUE CARD."
+	text "블루카드가 없으면"
+	line "포인트로 경품을"
+	cont "교환할 수 없단다"
 
-	para "Don't forget your"
-	line "BLUE CARD!"
+	para "블루카드를"
+	line "잊지 말아라!"
 	done
 
 RadioTower2FSalesSignText:
-	text "2F SALES"
+	text "2층 …… 영업부"
 	done
 
 RadioTower2FOaksPKMNTalkSignText:
-	text "PROF.OAK'S #MON"
-	line "TALK"
-
-	para "The Hottest Show"
-	line "on the Air!"
+	text "오박사의 포켓몬 강좌"
+	line "대 호평 방송중!"
 	done
 
 RadioTower2FPokemonRadioSignText:
-	text "Anywhere, Anytime"
-	line "#MON Radio"
+	text "24시간 언제든지"
+	line "어디에 있던지 포켓몬 라디오"
 	done
 
 RadioTower2F_MapEvents:

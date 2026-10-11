@@ -146,28 +146,19 @@ RuinsOfAlphKabutoChamberSkyfallTopMovement:
 	step_end
 
 RuinsOfAlphKabutoChamberReceptionistText:
-	text "유적의 방에"
-	line "잘 오셨습니다!"
+	text "유적의 방에 잘 오셨습니다!"
 
-	para "아주 오래전의"
-	line "사람이 그린"
+	para "아주 오래전의 사람이 그린"
+	line "포켓몬의 그림이 있습니다!"
 
-	para "포켓몬의 그림이"
-	line "있습니다!"
+	para "움직여봐 주세요 그림을 완성해"
+	line "주세요"
 
-	para "움직여봐"
-	line "주세요 그림을"
-	cont "완성해 주세요"
+	para "오른쪽은 그 포켓몬에 대한"
+	line "설명이라고 말해지고 있습니다"
 
-	para "오른쪽은 그 포켓몬에"
-	line "대한 설명이라고"
-	cont "말해지고 있습니다"
-
-	para "뒤쪽의"
-	line "박사님들은"
-
-	para "새로 발견된 문양을"
-	line "조사하고 있습니다"
+	para "뒤쪽의 박사님들은 새로 발견된"
+	line "문양을 조사하고 있습니다"
 	done
 
 RuinsOfAlphKabutoChamberScientistCrypticText:
@@ -201,21 +192,14 @@ RuinsOfAlphKabutoChamberScientistTremorText:
 	done
 
 RuinsOfAlphKabutoChamberUnusedText: ; unreferenced
-	text "벽에 그려져"
-	line "있는 모양은"
-	cont "글자인 것 같아!"
+	text "벽에 그려져 있는 모양은 글자인"
+	line "것 같아!"
 
-	para "그리고"
-	line "움직이는 석판은"
+	para "그리고 움직이는 석판은 무언가"
+	line "신호를 보내는 것 같군"
 
-	para "무언가 신호를"
-	line "보내는 것 같군"
-
-	para "포켓몬을 나타나게"
-	line "하는 것 같은데"
-
-	para "아직 확실하지는"
-	line "않아……"
+	para "포켓몬을 나타나게 하는 것 같은데"
+	line "아직 확실하지는 않아……"
 	done
 
 RuinsOfAlphKabutoChamberWallPatternLeftText:
@@ -239,16 +223,12 @@ RuinsOfAlphKabutoChamberWallHoleText:
 
 RuinsOfAlphKabutoChamberAncientReplicaText:
 	text "옛날의 포켓몬을"
-	line "모방해서"
-	cont "만들어진 것"
+	line "모방해서 만들어진 것"
 	done
 
 RuinsOfAlphKabutoChamberDescriptionText:
-	text "바다 밑에"
-	line "숨어서 등 뒤의"
-
-	para "눈으로 주변을"
-	line "보던 포켓몬"
+	text "바다 밑에 숨어서 등 뒤의"
+	line "눈으로 주변을 보던 포켓몬"
 	done
 
 RuinsOfAlphKabutoChamber_MapEvents:

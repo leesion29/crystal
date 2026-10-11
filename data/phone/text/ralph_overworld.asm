@@ -1,58 +1,58 @@
 RalphAskNumber1Text:
-	text "Don't young people"
-	line "fish anymore?"
+	text "요즘 젊은이들은"
+	line "낚시를 안 하나?"
 
-	para "I've seen rare"
-	line "#MON while I've"
-	cont "been fishing…"
+	para "낚시를 하다 보면"
+	line "희귀한 포켓몬을"
+	cont "보기도 한단다……"
 
-	para "You young people"
-	line "like that, right?"
+	para "너희 젊은이들은"
+	line "그런 걸 좋아하지?"
 
-	para "Want to trade"
-	line "phone numbers?"
+	para "전화번호를"
+	line "교환하지 않겠니?"
 
-	para "I'll let you know"
-	line "if I see anything."
+	para "뭔가 발견하면"
+	line "알려주마!"
 	done
 
 RalphAskNumber2Text:
-	text "Hm? So you do want"
-	line "me to phone if I"
-	cont "see rare #MON?"
+	text "음? 희귀한 포켓몬을"
+	line "보면 전화해 주길"
+	cont "바라는 거냐?"
 	done
 
 RalphNumberAcceptedText:
-	text "Yep, phone if I"
-	line "see rare #MON."
+	text "그래 희귀한 포켓몬을"
+	line "보면 전화해 주마"
 
-	para "Don't worry, I"
-	line "won't forget!"
+	para "걱정하지 말거라"
+	line "잊지 않을 테니까!"
 	done
 
 RalphNumberDeclinedText:
-	text "Oh…"
-	line "My own kids won't"
+	text "아……"
+	line "우리 아이들도"
 
-	para "even give me their"
-	line "phone numbers…"
+	para "자기 전화번호를"
+	line "알려주지 않더구나……"
 
-	para "Is that how young"
-	line "people are today?"
+	para "요즘 젊은이들은"
+	line "다 그런 거냐?"
 	done
 
 RalphPhoneFullText:
-	text "Your phone's"
-	line "memory is full."
+	text "전화번호가"
+	line "가득 차 있구나"
 
-	para "It seems that"
-	line "young people all"
-	cont "have #GEAR."
+	para "요즘 젊은이들은"
+	line "모두 포켓기어를"
+	cont "가지고 있는 것 같구나"
 	done
 
 RalphRematchText:
-	text "Hey, kid!"
+	text "어이 꼬마야!"
 
-	para "No losing for me"
-	line "this day!"
+	para "오늘은 절대로"
+	line "지지 않겠다!"
 	done

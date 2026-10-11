@@ -151,655 +151,549 @@ GoldenrodPokeCenter1FLinkReceptionistWalkToStairsFromRightDoorwayTileMovement:
 	step_end
 
 GoldenrodPokecomCenterWelcomeToTradeCornerText: ; unreferenced
-	text "Hello! Welcome to"
-	line "#COM CENTER"
-	cont "TRADE CORNER."
+	text "안녕하세요 어서오세요"
+	line "포켓몬통신센터의"
+	cont "교환코너입니다"
 
-	para "You can trade"
-	line "#MON with other"
-	cont "people far away."
+	para "멀리 떨어진 사람들과"
+	line "포켓몬을"
+	cont "교환할 수 있습니다"
 	done
 
 GoldenrodPokecomCenterWeMustHoldYourMonText: ; unreferenced
-	text "To make a trade,"
-	line "we must hold your"
-	cont "#MON."
+	text "교환을 하려면"
+	line "당신의 포켓몬을"
+	cont "맡아두어야 합니다"
 
-	para "Would you like to"
-	line "trade?"
+	para "교환을"
+	line "하시겠습니까?"
 	done
 
 GoldenrodPokecomCenterWhatMonDoYouWantText: ; unreferenced
-	text "What kind of"
-	line "#MON do you"
-	cont "want in return?"
+	text "어떤 포켓몬을"
+	line "대신 받고"
+	cont "싶으신가요?"
 	done
 
 GoldenrodPokecomCenterWeWillTradeYourMonForMonText: ; unreferenced
-	text "Fine. We will try"
-	line "to trade your"
+	text "알겠습니다"
+	line "교환할 포켓몬은"
 
 	para "@"
 	text_ram wStringBuffer3
-	text " for"
+	text " 대신"
 	line "@"
 	text_ram wStringBuffer4
-	text "."
+	text "입니다"
 
-	para "We'll have to hold"
-	line "your #MON"
-	cont "during the trade."
+	para "교환이 이루어지는 동안"
+	line "당신의 포켓몬을"
+	cont "맡아두겠습니다"
 
-	para "Please wait while"
-	line "we prepare the"
-	cont "room for it."
+	para "포켓몬을 맡아둘"
+	line "방을 준비하겠습니다"
+	cont "잠시 기다려주세요"
 	done
 
 GoldenrodPokecomCenterWeWillTradeYourMonForNewText: ; unreferenced
-	text "Fine. We will try"
-	line "to trade your"
+	text "알겠습니다"
+	line "교환할 포켓몬은"
 
 	para "@"
 	text_ram wStringBuffer3
-	text " for a"
-	line "#MON that you"
-	cont "have never seen."
+	text " 대신"
+	line "당신이 아직 본 적 없는"
+	cont "포켓몬입니다"
 
-	para "We'll have to hold"
-	line "your #MON"
-	cont "during the trade."
+	para "교환이 이루어지는 동안"
+	line "당신의 포켓몬을"
+	cont "맡아두겠습니다"
 
-	para "Please wait while"
-	line "we prepare the"
-	cont "room for it."
+	para "포켓몬을 맡아둘"
+	line "방을 준비하겠습니다"
+	cont "잠시 기다려주세요"
 	done
 
 GoldenrodPokecomCenterYourMonHasBeenReceivedText: ; unreferenced
-	text "Your trade #MON"
-	line "has been received."
+	text "교환할 포켓몬을 맡았습니다"
 
-	para "It will take time"
-	line "to find a trade"
-
-	para "partner. Please"
-	line "come back later."
+	para "교환 상대를 찾는 데는 시간이"
+	line "걸립니다 나중에 다시 와주십시오"
 	done
 
 GoldenrodPokecomCenterYouHaveOnlyOneMonText: ; unreferenced
-	text "Oh? You have only"
-	line "one #MON in"
-	cont "your party. "
+	text "어라? 지니고 계신 포켓몬이"
+	line "한마리 뿐이군요"
 
-	para "Please come back"
-	line "once you've in-"
-	cont "creased the size"
-	cont "of your party."
+	para "지닌 포켓몬의 수를 늘린 뒤에"
+	line "다시 와주십시오"
 	done
 
 GoldenrodPokecomCenterWeHopeToSeeYouAgainText: ; unreferenced
-	text "We hope to see you"
-	line "again."
+	text "그럼 또 오세요"
 	done
 
 GoldenrodPokecomCenterCommunicationErrorText: ; unreferenced
-	text "Communication"
-	line "error…"
+	text "통신 에러가"
+	line "발생했습니다……"
 	done
 
 GoldenrodPokecomCenterCantAcceptLastMonText: ; unreferenced
-	text "If we accept that"
-	line "#MON, what will"
-	cont "you battle with?"
+	text "그 포켓몬을 맡기면"
+	line "어떤 포켓몬으로"
+	cont "싸우시겠습니까?"
 	done
 
 GoldenrodPokecomCenterCantAcceptEggText: ; unreferenced
-	text "Sorry. We can't"
-	line "accept an EGG."
+	text "죄송합니다"
+	line "알은 맡길 수 없습니다"
 	done
 
 GoldenrodPokecomCenterCantAcceptAbnormalMonText: ; unreferenced
-	text "Sorry, but your"
-	line "#MON appears to"
-
-	para "be abnormal. We"
-	line "can't accept it."
+	text "죄송하지만 당신의 포켓몬에 이상이"
+	line "있는 것 같아 맡을 수 없습니다"
 	done
 
 GoldenrodPokecomCenterAlreadyHoldingMonText: ; unreferenced
-	text "Oh? Aren't we"
-	line "already holding a"
-	cont "#MON of yours?"
+	text "어라? 이미"
+	line "당신의 포켓몬을"
+	cont "맡고 있지 않나요?"
 	done
 
 GoldenrodPokecomCenterCheckingTheRoomsText: ; unreferenced
-	text "We'll check the"
-	line "rooms."
+	text "방을"
+	line "확인하겠습니다"
 
-	para "Please wait."
+	para "잠시 기다려주십시오"
 	done
 
 GoldenrodPokecomCenterTradePartnerHasBeenFoundText: ; unreferenced
-	text "Thank you for your"
-	line "patience."
+	text "기다려주셔서"
+	line "감사합니다"
 
-	para "A trade partner"
-	line "has been found."
+	para "교환 상대를"
+	line "찾았습니다"
 	done
 
 GoldenrodPokecomCenterItsYourNewPartnerText: ; unreferenced
-	text "It's your new"
-	line "partner."
+	text "새로운"
+	line "파트너입니다"
 
-	para "Please take care"
-	line "of it with love."
+	para "사랑을 담아서"
+	line "소중히 키워주세요"
 
-	para "We hope to see you"
-	line "again."
+	para "그럼"
+	line "또 오세요"
 	done
 
 GoldenrodPokecomCenterYourPartyIsFullText: ; unreferenced
-	text "Uh-oh. Your party"
-	line "is already full."
+	text "이런 지닌 포켓몬이"
+	line "이미 가득하군요"
 
-	para "Please come back"
-	line "when you have room"
-	cont "in your party."
+	para "포켓몬을"
+	line "더 지닐 수 있을 때"
+	cont "다시 와주십시오"
 	done
 
 GoldenrodPokecomCenterNoTradePartnerFoundText: ; unreferenced
-	text "It's unfortunate,"
-	line "but no one has"
+	text "안타깝지만 교환할 상대가 나타나지"
+	line "않았습니다"
 
-	para "come forward as a"
-	line "trade partner."
-
-	para "Would you like"
-	line "your #MON back?"
+	para "포켓몬을 돌려받으시겠습니까?"
 	done
 
 GoldenrodPokecomCenterReturnedYourMonText: ; unreferenced
-	text "We have returned"
-	line "your #MON."
+	text "당신의 포켓몬을"
+	line "돌려드렸습니다"
 	done
 
 GoldenrodPokecomCenterYourMonIsLonelyText: ; unreferenced
-	text "It's unfortunate,"
-	line "but no one has"
+	text "안타깝지만 교환할 상대가 나타나지"
+	line "않았습니다"
 
-	para "come forward as a"
-	line "trade partner."
+	para "당신의 포켓몬을 오랫동안 맡고"
+	line "있었기 때문에 많이 외로워하고"
+	cont "있습니다"
 
-	para "We've held your"
-	line "#MON for a long"
-
-	para "time. As a result,"
-	line "it is very lonely."
-
-	para "Sorry, but we must"
-	line "return it to you."
+	para "죄송하지만 포켓몬을"
+	line "돌려드리겠습니다"
 	done
 
 GoldenrodPokecenter1FWeHopeToSeeYouAgainText_2: ; unreferenced
-	text "We hope to see you"
-	line "again."
+	text "그럼 또 오세요"
 	done
 
 GoldenrodPokecomCenterContinueToHoldYourMonText: ; unreferenced
-	text "Fine. We will"
-	line "continue to hold"
-	cont "your #MON."
+	text "알겠습니다"
+	line "계속 포켓몬을"
+	cont "맡아두겠습니다"
 	done
 
 GoldenrodPokecomCenterRecentlyLeftYourMonText: ; unreferenced
-	text "Oh? You left your"
-	line "#MON with us"
-	cont "only recently."
+	text "어라? 포켓몬을"
+	line "맡기신 지 얼마"
+	cont "되지 않았군요"
 
-	para "Please come back"
-	line "later."
+	para "나중에"
+	line "다시 와주십시오"
 	done
 
 GoldenrodPokecomCenterSaveBeforeTradeCornerText: ; unreferenced
-	text "We'll SAVE before"
-	line "connecting to the"
-	cont "CENTER."
+	text "통신을 시작하기 전에"
+	line "레포트를 쓰겠습니다"
 	done
 
 GoldenrodPokecomCenterWhichMonToTradeText: ; unreferenced
-	text "Which #MON do"
-	line "you want to trade?"
+	text "어느 포켓몬을"
+	line "교환하시겠습니까?"
 	done
 
 GoldenrodPokecomCenterTradeCanceledText: ; unreferenced
-	text "Sorry, but we must"
-	line "cancel the trade."
+	text "죄송하지만"
+	line "교환을 중지하겠습니다"
 	done
 
 GoldenrodPokecomCenterEggTicketText: ; unreferenced
-	text "Oh!"
+	text "어머! 알티켓을 가지고"
+	line "계시는군요!"
 
-	para "I see you have an"
-	line "EGG TICKET!"
-
-	para "It's a coupon that"
-	line "special people can"
-
-	para "redeem for a"
-	line "special #MON!"
+	para "특별한 분들이 특별한 포켓몬을"
+	line "받을 수 있는 티켓입니다!"
 	done
 
 GoldenrodPokecomCenterOddEggBriefingText: ; unreferenced
-	text "Let me give you a"
-	line "quick briefing."
+	text "간단하게 설명해드리겠습니다"
 
-	para "Trades held at the"
-	line "TRADE CORNER are"
+	para "교환코너에서의 교환은 서로 모르는"
+	line "트레이너끼리 이루어지는 교환입니다"
 
-	para "between two"
-	line "trainers who don't"
+	para "그래서 시간이 걸릴 수도 있습니다"
 
-	para "know each other's"
-	line "identity."
+	para "하지만 당신을 위해 특별히 준비한"
+	line "이상한 알이 있습니다"
 
-	para "As a result, it"
-	line "may take time."
+	para "그 알은 곧바로 보내드리겠습니다"
 
-	para "However, an ODD"
-	line "EGG is available"
-	cont "just for you."
-
-	para "It will be sent to"
-	line "you right away."
-
-	para "Please choose one"
-	line "of the rooms in"
-
-	para "the CENTER."
-	line "An ODD EGG will be"
-
-	para "sent from the"
-	line "chosen room."
+	para "센터의 방 중 한 곳을"
+	line "선택해주세요 선택하신 방에서"
+	cont "이상한 알을 보내드립니다"
 	done
 
 GoldenrodPokecomCenterPleaseWaitAMomentText: ; unreferenced
-	text "Please wait a"
-	line "moment."
+	text "잠시 기다려주십시오"
 	done
 
 GoldenrodPokecomCenterHereIsYourOddEggText: ; unreferenced
-	text "Thank you for"
-	line "waiting."
+	text "기다려주셔서"
+	line "감사합니다"
 
-	para "We received your"
-	line "ODD EGG."
+	para "당신의 이상한 알이"
+	line "도착했습니다"
 
-	para "Here it is!"
+	para "자 여기 있습니다!"
 
-	para "Please raise it"
-	line "with loving care."
+	para "사랑을 담아서"
+	line "소중히 키워주세요"
 	done
 
 GoldenrodPokecomCenterNoEggTicketServiceText: ; unreferenced
-	text "I'm awfully sorry."
+	text "정말 죄송합니다"
 
-	para "The EGG TICKET"
-	line "exchange service"
-	cont "isn't running now."
+	para "지금은 알티켓"
+	line "교환 서비스를"
+	cont "이용하실 수 없습니다"
 	done
 
 GoldenrodPokecomCenterNewsMachineText: ; unreferenced
-	text "It's a #MON"
-	line "NEWS MACHINE."
+	text "포켓몬 뉴스"
+	line "기계다"
 	done
 
 GoldenrodPokecomCenterWhatToDoText: ; unreferenced
-	text "What would you"
-	line "like to do?"
+	text "어떻게"
+	line "하시겠습니까?"
 	done
 
 GoldenrodPokecomCenterNewsMachineExplanationText: ; unreferenced
-	text "#MON NEWS is"
-	line "news compiled from"
+	text "포켓몬 뉴스는 포켓몬 트레이너의"
+	line "레포트를 모아서 만드는 뉴스입니다"
 
-	para "the SAVE files of"
-	line "#MON trainers."
+	para "뉴스를 읽을 때 당신의 레포트가"
+	line "전송될 수도 있습니다"
 
-	para "When reading the"
-	line "NEWS, your SAVE"
+	para "레포트의 데이터에는 당신의 모험"
+	line "기록과 모바일 프로필이 들어"
+	cont "있습니다"
 
-	para "file may be sent"
-	line "out."
+	para "전화번호는 전송되지 않습니다"
 
-	para "The SAVE file data"
-	line "will contain your"
+	para "당신과 다른 포켓몬 트레이너들이"
+	line "보내준 레포트에 따라서 뉴스의"
+	cont "내용도 바뀝니다"
 
-	para "adventure log and"
-	line "mobile profile."
-
-	para "Your phone number"
-	line "will not be sent."
-
-	para "The contents of"
-	line "the NEWS will vary"
-
-	para "depending on the"
-	line "SAVE files sent by"
-
-	para "you and the other"
-	line "#MON trainers."
-
-	para "You might even be"
-	line "in the NEWS!"
+	para "당신도 뉴스에 나올 수 있습니다!"
 	done
 
 GoldenrodPokecomCenterWouldYouLikeTheNewsText: ; unreferenced
-	text "Would you like to"
-	line "get the NEWS?"
+	text "뉴스를"
+	line "받으시겠습니까?"
 	done
 
 GoldenrodPokecomCenterReadingTheLatestNewsText: ; unreferenced
-	text "Reading the latest"
-	line "NEWS… Please wait."
+	text "최신 뉴스를 받는 중……"
+	line "잠시 기다려주십시오"
 	done
 
 GoldenrodPokecomCenterNoOldNewsText: ; unreferenced
-	text "There is no old"
-	line "NEWS…"
+	text "지난 뉴스가"
+	line "없습니다……"
 	done
 
 GoldenrodPokecomCenterCorruptedNewsDataText: ; unreferenced
-	text "The NEWS data is"
-	line "corrupted."
+	text "뉴스 데이터가"
+	line "손상되었습니다"
 
-	para "Please download"
-	line "the NEWS again."
+	para "뉴스를 다시"
+	line "받아주십시오"
 	done
 
 GoldenrodPokecomCenterMakingPreparationsText: ; unreferenced
-	text "We're making"
-	line "preparations."
+	text "지금은"
+	line "준비중입니다"
 
-	para "Please come back"
-	line "later."
+	para "나중에"
+	line "다시 와주십시오"
 	done
 
 GoldenrodPokecomCenterSaveBeforeNewsMachineText: ; unreferenced
-	text "We will SAVE your"
-	line "progress before"
-
-	para "starting the NEWS"
-	line "MACHINE."
+	text "포켓몬 뉴스 기계를 사용하기 전에"
+	line "레포트를 쓰겠습니다"
 	done
 
 GoldenrodPokecomCenterPerson1Text: ; unreferenced
-	text "Whoa, this #MON"
-	line "CENTER is huge."
+	text "와아 이 포켓몬 센터는 정말"
+	line "크구나"
 
-	para "They just built"
-	line "this place. They"
-
-	para "installed lots of"
-	line "new machines too."
+	para "새로 지은 곳이래 처음 보는"
+	line "기계도 잔뜩 들여놓았더라"
 	done
 
 GoldenrodPokecomCenterPerson2Text: ; unreferenced
-	text "I thought up a fun"
-	line "new thing for the"
-	cont "TRADE CORNER!"
+	text "교환코너에서 할 수 있는 재미있는"
+	line "일을 생각해냈어!"
 
-	para "I make a PIDGEY"
-	line "hold MAIL, then"
+	para "구구에게 메일을 지니게 해서 다른"
+	line "구구와 교환을 하는거야!"
 
-	para "put it up for"
-	line "trade for another"
-	cont "one!"
+	para "모두가 그렇게 하면 여러 사람들과"
+	line "메일을 교환할 수 있잖아!"
 
-	para "If everyone did"
-	line "that, MAIL could"
+	para "이름하여 구구 메일!"
 
-	para "be traded with all"
-	line "sorts of people!"
-
-	para "I call it PIDGEY"
-	line "MAIL!"
-
-	para "If it becomes"
-	line "popular, I might"
-
-	para "make lots of new"
-	line "friends!"
+	para "유행하게 되면 새로운 친구도 많이"
+	line "사귈 수 있을꺼야!"
 	done
 
 GoldenrodPokecomCenterPerson3Text: ; unreferenced
-	text "They said you can"
-	line "trade #MON with"
+	text "여기서는 전혀 모르는 사람과도"
+	line "포켓몬을 교환할 수 있다고 하더라"
 
-	para "total strangers up"
-	line "here."
-
-	para "But they're still"
-	line "adjusting things."
+	para "하지만 아직 조정중이래"
 	done
 
 GoldenrodPokecomCenterPerson4Text: ; unreferenced
-	text "Some girl I don't"
-	line "know sent me her"
+	text "모르는 여자아이가 자기 통통코를"
+	line "보내줬어 너도 갖고 싶은"
 
-	para "HOPPIP."
-	line "You should trade"
-
-	para "for a #MON that"
-	line "you want."
+	para "포켓몬과 교환을 해보면 어때?"
 	done
 
 GoldenrodPokecomCenterPerson5Text: ; unreferenced
-	text "I received a"
-	line "female HOPPIP, but"
-	cont "its named STANLEY!"
+	text "암컷 통통코를"
+	line "받았는데"
+	cont "이름이 스탠리야!"
 
-	para "That's my dad's"
-	line "name!"
+	para "우리 아빠"
+	line "이름이잖아!"
 	done
 
 GoldenrodPokecomCenterPerson6Text: ; unreferenced
-	text "What is the NEWS"
-	line "MACHINE?"
+	text "뉴스 기계가"
+	line "뭘까?"
 
-	para "Does it get news"
-	line "from a wider area"
-	cont "than the radio?"
+	para "라디오보다 더 넓은"
+	line "지역의 뉴스를"
+	cont "알려주는걸까?"
 	done
 
 GoldenrodPokecomCenterPerson7Text: ; unreferenced
-	text "The #COM CENTER"
-	line "will link with all"
+	text "포켓몬통신센터는 무선 통신망으로"
+	line "모든 포켓몬 센터와 연결된대"
 
-	para "#MON CENTERS in"
-	line "a wireless net."
-
-	para "That must mean"
-	line "I'll be able to"
-
-	para "link with all"
-	line "sorts of people."
+	para "그렇다면 여러 사람들과 통신할 수"
+	line "있겠구나"
 	done
 
 GoldenrodPokecomCenterPerson8Text: ; unreferenced
-	text "The machines here"
-	line "can't be used yet."
+	text "여기 기계들은"
+	line "아직 쓸 수 없대"
 
-	para "Still, it's nice"
-	line "coming to a trendy"
+	para "그래도 남들보다"
+	line "유행하는 곳에 먼저"
 
-	para "place before other"
-	line "people."
+	para "와보니까"
+	line "기분이 좋아"
 	done
 
 GoldenrodPokecomCenterPerson9Text: ; unreferenced
-	text "My friend was in"
-	line "the NEWS a while"
+	text "얼마 전에 내 친구가"
+	line "뉴스에 나왔어"
 
-	para "back. I was really"
-	line "surprised!"
+	para "정말"
+	line "놀랐다니까!"
 	done
 
 GoldenrodPokecomCenterPerson10Text: ; unreferenced
-	text "I get anxious if I"
-	line "don't check out"
-	cont "the latest NEWS!"
+	text "최신 뉴스를"
+	line "확인하지 않으면"
+	cont "불안하다니까!"
 	done
 
 GoldenrodPokecomCenterPerson11Text: ; unreferenced
-	text "If I get in the"
-	line "NEWS and become"
+	text "뉴스에 나와서"
+	line "유명해지면"
 
-	para "famous, I bet I'll"
-	line "be adored."
+	para "사람들에게 인기도"
+	line "많아지겠지"
 
-	para "I wonder how I"
-	line "could get in the"
-	cont "NEWS?"
+	para "어떻게 해야"
+	line "뉴스에"
+	cont "나올 수 있을까?"
 	done
 
 GoldenrodPokecenter1FGameboyKidText:
-	text "The COLOSSEUM"
-	line "upstairs is for"
-	cont "link battles."
+	text "포켓몬 센터의"
+	line "2층에 있는 콜로세움에서"
+	cont "통신대전을 할 수 있지"
 
-	para "Battle records are"
-	line "posted on the"
-
-	para "wall, so I can't"
-	line "afford to lose."
+	para "벽을 보면 자신의 성적을"
+	line "알 수 있으니까 질 수 없어"
 	done
 
 GoldenrodPokecomCenterPerson12Text: ; unreferenced
-	text "I came over here"
-	line "when I got word"
+	text "금빛시티의"
+	line "포켓몬 센터에"
 
-	para "that GOLDENROD's"
-	line "#MON CENTER has"
+	para "아무도 본 적 없는"
+	line "새로운 기계가"
 
-	para "new machines that"
-	line "no one's ever seen"
-	cont "before."
+	para "들어왔다는"
+	line "소식을 듣고"
+	cont "찾아왔단다"
 
-	para "But it looks like"
-	line "they're still busy"
+	para "하지만 아직"
+	line "준비를 하느라"
 
-	para "with all their"
-	line "preparations…"
+	para "다들"
+	line "바쁜 것 같구나……"
 	done
 
 GoldenrodPokecomCenterPerson13Text: ; unreferenced
-	text "Just seeing all"
-	line "these new things"
+	text "여기서 새로운 것들을"
+	line "구경하는 것만으로도"
 
-	para "here makes me feel"
-	line "younger!"
+	para "젊어지는"
+	line "기분이 드는군!"
 	done
 
 GoldenrodPokecenter1FLassText:
-	text "A higher level"
-	line "#MON doesn't"
-	cont "always win."
+	text "얼마나 레벨이 높든"
+	line "타입의 상성이 있단다"
 
-	para "After all, it may"
-	line "have a type dis-"
-	cont "advantage."
-
-	para "I don't think"
-	line "there is a single"
-
-	para "#MON that is"
-	line "the toughest."
+	para "절대 강한 포켓몬이란 것은"
+	line "그렇게 없는 것 같아"
 	done
 
 GoldenrodPokeCenter1FLinkReceptionistPleaseAcceptGSBallText:
-	text "<PLAYER>, isn't it?"
+	text "<PLAYER> 맞으시죠?"
 
-	para "Congratulations!"
+	para "축하합니다!"
 
-	para "As a special deal,"
-	line "a GS BALL has been"
-	cont "sent just for you!"
+	para "특별 선물로"
+	line "당신 앞으로"
+	cont "GS볼이 도착했습니다!"
 
-	para "Please accept it!"
+	para "받아주십시오!"
 	done
 
 GoldenrodPokeCenter1FLinkReceptionistPleaseDoComeAgainText:
-	text "Please do come"
-	line "again!"
+	text "그럼 또 오세요"
 	done
 
 GoldenrodPokecomCenterSignText: ; unreferenced
-	text "#COM CENTER"
-	line "1F INFORMATION"
+	text "포켓몬통신센터"
+	line "1층……안내"
 
-	para "Left:"
-	line "ADMINISTRATION"
+	para "왼쪽:"
+	line "관리 사무실"
 
-	para "Center:"
-	line "TRADE CORNER"
+	para "가운데:"
+	line "교환코너"
 
-	para "Right:"
-	line "#MON NEWS"
+	para "오른쪽:"
+	line "포켓몬 뉴스"
 	done
 
 GoldenrodPokecomCenterNewsMachineNotYetText: ; unreferenced
-	text "It's a #MON"
-	line "NEWS MACHINE!"
+	text "포켓몬 뉴스"
+	line "기계다!"
 
-	para "It's not in"
-	line "operation yet…"
+	para "아직"
+	line "작동하지 않는 것 같다……"
 	done
 
 GoldenrodPokecenter1FPokefanFDoYouHaveEonMailText:
-	text "Oh my, your pack"
-	line "looks so heavy!"
+	text "어머 가방이 아주 무거워"
+	line "보이는구나!"
 
-	para "Oh! Do you happen"
-	line "to have something"
-	cont "named EON MAIL?"
+	para "앗 혹시 브이브이 메일이라는 것을"
+	line "가지고 있니?"
 
-	para "My daughter is"
-	line "after one."
-
-	para "You can part with"
-	line "one, can't you?"
+	para "내 딸이 갖고 싶어 하거든 하나만"
+	line "나눠주지 않겠니?"
 	done
 
 GoldenrodPokecenter1FAskGiveAwayAnEonMailText:
-	text "Give away an EON"
-	line "MAIL?"
+	text "브이브이 메일을"
+	line "건네주겠습니까?"
 	done
 
 GoldenrodPokecenter1FPokefanFThisIsForYouText:
-	text "Oh, that's great!"
-	line "Thank you, honey!"
+	text "어머 정말 기쁘구나!"
+	line "고맙다 얘야!"
 
-	para "Here, this is for"
-	line "you in return!"
+	para "자 이건"
+	line "답례로 줄께!"
 	done
 
 GoldenrodPokecenter1FPokefanFDaughterWillBeDelightedText:
-	text "My daughter will"
-	line "be delighted!"
+	text "우리 딸이"
+	line "아주 좋아하겠구나!"
 	done
 
 GoldenrodPokecenter1FPokefanFTooBadText:
-	text "Oh? You don't have"
-	line "one? Too bad."
+	text "어라? 가지고 있지"
+	line "않니? 아쉽구나"
 	done
 
 GoldenrodPokecenter1FPokefanFAnotherTimeThenText:
-	text "Oh… Well, another"
-	line "time, then."
+	text "아…… 그럼"
+	line "다음 기회에 부탁할께"
 	done
 
 GoldenrodPokecenter1FPlayerGaveAwayTheEonMailText:
-	text "<PLAYER> gave away"
-	line "the EON MAIL."
+	text "<PLAYER>는(은)"
+	line "브이브이 메일을 건네주었다"
 	done
 
 GoldenrodPokecenter1F_MapEvents:

@@ -1,0 +1,116 @@
+{
+  "regions": {
+    "union": [
+      "maps/UnionCave1F.asm",
+      "maps/UnionCaveB1F.asm",
+      "maps/UnionCaveB2F.asm"
+    ],
+    "route34": [
+      "maps/Route34.asm",
+      "maps/DayCare.asm",
+      "maps/Route34IlexForestGate.asm",
+      "data/phone/text/todd_overworld.asm",
+      "data/phone/text/gina_overworld.asm"
+    ],
+    "goldenrod": [
+      "maps/GoldenrodCity.asm",
+      "maps/GoldenrodGym.asm",
+      "maps/GoldenrodBikeShop.asm",
+      "maps/GoldenrodHappinessRater.asm",
+      "maps/BillsFamilysHouse.asm",
+      "maps/GoldenrodMagnetTrainStation.asm",
+      "maps/GoldenrodFlowerShop.asm",
+      "maps/GoldenrodPPSpeechHouse.asm",
+      "maps/GoldenrodNameRater.asm",
+      "maps/GoldenrodGameCorner.asm",
+      "maps/GoldenrodPokecenter1F.asm",
+      "maps/PokecomCenterAdminOfficeMobile.asm",
+      "maps/Route35GoldenrodGate.asm",
+      "maps/GoldenrodDeptStore1F.asm",
+      "maps/GoldenrodDeptStore2F.asm",
+      "maps/GoldenrodDeptStore3F.asm",
+      "maps/GoldenrodDeptStore4F.asm",
+      "maps/GoldenrodDeptStore5F.asm",
+      "maps/GoldenrodDeptStore6F.asm",
+      "maps/GoldenrodDeptStoreRoof.asm",
+      "maps/GoldenrodDeptStoreB1F.asm",
+      "maps/GoldenrodDeptStoreElevator.asm",
+      "maps/GoldenrodUnderground.asm",
+      "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "maps/GoldenrodUndergroundWarehouse.asm",
+      "maps/RadioTower1F.asm",
+      "maps/RadioTower2F.asm",
+      "maps/RadioTower3F.asm",
+      "maps/RadioTower4F.asm",
+      "maps/RadioTower5F.asm",
+      "data/text/common_1.asm",
+      "data/text/common_2.asm",
+      "data/text/common_3.asm",
+      "data/text/std_text.asm"
+    ]
+  },
+  "labels": {
+    "data/text/common_1.asm": [
+      "_BuenaRadioText1",
+      "_BuenaRadioText2",
+      "_BuenaRadioText3",
+      "_BuenaRadioText4",
+      "_BuenaRadioText5",
+      "_BuenaRadioText6",
+      "_BuenaRadioText7",
+      "_BuenaRadioMidnightText1",
+      "_BuenaRadioMidnightText2",
+      "_BuenaRadioMidnightText3",
+      "_BuenaRadioMidnightText4",
+      "_BuenaRadioMidnightText5",
+      "_BuenaRadioMidnightText6",
+      "_BuenaRadioMidnightText7",
+      "_BuenaRadioMidnightText8",
+      "_BuenaRadioMidnightText9",
+      "_BuenaRadioMidnightText10",
+      "_BuenaOffTheAirText",
+      "_AskFloorElevatorText"
+    ],
+    "data/text/common_2.asm": [
+      "_NameRaterHelloText",
+      "_NameRaterWhichMonText",
+      "_NameRaterBetterNameText",
+      "_NameRaterWhatNameText",
+      "_NameRaterFinishedText",
+      "_NameRaterComeAgainText",
+      "_NameRaterPerfectNameText",
+      "_NameRaterEggText",
+      "_NameRaterSameNameText",
+      "_NameRaterNamedText"
+    ],
+    "data/text/common_3.asm": [
+      "_BuenaAskWhichPrizeText",
+      "_BuenaIsThatRightText",
+      "_BuenaHereYouGoText",
+      "_BuenaNotEnoughPointsText",
+      "_BuenaNoRoomText",
+      "_BuenaComeAgainText"
+    ],
+    "data/text/std_text.asm": [
+      "CoinVendor_WelcomeText",
+      "CoinVendor_NoCoinCaseText",
+      "CoinVendor_IntroText",
+      "CoinVendor_Buy50CoinsText",
+      "CoinVendor_Buy500CoinsText",
+      "CoinVendor_NotEnoughMoneyText",
+      "CoinVendor_CoinCaseFullText",
+      "CoinVendor_CancelText"
+    ]
+  },
+  "baseline_ref": "84739d69ec0a35366f6b83f3aa4ce3711d620d3a",
+  "baseline_dir": ".verification/union-route34-goldenrod-20261011/baseline",
+  "state": "development-needs-human-review",
+  "excluded": [
+    "이동 중 전화 통화 caller/callee",
+    "Route35 본도로",
+    "SaffronMagnetTrainStation",
+    "알프 유적",
+    "공용 Pokecenter2F",
+    "고정 길이 선물 메일·이름·OT 비교 데이터"
+  ]
+}

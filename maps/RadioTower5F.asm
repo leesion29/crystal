@@ -198,231 +198,166 @@ RadioTower5FFollowerMovement:
 	step_end
 
 FakeDirectorTextBefore1:
-	text "Y-you! You came to"
-	line "rescue me?"
+	text "너 너는!"
+	line "구하러 와주었는가……"
 	done
 
 FakeDirectorTextBefore2:
-	text "Is that what you"
-	line "were expecting?"
+	text "라고 말할꺼라 생각했느냐!"
+	line "이몸은 가짜다!"
 
-	para "Wrong!"
-	line "I'm an imposter!"
+	para "진짜인 것처럼 해서"
+	line "빼앗을 준비를 하고있었다"
 
-	para "I pretended to be"
-	line "the real thing to"
+	para "하-하하 국장이"
+	line "있는 장소를 알고싶은가!"
 
-	para "prepare for our"
-	line "takeover."
-
-	para "Do you want to"
-	line "know where we hid"
-	cont "the real DIRECTOR?"
-
-	para "Sure, I'll tell"
-	line "you. But only if"
-	cont "you can beat me!"
+	para "좋아 가르쳐주도록 하지"
+	line "단 이몸을 이기고 나서다"
 	done
 
 FakeDirectorWinText:
-	text "OK, OK. I'll tell"
-	line "you where he is."
+	text "아 알았다……"
+	line "국장이 있는곳을 가르쳐주겠다"
 	done
 
 FakeDirectorTextAfter:
-	text "We stashed the"
-	line "real DIRECTOR in"
+	text "진짜 국장은……"
 
-	para "the UNDERGROUND"
-	line "WAREHOUSE."
+	para "지하창고에 감금되어있다!"
 
-	para "It's at the far"
-	line "end of the UNDER-"
-	cont "GROUND."
-
-	para "But I doubt you'll"
-	line "get that far."
+	para "지하창고 알겠는가?"
+	line "지하창고 뒷편의 더욱 뒷쪽"
+	cont "거기까지 갈 수 있을까?……"
 	done
 
 Executivef1SeenText:
-	text "Remember me from"
-	line "the HIDEOUT in"
-	cont "MAHOGANY TOWN?"
+	text "오호! 꼬마?"
+	line "황토마을의 아지트에서 만났었지"
 
-	para "I lost then, but I"
-	line "won't this time."
+	para "그때는 졌지만"
+	line "이번에는 그렇게 안될 꺼야"
 	done
 
 Executivef1BeatenText:
-	text "This can't be"
-	line "happening!"
+	text "……!"
 
-	para "I fought hard, but"
-	line "I still lost…"
+	para "전력을 다해 싸웠는데도……"
+	line "이럴수가 패배라니……"
 	done
 
 Executivef1AfterBattleText:
-	text "<PLAYER>, isn't it?"
+	text "<PLAYER>(이)라고 했었지?"
 
-	para "A brat like you"
-	line "won't appreciate"
+	para "너 같은 꼬마에게는"
+	line "우리들의 위대함을"
+	cont "이해하기 힘들것 같군"
 
-	para "the magnificence"
-	line "of TEAM ROCKET."
-
-	para "That's too bad."
-	line "I really admire"
-	cont "your power."
+	para "유감이군"
+	line "너의 강함이 맘에 들었는데"
 	done
 
 RadioTower5FRocketBossBeforeText:
-	text "Oh? You managed to"
-	line "get this far?"
+	text "이런이런 이곳까지 왔단말인가"
 
-	para "You must be quite"
-	line "the trainer."
+	para "꽤나 우수한"
+	line "트레이너 같군"
 
-	para "We intend to take"
-	line "over this RADIO"
+	para "우리들은 라디오 방송국을"
+	line "점령해서 전국에"
+	cont "부활했다는 선전을 할 것입니다"
 
-	para "STATION and an-"
-	line "nounce our come-"
-	cont "back."
+	para "그러고보니 어디선가"
+	line "수행중의 비주기님도"
+	cont "돌아오실 것이 틀림없어"
 
-	para "That should bring"
-	line "our boss GIOVANNI"
-
-	para "back from his solo"
-	line "training."
-
-	para "We are going to"
-	line "regain our former"
-	cont "glory."
-
-	para "I won't allow you"
-	line "to interfere with"
-	cont "our plans."
+	para "그 옛날의 영광을"
+	line "되돌리는 것입니다……"
+	cont "더 이상 방해는 용서 않겠습니다!"
 	done
 
 RadioTower5FRocketBossWinText:
-	text "No! Forgive me,"
-	line "GIOVANNI!"
+	text "…… 크윽~"
+	line "비주기님 용서를……"
 	done
 
 RadioTower5FRocketBossAfterText:
-	text "How could this be?"
+	text "……아아 이럴수가"
 
-	para "Our dreams have"
-	line "come to naught."
+	para "모든 꿈이"
+	line "지금 물거품이 되어버렸어요"
+	cont "역시 저에게는 무리였을까요?"
 
-	para "I wasn't up to the"
-	line "task after all."
+	para "알겠습니다"
+	line "비주기님이 그렇게 한 것처럼"
+	cont "우리들 로켓단은"
+	cont "여기서 해산하지요"
 
-	para "Like GIOVANNI did"
-	line "before me, I will"
-
-	para "disband TEAM"
-	line "ROCKET here today."
-
-	para "Farewell."
+	para "그럼 작별입니다"
 	done
 
 RadioTower5FDirectorThankYouText:
-	text "DIRECTOR: <PLAY_G>,"
-	line "thank you!"
+	text "국장『오오 <PLAY_G> 정말"
+	line "고맙다"
 
-	para "Your courageous"
-	line "actions have saved"
+	para "너의 용기있는 행동이 전국의"
+	line "포켓몬을 구했단다"
 
-	para "#MON nation-"
-	line "wide."
-
-	para "I know it's not"
-	line "much, but please"
-	cont "take this."
+	para "이것은 약소하지만 나의 마음이란다"
 	done
 
 RadioTower5FDirectorDescribeClearBellText:
-	text "There used to be a"
-	line "tower right here"
-	cont "in GOLDENROD CITY."
+	text "예전에는 이 금빛시티에 탑이 서"
+	line "있었단다"
 
-	para "But it was old and"
-	line "creaky."
+	para "하지만 낡아서 무너질 것 같았지"
 
-	para "So we replaced it"
-	line "with our RADIO"
-	cont "TOWER."
+	para "그래서 라디오타워를 새로 세웠단다"
 
-	para "We dug up that"
-	line "bell during"
-	cont "construction."
+	para "공사를 하다가 그 방울을 파내게"
+	line "되었지"
 
-	para "I heard that all"
-	line "sorts of #MON"
+	para "옛날 금빛시티에는 여러 종류의"
+	line "포켓몬이 살고 있었다더구나"
 
-	para "lived in GOLDENROD"
-	line "in the past."
+	para "혹시…… 그 방울은 무언가 관련이"
+	line "있을지도 모르지 인주시티의"
+	cont "방울탑과……"
 
-	para "Perhaps…"
+	para "아! 그러고보니…… 로켓단이"
+	line "속삭이던 이야기를 들었단다"
 
-	para "That bell has some"
-	line "connection to the"
+	para "방울탑에서 무슨 일이 벌어지고"
+	line "있다더구나"
 
-	para "TIN TOWER in"
-	line "ECRUTEAK CITY…"
+	para "무슨 일인지는 모르겠지만 네가"
+	line "한번 알아보면 어떻겠니"
 
-	para "Ah!"
-
-	para "That reminds me…"
-
-	para "I overheard TEAM"
-	line "ROCKET whispering."
-
-	para "Apparently, some-"
-	line "thing is going on"
-	cont "at the TIN TOWER."
-
-	para "I have no idea"
-	line "what is happening,"
-
-	para "but you might look"
-	line "into it."
-
-	para "OK, I better go to"
-	line "my OFFICE."
+	para "그럼 이제 나는 국장실로"
+	line "돌아가야겠다"
 	done
 
 RadioTower5FDirectorText:
-	text "DIRECTOR: Hello,"
-	line "<PLAY_G>!"
+	text "국장『 <PLAY_G>"
 
-	para "You know, I love"
-	line "#MON."
+	para "나는 포켓몬이 너무너무 좋아서 그"
+	line "감정을 전하고싶어 라디오 방송을"
+	cont "시작했단다!"
 
-	para "I built this RADIO"
-	line "TOWER so I could"
-
-	para "express my love"
-	line "of #MON."
-
-	para "It would be nice"
-	line "if people enjoyed"
-	cont "our programs."
+	para "모두가 방송을 즐거워해준다면"
+	line "기쁘겠구나"
 	done
 
 BenText:
-	text "BEN: Do you listen"
-	line "to our music?"
+	text "준화『음악을 듣고있니?"
 	done
 
 RadioTower5FDirectorsOfficeSignText:
-	text "5F DIRECTOR'S"
-	line "   OFFICE"
+	text "5층 …… 국장실"
 	done
 
 RadioTower5FStudio1SignText:
-	text "5F STUDIO 1"
+	text "5층 …… 제1스튜디오"
 	done
 
 RadioTower5F_MapEvents:

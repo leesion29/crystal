@@ -26,8 +26,7 @@ RuinsOfAlphHoOhItemRoomAncientReplica:
 
 RuinsOfAlphHoOhItemRoomAncientReplicaText:
 	text "옛날의 포켓몬을"
-	line "흉내내서"
-	cont "만들어진 것"
+	line "흉내내서 만들어진 것"
 	done
 
 RuinsOfAlphHoOhItemRoom_MapEvents:

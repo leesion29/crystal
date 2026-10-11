@@ -1,0 +1,128 @@
+{
+  "data/phone/text/gina_overworld.asm": {
+    "GinaAskNumber1Text": [2, 1, 1, 1, 1]
+  },
+  "data/phone/text/todd_overworld.asm": {
+    "ToddAskNumber1Text": [3, 1, 1]
+  },
+  "maps/BillsFamilysHouse.asm": {
+    "BillTakeThisEeveeText": [1, 1, 2, 1],
+    "BillImCountingOnYouText": [1, 1, 2],
+    "BillPopWontWorkText": [2, 1],
+    "BillsMomText_BeforeEcruteak": [1, 2, 2],
+    "BillsMomText_AfterEcruteak": [3]
+  },
+  "maps/DayCare.asm": {
+    "Text_DayCareManTalksAboutEggTicket": [1, 2, 2, 2],
+    "DayCareManText_GiveOddEgg": [2, 2, 1, 2]
+  },
+  "maps/GoldenrodCity.asm": {
+    "GoldenrodCityMoveTutorAskTeachAMoveText": [2, 1],
+    "GoldenrodCityMoveTutorIfYouUnderstandYouveMadeItText": [2]
+  },
+  "maps/GoldenrodDeptStore1F.asm": {
+    "GoldenrodDeptStore1FDirectoryText": [1, 1, 1, 1, 1, 1, 1]
+  },
+  "maps/GoldenrodDeptStoreRoof.asm": {
+    "GoldenrodDeptStoreRoofPokefanFText": [1, 2],
+    "GoldenrodDeptStoreRoofFisherText": [1, 2],
+    "GoldenrodDeptStoreRoofPokefanMText": [2, 1],
+    "GoldenrodDeptStoreRoofBugCatcherText": [2, 2],
+    "Binoculars2Text": [1, 2],
+    "Binoculars3Text": [1, 2]
+  },
+  "maps/GoldenrodFlowerShop.asm": {
+    "GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute36Text": [1, 1, 2, 1],
+    "GoldenrodFlowerShopTeacherAskWantToBorrowWaterBottleText": [1, 2],
+    "GoldenrodFlowerShopFloriaWonderIfSisWillLendWaterBottleText": [2, 2]
+  },
+  "maps/GoldenrodGameCorner.asm": {
+    "GoldenrodGameCornerPokefanM1Text": [2],
+    "GoldenrodGameCornerPokefanM2Text": [1]
+  },
+  "maps/GoldenrodPokecenter1F.asm": {
+    "GoldenrodPokecomCenterYourMonHasBeenReceivedText": [1, 2],
+    "GoldenrodPokecomCenterYouHaveOnlyOneMonText": [1, 1],
+    "GoldenrodPokecomCenterCantAcceptAbnormalMonText": [2],
+    "GoldenrodPokecomCenterNoTradePartnerFoundText": [2, 1],
+    "GoldenrodPokecomCenterYourMonIsLonelyText": [2, 2, 1],
+    "GoldenrodPokecomCenterEggTicketText": [2, 2],
+    "GoldenrodPokecomCenterOddEggBriefingText": [1, 3, 1, 1, 1, 3],
+    "GoldenrodPokecomCenterNewsMachineExplanationText": [2, 2, 2, 1, 3, 1],
+    "GoldenrodPokecomCenterSaveBeforeNewsMachineText": [2],
+    "GoldenrodPokecomCenterPerson1Text": [1, 2],
+    "GoldenrodPokecomCenterPerson2Text": [1, 2, 2, 1, 2],
+    "GoldenrodPokecomCenterPerson3Text": [2, 1],
+    "GoldenrodPokecomCenterPerson4Text": [2, 1],
+    "GoldenrodPokecomCenterPerson7Text": [2, 2],
+    "GoldenrodPokecenter1FPokefanFDoYouHaveEonMailText": [1, 1, 2]
+  },
+  "maps/PokecomCenterAdminOfficeMobile.asm": {
+    "PokecomCenterAdminOfficeMobileScientist1Text": [4],
+    "PokecomCenterAdminOfficeMobileScientist2Text": [3, 2],
+    "PokecomCenterAdminOfficeMobileScientist3Text": [2],
+    "PokecomCenterAdminOfficeMobileComputer1Text": [2],
+    "PokecomCenterAdminOfficeMobileComputer1Text_PokeComClub": [2, 2, 2],
+    "PokecomCenterAdminOfficeMobileComputer1Text_MobileCenter": [2, 2],
+    "PokecomCenterAdminOfficeMobileComputer2Text": [1],
+    "PokecomCenterAdminOfficeMobileComputer2Text_UsePhone": [2, 1, 1],
+    "PokecomCenterAdminOfficeMobileComputer2Text_DontUsePhone": [2, 1, 2, 1],
+    "PokecomCenterAdminOfficeMobileComputer3Text": [1, 1, 1, 3, 2, 1]
+  },
+  "maps/RadioTower1F.asm": {
+    "RadioTower1FRadioCardWomanQuestion2Text": [1, 2],
+    "RadioTower1FRadioCardWomanQuestion4Text": [1, 2],
+    "RadioTower1FRadioCardWomanQuestion5Text": [1, 2]
+  },
+  "maps/RadioTower2F.asm": {
+    "RadioTower2FBuenaShowIntroductionText": [1, 1, 2, 3, 1, 1],
+    "RadioTower2FBuenaEveryoneSayPasswordText": [1, 2],
+    "RadioTower2FBuenaComeBackAfterListeningText": [2],
+    "RadioTower2FBuenaThanksForComingText": [2, 2],
+    "RadioTower2FBuenaTuneInAfterSixText": [2, 1],
+    "RadioTower2FBuenaOfferPhoneNumberText": [2, 1, 2, 1],
+    "RadioTower2FBuenaOfferNumberAgainText": [2],
+    "RadioTower2FBuenaCallMeText": [1],
+    "RadioTower2FBuenaYourPhoneIsFullText": [2],
+    "RadioTower2FBuenaReceptionistPointsForPrizesText": [2]
+  },
+  "maps/RadioTower5F.asm": {
+    "RadioTower5FDirectorThankYouText": [1, 2, 1],
+    "RadioTower5FDirectorDescribeClearBellText": [1, 1, 1, 1, 2, 3, 3, 1, 2, 1],
+    "RadioTower5FDirectorText": [1, 3, 1]
+  },
+  "maps/IlexForest.asm": {
+    "Text_ShrineCelebiEvent": [2, 1, 2, 1]
+  },
+  "maps/KurtsHouse.asm": {
+    "KurtsHouseKurtGranddaughterHelpingWorkFasterText": [2],
+    "KurtsHouseKurtWhatIsThatText": [1, 3, 1]
+  },
+  "maps/MrPokemonsHouse.asm": {
+    "MrPokemonsHouse_OakText1_Part2": [1, 1, 1, 2, 2, 2],
+    "MrPokemonsHouse_OakText1_Part3": [1, 2, 1, 3]
+  },
+  "maps/PlayersHouse1F.asm": {
+    "ElmsLookingForYouText": [2, 1, 1]
+  },
+  "maps/Route36.asm": {
+    "FloriaText1": [1, 1, 2, 1, 2, 1],
+    "FloriaText2": [2, 2],
+    "UnusedOddTreeText": [1, 2]
+  },
+  "maps/RuinsOfAlphKabutoChamber.asm": {
+    "RuinsOfAlphKabutoChamberReceptionistText": [1, 2, 1, 1, 2],
+    "RuinsOfAlphKabutoChamberUnusedText": [1, 2, 2]
+  },
+  "maps/RuinsOfAlphOutside.asm": {
+    "SuperNerdStanBeatenText": [2],
+    "SuperNerdStanAfterBattleText": [1, 1, 1, 1]
+  },
+  "maps/RuinsOfAlphResearchCenter.asm": {
+    "RuinsOfAlphResearchCenterScientist1Text_GotAllUnown": [2, 2],
+    "RuinsOfAlphResearchCenterUnusedText2": [1, 2, 2]
+  },
+  "maps/VioletPokecenter1F.asm": {
+    "VioletPokecenterElmsAideFavorText": [1, 1, 2]
+  }
+}

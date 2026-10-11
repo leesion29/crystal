@@ -1,0 +1,2524 @@
+{
+  "state": "superseded-by-verified-applied-plan",
+  "selected_plan": "data/translation/union-route34-goldenrod.json",
+  "encoding_approval": "사용자 승인! 이후 constants/charmap_hangul_poc.asm에 ~의 17 0b 69 매핑을 등록함",
+  "current_blockers": [],
+  "resolved_capacity_blockers": ["Map Scripts 1 and 19 overflow resolved by approved whole-map ROMX split; normal/debug builds and static artifact verification PASS. See goldenrod-status.json."],
+  "resolved_encoding_blockers": [
+    {
+      "file": "maps/RadioTower4F.asm",
+      "label": "GruntM10BeatenText",
+      "reference": "오- 이런~!",
+      "character": "~"
+    },
+    {
+      "file": "maps/RadioTower5F.asm",
+      "label": "RadioTower5FRocketBossWinText",
+      "reference": "…… 크윽~",
+      "character": "~"
+    }
+  ],
+  "entries": [
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityCooltrainerF2Text_GotRadioCard",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "와아 너의 포켓기어 라디오를",
+        "들을 수 있구나!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityRocketScoutText1",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "여기가",
+        "라디오타워인가……"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityRocketScoutText2",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "뭐야 임마 너",
+        "저리 꺼져!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityRocket1Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "어이 어슬렁거리지마!",
+        "방해하지 말라고!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityRocket5Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "임마! 꼬맹이가",
+        "무슨 용무냐!?",
+        "저리 꺼져!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityRocket6Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "너도 로켓단의",
+        "무서움을 아는",
+        "것이 좋을꺼다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityStationSignText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "이곳은",
+        "금빛시티 역"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityRadioTowerSignText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "금빛시티",
+        "라디오타워"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityBikeShopSignText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "어느 곳이든 씽씽!",
+        "자전거에 대한 것이라면",
+        "여기 미라클 싸이클로!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityUndergroundSignNorthText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "여기서부터",
+        "지하통로"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityUndergroundSignSouthText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "여기서부터",
+        "지하통로"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "LassBridgetBeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "아앙- 안 되는군!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "BeautyVictoriaBeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "에-그럼……",
+        "엥 끝났냐?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "BeautyVictoriaAfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "누나에게 이기다니",
+        "대단해 대단해! 그",
+        "상태로 열심히 해라"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "BeautySamanthaSeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "전력을 다하지",
+        "않으면 병원에",
+        "입원하게 될꺼야!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "BeautySamanthaBeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "아-야!! 미안해",
+        "나의 나옹아"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "BeautySamanthaAfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "어떤 타입의 포켓몬도",
+        "공격할 수 있도록",
+        "기술을 가르쳤는데"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodBikeShop.asm",
+      "label": "GoldenrodBikeShopClerkRefusedText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodBikeShop.asm",
+      "rows": [
+        "하아…… 사람들의",
+        "친절함에",
+        "젖어들고싶어"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodBikeShop.asm",
+      "label": "GoldenrodBikeShopBicycleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodBikeShop.asm",
+      "rows": [
+        "번쩍번쩍거리는",
+        "자전거다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodHappinessRater.asm",
+      "label": "GoldenrodHappinessRatingText_LovesYouALot",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodHappinessRater.asm",
+      "rows": [
+        "매우 행복해 보이는군 틀림없이",
+        "아주 많이 너를 잘 따르고",
+        "있는 것 같구나!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodHappinessRater.asm",
+      "label": "GoldenrodHappinessRatingText_ReallyTrustsYou",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodHappinessRater.asm",
+      "rows": [
+        "너를 믿을 수",
+        "있겠다 그런",
+        "기분이 들어"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodHappinessRater.asm",
+      "label": "GoldenrodHappinessRatingText_SortOfHappy",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodHappinessRater.asm",
+      "rows": [
+        "너를 잘 따르고",
+        "있구나 어쩐지",
+        "행복해 보이는구나"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodHappinessRater.asm",
+      "label": "GoldenrodHappinessRatingText_QuiteCute",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodHappinessRater.asm",
+      "rows": [
+        "제법 귀엽네"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodHappinessRater.asm",
+      "label": "GoldenrodHappinessRatingText_NotUsedToYou",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodHappinessRater.asm",
+      "rows": [
+        "조금 더 귀여워 해주면",
+        "어때? 아직 너에게",
+        "익숙해지지 않았나봐"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodHappinessRater.asm",
+      "label": "GoldenrodHappinessRatingText_LooksMean",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodHappinessRater.asm",
+      "rows": [
+        "전혀 따르지 않는",
+        "것 같구나 어쩐지",
+        "눈빛이 안 좋아"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodHappinessRater.asm",
+      "label": "GoldenrodHappinessRaterTwinText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodHappinessRater.asm",
+      "rows": [
+        "포켓몬에게 도구를",
+        "사용해주면 매우",
+        "기뻐하게 된단다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/BillsFamilysHouse.asm",
+      "label": "BillPartyFullText",
+      "source": "original-gold",
+      "ref_file": "maps/BillsFamilysHouse.asm",
+      "rows": [
+        "으… 이런 그",
+        "이상 포켓몬을",
+        "지닐 수 없잖아"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/BillsFamilysHouse.asm",
+      "label": "BillNoEeveeText",
+      "source": "original-gold",
+      "ref_file": "maps/BillsFamilysHouse.asm",
+      "rows": [
+        "그러냐……",
+        ""
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/BillsFamilysHouse.asm",
+      "label": "BillsYoungerSisterPhoneFullText",
+      "source": "original-gold",
+      "ref_file": "maps/BillsFamilysHouse.asm",
+      "rows": [
+        "앗! 그 이상 등록을",
+        "할 수 없구나"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodMagnetTrainStation.asm",
+      "label": "GoldenrodMagnetTrainStationOfficerYouDontHaveARailPassText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodMagnetTrainStation.asm",
+      "rows": [
+        "저 손님 승차권을",
+        "가지고 있지 않는군요"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodMagnetTrainStation.asm",
+      "label": "GoldenrodMagnetTrainStationOfficerHopeToSeeYouAgainText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodMagnetTrainStation.asm",
+      "rows": [
+        "다음에도 이용을",
+        "부탁드리겠습니다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodFlowerShop.asm",
+      "label": "GoldenrodFlowerShopTeacherLalalaHavePlentyOfWaterText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodFlowerShop.asm",
+      "rows": [
+        "라라라 라라라라",
+        "듬뿍 물을",
+        "줄께"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "label": "GoldenrodGameCornerPrizeVendorWhichPrizeText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGameCorner.asm",
+      "rows": [
+        "어느 것을",
+        "고르시겠습니까?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "label": "GoldenrodGameCornerPrizeVendorHereYouGoText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGameCorner.asm",
+      "rows": [
+        "네 여기 있습니다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "label": "GoldenrodGameCornerPrizeVendorNeedMoreCoinsText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGameCorner.asm",
+      "rows": [
+        "동전이",
+        "부족하군요"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "label": "GoldenrodGameCornerPrizeVendorNoMoreRoomText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGameCorner.asm",
+      "rows": [
+        "그 이상은 지닐",
+        "수 없습니다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "label": "GoldenrodGameCornerPrizeVendorQuitText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGameCorner.asm",
+      "rows": [
+        "그렇습니까",
+        "동전을 모아서",
+        "와주세요!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "label": "GoldenrodGameCornerPrizeVendorNoCoinCaseText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGameCorner.asm",
+      "rows": [
+        "응? 동전",
+        "케이스가 없군요"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "label": "GoldenrodGameCornerCooltrainerFText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGameCorner.asm",
+      "rows": [
+        "이길 때 까지",
+        "그만두지 않겠어!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore1F.asm",
+      "label": "GoldenrodDeptStore1FReceptionistText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore1F.asm",
+      "rows": [
+        "어서오세요! 금빛시티",
+        "백화점입니다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore1F.asm",
+      "label": "GoldenrodDeptStore1FPokefanFText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore1F.asm",
+      "rows": [
+        "자 오늘도 많이",
+        "쇼핑을 해야지!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore4F.asm",
+      "label": "GoldenrodDeptStore4FBugCatcherText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore4F.asm",
+      "rows": [
+        "사포닌으로 포켓몬의",
+        "방어력을 업하고 있어!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore5F.asm",
+      "label": "GoldenrodDeptStore5FReceptionistOhYourMonDotDotDotText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore5F.asm",
+      "rows": [
+        "어서오세요! 엇",
+        "너의 포켓몬……"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore5F.asm",
+      "label": "GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore5F.asm",
+      "rows": [
+        "어쩐지 눈빛이 나쁘구나",
+        "그런 포켓몬에게는 이",
+        "기술머신이 어떨까?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore6F.asm",
+      "label": "GoldenrodVendingText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore6F.asm",
+      "rows": [
+        "자동판매기다! 마시고",
+        "싶은 음료수는…… ……"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore6F.asm",
+      "label": "GoldenrodVendingNoMoneyText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore6F.asm",
+      "rows": [
+        "돈이 부족한",
+        "것 같다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore6F.asm",
+      "label": "GoldenrodVendingNoSpaceText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore6F.asm",
+      "rows": [
+        "이 이상 지닐",
+        "수 없다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStoreB1F.asm",
+      "label": "GoldenrodDeptStoreB1FMachokeText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStoreB1F.asm",
+      "rows": [
+        "근육몬『근육 우오오!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "SupernerdEricBeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "…… 투덜투덜"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "SupernerdEricAfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "역시 정정당당하지",
+        "않으면 안되는",
+        "것인가……"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "SupernerdTeruBeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "아이고 아얏!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "PokemaniacIssacBeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "으아아!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "PokemaniacDonaldBeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "으악! 졌다!",
+        "분하다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundTheDoorsLockedText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "열쇠가 잠겨있다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundTheDoorIsOpenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "문은 열려있군"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundBasementKeyOpenedDoorText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "지하의 열쇠를 사용했다!",
+        "문이 열렸다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundOlderHaircutBrotherAskWhichMonText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "어느 포켓몬을",
+        "아름답게 할까요?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundOlderHaircutBrotherWatchItBecomeBeautifulText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "좋습니다! 예쁘게",
+        "해 줄께요!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundOlderHaircutBrotherAllDoneText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "네 끝났습니다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundOlderHaircutBrotherThatsAShameText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "그래요?",
+        "유감이로군요"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundOlderHaircutBrotherYoullNeedMoreMoneyText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "돈이 부족한",
+        "것 같군요!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundOlderHaircutBrotherOneHaircutADayText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "하루에 1마리씩입니다",
+        "오늘 영업은",
+        "끝!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundYoungerHaircutBrotherAskWhichMonText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "어떤 포켓몬을",
+        "멋있게 할까?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundYoungerHaircutBrotherIllMakeItLookCoolText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "좋아! 아주 멋있게",
+        "해 줄께!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundYoungerHaircutBrotherAllDoneText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "자",
+        "끝났다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundYoungerHaircutBrotherHowDisappointingText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "그래?",
+        "유감이군"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundYoungerHaircutBrotherShortOnFundsText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "돈이 부족한",
+        "것 같군"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundWeAreNotOpenTodayText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "오늘은 하지",
+        "않아!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundNoEntryText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "이 앞은",
+        "출입금지!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntM11BeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "크웃! 싸우는 방법에",
+        "갈피를 잡지 못해버렸나!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntM25BeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "우우……",
+        "졌다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "BurglarDuncanSeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "너의 소중한 것을",
+        "훔쳐주겠어!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "BurglarDuncanBeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "우르르-"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "BurglarDuncanAfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "남의 것을 훔쳐서",
+        "팔아먹는다…… 그것이야말로",
+        "나쁜 짓의 방법이다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "BurglarEddieBeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "강하군……"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntM13BeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "크웃! 뽐내지",
+        "말거라"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntM13AfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "로켓단에게 이빨을",
+        "드러내다니 무서운 것을",
+        "모른다는 것인가……"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "SwitchRoomText_Switch1",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "스위치에 1이라고",
+        "써있다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntF3BeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "뭐야 이건"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntF3AfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "뭐 좋아 가고싶은",
+        "곳 어디든 가서",
+        "헤매거라!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "SwitchRoomText_OffTurnOn",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "OFF로 되어있습니다만",
+        "ON으로 하겠습니까?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "SwitchRoomText_OnTurnOff",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "ON으로 되어있습니다만",
+        "OFF로 하겠습니까?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "SwitchRoomText_Switch2",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "스위치에 2라고",
+        "써있다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "SwitchRoomText_Switch3",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "스위치에 3이라고",
+        "써있다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "SwitchRoomText_Emergency",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "스위치에 비상용",
+        "이라고 써있다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "GruntM24BeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "끝장나버렸다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "GruntM14BeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "쾅-!!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "GruntM15BeatenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "하하핫! 그래,",
+        "왔는가"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "GruntM15AfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "하하핫! 재미있었다",
+        "너에대해",
+        "기억해두마"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "DirectorCardKeyText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "국장『그것만 있으면",
+        "3층 셔터는",
+        "열 수 있다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityPokefanMText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "이곳은 탑이 낡아서",
+        "쓰러질 것 처럼",
+        "된 것을 최신 라디오",
+        "방송국으로 만들었단다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityYoungster1Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "자전거 가게가 새로",
+        "생겼는데 어디에 있지?",
+        "전혀 어디 있는지",
+        "찾을 수 없네"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityCooltrainerF1Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "그 검은색 투성의",
+        "사람들 로켓단의",
+        "흉내를 내고 있는걸까?",
+        "괴상한 사람들!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityCooltrainerF1Text_ClearedRadioTower",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "그 검은색",
+        "투성의 사람들",
+        "정말 로켓단이었어?",
+        "지금도 믿지 못하겠네"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityCooltrainerF2Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "금빛시티라고",
+        "하면 라디오타워",
+        "지금이라면",
+        "캠페인에서",
+        "포켓기어로",
+        "라디오를 들을",
+        "수 있게",
+        "서비스를",
+        "받을 수",
+        "있데!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityYoungster2Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "헤헤헤……",
+        "백화점의 지하",
+        "창고에서",
+        "숨바꼭질을",
+        "하다가 혼났어"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityLassText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "그쪽 집에서",
+        "포켓몬의 이름으로",
+        "점을 쳐준단다",
+        "포켓몬에게 좋은 이름을 다시",
+        "지어주는 것도 가능하데"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityGrampsText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "그런데 엄청 큰",
+        "마을이구나! 너무",
+        "넓어서 무엇이 있나",
+        "전혀 모르겠구나"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityRocket2Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "라디오타워를",
+        "빼앗아서……",
+        "뭐야! 꼬맹이에게는",
+        "관계 없다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityRocket3Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "포켓몬?",
+        "돈벌이에",
+        "사용하는",
+        "도구잖아!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityRocket4Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "이제 곧 우리들의",
+        "야망이……",
+        "여기까지 오는데",
+        "참 길었군……"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodDeptStoreSignText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "포켓몬 제품이라면",
+        "무엇이든지",
+        "있는 금빛시티",
+        "백화점"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodGymSignText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "금빛시티 포켓몬",
+        "체육관 관장",
+        "꼭두",
+        "다이너마이트",
+        "프리티 걸!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCitySignText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "이곳은 금빛시티 휘황찬란",
+        "금빛빤짝 생기 있는",
+        "아름다운 마을"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityGameCornerSignText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "모두의 유락시설!",
+        "…… 금빛시티",
+        "게임코너"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "label": "GoldenrodCityNameRaterSignText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodCity.asm",
+      "rows": [
+        "이곳은 작명가의",
+        "집 포켓몬의 이름으로",
+        "점을 봅니다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "WhitneyBeforeText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "네-에! 내가",
+        "바로 꼭두!!",
+        "모두 포켓몬",
+        "하고 있잖아",
+        "나도 시작해보니까",
+        "뭐- 엄청",
+        "귀여워서! 으-응",
+        "도전할꺼니? 말해두겠는데",
+        "나 엄청 강하단다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "WhitneyShouldntBeSoSeriousText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "우우……",
+        "…… 으앙!! 너무해",
+        "너무하다구!!",
+        "상대 못하겠어!!",
+        "꼬마니까……",
+        ""
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "WhitneyYouMeanieText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "와앙!!",
+        "와-앙!!",
+        "…… 훌쩍 훌쩍",
+        "…… 너무해!!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "WhitneyWhatDoYouWantText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "……훌쩍",
+        "뭐야? 아직 뭔가",
+        "남았어? 아아 배지?",
+        "미안해 까먹었었어",
+        "자 레귤러배지",
+        "이거 말이지!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "WhitneyPlainBadgeText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "레귤러배지를 가지고",
+        "있으면 싸우지",
+        "않을 때에도",
+        "괴력의 기술을",
+        "쓸 수 있고",
+        "포켓몬의",
+        "스피드도",
+        "빨라진단다 또",
+        "이것도 줄께!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "WhitneyAttractText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "내용물은",
+        "헤롱헤롱이라고 해",
+        "포켓몬의 매력을",
+        "최대한 사용하는",
+        "기술이야 귀여운",
+        "나한테 딱",
+        "어울리지?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "WhitneyGoodCryText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "후우! 울고나니까",
+        "후련해졌다!",
+        "그럼 또 놀러와!",
+        "바이바이!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "LassBridgetSeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "강한 포켓몬 보다",
+        "귀여운 포켓몬을",
+        "좋아해!",
+        "하지만 내가 가지고 있는 것은",
+        "강하고 귀여운 포켓몬이야!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "LassBridgetAfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "꼭두에게 이기려고",
+        "열심히 하는데 아직",
+        "멀었을까 어쩐지",
+        "자신이 없어져……",
+        "라고 하다니",
+        "지면 다음에 또",
+        "열심히하면 되지!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "BridgetWhitneyCriesText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "아-아 꼭두를",
+        "울게만들었군 괜찮아!",
+        "이제 곧 울음을",
+        "그칠테니까",
+        "지면 언제나",
+        "운단다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "BeautyVictoriaSeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "음 귀여운 트레이너네!",
+        "누님께서",
+        "맘에 들었다! 하지만",
+        "봐주지는 않을꺼다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "label": "GoldenrodGymGuideText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGym.asm",
+      "rows": [
+        "여어! 미래의",
+        "챔피언!",
+        "이 체육관은 노말타입",
+        "포켓몬의 조련사들이",
+        "모여 있단다!",
+        "싸우게 한다고 하면",
+        "격투타입의 포켓몬이",
+        "추천감이다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodBikeShop.asm",
+      "label": "GoldenrodBikeShopClerkIntroText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodBikeShop.asm",
+      "rows": [
+        "하아…… 일부러 멀리서",
+        "금빛시티까지 왔는데",
+        "자전거가 전혀 팔리지",
+        "않아 어째서일까?",
+        "너 자전거를 타고",
+        "돌아다니며 선전을",
+        "해주지 않겠니?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodBikeShop.asm",
+      "label": "GoldenrodBikeShopClerkAgreedText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodBikeShop.asm",
+      "rows": [
+        "저 정말?",
+        "그럼 이름이랑",
+        "전화번호",
+        "가르쳐줘 자전거를",
+        "빌려줄테니까"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodBikeShop.asm",
+      "label": "GoldenrodBikeShopClerkFirstRateBikesText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodBikeShop.asm",
+      "rows": [
+        "미라클 사이클의",
+        "자전거는 성능",
+        "최고니까! 어떤 길이라도",
+        "씽씽 달린단다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodBikeShop.asm",
+      "label": "GoldenrodBikeShopJustReleasedCompactBikeText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodBikeShop.asm",
+      "rows": [
+        "드디어 발매!",
+        "최고급 컴팩트",
+        "사이클"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodHappinessRater.asm",
+      "label": "GoldenrodHappinessRaterPokefanMText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodHappinessRater.asm",
+      "rows": [
+        "언제나 포켓몬",
+        "승부에",
+        "져서 기절만",
+        "시키고…… 그것이",
+        "이유일까 포켓몬이",
+        "잘 따라주질",
+        "않아"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/BillsFamilysHouse.asm",
+      "label": "BillEeveeMayEvolveText",
+      "source": "original-gold",
+      "ref_file": "maps/BillsFamilysHouse.asm",
+      "rows": [
+        "이수재『이브이에게는",
+        "새로운 진화의 가능성이",
+        "있다고 공박사님이",
+        "발표했단다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/BillsFamilysHouse.asm",
+      "label": "BillsYoungerSisterUsefulNumberText",
+      "source": "original-gold",
+      "ref_file": "maps/BillsFamilysHouse.asm",
+      "rows": [
+        "너 포켓몬 트레이너니?",
+        "그렇다면 내가",
+        "굉장한 전화번호를",
+        "가르쳐줄까?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/BillsFamilysHouse.asm",
+      "label": "BillsYoungerSisterRefusedNumberText",
+      "source": "original-gold",
+      "ref_file": "maps/BillsFamilysHouse.asm",
+      "rows": [
+        "컴퓨터로 포켓몬을 맡길",
+        "수 있는 시스템을 만든",
+        "것은 내 오빠야",
+        "너에게 이수재 오빠의",
+        "전화번호를 가르쳐주려고",
+        "생각했는데"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/BillsFamilysHouse.asm",
+      "label": "BillsYoungerSisterStorageSystemText",
+      "source": "original-gold",
+      "ref_file": "maps/BillsFamilysHouse.asm",
+      "rows": [
+        "컴퓨터로 포켓몬을",
+        "맡길 수 있는",
+        "시스템을 만든 것은",
+        "이수재 오빠란다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodMagnetTrainStation.asm",
+      "label": "GoldenrodMagnetTrainStationOfficerTheTrainHasntComeInText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodMagnetTrainStation.asm",
+      "rows": [
+        "전철이 오지",
+        "않아!",
+        "이렇게되면 대신",
+        "내가 손님을",
+        "업고……",
+        "그건 무리인가"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodMagnetTrainStation.asm",
+      "label": "GoldenrodMagnetTrainStationOfficerAreYouComingAboardText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodMagnetTrainStation.asm",
+      "rows": [
+        "노랑시티행",
+        "이제",
+        "곧 출발합니다",
+        "승차하시겠습니까?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodMagnetTrainStation.asm",
+      "label": "GoldenrodMagnetTrainStationOfficerRightThisWayText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodMagnetTrainStation.asm",
+      "rows": [
+        "승차권을",
+        "확인하겠습니다!",
+        "네! 이쪽으로",
+        "타십시오!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodMagnetTrainStation.asm",
+      "label": "GoldenrodMagnetTrainStationOfficerArrivedInGoldenrodText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodMagnetTrainStation.asm",
+      "rows": [
+        "대단히 고맙습니다",
+        "금빛시티에 도착했습니다",
+        "다음에도 이용을",
+        "부탁드리겠습니다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodMagnetTrainStation.asm",
+      "label": "GoldenrodMagnetTrainStationGentlemanText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodMagnetTrainStation.asm",
+      "rows": [
+        "내가 사장이다!",
+        "포켓몬보다도",
+        "빠른 철도!",
+        "그것이 꿈이었단다!",
+        "이것으로",
+        "성도랑 관동지방이",
+        "더욱",
+        "가까워졌단다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodPPSpeechHouse.asm",
+      "label": "GoldenrodPPSpeechHouseFisherText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodPPSpeechHouse.asm",
+      "rows": [
+        "요전에 싸우고",
+        "있을",
+        "때 포켓몬의",
+        "기술을",
+        "낼 수",
+        "없었다",
+        "파워포인트가 0이",
+        "되어버렸단다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodPPSpeechHouse.asm",
+      "label": "GoldenrodPPSpeechHouseLassText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodPPSpeechHouse.asm",
+      "rows": [
+        "포켓몬이 힘이",
+        "넘쳐도 기술을",
+        "쓸 수 없을",
+        "때도",
+        "있어! 그럴",
+        "때에는 포켓몬",
+        "센터든가 도구로",
+        "치료해줘야지"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "label": "GoldenrodGameCornerPrizeVendorIntroText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGameCorner.asm",
+      "rows": [
+        "어서오세요!",
+        "게임을 해서 모은 동전은",
+        "이곳에서 마음에 드는 경품으로",
+        "교환할 수 있습니다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "label": "GoldenrodGameCornerGentlemanText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGameCorner.asm",
+      "rows": [
+        "자신의 포켓몬에게",
+        "눈보라를 가르쳤단다",
+        "동전을 모으는",
+        "것이 힘들었지만",
+        "그만큼의",
+        "가치가 있어"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "label": "GoldenrodGameCornerPokefanM2Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodGameCorner.asm",
+      "rows": [
+        "슬롯머신으로도",
+        "이길",
+        "수 없고",
+        "카드",
+        "",
+        "돌리기에서도",
+        "못이긴다",
+        "화가나서",
+        "지하통로에",
+        "동전 케이스를",
+        "버렸단다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore1F.asm",
+      "label": "GoldenrodDeptStore1FGentlemanText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore1F.asm",
+      "rows": [
+        "금빛시티 백화점에는",
+        "여러가지 물건이 진열되어",
+        "있다 하지만 이",
+        "마을의 게임코너",
+        "경품이 아니면 손에",
+        "넣을 수 없는",
+        "것도 있단다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore1F.asm",
+      "label": "GoldenrodDeptStore1FBugCatcherText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore1F.asm",
+      "rows": [
+        "엄마는 쇼핑을",
+        "아주 잘하셔",
+        "약간 싼",
+        "가격에 도구를",
+        "사오신다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore2F.asm",
+      "label": "GoldenrodDeptStore2FUnusedText1",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore2F.asm",
+      "rows": [
+        "이곳에서는 포켓몬이 지닐",
+        "수 있는 물건을 여러가지",
+        "팔 작정이란다",
+        "이것은 서비스",
+        "포켓몬에게",
+        "지니게 하거라"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore2F.asm",
+      "label": "GoldenrodDeptStore2FUnusedText2",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore2F.asm",
+      "rows": [
+        "포켓몬에게 도구를",
+        "지니게 하면",
+        "승부를 할 때",
+        "여러가지 책략이",
+        "나온다고 한다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore2F.asm",
+      "label": "GoldenrodDeptStore2FYoungsterText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore2F.asm",
+      "rows": [
+        "포켓기어로 등록할",
+        "수 있는 전화번호는",
+        "10명뿐이란다",
+        "누구의 전화번호를",
+        "등록 해둘까",
+        "망설여진다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore2F.asm",
+      "label": "GoldenrodDeptStore2FCooltrainerFText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore2F.asm",
+      "rows": [
+        "나의 캐이시",
+        "게임코너에서 손에",
+        "넣었어 지금은 소중한",
+        "파트너가 되었다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore2F.asm",
+      "label": "GoldenrodDeptStore2FGentlemanText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore2F.asm",
+      "rows": [
+        "백화점에 오면",
+        "금빛시티는 도회지구나",
+        "라고 생각되",
+        "이 상품",
+        "진열의 훌륭함",
+        "다른 곳이랑은",
+        "틀려"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore2F.asm",
+      "label": "GoldenrodDeptStore2FDirectoryText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore2F.asm",
+      "rows": [
+        "여행의",
+        "친구에게",
+        "2층……트레이너즈",
+        "마켓"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore3F.asm",
+      "label": "GoldenrodDeptStore3FSuperNerdText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore3F.asm",
+      "rows": [
+        "나 난 서 성급해서",
+        "포 포켓몬",
+        "배틀 때에도 스피드 업을",
+        "사용해서 포 포켓몬의",
+        "스피드를 높인다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore3F.asm",
+      "label": "GoldenrodDeptStore3FRockerText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore3F.asm",
+      "rows": [
+        "오오 시합할 때",
+        "포켓몬에게 스페셜",
+        "업은 쓰고 있는가?",
+        "특수 능력이",
+        "올라가서 확실히",
+        "좋은 기분이지!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore3F.asm",
+      "label": "GoldenrodDeptStore3FDirectoryText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore3F.asm",
+      "rows": [
+        "승부에서",
+        "이기기",
+        "위해 3층……배틀",
+        "컬렉션"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore4F.asm",
+      "label": "GoldenrodDeptStore4FCooltrainerMText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore4F.asm",
+      "rows": [
+        "강한 포켓몬을",
+        "좋아해서",
+        "타우린을 줘서",
+        "공격력을",
+        "높여놓았지!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore4F.asm",
+      "label": "GoldenrodDeptStore4FGameboyKidText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore4F.asm",
+      "rows": [
+        "통신 케이블을",
+        "통하게",
+        "하는 것으로",
+        "진화하는",
+        "포켓몬도 있단다",
+        "근육몬",
+        "윤겔라 고우스트",
+        "데구리 4종류이지만",
+        "그밖에도 있다고들",
+        "말한단다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore4F.asm",
+      "label": "GoldenrodDeptStore4FDirectoryText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore4F.asm",
+      "rows": [
+        "포켓몬의 능력",
+        "업하자!",
+        "4층……메디신 박스"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore5F.asm",
+      "label": "GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore5F.asm",
+      "rows": [
+        "매우 잘 따르고",
+        "있는 것 같군",
+        "너희들의 콤비네이션이라면",
+        "이 기술을 쓸 수",
+        "있을 것 같네"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore5F.asm",
+      "label": "GoldenrodDeptStore5FReceptionistItsAdorableText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore5F.asm",
+      "rows": [
+        "귀엽구나!",
+        "기술머신을 사용해서 좋은",
+        "기술을 가르쳐 주거라!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore5F.asm",
+      "label": "GoldenrodDeptStore5FReceptionistThereAreTMsPerfectForMonText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore5F.asm",
+      "rows": [
+        "틀림없이 너의",
+        "포켓몬에게 딱",
+        "맞는 기술머신이",
+        "있을꺼야"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore5F.asm",
+      "label": "GoldenrodDeptStore5FCarrieMysteryGiftExplanationText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore5F.asm",
+      "rows": [
+        "이상한 소포",
+        "삐익! 하고",
+        "선물이",
+        "도달합니다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore5F.asm",
+      "label": "GoldenrodDeptStore5FLassText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore5F.asm",
+      "rows": [
+        "일요일에 오는",
+        "언니 포켓몬의",
+        "상태를",
+        "보고 기술머신을",
+        "주거나 한단다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore5F.asm",
+      "label": "GoldenrodDeptStore5FPokefanMText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore5F.asm",
+      "rows": [
+        "다른 사람에게",
+        "얻은 포켓몬은",
+        "이름을 바꿀",
+        "수 없단다",
+        "이름을 붙인",
+        "사람의 마음이",
+        "담겨져 있으니까"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore5F.asm",
+      "label": "GoldenrodDeptStore5FDirectoryText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore5F.asm",
+      "rows": [
+        "당신의 희망을",
+        "포켓몬에게",
+        "5층……기술머신 코너"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore6F.asm",
+      "label": "GoldenrodDeptStore6FLassText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore6F.asm",
+      "rows": [
+        "저기 너 라디오의",
+        "럭키채널을",
+        "듣고있니? 그건말야",
+        "여러 사람들과",
+        "포켓몬을 교환해서",
+        "여러 아이디를",
+        "모으는 편이 당첨되기",
+        "쉬워질꺼야"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore6F.asm",
+      "label": "GoldenrodDeptStore6FSuperNerdText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore6F.asm",
+      "rows": [
+        "지쳤을 때는",
+        "자동판매기의 마실",
+        "것이 최고!",
+        "포켓몬도 음료수를",
+        "아주 좋아한단다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStore6F.asm",
+      "label": "GoldenrodDeptStore6FDirectoryText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStore6F.asm",
+      "rows": [
+        "쇼핑하다가 힘들면",
+        "6층……휴식의",
+        "광장"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStoreB1F.asm",
+      "label": "GoldenrodDeptStoreB1FBlackBelt1Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStoreB1F.asm",
+      "rows": [
+        "어이어이, 일하는데",
+        "방해하지마",
+        "아무도 보는이",
+        "없을때 일한다",
+        "그것이 우리들의",
+        "방침!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStoreB1F.asm",
+      "label": "GoldenrodDeptStoreB1FBlackBelt2Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStoreB1F.asm",
+      "rows": [
+        "사람들에게",
+        "보여지면 짐을",
+        "나르는 힘이",
+        "없어진다구 저쪽으로",
+        "가 가!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodDeptStoreB1F.asm",
+      "label": "GoldenrodDeptStoreB1FBlackBelt3Text",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodDeptStoreB1F.asm",
+      "rows": [
+        "엣취 엣취",
+        "떨어져 있는",
+        "것은",
+        "잡동사니뿐 원한다면",
+        "가져가!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "SupernerdEricSeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "포켓몬을 사용하여",
+        "속임수를",
+        "쓰려다가",
+        "들켜서",
+        "게임코너에서",
+        "쫓겨났다……"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "SupernerdTeruSeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "너 포켓몬의",
+        "상성을 생각하고",
+        "있니?",
+        "타입의 상성을",
+        "알고 있으면",
+        "포켓몬이 더욱",
+        "강해진다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "SupernerdTeruAfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "타입의 상성은 잘",
+        "알고 있지만 나는",
+        "같은 타입의 포켓몬만",
+        "사용하고 있지"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "PokemaniacIssacSeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "산발하는 기술의",
+        "포켓몬!",
+        "그 강함을",
+        "보여주거랏!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "PokemaniacIssacAfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "산발을 당하면",
+        "어쩐지",
+        "포켓몬이 잘",
+        "따라준다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "PokemaniacDonaldSeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "너 어쩐지 희귀한",
+        "포켓몬을",
+        "가지고 있군",
+        "좀 보여줘"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "PokemaniacDonaldAfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "포켓몬 도감을 만들고",
+        "있니? 그럼 알아둬야",
+        "할 정보!",
+        "33번 도로에",
+        "있는 등산가",
+        "스톰씨는",
+        "희귀한 포켓몬을",
+        "발견하면 전화로",
+        "알려준단다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "label": "GoldenrodUndergroundYoungerHaircutBrotherOneHaircutADayText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUnderground.asm",
+      "rows": [
+        "하루에 1마리뿐이야",
+        "미안",
+        "오늘은 영업",
+        "끝!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "UndergroundRivalBeforeText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "기다려! 너의",
+        "모습을 발견하고는",
+        "뒤를 쫓아왔어",
+        "또 로켓단을 물리치는데",
+        "방해받으면",
+        "참을 수",
+        "없으니까 ……",
+        "생각났다 그러고",
+        "보니까",
+        "너한테도 진",
+        "적이 있었군",
+        "어쩌다 이긴",
+        "것이겠지만 빚은",
+        "되돌려주겠어"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "UndergroundRivalWinText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "…… 어째서냐!",
+        "어째서",
+        "진거야! 최강의",
+        "포켓몬을 모았다는",
+        "자만도 하지",
+        "않았는데……",
+        "왜, 어째서냐?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "UndergroundRivalAfterText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "……크우",
+        "알 수",
+        "없군 그",
+        "목호라는",
+        "녀석이 말했듯이",
+        "나는",
+        "포켓몬에의",
+        "애정이……",
+        "신뢰가……",
+        "부족하기에 이길",
+        "수",
+        "없단말인가",
+        "어째서인지",
+        "모르겠어 하지만",
+        "이대로",
+        "끝나진",
+        "않아 이런일로",
+        "최강이",
+        "되겠다는",
+        "꿈을",
+        "포기할 순",
+        "없어……"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "UndergroundRivalLossText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "이것이 나의",
+        "실력",
+        "이대로 로켓단을",
+        "무찔러",
+        "그 목호라는",
+        "녀석도 완전히",
+        "밟아주겠어"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GoldenrodUndergroundSwitchRoomEntrances_SuperNerdText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "후우…… 지하에서",
+        "포켓몬 승부를",
+        "당해서 엄청나게",
+        "고생했어 너도",
+        "주의하는 편이",
+        "좋을꺼야"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GoldenrodUndergroundSwitchRoomEntrances_TeacherText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "지하에는 가게가",
+        "있지만…… 트레이너가",
+        "잔뜩 있으니까",
+        "어쩐지 무서워서",
+        "다가갈 수가",
+        "없어"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntM11SeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "어딘가의 셔터를 열면",
+        "어딘가의 셔터가",
+        "닫힌다 목적지에",
+        "도달할 수 있을까?"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntM11AfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "…… 나도 갈피를",
+        "못 잡고있어",
+        "맨 처음 누르는 것은 제일",
+        "구석의 스위치였다는 것밖에는"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntM25SeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "크하하!",
+        "셔터의 구조를 몰라서",
+        "곤란한 것 같군",
+        "나에게 이기면",
+        "좋은 것",
+        "가르쳐주지"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntM25AfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "알겠다, 힌트를",
+        "주지 셔터의",
+        "스위치를 누르는",
+        "순서가 비뀌면",
+        "열리는 장소도",
+        "바뀐다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "BurglarEddieAfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "지하",
+        "창고에",
+        "갈텐가?",
+        "그만둬",
+        "그쪽엔 아무것도",
+        "없다"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntM13SeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "미아인지 뭔지",
+        "간에 내",
+        "앞에 나타난 놈은",
+        "모두 쓰러뜨려",
+        "주겠다!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "label": "GruntF3SeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "rows": [
+        "갈피를 못 잡겠니?",
+        "아니 틀리군",
+        "그런 겁에",
+        "질린 눈이",
+        "아니니까 그럼 누나가",
+        "가르쳐주지 진정",
+        "무서움이란 무엇인가를!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "GruntM24SeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "설마 이곳까지",
+        "올줄은……",
+        "할 수 없군",
+        "내가 끝장을",
+        "내주지!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "GruntM24AfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "우리들은 비주기님이",
+        "돌아오시게 될",
+        "때까지 로켓단을",
+        "지켜갈 것이다",
+        "설령 어떤 짓을",
+        "하던 간에"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "GruntM14SeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "젠장! 이 이상 앞으로",
+        "보내지 않겠다!",
+        "나는 상대가 어린아이라도",
+        "정당히 봐주지",
+        "않는 사나이닷!"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "GruntM14AfterBattleText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "졌다……",
+        "비주기님",
+        "용서를……"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "GruntM15SeenText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "하하핫!",
+        "",
+        "너에관해서 기억하고 있다",
+        "아지트에서는 신세를 졌으니까"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "DirectorIntroText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "국장『…… 너",
+        "너는? 그래",
+        "나를 구하러",
+        "와줬는가 정말",
+        "고맙구나 그",
+        "그렇지! 라디오타워는",
+        "어떻게 되었는가?",
+        "뭐야? 로켓단으로",
+        "가득이라! 알았다!",
+        "이 카드 키를",
+        "건네주마"
+      ],
+      "state": "development-needs-human-review"
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "label": "DirectorAfterText",
+      "source": "original-gold",
+      "ref_file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "rows": [
+        "부탁해, 라디오를",
+        "빼앗긴다면",
+        "무슨 일을",
+        "당할지",
+        "알 수 없단다",
+        "이상한",
+        "전파를 흘려서",
+        "포켓몬을",
+        "조종하는 것 까지도",
+        "가능하게될지도",
+        "모른다",
+        "부탁할 수",
+        "있는 것은 너뿐이다",
+        "라디오타워를……",
+        "전국의 포켓몬을",
+        "구해줘"
+      ],
+      "state": "development-needs-human-review"
+    }
+  ]
+}

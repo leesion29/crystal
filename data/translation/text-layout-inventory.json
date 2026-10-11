@@ -1,0 +1,2680 @@
+{
+  "state": "analysis",
+  "counts_note": "Initial block count includes 12 English #MON blocks due to normalization. Final raw-Korean count and current status are in text-layout-audit-result.json.",
+  "criterion": "docs/text_commands.md + home/text.asm + actual consumer",
+  "files": [
+    {
+      "file": "data/items/descriptions.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0cef5a75c46915b6e4f0feb7866673cb20e4f8e0607e44346b6e61d062bc477a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/items/names.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "31a17492b4a3e0479e61fa60e5f262dbb3040a67012c4efb1658c7e3e28730b6",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/items/pocket_names.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "7f75c0f39bf16826ac7c912177e9b5b2445258bae5caf65132c975e0c02d0957",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/items/stats_names.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6a29ce0a13d84f563ce8b6b8722e3fc9f56a21e34ef39b3a38c779adcbbe9c78",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/maps/landmarks.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "3671ea15564662af2ef9634ad143356c3e8d6d4ea37660c78df64aaf0cfb7ccb",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/moves/names.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "3c84dffc763cb2e3234c630c853949ebad60dfc0c21288751f7ae5d000fa7ee5",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/phone/text/anthony_overworld.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "fc229594c59f8fd3216612a0d9b538517024582f19e48231a7f7df5310b9df6f",
+      "dialogue_blocks": 6
+    },
+    {
+      "file": "data/phone/text/gina_overworld.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "219c6041b0eadf5358808955c40815e4cc452f81fcaa22b0fb5729d598a5e8bc",
+      "dialogue_blocks": 8
+    },
+    {
+      "file": "data/phone/text/liz_overworld.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "42cb36fcaa447a425c2d2b797229bea75f8939bc3d31bf18a472c64481936d6d",
+      "dialogue_blocks": 6
+    },
+    {
+      "file": "data/phone/text/ralph_overworld.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "d40c5c82ac94ffc4789698c61c660cc861c71b013b269244a80f3176623ad4fe",
+      "dialogue_blocks": 6
+    },
+    {
+      "file": "data/phone/text/todd_overworld.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "67823623ee71caf98fa6dcb55a29e82dcb1f7fbb0b24d654570f40165a9a2af1",
+      "dialogue_blocks": 7
+    },
+    {
+      "file": "data/player_names.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ec5e69508ac8b3cdda870f56aa4d2854dc0a87f87dee873c6a5703b869ff2944",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/abra.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5d48eba629e51c659ae0da10f0e2eac5ed941b78d4a1eba13ba546a1a26a2842",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/aerodactyl.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "33ce65c4f996894864b7d852115f1bb1ed867a1bc23caf4d6b67258c015cf901",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/aipom.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "234de07c9f501f63fe8e11af28bbbed10a98ef29956dd1121d76f90a1e83983b",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/alakazam.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "f3d477e27ce46fd9f92b838571d875645f9d220742a999ac1fdc9d436bcedb52",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ampharos.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "da0a53f718e78c0d3788cff8cdbcf78bba093337d643c6382834292f99a26e99",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/arbok.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "390baa73ad7361e17bcde52179f4a3df6e0b40240fa6e37c49ebb0f2a7cfac50",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/arcanine.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ef6eeecf0eae52d9be122fbc9c30c666a09d21f98c51db1a83a4e69253dc8558",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ariados.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "07bff1760b47a2eba122a28a432c89736821714797f52e1da43523d636e31cc6",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/articuno.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "7ad2bf570478828fbf5884cfecf987813c0c6019b41afed9c6586c95973c06f9",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/azumarill.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6d6d2aea01fa79b276b501d7159944b28f379464b07365efa69f1c77aa7e52bd",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/bayleef.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "092e691de182bb6a73f3c79374b4e8428ff583d8bf01861f3ce41c91af03a1c6",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/beedrill.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "fd3e47bcc5cdce8ab32d9978a57444a97ef5d2523b0e2622183404b608947c9a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/bellossom.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e166fa6d100029506d049d51aaa0da385a34e316165ca26aa3fd5d636b22927e",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/bellsprout.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "864ead3df3e7e74a9c2d1f353986f9935bc18b7dce13b3c4b4d8b35349c817d7",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/blastoise.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "a9e4a2aaa4a844146fc24e317ffc738ed081556f2a5cefaaab6e12ae67f70574",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/blissey.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "dfc70ddfa4fa67658f7846b7eba284c724e1c49c5574b9eb1767294cbffdd951",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/bulbasaur.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "409c6ff3c23a3ea79c94b1c9c55388f66fb6d2f74956b6efa029784996e4ae12",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/butterfree.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "1bbd39856c18415801386a90134a93b3f4b2d43242515f126ba8f45070998f8b",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/caterpie.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c880723aea9d0835449f389aee16cecb49430a4def7548eb77b3cdb9889effc6",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/celebi.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "129831fb9640c6b1830ec839f69097927bbd7f6084a20052c692f94f23073e9c",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/chansey.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "44a75bd5dd7ef0efcbea576da69152b16e7108f536b4d3dfbfccdd42d2d46078",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/charizard.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ff25c909c54d9c5370708e2089c7e84c402ea421a5f8622bfdbe39a92d05c499",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/charmander.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5ae55fcabfeb4520c3379846b3eee6f70a6a5ae3c039924c6d02326869f966fe",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/charmeleon.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ce9e5ae33505c468b45c229861ec36d336dad5bc510952c2887cd5a8bf2e91a9",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/chikorita.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "a0891c2e3a8e4556d35671a696d1c3ae3548e3af109c79acb3607f8be8acdb8a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/chinchou.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "47aac366f226761bef037ab0ca9da7529a02f269dca643db8a2a893aa8f6e659",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/clefable.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "32494d426f0cc101045e8cf66422db58fab1eb68f6bcebcd92fbd2e8be9a192d",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/clefairy.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6769fe9d59c74f5285955fcf22f578120b05c78595a426ab015b680aecc3a7a4",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/cleffa.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "910c115b7f02b109e7aef291350a8d4589233fb439863968b5f187d39f4b1870",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/cloyster.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "27d53c316fc8dfe8f1ccdcb01dddb324e8ac625642ee2dcb351c437e7846444f",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/corsola.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "b698ae976b7d2972603b59132116717e2db21640b9275cd1f81fac0a276a629e",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/crobat.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ae25488eda1bd84ebf14bcf67acde8962895eb719fec5d981f5f0bf847b27191",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/croconaw.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "8f88603726315f98284b67832940a159e94bed4ec7373333dc5ff8cda20d1df7",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/cubone.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "60596df733d1529bdf3f94c7be3f989bc6a34ff3cb9c46a664b099d68e42ceff",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/cyndaquil.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e7cfc573d50c0c531e76460d042a2e522b368cd8dc614c8c1cfa6643eb4ae139",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/delibird.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "9c7329d5724371acc54327143e45ce1f911372c946c477e078c3262211a3853a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dewgong.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5133b9540341183d7bf955c03bd526b02ea992aee07a0eb985cfdd1d211731d9",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/diglett.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6ac93bb7b52be95bb4c9de296c53cb252b9b9d5598dc04526ed9f2f07c195c98",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ditto.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5056bbb16637c8053a4a76f2bc7b58ccd00b2d1701c2851e3256f1b5eaa47c96",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dodrio.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6263e01facc97a75bd3b17f08415f4fcafe0b3e153eaac2d54ab61c6db1110d6",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/doduo.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ac58688a9c0f8f283ff9dbc08c5d65d46b460889e311966be35b9f80617e0abb",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/donphan.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "bea4a0d2592269329c662f5f55e6eac8031bec0a298c606a74db243331f76cc3",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dragonair.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "19e03250ef203bb9f2f5301902f28006710ffad79daa54b9ef01d0e1258692a2",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dragonite.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "92581051434b46aeb9a5d5d0575fe8131329e1fd69b491a13a606454692282e7",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dratini.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0a876366ec80731f22b2533805b844c2b1c6d958595da66ba99b489f578408ad",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/drowzee.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2c83e5fb2e6cfd1886cf7cc0af08576475627d781d166feb8d40ed7a1ec5776c",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dugtrio.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "382222922a4595711fdb729f8ce03b0e90309edac47adf1bf50d69e6493b4984",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/dunsparce.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "437f336037d51d885502f6c20f58ccdc6876e710567610fdac9b469862123132",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/eevee.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "855adfbbc40e362997ccde5a781951c7e29a7dafa166f9caa40f7149e3a52113",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ekans.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "4369e800c0c55d03afd2f0da6694444f031d4186e2cf47ddcdb3edeb836db386",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/electabuzz.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0577a30c2f0961755719eec5a5892eb38b26a429ab12c0e4c65238c38ee0d774",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/electrode.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "9bbcb7bae0f94f3186c89001d7743dd009c4dad8309d34aa908eb19588c07d33",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/elekid.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "cfcf7827bb065a65303c7a43859eb0d8824352b5fb324f72892ccd2dd93dd897",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/entei.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "80ad1aa395f313ee9695931172ae3c7334543db27a000b8f4f999a70564f2209",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/espeon.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "7d63b3ff89573dcb6a1c3e70524070ae996aa252907050aa4190e709687e4242",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/exeggcute.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c05b9ac573a8c952bede42737333fd42e0e4e6c4a999faee710666131cb66ec5",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/exeggutor.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "286c3ae9e4b2b88f16a97e0785de63547cde15ff0d79e113ccecf395e3787b06",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/farfetch_d.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "88f08d347c194d8a5284b7f0e0f5a0bb0909e518dc462a40d0a9d67b44b21831",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/fearow.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e9c8e5c840847ecfe6a5ac9b480d70f0a6c22152c1b559b60ddc6c3809840668",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/feraligatr.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ee16091d5f7beaa146cb7019e4c65e02adc34ca944fc31d97fa46268772c085a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/flaaffy.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "d9d48b91d8427ba11a0934110b8c33b0582aced235890d85652b0ca62ab7ff79",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/flareon.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e4fe49d859d5ad634a316ad13458bb09b652deb44c95a78620463f66e32372a6",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/forretress.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "7b1ad6896fe42f958f31869be87daac9e4e24cc2c244153998fddf0eff5d9f61",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/furret.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "815d457d45e073bab3765b40608a72e143e2aaad6de083f2879a007e1b0a66d6",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/gastly.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "619f6f6ae930aa38f151a5aae63321089401767d73e92cb735819aea846c66d6",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/gengar.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c0e70c91dcd53511eedf8f72657279cb991775be3261e4ce17989ba536baa1df",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/geodude.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c8223f02a5a45ff42db4165c05ac81fe65e2d3b10866871da9d0dab73204d037",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/girafarig.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "013bd65f94b14d09b23368f9bddd6002c35bff4070ce0ba91335f7f5ba2f3f32",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/gligar.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e6731eb6e50928815ea2ba978e6751ed0e601d00e98faa49d128d690c83369b5",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/gloom.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "d34974eddf3e67a37edc21aa06dfe224f89673024e114bcb33c2b9a83ccf2eec",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/golbat.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e1ac98242c4d8d0c1afb6a3ec8e21bd76adfe6c8dc23913cd33f98315f7b4b5f",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/goldeen.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6129cd21ad8859d852718e2cc2997c56cee61c464a90ea77717ea0a5b2a518f0",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/golduck.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "38f8c30e384cd1f9edbe28f7fc75f02cb8f2e17b6b051c0b450da9feeb314bfe",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/golem.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "4a953ff702ed4200877ca682ca11034de312ca5b4ab888ca7c3a4c735d90a1ac",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/granbull.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0db2cda4128dfc9fa69bc29acc777495d20c5415591f1851ed45346bc43b7208",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/graveler.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ab5474732c4c86fdabf8bdc93afb648d4a402d0e26b9882345909f6ec5743125",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/grimer.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e5304819702d371fe01a69aad654cb09e1986904e4e577ce74ca816224498691",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/growlithe.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "705caaa64baad722a3b492795acf22ef79d89c44aa348764f59746889d365236",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/gyarados.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "fd8cdc5fb25e8fcf9a14d8c792f07085fe02ffad6a12d9f3afa63f23a48e76c3",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/haunter.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "7def6b67a9e84d9ec6310206b971d2f68963aafbe260ce64520237d124edadfb",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/heracross.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "21bc0a83288ea30e01e9ed144504500c1279acba5ad4c5c80e17fa7fd310aa90",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hitmonchan.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "b32d0a406c01d5b327a47f7a4b432648e6839162440d7fc15db5cdcab0ce1efd",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hitmonlee.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "3ef363167f0c739a4a25b6a2ca4824a928b106de7a9d924b79dfb320c416ca1c",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hitmontop.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "1d1e2acee48d022d3cc410a9c08ebce3026455ecf3b1ed7a55b63624dfd15269",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ho_oh.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "d2c5dffaa93a540c69110d3970a0d73da6724892ff5c8ea86486f13af7ba617a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hoothoot.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "a17e71cd3d55e924e78d61aca0ab1021543fc13c88403354d28653beb79b23ec",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hoppip.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "4d47ff99f9302cb3c53f75ab30278e4413875e3e89ffe006a9d468f764fd0fbc",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/horsea.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "9289252e6d8b9bcccffe8d5e2a9481852376455730098989c16e84b08f88e312",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/houndoom.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "025fde1ec1dc832ec10c45b0a4d6413b6eb4333dccd65664a57eb545ed2a4856",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/houndour.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "44af659dd1f044383ff3e809a45bf15dfaff2e6ee32ab59f506a3d813f31126d",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/hypno.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2d17470b1d3eb71f37ac761c74066bb90c6ebf3c5f8be212c2fdfef273df3f69",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/igglybuff.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0763e50038d150c6b2ba1f242a1a1809c6bdb49f5da5f694c8bfe341a58b2ece",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ivysaur.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c6ebcddb9de2c6c828f0f22950ff251d98fe8f495433950097c66d72af597ffc",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/jigglypuff.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "a76f9a37e3626ea1a5ddd9d44f8d03ebbb82e943c78fb40cf8d0736874c4d248",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/jolteon.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c6b568694fb6d1326b8e3e5df0e4a00da127e8dac01bf445791785a8535fd6d7",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/jumpluff.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "7c2ffe7c933a21b03b69bbf9a789393a743a31e2f8807cd429ce83a655adf85c",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/jynx.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "de98f16a3f50218f718b87a2320218010479503dadc289cdb3d62653011226ad",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kabuto.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "cf2a98872f111ff0c06f0afbf46e28c10a288bbaf1bf7eeb5250ddec6710d2bc",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kabutops.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6a8363c708c508eaf3bb2c00d1d24651fb5f45ddeec4e9fb9e18d99234af55be",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kadabra.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "262d20172ec5caa2f4487e72fcc6d8133d5cb7c8a192702160cf775fe54e6b95",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kakuna.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0e59adaafe32b8c594a3c035943ef30e9a1af8fd6874fb36ed9bc30d68f81eaf",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kangaskhan.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "720468297b62f76f110d0c7be60684e3871c90507aa439878af8b0d922b021f8",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kingdra.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0f01a8de45cd5af62d1af68d61c3f1af46aeedbd8eceba56abccb83bfea75da3",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/kingler.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c49a6705e5a6e1f812555adf30b67f94956a8a07a01870672124331ccba41c4c",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/koffing.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "77f81eb83d2ab4618a9bde07c964ae916cfaf62a2c1fa65b6c69673806caab08",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/krabby.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c02388dcb500b22c47b62ce9b3f736f85f036bde52965aa45277b7e337f52458",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/lanturn.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "10d756bc72e30929d5f700b7348b35b99b49b8127f293b8471b22ab9eea65bb5",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/lapras.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "3f68fa326d236bd50d7fd29966d2237404af842d2283baec7238fcc57e9916d6",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/larvitar.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "fcc4c82e8449616c2baa8aadae7a868c60f39ff32c73732ee2ffbadce728bf99",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ledian.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c2c42f2ddf38dbc349a1cffed8a6dda16baa858adaf96e89d47f8cd79899dc9f",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ledyba.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "d0183c5698fbfe53ca197014067b0d07a1e05ef010b6023b1dadd88f86ad88c2",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/lickitung.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "db1701b9e56e2adfa32df35fa8cbd7cbab358727bd452c2c8a301d7efe9a3f6d",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/lugia.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0d75c13dc53ff5880041075b993f01f5a82cefaf5e4d3edb14d33fd758bb35df",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/machamp.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "32708b69a651775d05fe30976523d3568587bc2a4eb2298a5018bc6d00a406b6",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/machoke.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "9bff00e09cde89da9700dbba7bbe5dd7a65626f372bc1c799d269f84c1a7790a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/machop.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ba5c3c905c6e39e1c6daae87a728decb62f6792471a5bc1efd313391084d453e",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magby.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6318f4b9553120f6f54b3f7f49355794835bae2ff2898766c75f5030989ca8ff",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magcargo.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2522c0a087f012a53edcf8383707245ede94ef156407a2202afb07c16e954219",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magikarp.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5b49db2afd9e54a22efdae0d32490390f68c903c73fb408ca23de91e3a949243",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magmar.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "7404ef88f3ab988cc91c0d3bb62e6f14c0e492afac21ef0300b5bc4a2d544f20",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magnemite.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2e80e886c04783fc4654d4e12252b78651424fe61ce6620015868df598f15171",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/magneton.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "188d00aa9496cf34212596c1d77f49bb1f693652a48e0e1c8c75ffb8b39c2658",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mankey.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "40438af4a7ec52467cc4397c0b1473b5cd6c9dd590e66dd1fbdce9ae8123101d",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mantine.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "26fbaf3ac08b8000f3754a0cdd68b00d8594ef402b6446a5891740aeedfc313e",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mareep.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "92f255cc310a15ddaf693b0e76e6f7df741d7b4848fcbeb8a7cedcf89b757916",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/marill.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "dbbe274a7f793c763fe27c5e446b58ffed6f6cee80ed28a342349c65ebb8ac10",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/marowak.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e5ca22d115cf1f0341c0ba41902b74ebb05cfd5b699210dffbaa18d14c2bb66d",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/meganium.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "96fcf3d03e6a9fd3cfd05a2f17a7c437459de688e426d52923919c5158e58163",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/meowth.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "447a967b3fd61cf7c2916e98a916cb26265cf323e535f05272b32b2de5b60203",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/metapod.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "01ca7452bddce711bf26d3abf0ef2bc44670198006886931d8050ab15db9140e",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mew.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "4509c966adc638b01f65bc2a4fc02823fa211b4f4c57fe7f41bde2ce73e9ab54",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mewtwo.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5e762f4ce64c30ca3526d2aacac3655aa7661a1da2f21d4908cf2b38b759dc70",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/miltank.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "50d5cff5409da5ee9778c037171953d691ef3432e4c07bf13b4ad175dc977f7e",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/misdreavus.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e4868c4fea4b0dc44ecc962d904fe470f885352b3cd57c72e12e0916eaa48092",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/moltres.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "cfff547d5a995b615ad88f352ae63d4cdee4d0ebe108157ff4f99cfa8a31735f",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/mr__mime.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "814335c972202a542286e904de7a545003e1145137d71e2266c6e10963479052",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/muk.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "d0f2b92d7830198303e833da5a72a77412fcf20d370b1c8ee4e44bfa683ef09e",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/murkrow.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5eef8a3f8efe47cb5d4cabf03e1ef20873288d6d6e159f59a470e9e2cc19f77b",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/natu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "bdacf13cbc38f3a76a0ba2bb499681880c6031eaf2b3ee8839494fe130dbccf7",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidoking.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "dbef8970ad3534b6f78a1d5ea64bc76fe88e8092521387db34578d658a3636e0",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidoqueen.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "a36e4d551cfd688f29569b42db4b15e3ca2a7886d7cca80d9b0c9afd55db97df",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidoran_f.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6b3c93746d42fdba5bc3dea7705309137060e69828c0c68e33c2851ea170073b",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidoran_m.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "eb12b89471019c0a927e9db1591bdfe3d5202f9103cebaad99b0250ae17523ad",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidorina.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "4e7669f6e3127b30bb5069f9b5e965de6ce793dc180dc5b1fbb78f1c73d629af",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/nidorino.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5eb9799ba0b910eaf778696185d55e8c12aaae7d67ca1c1f2c987594ae08df09",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ninetales.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e765e24b2f941280f541ff2bf71f0534e92415db253b8485ae448a3b218ae046",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/noctowl.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "557ec2d9eb18114152ddfa2855d6d2dd70c06e07b6007c5f7d1eb72fabae1609",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/octillery.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e8bcf3bbdd016269a94bc42d83c5a056fc09d7d0c0d7b2b956a0f4840d6929e7",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/oddish.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "859238ea4031fc36db02d4aa341a7c406415e5853f2f55aab27a3440fbe05c97",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/omanyte.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "31b0a3329c1304a902c5a4ef02be860c680e9463b462befb468f82d8ad495eae",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/omastar.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "71d616f27e59d3db096c5803121a316a93916e7224e50fec0f0514615cebd99b",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/onix.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e804e2596d1e57e82ed270b388ed0fb38751ca0439a889b3375af3859d859303",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/paras.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "88b90387f4a593b473b7d80f769746b6a0debbf0fb150908e4a41a19491cfec2",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/parasect.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "621139e4fd0e5b6cdffa075f7ea61b212514627a7d50a423031f1277b36f871e",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/persian.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "16a5df6de84071fc57b2c99ce703963f5a942c9292f1bc9e2db4fc468ae10112",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/phanpy.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5d2862bccb211b10f07edc76700078c627331f970b9713ea700a4ede48a9d801",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pichu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2ab39146e9e58409ea0cc128a9c2cd73fe529cf7101d5fb88068d224752e8899",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pidgeot.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "70cf94b8d99ec9e4956651425c8e46f25868d2ccbbf3640b709dc5648abce2b1",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pidgeotto.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "45856a0e05bd6632ffb8ccfdbe026ad6c10f8ed329d670251e0ce2641b6ca3b5",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pidgey.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "3770dc7e263051b10fee6d16374e85d37f3d396064bb272a18bb42b330aee734",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pikachu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "53edf47d33c5ce14ccd62752a636dd788052afcad81c7489d3cfea9e9bbc1e5e",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/piloswine.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2a2644fc32a03f7122e55ae4ccab6b0fb4c9284e6c723b3b44edbeb8b5727639",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pineco.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "365afd3a2af8b6467bc60ee8cc3ac51882193d9953a57d01b31c75ba59400e43",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pinsir.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0ca484ec61333da0c5754dbf9236e8588bb289e11e52c51209d662d5bdd63465",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/politoed.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "a5389d240caa7e8d69d40e4cd146e7b961f2ad292a816ec7db9afb8167f545bf",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/poliwag.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "918c2aafb70687c11d60f49dba8ac19ec9637a8a8b7fc2070cced2a69a3df8e1",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/poliwhirl.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "03b80df1b55a920703e59d42ca9652b2b1e14e5202e4bb054677e79cb89fafe1",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/poliwrath.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "1b180cbea3760877b9750a7fe82b32f571b1d9eadae7f06830b9e5a9422b1173",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ponyta.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "fe074d03741ca6cfa2c8289d0803a4c9cabc160d34a5ef9f72ef04d474f53af4",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/porygon.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0227aa9f21bf619b30dde424ac9a321bbe3aca6b1ae42bb3a61cc9e8a3fa5f12",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/porygon2.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5c8b8992200a8f68d8ed266b558d613742fc15aa63baad46c9d819a16b06d4eb",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/primeape.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "55a981a8be782c1b163bee4335bbf7d195d9ebc4e44758be2f5486179bcef67d",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/psyduck.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "a5e8813f24531d715c93d33ba8a1b1d0c434fa71335a32b1ab43f379f4a76a18",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/pupitar.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "53df9724dd14e9249f99c691092d4a36d0dc49fceec622ffb43ebe85b1f1221f",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/quagsire.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6ec50a5335b33f959cef25413b68c7bf8a65ae2cba9f67f31492cdb602e5edaa",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/quilava.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ec46bd39316ce11c366a0fa01f251d72673699b70cb01197e9b1b48349069022",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/qwilfish.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "bdaa20c831a3a43ad09adca6f70a7c6b182e93c0a540c7d285bd6c7b014d40df",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/raichu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "063f265f0c48667c32ddaab99900ad33ea2415d5d83043a234470aefaa492de8",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/raikou.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "9471b8e5dd935648b3722142622ecf549c5a5e1973a6d4ae11c74889f8c50643",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/rapidash.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ffcca9f1f271c64ff7be907a28da1569e91aa764fdbfe6de7c395aae262ba62d",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/raticate.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "a57667c203bc65966fe5cbde10861c589b4d89ef9627cdc8ac4e9c601bfa34fa",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/rattata.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "81db6c7e19c78e74185401b185fc8b9cfadc606c5464df39f561faffee9fdf35",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/remoraid.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ae88a9f946f1467defea8bf77ad24f2762ac79f58655bca7b9bdfcb2f1dabab2",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/rhydon.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c54894cae8cb9c2edb6569eb8c85f5cbcf290ee2f8f3a4af7c73bd7fd33b1154",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/rhyhorn.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6455d78d57a4aa59ae1655a20eea0abc36f01b1a1a7cb31d0e1cdd5f841fec39",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sandshrew.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "fe13994e13f8ee6e2e85e58da1942557c00b8840d4d34137f966ea1d0e106e2f",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sandslash.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "13d451239897529a48e9531d38769b55b4889bd6aff7cd40f01dc917311f7434",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/scizor.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "8e205d7be6b9224a09e1c52c295c7b52e7fe32dd567228fa5bcdfc40a5529d94",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/scyther.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "cf07aec29b21fca26ba99455b9542904d8173d79cd94bf99be1b60513b38dc86",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/seadra.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "9be7289dcd2c392021a7eb3d1a50d528c1c2bd69c94293273a217367691ba4b7",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/seaking.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "4a44846ad0187dc529ce72e8735ba68f65c632e4a5b1c40b40d7576be756235c",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/seel.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "08f31019ebc28639076d335dd896c804ecc5aa9dc9b1b7f3803bb13d17495daa",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sentret.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "7c18aa33a09da7492e39983e5634f9cde8c1a74a9317944e1bb1ef73bf6679ff",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/shellder.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "cb8785037210922a17e0b17ea06ff800f3e1ff3f50c6a14d63b48c8196a2ea72",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/shuckle.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5b6a32ae88bf7fe0d536d7f96996cd280287b33801611253d2d3873669e8973d",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/skarmory.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0a877850aaf31eab98a20582dcc7cbb792d80483cfe02582edf2733d733b92b4",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/skiploom.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "cc9376bf83ae1beb44bb15a50407a5b547e7481a2d7509501e3b6e47f2cd8fbb",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/slowbro.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "88c63ad63c1fdec60507d9c5fc341df0370879ab6e4ef8669d2ec714396a8c3a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/slowking.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "7237bce54c6298a546c8865a032606c6bf4f0d315b8be01f23d61833c3058a96",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/slowpoke.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "34676229f8a02a79fad8eee6233f71060b142dbf1128310bd61d5847d4fca880",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/slugma.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "cb2153cb558741bc3c2f5c5cb6192d69b07a2214bf68cf9e838e130e4e992e24",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/smeargle.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "aa2ae279946fa74df727b7b8e997400793cbbb3a5afc265c5433f365e76c9d1d",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/smoochum.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "59fd05df0cafa9a57b892c747f96b00a6760549bedf0c426fea8c0605644ae14",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sneasel.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "4fe2fa02d184436f7f761e131be32dcd4fde23a6588c70a471a0f5af0b690c8a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/snorlax.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c97c3505c83cabc9638bd8a3f93580a5a2f885b4b53065eee75cd566e1b89fab",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/snubbull.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6aa351345f144683a7281705963e4463fa33f40d6da444b68ee1518647c35eaa",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/spearow.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "48d410f66d3b99c694fd199a31a8f1949b032ee8768fba340b06d2a395346c0f",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/spinarak.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c19bebc96d652d78701c95d90e4597e9cb2b3c3f65b7a60ea5919ae76410cdee",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/squirtle.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "d81bc17177ddba85429d2ac246dbeb0a4b3702dff5f0b4fda82ddc3f29111be3",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/stantler.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "312c56b0ba594405fed623dc282d128662120e8833d8f92e7ec8ff303d5e85bb",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/starmie.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "f75c2dfbf1fd099b005cf0e4fb3b3486566ec7ae680714572c90fb21d72d9d0a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/staryu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "902c0cbdff00452b1d0ba9398eca3d5c536e800eb74c14da4b23dd4bbd5d6609",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/steelix.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5194bcf6c93c874d48c7f162b16b1e48b1a2c68489b53be4cd6a1824aff69d72",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sudowoodo.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "3f46b0e94d29ccf7c3577b601c77116b0ed8cf98f783234f1bd83fdf50c25c94",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/suicune.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "9a691626993e2ada3b9cf49562b7e121058435faee0530e14cc578fc7ed553e8",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sunflora.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "b0ff768c54e467097de666ae14da8d5ce25ae36096e6986b44031a8435658e60",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/sunkern.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2d0f18850a3c80e3911e4a9931a773b23c8ab0fb9624cfd204d9330df9e921ea",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/swinub.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "78a22c6c5c725f9c3639f11cbb627e0df03885bcd753a5931e9e4cd7e23325bc",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tangela.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "614ad78ff715715f549e14eabf2c20690c5d3c6c00029e9ca549a294b2d56f8a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tauros.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "1e92c45ab8a8393b3332da32ef6a2efedd63335e73496a7b3241587907bf4241",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/teddiursa.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ef5d5561edda1701f7d4bf254c15c112e7a147ff1bdc04a31dcff61fcf0d93ca",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tentacool.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "a676bcaf12ebe9002e498722528b563ed173ba30c80593964d9f712d751c6a19",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tentacruel.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0f371b214a58cff70adfc72909b77aa9cc7f5146f4e2910cf28a705f5948075a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/togepi.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "d731cf38dae12abc28589b2f0c0fff65954a23adfad50284acdf8c9aff3440cf",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/togetic.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "58359b04f4bcf9ab8f948a10c36112d2c400b9dac32d0ecb1198533690ef1034",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/totodile.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2548dcf4736ac51ba4d209e51197b5eaa30d4dfd7a741ff3f8dbe59c9b3105af",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/typhlosion.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "1e62a1403c990627c60f510e703fe7e81769e19ef18cfef22d3397c5b3f9a07c",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tyranitar.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e763a4a3ee4beb16fbe6ad48786f68010bf7b2ed98c612e333c4219ede0afb79",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/tyrogue.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "4dd769484e7f231351e0b421e41e8f7bf26834b2a393e004cfe236a249cb57c6",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/umbreon.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "aec973597f0cd1046a1d03197de20e270823927af0ba0344a0e6eb9747d1886b",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/unown.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "9700d95323619ead57a73602e4d5ec1b2befe28d74470415b670566b7fbc70db",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/ursaring.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6afdb0039e71ba80aeb39d178c5e157fd81ae8b16a7277532e6c6989264bace0",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/vaporeon.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5b113e4327f0b1c4144610206c55760f78732974f49c9e8c2dd1b9deb352ca5a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/venomoth.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "23f6a88d4d92c1ab3e70b49dafe4e161eccda45c3933b5d0b687c29f443849f0",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/venonat.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "17348023885098eefb095dc38dfb00b38d4a173067482665d1cef4b0b19326cc",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/venusaur.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "26a2271bbd17c9ec6abfc8f9bda0f64b9142c7967084cb9ac791005ab886f0ed",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/victreebel.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "17d87908364595173bddc7a5c48f9999469a079db617ed17d8e23a1d762ae6e9",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/vileplume.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2123edf4bb6b74509663cb984deeda0195dbb20cc703e9fcaa5fddc4c10d6205",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/voltorb.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0201c64b6081438f75f279f4666a2be84e6536955f7e904b7149f0774e09fbf1",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/vulpix.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "7d909f379c501b8e112ce42f72d2461b6685de1a602a20a7a2bbe8a5a242c442",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/wartortle.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "60f7ea829b17f942f98848b3e20addd00faa5c430a5b8615d84ce0ddc9efd07c",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/weedle.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "cc2efb1aadf9bb408a27933bfdfacf8e48c5708487c9dce83a8188879637ff7a",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/weepinbell.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0d52984fac488e98989f27551eb91f7a062421b22179ba990f6477abab89de9e",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/weezing.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0c23fe7015762dac9aeeb7caf2c36e31c1b0fe8729ebeee2416ba19219570b93",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/wigglytuff.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "8a8d916db693847782e1f7c38a0404426e620e9ed1091e919294f7cc73e6c85f",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/wobbuffet.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5e24a5803eedfeaa8cc97d60d8d2366b13e1b8584deef264646edb8f6ff4de50",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/wooper.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "bd2955515091edcc1167e864c0b0abe7669950db3a78690f87619440ec1c1f75",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/xatu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "874e56bc1fdb436c882413faac1490e6ab76bc4bab82f4cb40260422a7c0b852",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/yanma.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "11eecff4bbd28268527c0243cd681d4fa273e8a8a19d7b787cfbb4cbc9b4e146",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/zapdos.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e291cfac59b98ec19ac590273835192ce593adb1b0271cc1351a686f8937e1dd",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/dex_entries/zubat.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "a30319429042f7d21b543c05803d118cdfec341bc54c38a4b0eba4046d20cdcf",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/pokemon/names.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "917e2f7638e3036ef1036be150557d0b81289c3e482acc9931e9c995cfde364c",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/radio/buenas_passwords.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "0be991f8b0b4026c17eec419c5aa1e9b17759576daedd7c83d3c4ab98801b668",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "data/text/battle.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "acb6eee8aa2853434ff8f3b3f60abf85f6701fd75b9e81d35c6b67d13d53e91c",
+      "dialogue_blocks": 193
+    },
+    {
+      "file": "data/text/common_1.asm",
+      "uncommitted": true,
+      "in_post_fork_history": true,
+      "sha256": "ee879ec3cf1bdd22ee8de08d39c8f5cc9e3a8e6a0393081a067e70ef0d930c41",
+      "dialogue_blocks": 238
+    },
+    {
+      "file": "data/text/common_2.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "f18ef6ddd36c68e2a28f6f4a43eca273d5218b43d80e49c9ef5f4fcbb31fa933",
+      "dialogue_blocks": 234
+    },
+    {
+      "file": "data/text/common_3.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "a657f5e1c684fb4b3085de75d55c54fcaa8c54bbcc930eda7cb3b5af4f16529a",
+      "dialogue_blocks": 213
+    },
+    {
+      "file": "data/text/std_text.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "d76e52d8b7862a4a1b420c31fd00167a226e74ee9c8b395af67e9c67ac8e2745",
+      "dialogue_blocks": 43
+    },
+    {
+      "file": "engine/battle/core.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "3f4ba05be7e020d307081e235a9f0e993a136f3b541dea9cea1c635d87b03eee",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/battle/korean_move_text.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "cecb661b18ffc0b296a92a158cda424976c366609d020d0928fea071ee454271",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/battle/menu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "21a0339931c478ccdff6d7c97e4409491ede6de556f4a82099b62a7556cb9ad1",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/events/buena.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "4bcd1a650216cc87ffdcdbc873a4ce4a86d19ba346fe75a86dbdd8fbc97bb901",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/events/elevator.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "c6db9f34557a508229d38422de4f3b26cafddc328b9e03f38111ead8715072a1",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/events/follower.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ed4ed16bba872778224e0cbf31859b64057d216c2d5b976d99af3b5f5419654f",
+      "dialogue_blocks": 17
+    },
+    {
+      "file": "engine/events/std_scripts.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "49dcee915ed766c5c0717e4c71dbc8fb4fffb8d06fdaf3e09ed262c5c0068fb4",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/items/mart.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "1ad3fd4a17de9dc8dbc201063576c040a5eb839c0b92ddcfd69bd0e4302f43f4",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/menus/init_gender.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e6c588cadb283b7dce8be3a2567335acfb10aec699811f72ed4b3257c3adb17f",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/menus/intro_menu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "1ec647eab9041ef04f37ca4cbd5113993636c84d1df570f99dd7a4a258cd8c80",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/menus/main_menu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "44189d7422602be26fc0d58a47ffc5a8a6991dca4cbb34e6d107c74f3f2e7a99",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/menus/options_menu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e860065125fe3b77a094c4de36233c8ce0bfb853f7b1f0c63d356159809a7cfb",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/menus/start_menu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "25d3cc16b8f527f29811bc55097d443b9091db9fc9eb753ae7ed88402d062dca",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/pokedex/pokedex.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "10c7fe00f8224223a585d5a225abb51c29143f544cff382d517aaacf95f220f7",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/pokedex/pokedex_2.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "37ea4d1dbf60de2748321af45022e17291a32727a5a87323cf76281911d727ee",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/pokegear/pokegear.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "edb6de65ac000d47d8d85122ce6ac262224dd69d9f819aace44dcc405f0797f0",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/pokegear/radio.asm",
+      "uncommitted": true,
+      "in_post_fork_history": true,
+      "sha256": "fc3d98cf782693034e283d4f9f471920f9216a61b7275f205edef585827d2f69",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/pokemon/stats_screen.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "47fe2e20d9f9a4972ac718990a1d979343ec84b3249d5cd4cf967b5c51fb88d0",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "engine/rtc/timeset.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "b01b7e2ea91dfa04c13833498e2ff9313080b4b0bc6ef8cc67973c0e522d0dfe",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "home/menu.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "7c9bceab8ec94ecea5463611b643d618f3b3f930d36f78a05e0a654ec578cdc2",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "home/names.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "998a2803d49f44923a813a047ce7c0552f5c1bd6f74fa3e503b1976c7bee71d5",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "home/text.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "4871c0a27f2f93613dd30515b7c92986de3abc652846f64de37245e45f0dcf44",
+      "dialogue_blocks": 0
+    },
+    {
+      "file": "maps/AzaleaGym.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "8d6d8caa37d21207828315652b9ccf92749569f8b597e92774a6ac28b1802a5f",
+      "dialogue_blocks": 23
+    },
+    {
+      "file": "maps/AzaleaMart.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "50972e9269f94735ecdf674164dae22e1c72086a0b52c91e794b3592a552c8a7",
+      "dialogue_blocks": 2
+    },
+    {
+      "file": "maps/AzaleaPokecenter1F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "aaee123e28a3df72c9778a6aea364ea0b12391a299aa159a90bc5cf99e91fd30",
+      "dialogue_blocks": 4
+    },
+    {
+      "file": "maps/AzaleaTown.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "bb9c70b7c7d41ba295de3db9fcfc185eabad774468d97315305f593012adace2",
+      "dialogue_blocks": 22
+    },
+    {
+      "file": "maps/BillsFamilysHouse.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "60acfea6a616d67ca86bd37573317870bb1c084dab8b6ed9667da1e8ce83b269",
+      "dialogue_blocks": 14
+    },
+    {
+      "file": "maps/CharcoalKiln.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "79b66395f3da11545fa749abc964c4dabb8b7c3b690dabd28ceb133a5f4b62b8",
+      "dialogue_blocks": 7
+    },
+    {
+      "file": "maps/CherrygroveCity.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ce0b63c6e11a770bb79ab42b8d631c6274cc0ee4af267f2797068cf9b1b6fe7d",
+      "dialogue_blocks": 23
+    },
+    {
+      "file": "maps/CherrygroveEvolutionSpeechHouse.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "c713753e0ab7ca83f719d974336609b5baea711731d62de628b13125be9f94d5",
+      "dialogue_blocks": 2
+    },
+    {
+      "file": "maps/CherrygroveGymSpeechHouse.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "fe71c8928f82233e4ba8b5ce548d96001f18819a72cf13d3553c0bdc111a2cfb",
+      "dialogue_blocks": 2
+    },
+    {
+      "file": "maps/CherrygroveMart.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "427760d4b755308da28170888122e0f394082b55e0b033ff539c117979e23a4d",
+      "dialogue_blocks": 3
+    },
+    {
+      "file": "maps/CherrygrovePokecenter1F.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "b1f22efe0a2a303ddfdaa8324632e78a3243a957921ede873ecbb341b7fd6cf8",
+      "dialogue_blocks": 4
+    },
+    {
+      "file": "maps/DayCare.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "ef1a3f5c1341cc01d0ac59f2fe5199c9aa563018ac9921a9b1c69cbb7b8e1188",
+      "dialogue_blocks": 7
+    },
+    {
+      "file": "maps/EarlsPokemonAcademy.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "5cf674481f525842012fcf1ddd00261b7dd7963fa8858a0e6206a887f4c3b04b",
+      "dialogue_blocks": 21
+    },
+    {
+      "file": "maps/ElmsHouse.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "552938901b2b15c23aaab9018c1ae4560e20b3906e6d9103ad5ce413a0ebd14c",
+      "dialogue_blocks": 4
+    },
+    {
+      "file": "maps/ElmsLab.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "7f162195015ddc4ff3bde53ead53c3ecdf7c9bcc095b18ac0b2ee81f10e898f2",
+      "dialogue_blocks": 60
+    },
+    {
+      "file": "maps/GoldenrodBikeShop.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "ce212e125e77e6c979ed18cffeedc8c4c831d587eb44ebc556b68ba8539d44ac",
+      "dialogue_blocks": 7
+    },
+    {
+      "file": "maps/GoldenrodCity.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "f4f22d1b0be459016b4397e06d42c192954c4aa02b0ebb0f5485289ccd7c6a49",
+      "dialogue_blocks": 38
+    },
+    {
+      "file": "maps/GoldenrodDeptStore1F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "cc279c5fb09f1d97b29de558bfafb68bc121c7624efc1e17904fb094b8710c63",
+      "dialogue_blocks": 5
+    },
+    {
+      "file": "maps/GoldenrodDeptStore2F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "78e704fb273e91b5d374f27af8f24372ecce0f6122276f557679426627598475",
+      "dialogue_blocks": 6
+    },
+    {
+      "file": "maps/GoldenrodDeptStore3F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "cd99d81a061d4c2bb42ba5c7e5cf2b1f69371c1cc0aed380a4ff0570bb5a4289",
+      "dialogue_blocks": 3
+    },
+    {
+      "file": "maps/GoldenrodDeptStore4F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "f15de6305b7c05419ee92c6eb1973f916c9bbee9d1b2df8b8235ca3dc1fcd3b9",
+      "dialogue_blocks": 4
+    },
+    {
+      "file": "maps/GoldenrodDeptStore5F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "6a53581ead35973ea2d07f156818d91c12a61bf6212c5ccba2551f1980958710",
+      "dialogue_blocks": 10
+    },
+    {
+      "file": "maps/GoldenrodDeptStore6F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "d46e347c890607bcc27dce2df9de4ee378e66321d484884fdc052a7dee1b54b6",
+      "dialogue_blocks": 7
+    },
+    {
+      "file": "maps/GoldenrodDeptStoreB1F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "1b624baf902000b963b7d2bc0c52eaebf0d5c0189e7277b7b97e60697a8f1c8f",
+      "dialogue_blocks": 4
+    },
+    {
+      "file": "maps/GoldenrodDeptStoreRoof.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "e3d303fb57bdd59159d36408f90f283834e2df9b3e6da63d2790633a79d36c2d",
+      "dialogue_blocks": 12
+    },
+    {
+      "file": "maps/GoldenrodFlowerShop.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "fa9d435d02ab8778d245bb087229b520a7a96e408a915ed62f851b2cbfc4c8a5",
+      "dialogue_blocks": 8
+    },
+    {
+      "file": "maps/GoldenrodGameCorner.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "870873fd47816f18ee1a3a4467e64ee159f170b3da430caccac6960c3b5baedd",
+      "dialogue_blocks": 17
+    },
+    {
+      "file": "maps/GoldenrodGym.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "00cdd5d08599952d7d38cd6403bb653aee7d7573a2a0e6e8ac35a8748a693b4b",
+      "dialogue_blocks": 23
+    },
+    {
+      "file": "maps/GoldenrodHappinessRater.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "4dc4b6b206d607752bdc3dd8bdf9a3352f1d4da706ce7338c0f29d45a3acf181",
+      "dialogue_blocks": 9
+    },
+    {
+      "file": "maps/GoldenrodMagnetTrainStation.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "63a9f2084285bba66cd788bfba7a5426cbe5225cd239ffe9bb77395124585c68",
+      "dialogue_blocks": 7
+    },
+    {
+      "file": "maps/GoldenrodPPSpeechHouse.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "64fe1e73948cfdd7fb33220cfcdf8e29b9d5d5de40ef03c19d66436aa5df7181",
+      "dialogue_blocks": 2
+    },
+    {
+      "file": "maps/GoldenrodPokecenter1F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "606d0c15f3f0ee10392fa3e45209d81618e7a8ae57dca09c4979fe268a1ef90e",
+      "dialogue_blocks": 66
+    },
+    {
+      "file": "maps/GoldenrodUnderground.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "2018baadd4738679aff71510f5cc2fd7a1816c45121e119d7c48692e30bd8236",
+      "dialogue_blocks": 34
+    },
+    {
+      "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "cb327c95e51f0823d663852994dec47afc36e883e23c11da37fdb7dde2dbf91e",
+      "dialogue_blocks": 30
+    },
+    {
+      "file": "maps/GoldenrodUndergroundWarehouse.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "24b994276524d627578832dadb69f6eebe9fa4485fc811b1bd920d781122b69e",
+      "dialogue_blocks": 12
+    },
+    {
+      "file": "maps/GuideGentsHouse.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "e931e3d4a6c5d92a4f9777cdfb5b6ff76987fd177ce851d14e902a0d2b5e155e",
+      "dialogue_blocks": 1
+    },
+    {
+      "file": "maps/IlexForest.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "443186f9394104459c1ed1bd36ee53cae156ce38c45a50c1ec1d0a02e02e00fe",
+      "dialogue_blocks": 18
+    },
+    {
+      "file": "maps/IlexForestAzaleaGate.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "855364be44d06a87657e0aa07a79ac6dd3763efcc64dd4a8066bf78630f7b363",
+      "dialogue_blocks": 2
+    },
+    {
+      "file": "maps/KurtsHouse.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "08c556dcca2be50ad429787ed33880deabe8b6126a061d91b7fa9681e0c4f943",
+      "dialogue_blocks": 24
+    },
+    {
+      "file": "maps/MrPokemonsHouse.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "12bd55f26dd2c298c960b4b5a96f1e6251b554dc6f87412f710ce1ca5658d93c",
+      "dialogue_blocks": 19
+    },
+    {
+      "file": "maps/NewBarkTown.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2d3be65c66dc40fb517ec4bcbd906a4af605eeeb816663668d1d2f2f532a1cb5",
+      "dialogue_blocks": 14
+    },
+    {
+      "file": "maps/PlayersHouse1F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": true,
+      "sha256": "d5371cdaebc3ae2bfefc44c3065316b775181c8ae2a3d61efd5ad2f1ddf45687",
+      "dialogue_blocks": 17
+    },
+    {
+      "file": "maps/PlayersNeighborsHouse.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2893b28b908e02646f570a771f50f39261507ffde16bfed05327d5dbed53897b",
+      "dialogue_blocks": 6
+    },
+    {
+      "file": "maps/PokecomCenterAdminOfficeMobile.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "4985f00eae3d82f3511b91159be7f2f8a95b4673ade51a8e1092375b6777b32c",
+      "dialogue_blocks": 10
+    },
+    {
+      "file": "maps/RadioTower1F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "d4d6b24407c5345d0b3cb400ac6fefc091823e20025019965365b0a70c8ab902",
+      "dialogue_blocks": 29
+    },
+    {
+      "file": "maps/RadioTower2F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "b96bf77fdee30a15551bd52e4278580aab962469ee7ba98a4ecf754521dfe9a8",
+      "dialogue_blocks": 43
+    },
+    {
+      "file": "maps/RadioTower3F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "f78186ae225be67cd4448170d44723f2f2990211e85d4387c417d5da9a7875fc",
+      "dialogue_blocks": 24
+    },
+    {
+      "file": "maps/RadioTower4F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "32e4be35cd29892d5c85c3a0b2d5fe2ce25d012bd01589f46695046a7c70ee49",
+      "dialogue_blocks": 20
+    },
+    {
+      "file": "maps/RadioTower5F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "55d3ec250782ae842d7566ac6a221e1118f6a59268b02c79b2e76233a321bc50",
+      "dialogue_blocks": 16
+    },
+    {
+      "file": "maps/Route29.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2594870d31283d9cf431239b3aae3392e8cc9b2a3906302928a968e12fb3ee64",
+      "dialogue_blocks": 18
+    },
+    {
+      "file": "maps/Route30.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "66edc442434088ca8cd21d49e47e04ec69a54e40ce24f1444c94a3b0a04f7c29",
+      "dialogue_blocks": 19
+    },
+    {
+      "file": "maps/Route30BerryHouse.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2579b5b9a62e6c2f9bbfb37f6a1bfabf60ad972e6a661480d1e55c85823438d4",
+      "dialogue_blocks": 2
+    },
+    {
+      "file": "maps/Route31.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "72ce1e36eb0ee523f7afd253d7e06a1f6af313d11396b6ff2da548cc1d713e8b",
+      "dialogue_blocks": 16
+    },
+    {
+      "file": "maps/Route31VioletGate.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "df182e8fbe0dec72941c9eff9e4d0a333925530943c76f2339c2ad9b98f40faf",
+      "dialogue_blocks": 2
+    },
+    {
+      "file": "maps/Route32.asm",
+      "uncommitted": true,
+      "in_post_fork_history": true,
+      "sha256": "c9c08085838f55bf05034812c270f3df3188d9fad9a63e39a5bb3b063291089a",
+      "dialogue_blocks": 51
+    },
+    {
+      "file": "maps/Route32Pokecenter1F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "e2d8da4d2319a04ca34b78cfb6b4f76c44d5f5919c17e0aab9844729389aad54",
+      "dialogue_blocks": 6
+    },
+    {
+      "file": "maps/Route32RuinsOfAlphGate.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "898751860065a9df48fafe1a215d3c61e89211dd46aa53c2478dbdb346875a83",
+      "dialogue_blocks": 3
+    },
+    {
+      "file": "maps/Route33.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "614125d80362e62bb9d23629b3cc2342a6bc4dc15b271946533410bfe92e0e8a",
+      "dialogue_blocks": 6
+    },
+    {
+      "file": "maps/Route34.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "ffda976a6e77f94c98a8a5329575b51db88caec6fad8da1da269ca266dc0da19",
+      "dialogue_blocks": 37
+    },
+    {
+      "file": "maps/Route34IlexForestGate.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "222fa67f4b7aca53e10ebf77d0d599ed2523c0a84785cc2fd218d0ca70d4bc55",
+      "dialogue_blocks": 5
+    },
+    {
+      "file": "maps/Route35GoldenrodGate.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "64611999eb0a986238df1460b4124d778cc060e66ed90105c62a310e55180681",
+      "dialogue_blocks": 11
+    },
+    {
+      "file": "maps/Route36.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "dc7df2abeacbb19b1e0043bb8f51d94de5aa62b0fdc74e891f5b0772c7c3d55b",
+      "dialogue_blocks": 27
+    },
+    {
+      "file": "maps/Route36NationalParkGate.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ac0b462444d367ef7820085f29990ccdd443bcc3cff2d62a95549749113a5d8c",
+      "dialogue_blocks": 41
+    },
+    {
+      "file": "maps/Route36RuinsOfAlphGate.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0696275fd877d31568b8590498bd6d381849b5c4ce56fcdd5498319f57b10e35",
+      "dialogue_blocks": 2
+    },
+    {
+      "file": "maps/RuinsOfAlphAerodactylChamber.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "3ea626b3787f787973c0c8bc104d1ae9f71a7653d0904736d88cf79645a7e4d8",
+      "dialogue_blocks": 6
+    },
+    {
+      "file": "maps/RuinsOfAlphAerodactylItemRoom.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "24e3407fdd6306dea8a8c190623ee060bd9a41c30caee2c43de73244abadac06",
+      "dialogue_blocks": 1
+    },
+    {
+      "file": "maps/RuinsOfAlphHoOhChamber.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2bc4505a6e8be77f56cb01c23ebfec3ed6f6cf71b00666fa6a5f16ff1b5e8cd7",
+      "dialogue_blocks": 6
+    },
+    {
+      "file": "maps/RuinsOfAlphHoOhItemRoom.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "81db64cb4362829b6e122e1db834910e910b1e7e3e9efd54a924a60ed44f419c",
+      "dialogue_blocks": 1
+    },
+    {
+      "file": "maps/RuinsOfAlphInnerChamber.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "60aaf960569ce73606128fd13b5cc1928eea32ae0fc31f2d16847d63c8205d3d",
+      "dialogue_blocks": 5
+    },
+    {
+      "file": "maps/RuinsOfAlphKabutoChamber.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "638f47ad9eb0329bdee89ea07f2b5512f29fd639f2b2bdfa6cb219b6c73136a2",
+      "dialogue_blocks": 11
+    },
+    {
+      "file": "maps/RuinsOfAlphKabutoItemRoom.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "ba7a65caa311c3f1b48dd10e8b45b652c7ef66fc20479ea57cd29d5176e60435",
+      "dialogue_blocks": 1
+    },
+    {
+      "file": "maps/RuinsOfAlphOmanyteChamber.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "945a9f76f1c5c837f3e880e0d7952edd0da5c59d0efefba105c987c68cb4c176",
+      "dialogue_blocks": 6
+    },
+    {
+      "file": "maps/RuinsOfAlphOmanyteItemRoom.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "9aebfa9789752ce78ad5f383baad9f19f368b15eaa2f3c7a58daa3c57b8159d0",
+      "dialogue_blocks": 1
+    },
+    {
+      "file": "maps/RuinsOfAlphOutside.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "156dc4a0d7b19ed9b60d9c9d04b358262966b1c34aa8ee3574ba98ca6ac1795d",
+      "dialogue_blocks": 13
+    },
+    {
+      "file": "maps/RuinsOfAlphResearchCenter.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "96f4a0158b71f876d97b12bcd7266108dccfa74aad7f3a08d9a6cbff66c57e38",
+      "dialogue_blocks": 19
+    },
+    {
+      "file": "maps/SlowpokeWellB1F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "090c333ea48d5a8a6bfe02442ebe666ba49323abb264bae4de20352c29bc56b2",
+      "dialogue_blocks": 17
+    },
+    {
+      "file": "maps/SlowpokeWellB2F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "d7b2aa4bb66e98b100bc9b70021d1d5428d325982174977e427fcaccc65b093a",
+      "dialogue_blocks": 2
+    },
+    {
+      "file": "maps/SproutTower1F.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2fb6b9c2b227256294e9669956c2dc47e3e9f6284efb119ae8389b6ef814f09b",
+      "dialogue_blocks": 8
+    },
+    {
+      "file": "maps/SproutTower2F.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "2237a83f2cde8411f1788ea07526f4ee44465873205bcae7642fa7275967c67f",
+      "dialogue_blocks": 7
+    },
+    {
+      "file": "maps/SproutTower3F.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "500e891676a3d7a71cb5d8cbcd0200df5eaded25cd5a9b7333bfc98615ca744e",
+      "dialogue_blocks": 19
+    },
+    {
+      "file": "maps/UnionCave1F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "a678980fa0d11d47e70a0944b2a5c375e700a0491cfc77908411d1d1ba8aafb6",
+      "dialogue_blocks": 16
+    },
+    {
+      "file": "maps/UnionCaveB1F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "e77dacf206d06a04600ef1332d885f938961d1d63238026c73deffb8fd08c7c0",
+      "dialogue_blocks": 12
+    },
+    {
+      "file": "maps/UnionCaveB2F.asm",
+      "uncommitted": true,
+      "in_post_fork_history": false,
+      "sha256": "e3c46d26d43aa4bc80d962be9b221940ddd564d4ccddbf5453c4031456732039",
+      "dialogue_blocks": 9
+    },
+    {
+      "file": "maps/VioletCity.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "9a24e688bdca3155d64f7668a805c79a622b0b84f7f9219dbbd825cc04ce6fca",
+      "dialogue_blocks": 12
+    },
+    {
+      "file": "maps/VioletGym.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "9044be77241193e3ef5b6e15380a4e1ec10580aac16332835a5e41c1016d9534",
+      "dialogue_blocks": 14
+    },
+    {
+      "file": "maps/VioletKylesHouse.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "fe7e841b7872acccf8a7f1c0d4d930186fa9834ec09cec6e4439bac520ff7341",
+      "dialogue_blocks": 1
+    },
+    {
+      "file": "maps/VioletMart.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "0db848219a744b895e6d54b053b73f4009deb4f9c7c563be198b704d8814898a",
+      "dialogue_blocks": 2
+    },
+    {
+      "file": "maps/VioletNicknameSpeechHouse.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "6f295b3a51d1332ca2fa83247aaf520f2d560d6c3dceb5ffe2149fc04f6bb209",
+      "dialogue_blocks": 3
+    },
+    {
+      "file": "maps/VioletPokecenter1F.asm",
+      "uncommitted": false,
+      "in_post_fork_history": true,
+      "sha256": "74f97aa5f9486bdafb4acdd627e728c909f024fe54dc51845e8ffc1db487e7e6",
+      "dialogue_blocks": 10
+    }
+  ],
+  "counts": {
+    "dialogue_blocks": 2164,
+    "reference_matched": 1495,
+    "layout_mismatch": 788,
+    "potential_issues": 16
+  }
+}

@@ -107,137 +107,102 @@ BillsHouseRadio:
 	jumpstd Radio2Script
 
 BillTakeThisEeveeText:
-	text "BILL: Hi, <PLAYER>!"
-	line "Do us a favor and"
-	cont "take this EEVEE."
+	text "이수재『오오 <PLAYER>! 그래"
+	line "부탁이 있어 이브이를 맡아줘"
 
-	para "It came over when"
-	line "I was adjusting"
-	cont "the TIME CAPSULE."
+	para "이녀석 타임캡슐을 조정했더니"
+	line "갑자기 보내져왔단다"
 
-	para "Someone has to"
-	line "take care of it,"
+	para "누군가 돌봐줘야 할텐데 나는 밖에"
+	line "나가는 것을 좋아하지 않아서 말야"
 
-	para "but I don't like"
-	line "being outside."
-
-	para "Can I count on you"
-	line "to play with it,"
-	cont "<PLAYER>?"
+	para "이녀석이랑 같이 잘 놀아주겠니"
+	line "<PLAYER>?"
 	done
 
 BillImCountingOnYouText:
-	text "BILL: I knew you'd"
-	line "come through!"
+	text "이수재『역시 들어줄 줄 알았어!"
 
-	para "Way to go! You're"
-	line "the real deal!"
+	para "멋지구나! 정말 믿음직해!"
 
-	para "OK, I'm counting"
-	line "on you."
-
-	para "Take good care of"
-	line "it!"
+	para "그럼 부탁할께 많이 이뻐해줘!"
 	done
 
 ReceivedEeveeText:
-	text "<PLAYER> received"
-	line "EEVEE!"
+	text "<PLAYER>는(은)"
+	line "이브이를 얻었다!"
 	done
 
 BillEeveeMayEvolveText:
-	text "BILL: PROF.ELM"
-	line "claims EEVEE may"
-
-	para "evolve in new and"
-	line "unknown ways."
+	text "이수재『이브이에게는 새로운"
+	line "진화의 가능성이 있다고"
+	cont "공박사님이 발표했단다"
 	done
 
 BillPartyFullText:
-	text "Whoa, wait. You"
-	line "can't carry any"
-	cont "more #MON."
+	text "으… 이런"
+	line "그 이상 포켓몬을 지닐 수 없잖아"
 	done
 
 BillNoEeveeText:
-	text "Oh… Now what to"
-	line "do?"
+	text "그러냐……"
 	done
 
 BillPopWontWorkText:
-	text "BILL: My pop, he"
-	line "won't work. All he"
+	text "이수재『우리 아버지는 일도"
+	line "안하시고 하루종일 놀기만 하신단다"
 
-	para "does is goof off"
-	line "all day long."
-
-	para "He's getting to be"
-	line "a real headache…"
+	para "정말 골치가 아파지는군……"
 	done
 
 BillsMomText_BeforeEcruteak:
-	text "Oh, you collect"
-	line "#MON? My son"
-	cont "BILL is an expert."
+	text "너 포켓몬 모으고 있니 내 아들"
+	line "이수재는 포켓몬에 박식하단다"
 
-	para "He just got called"
-	line "to the #MON"
+	para "방금 인주시티의 포켓몬 센터에서"
+	line "와달라고 해서 거기로 갔단다"
 
-	para "CENTER in ECRUTEAK"
-	line "CITY."
-
-	para "My husband went"
-	line "off to the GAME"
-
-	para "CORNER without"
-	line "being called…"
+	para "우리 남편은 부르지도 않았는데"
+	line "게임코너로 가버렸지……"
 	done
 
 BillsMomText_AfterEcruteak:
-	text "My husband was"
-	line "once known as a"
-
-	para "#MANIAC."
-	line "BILL must have"
-
-	para "taken after his"
-	line "father."
+	text "우리 남편은 예전에 포켓몬"
+	line "매니아로 불렸었단다 이수재도"
+	cont "아버지를 닮았나봐"
 	done
 
 BillsYoungerSisterUsefulNumberText:
-	text "Are you a trainer?"
+	text "너 포켓몬 트레이너니?"
 
-	para "I've got a useful"
-	line "phone number for"
-	cont "you."
+	para "그렇다면 내가 굉장한"
+	line "전화번호를 가르쳐줄까?"
 	done
 
 RecordedBillsNumberText:
-	text "<PLAYER> recorded"
-	line "BILL's number."
+	text "<PLAYER>는(은) 이수재의"
+	line "전화번호를 등록했다!"
 	done
 
 BillsYoungerSisterRefusedNumberText:
-	text "My brother made"
-	line "the PC #MON"
-	cont "storage system."
+	text "컴퓨터로 포켓몬을 맡길 수 있는"
+	line "시스템을 만든 것은"
+	cont "내 오빠야"
 
-	para "I was going to"
-	line "give you BILL's"
-	cont "number…"
+	para "너에게 이수재 오빠의"
+	line "전화번호를"
+	cont "가르쳐주려고 생각했는데"
 	done
 
 BillsYoungerSisterPhoneFullText:
-	text "You can't record"
-	line "any more numbers."
+	text "앗!"
+	line "그 이상 등록을 할 수 없구나"
 	done
 
 BillsYoungerSisterStorageSystemText:
-	text "My big brother"
-	line "BILL made the PC"
-
-	para "#MON storage"
-	line "system."
+	text "컴퓨터로 포켓몬을"
+	line "맡길 수 있는 시스템을 만든 것은"
+	cont "이수재 오빠란다"
 	done
 
 BillsFamilysHouse_MapEvents:

@@ -274,12 +274,10 @@ Text_ThisIsABigBattle:
 
 YoungsterJoey1SeenText:
 	text "아까 진 것이 분해서"
-	line "포켓몬을"
-	cont "찾고있었어"
+	line "포켓몬을 찾고있었어"
 
-	para "헌데 너"
-	line "약해보이는구나……"
-	cont "좋아! 승부를 겨루어보자!"
+	para "헌데 너 약해보이는구나……"
+	line "좋아! 승부를 겨루어보자!"
 	done
 
 YoungsterJoey1BeatenText:
@@ -300,11 +298,8 @@ YoungsterJoey1AfterText:
 	done
 
 YoungsterMikeySeenText:
-	text "너 포켓몬"
-	line "트레이너지?"
-
-	para "그렇다면 포켓몬"
-	line "승부를 하자!"
+	text "너 포켓몬 트레이너지?"
+	line "그렇다면 포켓몬 승부를 하자!"
 	done
 
 YoungsterMikeyBeatenText:
@@ -314,38 +309,32 @@ YoungsterMikeyBeatenText:
 
 YoungsterMikeyAfterText:
 	text "포켓몬의 길은"
-	line "멀고도"
-	cont "험하구낭……"
+	line "멀고도 험하구낭……"
 
 	para "좋아! 여러 트레이너랑"
-	line "승부를 해서 단련하고"
-	cont "돌아와야지!"
+	line "승부를 해서 단련하고 돌아와야지!"
 	done
 
 BugCatcherDonSeenText:
-	text "벌레포켓몬"
-	line "대신"
-	cont "트레이너 발견!"
+	text "벌레포켓몬 대신"
+	line "트레이너 발견!"
 	done
 
 BugCatcherDonBeatenText:
-	text "에구구"
-	line "강하구나-!"
+	text "에구구 강하구나-!"
 	done
 
 BugCatcherDonAfterText:
 	text "포켓몬을 잡으니까"
-	line "몬스터볼을 다"
-	cont "써버려서……"
+	line "몬스터볼을 다 써버려서……"
 
 	para "더 많이"
 	line "사두었으면 좋았는데"
 	done
 
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
-	text "포켓몬 할아버지의"
-	line "집?"
-	cont "조금 더 가야해"
+	text "포켓몬 할아버지의 집?"
+	line "조금 더 가야해"
 	done
 
 Route30YoungsterText_EveryoneIsBattling:
@@ -364,9 +353,7 @@ Route30CooltrainerFText:
 
 Route30SignText:
 	text "이곳은 30번 도로"
-
-	para "도라지시티 ……"
-	line "무궁시티"
+	line "도라지시티 …… 무궁시티"
 	done
 
 MrPokemonsHouseDirectionsSignText:
@@ -385,8 +372,7 @@ Route30TrainerTipsText:
 	line "잡으면 도둑놈!"
 
 	para "몬스터볼은 야생의"
-	line "포켓몬에게만"
-	cont "던집시다!"
+	line "포켓몬에게만 던집시다!"
 	done
 
 YoungsterJoeyText_GiveHPUpAfterBattle:

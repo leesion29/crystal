@@ -119,17 +119,13 @@ MovementData_AideFinishesLeavingPokecenter:
 	step_end
 
 VioletPokecenterElmsAideFavorText:
-	text "<PLAY_G>"
-	line "오래간만입니다"
+	text "<PLAY_G> 오래간만입니다"
 
-	para "공박사님께 부탁을 받아서"
-	line "당신을 찾고 있었어요"
+	para "공박사님께 부탁을 받아서 당신을"
+	line "찾고 있었어요"
 
-	para "사실은"
-	line "……"
-
-	para "포켓몬 알을"
-	line "지니고 있어달라는 것입니다!"
+	para "사실은 …… 포켓몬 알을 지니고"
+	line "있어달라는 것입니다!"
 	done
 
 VioletPokecenterElmsAideGiveEggText:
@@ -154,17 +150,13 @@ VioletPokecenterElmsAideGiveEggText:
 
 VioletCityElmsAideFullPartyText:
 	text "포켓몬이 잔뜩 있어서"
-	line "그 이상 데리고 다닐 수"
-	cont "없습니다"
-
-	para "그럼"
-	line "이곳에서"
-	cont "기다리겠습니다"
+	line "그 이상 데리고 다닐 수 없습니다"
+	cont "그럼 이곳에서 기다리겠습니다"
 	done
 
 VioletPokecenterElmsAideRefuseText:
-	text "그 그런…… 공박사님의"
-	line "부탁이라니까요"
+	text "그 그런……"
+	line "공박사님의 부탁이라니까요"
 	done
 
 VioletPokecenterElmsAideAskEggText:
@@ -196,14 +188,13 @@ VioletPokecenterMobileAdapterText: ; unreferenced
 	done
 
 VioletPokecenter1FGameboyKidText:
-	text "잡은 포켓몬을 컴퓨터에"
-	line "맡기는 시스템을"
+	text "잡은 포켓몬을"
+	line "컴퓨터에 맡기는 시스템을"
 	cont "이수재라는 녀석이 만들었대"
 	done
 
 VioletPokecenter1FGentlemanText:
-	text "3년정도 전쯤의"
-	line "이야기란다"
+	text "3년정도 전쯤의 이야기란다"
 
 	para "로켓단이라고 하는 녀석들이"
 	line "포켓몬을 사용해서"
@@ -217,15 +208,10 @@ VioletPokecenter1FGentlemanText:
 VioletPokecenter1FYoungsterText:
 	text "포켓몬은 머리가 좋으니까"
 	line "존경할만한 트레이너가"
+	cont "말하는 것이 아니면 듣지 않아"
 
-	para "말하는 것이"
-	line "아니면 듣지 않아"
-
-	para "체육관 배지를"
-	line "지니고 있지 않으면"
-
-	para "명령도 듣지않고"
-	line "제멋대로란다"
+	para "체육관 배지를 지니고 있지 않으면"
+	line "명령도 듣지않고 제멋대로란다"
 	done
 
 VioletPokecenter1F_MapEvents:

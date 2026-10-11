@@ -267,16 +267,14 @@ Route31PokeBall:
 
 Route31CooltrainerMText:
 	text "어둠의 동굴……"
-
-	para "포켓몬이 주변을 밝게 해주는"
-	line "기술을 쓸 수 있다면"
+	line "포켓몬이 주변을 밝게 해주는"
+	cont "기술을 쓸 수 있다면"
 	cont "안을 조사해 볼 수 있을텐데"
 	done
 
 BugCatcherWade1SeenText:
-	text "잔뜩 포켓몬을"
-	line "잡았다"
-	cont "잠시 승부를 겨루어줘!"
+	text "잔뜩 포켓몬을 잡았다"
+	line "잠시 승부를 겨루어줘!"
 	done
 
 BugCatcherWade1BeatenText:
@@ -284,32 +282,21 @@ BugCatcherWade1BeatenText:
 	done
 
 BugCatcherWade1AfterText:
-	text "6마리를"
-	line "가지고 있을 때"
-
-	para "포켓몬을"
-	line "잡으면"
-
-	para "컴퓨터 통신에서"
-	line "자동적으로 박스에"
-	cont "보내어진단다!"
+	text "6마리를 가지고 있을 때"
+	line "포켓몬을 잡으면"
+	cont "컴퓨터 통신에서 자동적으로"
+	cont "박스에 보내어진단다!"
 	done
 
 Text_Route31SleepyMan:
 	text "움 음냐음냐……"
 
-	para "포켓몬을 찾아서"
-	line "너무"
-	cont "돌아다녔다"
-
-	para "다리는 아프고"
-	line "잠도오고……"
+	para "포켓몬을 찾아서 너무 돌아다녔다"
+	line "다리는 아프고 잠도오고……"
 
 	para "내가 야생 포켓몬이라면"
-	line "잡기 쉬운"
-	cont "상태다……"
-
-	para "쿠우…… 음냐음냐……"
+	line "잡기 쉬운 상태다……"
+	cont "쿠우…… 음냐음냐……"
 	done
 
 Text_Route31SleepyManGotMail:
@@ -320,9 +307,8 @@ Text_Route31SleepyManGotMail:
 	done
 
 Text_Route31HandOverMailMon:
-	text "<PLAYER>는(은)"
-	line "메일을 지닌"
-	cont "포켓몬을 건네주었다!"
+	text "<PLAYER>는(은) 메일을 지닌"
+	line "포켓몬을 건네주었다!"
 	done
 
 Text_Route31ReadingMail:
@@ -330,85 +316,60 @@ Text_Route31ReadingMail:
 
 	para "「어둠의 동굴에서부터"
 	line "다른길이 연결되어있어」"
+	cont "라고"
 
-	para "라고"
-	line "고맙다!"
+	para "고맙다!"
 
-	para "친구도"
-	line "친절하지만"
+	para "친구도 친절하지만"
+	line "너도 친절하구나!"
 
-	para "너도"
-	line "친절하구나!"
-	cont "친절에 감동받아서"
+	para "친절에 감동받아서"
+	line "나도 무언가 해주고싶어"
 
-	para "나도 무언가"
-	line "해주고싶어"
-	cont "맞아!"
-
-	para "이것을"
-	line "줄께!"
+	para "맞아!"
+	line "이것을 줄께!"
 	done
 
 Text_Route31DescribeNightmare:
 	text "기술머신50은 악몽"
 
-	para "자고있는"
-	line "상대의 체력을"
+	para "자고있는 상대의 체력을"
+	line "천천히 줄게하는 무서운 기술"
 
-	para "천천히 줄게하는"
-	line "무서운 기술"
-
-	para "우-"
-	line "떨려라……"
-
-	para "무서운 꿈은"
-	line "꾸고싶지 않아……"
+	para "우- 떨려라……"
+	line "무서운 꿈은 꾸고싶지 않아……"
 	done
 
 Text_Route31WrongMail:
-	text "이건 나에게 온"
-	line "메일이 아니야"
+	text "이건 나에게 온 메일이 아니야"
 	done
 
 Text_Route31MissingMail:
-	text "그 포켓몬이"
-	line "뭘 어떡했는데?"
-
-	para "메일을"
-	line "가지고있지 않잖아"
+	text "그 포켓몬이 뭘 어떡했는데?"
+	line "메일을 가지고있지 않잖아"
 	done
 
 Text_Route31DeclinedToHandOverMail:
-	text "뭐? 아무것도"
-	line "아니라구?"
+	text "뭐? 아무것도 아니라구?"
 	done
 
 Text_Route31CantTakeLastMon:
-	text "내가 그"
-	line "포켓몬을 받으면"
-
-	para "너는 싸울 수"
-	line "없게되는 것이군!"
+	text "내가 그 포켓몬을 받으면"
+	line "너는 싸울 수 없게되는 것이군!"
 	done
 
 Route31YoungsterText:
 	text "어둠의 동굴에서"
-	line "좋은 포켓몬을"
-	cont "잡았다!"
+	line "좋은 포켓몬을 잡았다!"
 
-	para "이녀석을"
-	line "단련시켜서"
-	cont "도라지시티"
-
-	para "체육관 관장"
-	line "비상과 승부를 내겠어!"
+	para "이녀석을 단련시켜서"
+	line "도라지시티 체육관 관장"
+	cont "비상과 승부를 내겠어!"
 	done
 
 Route31SignText:
 	text "이곳은 31번 도로"
-
-	para "도라지시티"
-	line "…… 무궁시티"
+	line "도라지시티 …… 무궁시티"
 	done
 
 DarkCaveSignText:

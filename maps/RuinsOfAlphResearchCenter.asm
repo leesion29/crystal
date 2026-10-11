@@ -191,18 +191,14 @@ RuinsOfAlphResearchCenterLeavesPlayerMovement:
 RuinsOfAlphResearchCenterModifiedDexText:
 	text "좋아!"
 
-	para "포켓몬 도감의"
-	line "개조가 끝났다!"
+	para "포켓몬 도감의 개조가"
+	line "끝났다!"
 
-	para "옵션에서"
-	line "안농도감을"
-
-	para "추가해"
-	line "넣었다"
+	para "옵션에서 안농도감을"
+	line "추가해 넣었다"
 
 	para "잡힌 순서대로"
-	line "기록될 수"
-	cont "있도록 했단다"
+	line "기록될 수 있도록 했단다"
 	done
 
 RuinsOfAlphResearchCenterDexUpgradedText:
@@ -212,8 +208,7 @@ RuinsOfAlphResearchCenterDexUpgradedText:
 
 RuinsOfAlphResearchCenterScientist3Text:
 	text "잡힌 안농이"
-	line "전부"
-	cont "기록되어질꺼야"
+	line "전부 기록되어질꺼야"
 
 	para "몇 종류나 있을까"
 	line "너도 확인해 줘!"
@@ -236,74 +231,48 @@ RuinsOfAlphResearchCenterScientist3_PrinterAvailable:
 
 RuinsOfAlphResearchCenterScientist1Text:
 	text "대략 1500년 전에"
-	line "유적이"
-	cont "만들어졌지만"
-
-	para "누가 무엇을 위해"
-	line "만들었나"
+	line "유적이 만들어졌지만"
+	cont "누가 무엇을 위해 만들었나"
 	cont "아직 모릅니다……"
 	done
 
 RuinsOfAlphResearchCenterScientist1Text_GotUnownDex:
 	text "유적의 포켓몬"
-	line "전부 몇"
-	cont "종류나 있지?"
+	line "전부 몇 종류나 있지?"
 	done
 
 RuinsOfAlphResearchCenterScientist1Text_UnownAppeared:
 	text "유적의 포켓몬이"
 	line "출현했어요!?"
 
-	para "이건 대"
-	line "사건이군"
-
-	para "바로 조사를"
-	line "착수해야겠군!"
+	para "이건 대 사건이군"
+	line "바로 조사를 착수해야겠군!"
 	done
 
 RuinsOfAlphResearchCenterScientist1Text_GotAllUnown:
-	text "네 도움으로"
-	line "조사를 진행하면서"
+	text "네 도움으로 조사를 진행하면서"
+	line "유적에 대해 알게 되었어"
 
-	para "유적에 대해"
-	line "알게 되었어"
-
-	para "유적은 포켓몬이"
-	line "살 곳으로"
-
-	para "만들어진"
-	line "것 같아"
+	para "유적은 포켓몬이 살 곳으로"
+	line "만들어진 것 같아"
 	done
 
 RuinsOfAlphResearchCenterScientist2Text:
-	text "벽에 그려져"
-	line "있는 모양이"
+	text "벽에 그려져 있는 모양이"
+	line "유적의 수수께끼를 푸는 열쇠다!"
 
-	para "유적의"
-	line "수수께끼를"
-
-	para "푸는"
-	line "열쇠다!"
-	cont "……라고"
-	cont "생각하는데-"
+	para "……라고 생각하는데-"
 	done
 
 RuinsOfAlphResearchCenterScientist2Text_UnownAppeared:
-	text "네가"
-	line "만난"
-	cont "포켓몬은"
-
-	para "유적 벽의"
-	line "모양과"
-
-	para "닮아있는것"
-	line "같군"
+	text "네가 만난 포켓몬은"
+	line "유적 벽의 모양과"
+	cont "닮아있는것 같군"
 
 	para "……흐음"
 
 	para "그렇다고하면 수많은 종류가"
-	line "유적에 있다는"
-	cont "것인가……"
+	line "유적에 있다는 것인가……"
 	done
 
 RuinsOfAlphResearchCenterUnusedText1: ; unreferenced
@@ -318,19 +287,13 @@ RuinsOfAlphResearchCenterUnusedText1: ; unreferenced
 	done
 
 RuinsOfAlphResearchCenterUnusedText2: ; unreferenced
-	text "내 연구에"
-	line "따르면……"
+	text "내 연구에 따르면……"
 
-	para "그 수수께끼의"
-	line "문양은"
+	para "그 수수께끼의 문양은 포켓몬"
+	line "커뮤니케이션센터가 만들어졌을 때"
+	cont "나타났어"
 
-	para "포켓몬 커뮤니케이션센터가"
-	line "만들어졌을 때 나타났어"
-
-	para "그렇다면"
-	line "전파와"
-
-	para "무언가 관계가"
+	para "그렇다면 전파와 무언가 관계가"
 	line "있다는 뜻이겠지……"
 	done
 
@@ -347,17 +310,13 @@ RuinsOfAlphResearchCenterScientist2Text_GotAllUnown:
 
 RuinsOfAlphResearchCenterComputerText:
 	text "알프 유적의 조사"
-
-	para "……올해로"
-	line "10년째"
+	line "……올해로 10년째"
 	done
 
 RuinsOfAlphResearchCenterComputerText_GotAllUnown:
 	text "수수께끼의 포켓몬"
 	line "이름……안농"
-
-	para "전부해서"
-	line "{d:NUM_UNOWN}종류 발견"
+	cont "전부해서 {d:NUM_UNOWN}종류 발견"
 	done
 
 RuinsOfAlphResearchCenterPrinterText_DoesntWork:
@@ -371,20 +330,15 @@ RuinsOfAlphResearchCenterUnownPrinterText:
 	done
 
 RuinsOfAlphResearchCenterProfSilktreePhotoText:
-	text "알프의 유적"
-	line "연구소 초대"
-
-	para "소장 작명박사의"
-	line "사진이다!"
+	text "알프의 유적 연구소"
+	line "초대 소장"
+	cont "작명박사의 사진이다!"
 	done
 
 RuinsOfAlphResearchCenterAcademicBooksText:
-	text "어려운 책들이"
-	line "가득하군"
-
-	para "『고대 유적』……"
-	line "『고대 문명의"
-	cont "수수께끼』……"
+	text "어려운 책들이 가득하군"
+	line "『고대 유적』……"
+	cont "『고대 문명의 수수께끼』……"
 	done
 
 RuinsOfAlphResearchCenter_MapEvents:

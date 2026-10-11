@@ -24,13 +24,11 @@ VioletNicknameSpeechHouseBirdScript:
 	end
 
 VioletNicknameSpeechHouseTeacherText:
-	text "좋아하는"
-	line "음식의 이름을"
-	cont "붙이고 있단다"
+	text "좋아하는 음식의 이름을"
+	line "붙이고 있단다"
 
-	para "우리 딸이"
-	line "붙이고 있는 것은"
-	cont "포켓몬의 별명이란다"
+	para "우리 딸이 붙이고 있는 것은"
+	line "포켓몬의 별명이란다"
 	done
 
 VioletNicknameSpeechHouseLassText:

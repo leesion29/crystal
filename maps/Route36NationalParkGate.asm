@@ -477,28 +477,20 @@ Route36NationalParkGateOfficer1AskToParticipateText:
 	text "오늘은 @"
 	text_ram wStringBuffer3
 	text "요일"
-	line "곤충채집"
+	line "곤충채집 대회가 열립니다"
 
-	para "대회가"
-	line "열립니다"
-
-	para "룰은"
-	line "간단!"
+	para "룰은 간단!"
 
 	para "소지한 포켓몬 1마리로"
 	line "강해보이는 벌레포켓몬을"
+	cont "잡을 수 있을까 경쟁하는겁니다"
 
-	para "잡을 수 있을까"
-	line "경쟁하는겁니다"
-
-	para "참가"
-	line "하겠습니까?"
+	para "참가하겠습니까?"
 	done
 
 Route36NationalParkGateOfficer1GiveParkBallsText:
-	text "대회에서"
-	line "사용할 전용볼을"
-	cont "받으세요!"
+	text "대회에서 사용할"
+	line "전용볼을 받으세요!"
 	done
 
 Route36NationalParkGatePlayerReceivedParkBallsText:
@@ -507,135 +499,96 @@ Route36NationalParkGatePlayerReceivedParkBallsText:
 	done
 
 Route36NationalParkGateOfficer1ExplainsRulesText:
-	text "가장 강해보이는"
-	line "포켓몬을"
-	cont "잡은 사람이"
-	cont "우승입니다!"
+	text "가장 강해보이는 포켓몬을"
+	line "잡은 사람이 우승입니다!"
 
-	para "제한시간은"
-	line "{d:BUG_CONTEST_MINUTES}분!"
+	para "제한시간은 {d:BUG_CONTEST_MINUTES}분!"
 
-	para "또한 파크볼이"
-	line "전부 떨어지면"
-	cont "종료입니다!"
+	para "또한 파크볼이 전부 떨어지면"
+	line "종료입니다!"
 
-	para "최종적으로"
-	line "잡은 포켓몬은"
-	cont "참가자의 것이"
+	para "최종적으로 잡은 포켓몬은"
+	line "참가자의 것이 되겠습니다!"
 
-	para "되겠습니다!"
-	line "열심히 해서"
-
-	para "강해보이는 포켓몬을"
-	line "잡아주세요!"
+	para "열심히 해서 강해보이는"
+	line "포켓몬을 잡아주세요!"
 	done
 
 Route36NationalParkGateOfficer1AskToUseFirstMonText:
 	text "엥?"
-
-	para "포켓몬이"
-	line "1마리가 아니로군요!"
+	line "포켓몬이 1마리가 아니로군요!"
 
 	para "대회에 필요한 포켓몬……"
 	line "@"
 	text_ram wStringBuffer3
 	text "(으)로"
-
-	para "참가하기로"
-	line "되겠습니다"
-
-	para "괜찮"
-	line "겠습니까?"
+	cont "참가하기로 되겠습니다"
+	cont "괜찮겠습니까?"
 	done
 
 Route36NationalParkGateOfficer1WellHoldYourMonText:
-	text "그럼 남은"
-	line "포켓몬은 여기서"
-	cont "맡아놓겠습니다!"
+	text "그럼 남은 포켓몬은"
+	line "여기서 맡아놓겠습니다!"
 	done
 
 Route36NationalParkGatePlayersMonLeftWithHelperText:
-	text "<PLAYER>는(은)"
-	line "관계자에게"
-	cont "포켓몬을 맡겼다!"
+	text "<PLAYER>는(은) 관계자에게"
+	line "포켓몬을 맡겼다!"
 	done
 
 Route36NationalParkGateOfficer1ChooseMonAndComeBackText:
-	text "대회에서 싸우게"
-	line "할 포켓몬을"
-
-	para "정하고나서 다시"
-	line "한번 와주세요"
+	text "대회에서 싸우게 할"
+	line "포켓몬을 정하고나서"
+	cont "다시 한번 와주세요"
 	done
 
 Route36NationalParkGateOfficer1TakePartInFutureText:
 	text "그렇습니까"
-	line "그럼 다음에"
-	cont "참가해주세요!"
+	line "그럼 다음에 참가해주세요!"
 	done
 
 Route36NationalParkGateOfficer1FirstMonCantBattleText:
 	text "엥?"
-	line "참가할"
+	line "참가할 포켓몬이"
+	cont "싸울 수 없어보이는군요"
 
-	para "포켓몬이"
-	line "싸울 수"
-
-	para "없어보이는군요"
-	line "포켓몬을"
-
-	para "바꾸고나서"
+	para "포켓몬을 바꾸고나서"
 	line "와주세요"
 	done
 
 Route36NationalParkGateOfficer1MakeRoomText:
-	text "엥? 소지품과"
-	line "컴퓨터 박스도"
+	text "엥?"
+	line "소지품과 컴퓨터 박스도"
+	cont "가득인 것 같군요"
 
-	para "가득인 것"
-	line "같군요 그렇다면"
+	para "그렇다면 벌레포켓몬을"
+	line "잡아도 지닐 수 없어요"
 
-	para "벌레포켓몬을"
-	line "잡아도 지닐"
-	cont "수 없어요"
-
-	para "소지품과"
-	line "컴퓨터 박스를"
-
-	para "정리하고"
-	line "와주세요"
+	para "소지품과 컴퓨터 박스를"
+	line "정리하고 와주세요"
 	done
 
 Route36NationalParkGateOfficer1EggAsFirstMonText:
 	text "엥?"
-	line "맨 앞의"
+	line "맨 앞의 포켓몬이"
+	cont "알 같군요"
 
-	para "포켓몬이"
-	line "알"
-
-	para "같군요"
-	line "포켓몬을"
-
-	para "바꾸고나서"
+	para "포켓몬을 바꾸고나서"
 	line "와주세요"
 	done
 
 Route36NationalParkGateOfficer1WantToFinishText:
-	text "남은시간은 앞으로 @"
+	text "남은시간은"
+	line "앞으로 @"
 	text_ram wStringBuffer3
-	text_start
-	line "분입니다"
-
-	para "벌써"
-	line "끝내겠습니까?"
+	text "분입니다"
+	cont "벌써 끝내겠습니까?"
 	done
 
 Route36NationalParkGateOfficer1WaitHereForAnnouncementText:
 	text "그렇습니까"
-	line "그럼 여기서"
-
-	para "결과발표를"
-	line "기다려 주십시오"
+	line "그럼 여기서 결과발표를"
+	cont "기다려 주십시오"
 	done
 
 Route36NationalParkGateOfficer1OkGoFinishText:
@@ -647,36 +600,27 @@ Route36NationalParkGateOfficer1OkGoFinishText:
 Route36NationalParkGateOfficer1ContestIsOverText:
 	text "오늘의 콘테스트는"
 	line "끝났어요"
-
-	para "다음에 다시"
-	line "참가하세요!"
+	cont "다음에 다시 참가하세요!"
 	done
 
 Route36NationalParkGateOfficer1SomeMonOnlySeenInParkText:
-	text "공원에서만"
-	line "발견할 수 있는"
-	cont "포켓몬도 있단다!"
+	text "공원에서만 발견할 수 있는"
+	line "포켓몬도 있단다!"
 	done
 
 BugCatchingContestant1BText:
-	text "미키『나를"
-	line "패배시키다니……"
-	cont "너 꽤 잘하는군!"
+	text "미키『나를 패배시키다니……"
+	line "너 꽤 잘하는군!"
 	done
 
 BugCatchingContestant1BStillCompetingText:
-	text "미키『포켓몬이"
-	line "나올까"
-
-	para "어떨까는"
-	line "운도"
-	cont "중요하단다"
+	text "미키『포켓몬이 나올까 어떨까는"
+	line "운도 중요하단다"
 	done
 
 BugCatchingContestant2BText:
-	text "태민『움"
-	line "부럽군 이번에는"
-	cont "상태가 나빴어"
+	text "태민『움 부럽군"
+	line "이번에는 상태가 나빴어"
 	done
 
 BugCatchingContestant2BStillCompetingText:
@@ -686,36 +630,27 @@ BugCatchingContestant2BStillCompetingText:
 
 BugCatchingContestant3BText:
 	text "켄『훌륭해!"
-	line "나도 포켓몬을"
-	cont "새롭게 키울꺼야!"
+	line "나도 포켓몬을 새롭게 키울꺼야!"
 	done
 
 BugCatchingContestant3BStillCompetingText:
-	text "켄『포켓몬의"
-	line "색깔이 희귀하면"
-
-	para "포인트가"
-	line "높아질까"
+	text "켄『포켓몬의 색깔이"
+	line "희귀하면 포인트가 높아질까"
 	done
 
 BugCatchingContestant4BText:
-	text "인명『네가"
-	line "우승인가! 어떤"
-	cont "포켓몬을 잡았느냐"
+	text "인명『네가 우승인가!"
+	line "어떤 포켓몬을 잡았느냐"
 	done
 
 BugCatchingContestant4BStillCompetingText:
-	text "인명『원하던"
-	line "포켓몬을"
-
-	para "발견한다면"
-	line "만족이지"
+	text "인명『원하던 포켓몬을"
+	line "발견한다면 만족이지"
 	done
 
 BugCatchingContestant5BText:
 	text "정남『축하해!"
-	line "너에대해 존경을"
-	cont "할 것 같아!"
+	line "너에대해 존경을 할 것 같아!"
 	done
 
 BugCatchingContestant5BStillCompetingText:
@@ -725,30 +660,22 @@ BugCatchingContestant5BStillCompetingText:
 	done
 
 BugCatchingContestant6BText:
-	text "웅일『네가"
-	line "잡은 포켓몬"
-	cont "멋있구나!"
+	text "웅일『네가 잡은"
+	line "포켓몬 멋있구나!"
 	done
 
 BugCatchingContestant6BStillCompetingText:
-	text "웅일『레벨이"
-	line "높으면"
-
-	para "우승하기"
-	line "쉬울텐데……"
-
-	para "그밖에도"
-	line "포인트가"
-	cont "있는 것 같아"
+	text "웅일『레벨이 높으면"
+	line "우승하기 쉬울텐데……"
+	cont "그밖에도 포인트가 있는 것 같아"
 	done
 
 BugCatchingContestant7BText:
 	text "미지『네가 우승!?"
 	line "대단하네!!"
 
-	para "다음번에 함께"
-	line "벌레포켓몬을"
-	cont "잡으러가지 않을래?"
+	para "다음번에 함께 벌레포켓몬을"
+	line "잡으러가지 않을래?"
 	done
 
 BugCatchingContestant7BStillCompetingText:
@@ -757,95 +684,69 @@ BugCatchingContestant7BStillCompetingText:
 	done
 
 BugCatchingContestant8BText:
-	text "희주『벌레포켓몬"
-	line "잡기에 이"
-	cont "내가 지다니……"
+	text "희주『벌레포켓몬 잡기에"
+	line "이 내가 지다니……"
 	done
 
 BugCatchingContestant8BStillCompetingText:
 	text "희주『캐터피로"
-	line "우승한 사람이"
-	cont "있다고한다!"
+	line "우승한 사람이 있다고한다!"
 	done
 
 BugCatchingContestant9BText:
-	text "동석『다음번엔"
-	line "내가 이길꺼야!"
+	text "동석『다음번엔 내가 이길꺼야!"
 	done
 
 BugCatchingContestant9BStillCompetingText:
-	text "동석『움 더"
-	line "많이 포인트가"
-	cont "높다고 생각했는데"
+	text "동석『움 더 많이"
+	line "포인트가 높다고 생각했는데"
 	done
 
 BugCatchingContestant10BText:
-	text "지선『꼭"
-	line "비법을"
-
-	para "가르쳐줘!"
+	text "지선『꼭 비법을 가르쳐줘!"
 	line "공부하고싶걸랑!"
 	done
 
 BugCatchingContestant10BStillCompetingText:
-	text "지선『공부하고는"
-	line "있지만……"
-
-	para "그것만으로는"
-	line "이길 수 없겠지"
+	text "지선『공부하고는 있지만……"
+	line "그것만으로는 이길 수 없겠지"
 	done
 
 UnusedSilphScope2Text: ; unreferenced
 ; This text is referring to Sudowoodo.
 ; The SILPHSCOPE2 was later reworked into the SQUIRTBOTTLE.
-	text "커다란 나무와"
-	line "같은 모습의"
-	cont "포켓몬이 어딘가에"
+	text "커다란 나무와 같은 모습의"
+	line "포켓몬이 어딘가에 있다고한다"
 
-	para "있다고한다 실프"
-	line "스코프2가 있다면"
-	cont "정체를 알 수 있데"
+	para "실프 스코프2가 있다면"
+	line "정체를 알 수 있데"
 	done
 
 UnusedBugCatchingContestExplanationText:
 ; duplicate of BugCatchingContestExplanationText in Route35NationalParkGate.asm
-	text "곤충채집"
-	line "대회가"
+	text "곤충채집 대회가"
+	line "열리는 것은……"
+	cont "화요일 목요일 토요일"
 
-	para "열리는"
-	line "것은……"
-
-	para "화요일"
-	line "목요일 토요일"
-
-	para "참가상을"
-	line "받는 것은"
-
-	para "물론이고 잡은"
-	line "벌레포켓몬을"
-
-	para "자기가 가질"
-	line "수 있습니다"
+	para "참가상을 받는 것은 물론이고"
+	line "잡은 벌레포켓몬을"
+	cont "자기가 가질 수 있습니다"
 	done
 
 Route36NationalParkGateOfficer1WellHoldPrizeText:
-	text "오잉? 짐이"
-	line "가득찬 것"
+	text "오잉?"
+	line "짐이 가득찬 것 같군요…"
 
-	para "같군요… 오늘"
-	line "가져갈 수 없다면"
-	cont "맡아두겠으니"
-
-	para "짐을 정리하고"
-	line "와주세요"
+	para "오늘 가져갈 수 없다면"
+	line "맡아두겠으니"
+	cont "짐을 정리하고 와주세요"
 	done
 
 Route36NationalParkGateOfficer1HeresThePrizeText:
 	text "<PLAYER>씨죠?"
 
 	para "여기"
-	line "맡아두었던"
-	cont "상품입니다"
+	line "맡아두었던 상품입니다"
 	done
 
 Route36NationalParkGate_MapEvents:

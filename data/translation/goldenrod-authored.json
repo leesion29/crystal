@@ -1,0 +1,769 @@
+[
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "label": "GoldenrodCityPokeComCenterSignText",
+    "source": "new",
+    "rows": [
+      "모바일 통신 안내!",
+      "포켓몬통신센터"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "label": "GoldenrodCityFlowerShopSignText",
+    "source": "new",
+    "rows": [
+      "아름다운 꽃이 피는",
+      "꽃가게"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "label": "GoldenrodCityMoveTutorAskTeachAMoveText",
+    "source": "new",
+    "rows": [
+      "원한다면 너의 포켓몬에게",
+      "굉장한 기술을 가르쳐줄 수",
+      "있단다",
+      "어떻게 할래?",
+      "새로운 기술을",
+      "가르쳐줄까?"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "label": "GoldenrodCityMoveTutorAsk4000CoinsOkayText",
+    "source": "new",
+    "rows": [
+      "동전 4000개가 필요한데",
+      "괜찮겠니?"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "label": "GoldenrodCityMoveTutorAwwButTheyreAmazingText",
+    "source": "new",
+    "rows": [
+      "아아…… 그렇게",
+      "굉장한 기술인데……"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "label": "GoldenrodCityMoveTutorWhichMoveShouldITeachText",
+    "source": "new",
+    "rows": [
+      "와하하하!",
+      "후회하지 않을꺼야!",
+      "어느 기술을",
+      "가르쳐줄까?"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "label": "GoldenrodCityMoveTutorHmTooBadText",
+    "source": "new",
+    "rows": [
+      "음 아쉽군",
+      "집에서 돈을 좀",
+      "가져와야겠어……"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "label": "GoldenrodCityMoveTutorIfYouUnderstandYouveMadeItText",
+    "source": "new",
+    "rows": [
+      "이 기술이 얼마나",
+      "굉장한지 알겠다면",
+      "너도 이제",
+      "어엿한 트레이너가",
+      "된 것이란다"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "label": "GoldenrodCityMoveTutorFarewellKidText",
+    "source": "new",
+    "rows": [
+      "와하하하!",
+      "잘 있거라 꼬마야!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "label": "GoldenrodCityMoveTutorBButText",
+    "source": "new",
+    "rows": [
+      "그 그렇지만……"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodCity.asm",
+    "label": "GoldenrodCityMoveTutorYouDontHaveEnoughCoinsText",
+    "source": "new",
+    "rows": [
+      "……동전이",
+      "부족한 것 같구나……"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodGym.asm",
+    "label": "PlayerReceivedPlainBadgeText",
+    "source": "original-gold",
+    "rows": [
+      "<PLAYER>는(은) 꼭두로부터",
+      "레귤러배지를 받았다!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodGym.asm",
+    "label": "LassCarrieSeenText",
+    "source": "new",
+    "rows": [
+      "내 포켓몬의",
+      "귀여운 모습만 보고",
+      "방심하면 안될꺼야",
+      "너를 이길 수 있으니까!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodGym.asm",
+    "label": "LassCarrieBeatenText",
+    "source": "new",
+    "rows": [
+      "이런……",
+      "약할 줄 알았는데……"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodGym.asm",
+    "label": "LassCarrieAfterBattleText",
+    "source": "new",
+    "rows": [
+      "내 포켓몬도 나를",
+      "귀엽다고 생각할까?"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodGym.asm",
+    "label": "GoldenrodGymGuideWinText",
+    "source": "new",
+    "rows": [
+      "이겼니? 그것 참 잘 되었구나!",
+      "나는 여기 여자아이들을",
+      "보느라 정신이 없었단다"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodBikeShop.asm",
+    "label": "BorrowedABicycleText",
+    "source": "original-gold",
+    "rows": [
+      "<PLAYER>는(은)",
+      "자전거를 빌렸다!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodHappinessRater.asm",
+    "label": "GoldenrodHappinessRaterTeacherText",
+    "source": "original-gold",
+    "rows": [
+      "포켓몬도",
+      "말이야",
+      "소중히 대해주면",
+      "잘 따른단다",
+      "응?",
+      "너의 @",
+      "……"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/BillsFamilysHouse.asm",
+    "label": "BillTakeThisEeveeText",
+    "source": "new",
+    "rows": [
+      "이수재『오오 <PLAYER>!",
+      "그래 부탁이 있어",
+      "이브이를 맡아줘",
+      "이녀석 타임캡슐을",
+      "조정했더니",
+      "갑자기 보내져왔단다",
+      "누군가",
+      "돌봐줘야 할텐데",
+      "나는 밖에 나가는 것을",
+      "좋아하지 않아서 말야",
+      "이녀석이랑",
+      "같이 잘 놀아주겠니",
+      "<PLAYER>?"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/BillsFamilysHouse.asm",
+    "label": "BillImCountingOnYouText",
+    "source": "new",
+    "rows": [
+      "이수재『역시",
+      "들어줄 줄 알았어!",
+      "멋지구나!",
+      "정말 믿음직해!",
+      "그럼",
+      "부탁할께",
+      "많이",
+      "이뻐해줘!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/BillsFamilysHouse.asm",
+    "label": "ReceivedEeveeText",
+    "source": "original-gold",
+    "rows": [
+      "<PLAYER>는(은)",
+      "이브이를 얻었다!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/BillsFamilysHouse.asm",
+    "label": "RecordedBillsNumberText",
+    "source": "original-gold",
+    "rows": [
+      "<PLAYER>는(은) 이수재의",
+      "전화번호를 등록했다!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/BillsFamilysHouse.asm",
+    "label": "BillPopWontWorkText",
+    "source": "new",
+    "rows": [
+      "이수재『우리 아버지는",
+      "일도 안하시고",
+      "하루종일",
+      "놀기만 하신단다",
+      "정말 골치가",
+      "아파지는군……"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/BillsFamilysHouse.asm",
+    "label": "BillsMomText_BeforeEcruteak",
+    "source": "new",
+    "rows": [
+      "너 포켓몬 모으고 있니",
+      "내 아들 이수재는",
+      "포켓몬에 박식하단다",
+      "방금 인주시티의",
+      "포켓몬 센터에서",
+      "와달라고 해서",
+      "거기로 갔단다",
+      "우리 남편은",
+      "부르지도 않았는데",
+      "게임코너로",
+      "가버렸지……"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/BillsFamilysHouse.asm",
+    "label": "BillsMomText_AfterEcruteak",
+    "source": "new",
+    "rows": [
+      "우리 남편은",
+      "예전에 포켓몬 매니아로",
+      "불렸었단다",
+      "이수재도",
+      "아버지를 닮았나봐",
+      ""
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodFlowerShop.asm",
+    "label": "GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute36Text",
+    "source": "new",
+    "rows": [
+      "그 꿈틀꿈틀 움직이는",
+      "나무를 보았니?",
+      "36번 도로에서",
+      "자라고 있단다",
+      "내 동생이",
+      "잔뜩 신이 나서",
+      "그 나무를 보러",
+      "가버렸어……",
+      "걱정이 되는구나……",
+      "위험하지 않을까?"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodFlowerShop.asm",
+    "label": "GoldenrodFlowerShopTeacherAskWantToBorrowWaterBottleText",
+    "source": "new",
+    "rows": [
+      "너도 물뿌리개를",
+      "빌리고 싶니?",
+      "하지만 그걸로",
+      "위험한 짓을",
+      "하지 않았으면",
+      "좋겠구나"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodFlowerShop.asm",
+    "label": "GoldenrodFlowerShopTeacherHeresTheSquirtbottleText",
+    "source": "new",
+    "rows": [
+      "응? 너",
+      "꼭두보다 강하구나",
+      "그럼 걱정 없겠네!",
+      "자 여기",
+      "꼬부기 물뿌리개야!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodFlowerShop.asm",
+    "label": "GoldenrodFlowerShopTeacherDontDoAnythingDangerousText",
+    "source": "new",
+    "rows": [
+      "너무 위험한 짓은",
+      "하지 말아라!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodFlowerShop.asm",
+    "label": "GoldenrodFlowerShopFloriaWonderIfSisWillLendWaterBottleText",
+    "source": "new",
+    "rows": [
+      "언니에게",
+      "움직이는 나무 이야기를",
+      "했더니",
+      "위험하다고 하더라",
+      "내가 꼭두에게 이기면",
+      "언니가 나한테",
+      "물뿌리개를",
+      "빌려줄까……"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodFlowerShop.asm",
+    "label": "GoldenrodFlowerShopFloriaYouBeatWhitneyText",
+    "source": "new",
+    "rows": [
+      "와아 꼭두에게 이겼어?",
+      "굉장하다!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodFlowerShop.asm",
+    "label": "GoldenrodFlowerShopFloriaItReallyWasAMonText",
+    "source": "new",
+    "rows": [
+      "역시",
+      "포켓몬이었구나!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodGameCorner.asm",
+    "label": "GoldenrodGameCornerPrizeVendorConfirmPrizeText",
+    "source": "original-gold",
+    "rows": [
+      "(으)로",
+      "하시겠습니까?"
+    ],
+    "state": "development-needs-human-review",
+    "reference_ignore_tokens": [
+      "@"
+    ]
+  },
+  {
+    "file": "maps/GoldenrodGameCorner.asm",
+    "label": "GoldenrodGameCornerPharmacistText",
+    "source": "new",
+    "rows": [
+      "이 기계는",
+      "다른 기계들과",
+      "똑같아 보인다",
+      "항상 이 슬롯머신으로 하고 있다",
+      "어쩐지 다른 것과 비교해서",
+      "나오기 쉬울 것 같은",
+      "기분이 든다"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodGameCorner.asm",
+    "label": "GoldenrodGameCornerPokefanM1Text",
+    "source": "new",
+    "rows": [
+      "이 기계들은",
+      "무지개시티에 있는 것과",
+      "달라",
+      "보이는군!",
+      "최신형의 슬롯머신은 좋구나",
+      "무지개시티에서",
+      "할 때 보다",
+      "도전하는 보람도",
+      "있단다!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodGameCorner.asm",
+    "label": "GoldenrodGameCornerCooltrainerMText",
+    "source": "new",
+    "rows": [
+      "여기서는 확실한 게",
+      "하나도 없어",
+      "인생 한방 승부!",
+      "쓰러질 때까지",
+      "카드를 돌리는거야!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodGameCorner.asm",
+    "label": "GoldenrodGameCornerPokefanFText",
+    "source": "new",
+    "rows": [
+      "카드 돌리기……",
+      "다른 기계들과는",
+      "다르지",
+      "자신이 예상을",
+      "하기 쉽기때문에",
+      "슬롯머신보다",
+      "좋아해",
+      "하지만 배율은",
+      "훨씬 낮단다"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodGameCorner.asm",
+    "label": "MoveTutorInsideText",
+    "source": "new",
+    "rows": [
+      "와하하하!",
+      "동전이 계속 들어오는군!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodGameCorner.asm",
+    "label": "GoldenrodGameCornerLeftTheirDrinkText",
+    "source": "new",
+    "rows": [
+      "누군가 마실 것을",
+      "두고 갔다",
+      "달콤한 냄새가 난다"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/Route35GoldenrodGate.asm",
+    "label": "Route35GoldenrodGatePlayerReceivedAMonWithMailText",
+    "source": "original-gold",
+    "rows": [
+      "<PLAYER>는(은) 메일을 지닌",
+      "포켓몬을 맡았다!"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/Route35GoldenrodGate.asm",
+    "label": "Route35GoldenrodGateFisherText",
+    "source": "original-gold",
+    "rows": [
+      "이 세상에는",
+      "어느정도나",
+      "포켓몬이",
+      "있는 것일까",
+      "3년전 오박사님은",
+      "150종류가",
+      "있다고",
+      "발표하셨는데"
+    ],
+    "state": "development-needs-human-review",
+    "ref_file": "maps/GoldenrodPokecenter1F.asm",
+    "ref_label": "GoldenrodPokecenter1FPersonText"
+  },
+  {
+    "file": "maps/GoldenrodDeptStore1F.asm",
+    "label": "GoldenrodDeptStore1FDirectoryText",
+    "source": "new",
+    "rows": [
+      "1층……서비스 카운터",
+      "2층……",
+      "트레이너즈 마켓",
+      "3층……",
+      "배틀 컬렉션",
+      "4층……메디신 박스",
+      "5층……기술머신 코너",
+      "6층……휴식의 광장",
+      "옥상……전망대"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodDeptStore5F.asm",
+    "label": "GoldenrodDeptStore5FCarrieMysteryGiftRequiresGBCText",
+    "source": "new",
+    "rows": [
+      "이상한 소포는",
+      "게임보이 컬러가 아니면",
+      "사용할 수 없단다"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodDeptStore6F.asm",
+    "label": "GoldenrodClangText",
+    "source": "original-gold",
+    "rows": [
+      "덜컹!",
+      "@",
+      "(이)가 나왔다"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodUnderground.asm",
+    "label": "GoldenrodUndergroundOlderHaircutBrotherOfferHaircutText",
+    "source": "original-gold",
+    "rows": [
+      "어서오세요!",
+      "우리집은",
+      "포켓몬 미용실!",
+      "실력이 확실한 나는",
+      "미용사 형제중의",
+      "형님이",
+      "500원으로",
+      "당신의 포켓몬을",
+      "예쁘게 꾸며줍니다!",
+      "어떻게 할래요?",
+      "예쁘게 꾸며줄까요?"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodUnderground.asm",
+    "label": "GoldenrodUndergroundYoungerHaircutBrotherOfferHaircutText",
+    "source": "original-gold",
+    "rows": [
+      "포켓몬 미용실에",
+      "잘 오셨습니다!",
+      "나는",
+      "미용사 형제중의 동생!",
+      "값이 싼 점이",
+      "영업방침!",
+      "300원으로 너의",
+      "포켓몬을",
+      "예쁘게 해 줄께!",
+      "어떻게 할래? 나한테 맡겨볼래?"
+    ],
+    "state": "development-needs-human-review"
+  },
+  {
+    "file": "maps/GoldenrodUnderground.asm",
+    "label": "HaircutBrosText_SlightlyHappier",
+    "source": "original-gold",
+    "rows": [
+      "는(은)",
+      "약간 기쁜 듯"
+    ],
+    "state": "development-needs-human-review",
+    "reference_ignore_tokens": [
+      "@"
+    ]
+  },
+  {
+    "file": "maps/GoldenrodUnderground.asm",
+    "label": "HaircutBrosText_Happier",
+    "source": "original-gold",
+    "rows": [
+      "는(은)",
+      "기뻐하는 것 같다!"
+    ],
+    "state": "development-needs-human-review",
+    "reference_ignore_tokens": [
+      "@"
+    ]
+  },
+  {
+    "file": "maps/GoldenrodUnderground.asm",
+    "label": "HaircutBrosText_MuchHappier",
+    "source": "original-gold",
+    "rows": [
+      "는(은)",
+      "매우 기뻐하는 것 같다!"
+    ],
+    "state": "development-needs-human-review",
+    "reference_ignore_tokens": [
+      "@"
+    ]
+  },
+  {
+    "file": "maps/GoldenrodUndergroundSwitchRoomEntrances.asm",
+    "label": "BurglarEddieSeenText",
+    "source": "new",
+    "rows": [
+      "공사가 끝나기도 전에",
+      "이곳을",
+      "버려두고 갔더군",
+      "남겨진 보물을",
+      "찾고 있는 중이야"
+    ],
+    "state": "development-needs-human-review"
+  }
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterWelcomeToTradeCornerText","source":"new","rows":["안녕하세요 어서오세요","포켓몬통신센터의","교환코너입니다","멀리 떨어진 사람들과","포켓몬을","교환할 수 있습니다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterWeMustHoldYourMonText","source":"new","rows":["교환을 하려면","당신의 포켓몬을","맡아두어야 합니다","교환을","하시겠습니까?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterWhatMonDoYouWantText","source":"new","rows":["어떤 포켓몬을","대신 받고","싶으신가요?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterWeWillTradeYourMonForMonText","source":"new","rows":["알겠습니다","교환할 포켓몬은","@"," 대신","@","입니다","교환이 이루어지는 동안","당신의 포켓몬을","맡아두겠습니다","포켓몬을 맡아둘","방을 준비하겠습니다","잠시 기다려주세요"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterWeWillTradeYourMonForNewText","source":"new","rows":["알겠습니다","교환할 포켓몬은","@"," 대신","당신이 아직 본 적 없는","포켓몬입니다","교환이 이루어지는 동안","당신의 포켓몬을","맡아두겠습니다","포켓몬을 맡아둘","방을 준비하겠습니다","잠시 기다려주세요"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterYourMonHasBeenReceivedText","source":"new","rows":["교환할 포켓몬을","맡았습니다","교환 상대를","찾는 데는 시간이","걸립니다 나중에","다시 와주십시오"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterYouHaveOnlyOneMonText","source":"new","rows":["어라? 지니고 계신","포켓몬이 한마리","뿐이군요","지닌 포켓몬의 수를","늘린 뒤에","다시","와주십시오"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterWeHopeToSeeYouAgainText","source":"original-gold","rows":["그럼","또 오세요"],"state":"development-needs-human-review","ref_file":"maps/Pokecenter2F.asm","ref_label":"Text_PleaseComeAgain"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterCommunicationErrorText","source":"new","rows":["통신 에러가","발생했습니다……"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterCantAcceptLastMonText","source":"new","rows":["그 포켓몬을 맡기면","어떤 포켓몬으로","싸우시겠습니까?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterCantAcceptEggText","source":"new","rows":["죄송합니다","알은 맡길 수 없습니다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterCantAcceptAbnormalMonText","source":"new","rows":["죄송하지만","당신의 포켓몬에","이상이 있는 것 같아","맡을 수 없습니다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterAlreadyHoldingMonText","source":"new","rows":["어라? 이미","당신의 포켓몬을","맡고 있지 않나요?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterCheckingTheRoomsText","source":"new","rows":["방을","확인하겠습니다","잠시 기다려주십시오"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterTradePartnerHasBeenFoundText","source":"new","rows":["기다려주셔서","감사합니다","교환 상대를","찾았습니다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterItsYourNewPartnerText","source":"new","rows":["새로운","파트너입니다","사랑을 담아서","소중히 키워주세요","그럼","또 오세요"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterYourPartyIsFullText","source":"new","rows":["이런 지닌 포켓몬이","이미 가득하군요","포켓몬을","더 지닐 수 있을 때","다시 와주십시오"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterNoTradePartnerFoundText","source":"new","rows":["안타깝지만","교환할","상대가","나타나지 않았습니다","포켓몬을","돌려받으시겠습니까?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterReturnedYourMonText","source":"new","rows":["당신의 포켓몬을","돌려드렸습니다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterYourMonIsLonelyText","source":"new","rows":["안타깝지만","교환할","상대가","나타나지 않았습니다","당신의 포켓몬을","오랫동안 맡고","있었기 때문에","많이 외로워하고 있습니다","죄송하지만 포켓몬을","돌려드리겠습니다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecenter1FWeHopeToSeeYouAgainText_2","source":"original-gold","rows":["그럼","또 오세요"],"state":"development-needs-human-review","ref_file":"maps/Pokecenter2F.asm","ref_label":"Text_PleaseComeAgain"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterContinueToHoldYourMonText","source":"new","rows":["알겠습니다","계속 포켓몬을","맡아두겠습니다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterRecentlyLeftYourMonText","source":"new","rows":["어라? 포켓몬을","맡기신 지 얼마","되지 않았군요","나중에","다시 와주십시오"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterSaveBeforeTradeCornerText","source":"original-gold","rows":["통신을 시작하기","전에","레포트를 쓰겠습니다"],"state":"development-needs-human-review","ref_file":"maps/Pokecenter2F.asm","ref_label":"Text_MustSaveGame"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterWhichMonToTradeText","source":"new","rows":["어느 포켓몬을","교환하시겠습니까?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterTradeCanceledText","source":"new","rows":["죄송하지만","교환을 중지하겠습니다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterEggTicketText","source":"new","rows":["어머!","알티켓을","가지고 계시는군요!","특별한 분들이","특별한 포켓몬을","받을 수","있는 티켓입니다!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterOddEggBriefingText","source":"new","rows":["간단하게","설명해드리겠습니다","교환코너에서의","교환은","서로 모르는","트레이너끼리","이루어지는","교환입니다","그래서 시간이","걸릴 수도 있습니다","하지만 당신을 위해","특별히 준비한","이상한 알이 있습니다","그 알은","곧바로 보내드리겠습니다","센터의 방 중","한 곳을","선택해주세요","선택하신 방에서","이상한 알을","보내드립니다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPleaseWaitAMomentText","source":"original-gold","rows":["잠시","기다려주십시오"],"state":"development-needs-human-review","ref_file":"maps/Pokecenter2F.asm","ref_label":"Text_PleaseWait"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterHereIsYourOddEggText","source":"new","rows":["기다려주셔서","감사합니다","당신의 이상한 알이","도착했습니다","자 여기 있습니다!","사랑을 담아서","소중히 키워주세요"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterNoEggTicketServiceText","source":"new","rows":["정말 죄송합니다","지금은 알티켓","교환 서비스를","이용하실 수 없습니다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterNewsMachineText","source":"new","rows":["포켓몬 뉴스","기계다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterWhatToDoText","source":"new","rows":["어떻게","하시겠습니까?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterNewsMachineExplanationText","source":"new","rows":["포켓몬 뉴스는","포켓몬 트레이너의","레포트를 모아서","만드는 뉴스입니다","뉴스를 읽을 때","당신의 레포트가","전송될 수도","있습니다","레포트의 데이터에는","당신의 모험 기록과","모바일 프로필이","들어 있습니다","전화번호는","전송되지 않습니다","당신과 다른","포켓몬 트레이너들이","보내준 레포트에","따라서","뉴스의 내용도","바뀝니다","당신도 뉴스에","나올 수 있습니다!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterWouldYouLikeTheNewsText","source":"new","rows":["뉴스를","받으시겠습니까?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterReadingTheLatestNewsText","source":"new","rows":["최신 뉴스를 받는 중……","잠시 기다려주십시오"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterNoOldNewsText","source":"new","rows":["지난 뉴스가","없습니다……"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterCorruptedNewsDataText","source":"new","rows":["뉴스 데이터가","손상되었습니다","뉴스를 다시","받아주십시오"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterMakingPreparationsText","source":"new","rows":["지금은","준비중입니다","나중에","다시 와주십시오"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterSaveBeforeNewsMachineText","source":"new","rows":["포켓몬 뉴스","기계를 사용하기","전에 레포트를","쓰겠습니다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson1Text","source":"new","rows":["와아 이 포켓몬","센터는 정말 크구나","새로 지은 곳이래","처음 보는 기계도","잔뜩","들여놓았더라"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson2Text","source":"new","rows":["교환코너에서 할 수 있는","재미있는 일을","생각해냈어!","구구에게","메일을 지니게 해서","다른 구구와","교환을","하는거야!","모두가 그렇게 하면","여러 사람들과","메일을 교환할 수","있잖아!","이름하여","구구 메일!","유행하게 되면","새로운 친구도","많이 사귈 수","있을꺼야!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson3Text","source":"new","rows":["여기서는 전혀","모르는 사람과도","포켓몬을 교환할 수","있다고 하더라","하지만 아직","조정중이래"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson4Text","source":"new","rows":["모르는 여자아이가","자기 통통코를","보내줬어","너도 갖고 싶은","포켓몬과 교환을","해보면 어때?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson5Text","source":"new","rows":["암컷 통통코를","받았는데","이름이 스탠리야!","우리 아빠","이름이잖아!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson6Text","source":"new","rows":["뉴스 기계가","뭘까?","라디오보다 더 넓은","지역의 뉴스를","알려주는걸까?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson7Text","source":"new","rows":["포켓몬통신센터는","무선 통신망으로","모든 포켓몬 센터와","연결된대","그렇다면","여러 사람들과","통신할 수","있겠구나"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson8Text","source":"new","rows":["여기 기계들은","아직 쓸 수 없대","그래도 남들보다","유행하는 곳에 먼저","와보니까","기분이 좋아"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson9Text","source":"new","rows":["얼마 전에 내 친구가","뉴스에 나왔어","정말","놀랐다니까!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson10Text","source":"new","rows":["최신 뉴스를","확인하지 않으면","불안하다니까!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson11Text","source":"new","rows":["뉴스에 나와서","유명해지면","사람들에게 인기도","많아지겠지","어떻게 해야","뉴스에","나올 수 있을까?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson12Text","source":"new","rows":["금빛시티의","포켓몬 센터에","아무도 본 적 없는","새로운 기계가","들어왔다는","소식을 듣고","찾아왔단다","하지만 아직","준비를 하느라","다들","바쁜 것 같구나……"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterPerson13Text","source":"new","rows":["여기서 새로운 것들을","구경하는 것만으로도","젊어지는","기분이 드는군!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokeCenter1FLinkReceptionistPleaseAcceptGSBallText","source":"new","rows":["<PLAYER> 맞으시죠?","축하합니다!","특별 선물로","당신 앞으로","GS볼이 도착했습니다!","받아주십시오!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokeCenter1FLinkReceptionistPleaseDoComeAgainText","source":"original-gold","rows":["그럼","또 오세요"],"state":"development-needs-human-review","ref_file":"maps/Pokecenter2F.asm","ref_label":"Text_PleaseComeAgain"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterSignText","source":"new","rows":["포켓몬통신센터","1층……안내","왼쪽:","관리 사무실","가운데:","교환코너","오른쪽:","포켓몬 뉴스"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecomCenterNewsMachineNotYetText","source":"new","rows":["포켓몬 뉴스","기계다!","아직","작동하지 않는 것 같다……"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecenter1FPokefanFDoYouHaveEonMailText","source":"new","rows":["어머 가방이","아주 무거워 보이는구나!","앗 혹시","브이브이 메일이라는","것을 가지고 있니?","내 딸이","갖고 싶어 하거든","하나만","나눠주지 않겠니?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecenter1FAskGiveAwayAnEonMailText","source":"new","rows":["브이브이 메일을","건네주겠습니까?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecenter1FPokefanFThisIsForYouText","source":"new","rows":["어머 정말 기쁘구나!","고맙다 얘야!","자 이건","답례로 줄께!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecenter1FPokefanFDaughterWillBeDelightedText","source":"new","rows":["우리 딸이","아주 좋아하겠구나!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecenter1FPokefanFTooBadText","source":"new","rows":["어라? 가지고 있지","않니? 아쉽구나"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecenter1FPokefanFAnotherTimeThenText","source":"new","rows":["아…… 그럼","다음 기회에 부탁할께"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodPokecenter1F.asm","label":"GoldenrodPokecenter1FPlayerGaveAwayTheEonMailText","source":"new","rows":["<PLAYER>는(은)","브이브이 메일을 건네주었다"],"state":"development-needs-human-review"}
+,{"file":"maps/PokecomCenterAdminOfficeMobile.asm","label":"PokecomCenterAdminOfficeMobileScientist1Text","source":"new","rows":["포켓몬통신센터와","모바일 센터는","멀리 떨어진 사람과","교환이나 대전을","즐기고 싶다는","트레이너들의","요청에 따라","만들어졌단다"],"state":"development-needs-human-review"}
+,{"file":"maps/PokecomCenterAdminOfficeMobile.asm","label":"PokecomCenterAdminOfficeMobileScientist2Text","source":"new","rows":["누군가와","휴대전화로","처음","통신을 했을 때","감동하지","않았니?","나는 첫 통신이","성공했을 때","너무 감동해서","몸이 떨릴 정도였단다!"],"state":"development-needs-human-review"}
+,{"file":"maps/PokecomCenterAdminOfficeMobile.asm","label":"PokecomCenterAdminOfficeMobileScientist3Text","source":"new","rows":["이렇게 커다란","시설을 만들 수 있었던 것은","무선 통신","기술이 발전한","덕분이란다"],"state":"development-needs-human-review"}
+,{"file":"maps/PokecomCenterAdminOfficeMobile.asm","label":"PokecomCenterAdminOfficeMobileComputer1Text","source":"new","rows":["모바일 어댑터를","어디에서","사용할 수 있는지","안내되어 있다……"],"state":"development-needs-human-review"}
+,{"file":"maps/PokecomCenterAdminOfficeMobile.asm","label":"PokecomCenterAdminOfficeMobileComputer1Text_PokeComClub","source":"new","rows":["포켓몬통신 클럽은","어느 포켓몬","센터든","2층에 있습니다","그곳에서는","교환이나 대전을","모바일 어댑터로","멀리 있는 친구와","즐길 수 있습니다","통신하려면","친구도 당신과","같은 종류의","모바일 어댑터를","가지고 있어야 합니다"],"state":"development-needs-human-review"}
+,{"file":"maps/PokecomCenterAdminOfficeMobile.asm","label":"PokecomCenterAdminOfficeMobileComputer1Text_MobileCenter","source":"new","rows":["교환코너를 이용하거나","포켓몬 뉴스를 읽으려면","모바일 센터에","전화를","걸어야 합니다","통신하기 전에","모바일 센터에","등록을 해두어야","합니다"],"state":"development-needs-human-review"}
+,{"file":"maps/PokecomCenterAdminOfficeMobile.asm","label":"PokecomCenterAdminOfficeMobileComputer2Text","source":"new","rows":["전화 사용에","대한","안내문이다……"],"state":"development-needs-human-review"}
+,{"file":"maps/PokecomCenterAdminOfficeMobile.asm","label":"PokecomCenterAdminOfficeMobileComputer2Text_UsePhone","source":"new","rows":["전화와","모바일 어댑터가","제대로 연결되었는지","확인해주세요","전화의 전파가","강하게 잡히는지도","확인해주세요","통신중에는","전화를 만지거나","끊지 마세요"],"state":"development-needs-human-review"}
+,{"file":"maps/PokecomCenterAdminOfficeMobile.asm","label":"PokecomCenterAdminOfficeMobileComputer2Text_DontUsePhone","source":"new","rows":["서버가","혼잡할 때는","접속하지 못하는","경우가 있습니다","그럴 때는 나중에","다시 전화해주세요","접속할 수 없거나","에러 메시지가","무슨 뜻인지","모르겠다면","고객 지원센터에","문의하거나","설명서를 읽어주세요"],"state":"development-needs-human-review"}
+,{"file":"maps/PokecomCenterAdminOfficeMobile.asm","label":"PokecomCenterAdminOfficeMobileComputer3Text","source":"new","rows":["관리 사무실에","전자우편이","도착해 있다 내용은……","<……> <……> <……>","포켓몬통신센터","직원 여러분께……","무선 통신","기술 덕분에","전국의","포켓몬 트레이너들이","서로 교류할 수","있게 되었습니다","세계의 모든","트레이너들이","장벽 없이 통신할 수","있도록 계속 노력합시다!","<……> <……> <……>"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"GoldenrodDeptStoreRoofPokefanFText","source":"new","rows":["휴우 피곤하구나","가끔 쇼핑을 하다가","쉬고 싶을 때","옥상에","올라온단다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"GoldenrodDeptStoreRoofFisherText","source":"new","rows":["뭐라고? 어른은","이런 것에 빠지면 안된다고","누가 그래?","나는","날마다 와서","인형을 전부","모을꺼야!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"GoldenrodDeptStoreRoofTwinText","source":"new","rows":["여기서는 가끔","특가 판매를","한단다"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"GoldenrodDeptStoreRoofSuperNerdOhWowText","source":"new","rows":["오오 굉장하다!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"GoldenrodDeptStoreRoofSuperNerdQuitBotheringMeText","source":"new","rows":["나 좀 그만","방해해줄래?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"GoldenrodDeptStoreRoofPokefanMText","source":"new","rows":["정말로","갖고 싶은 것이 있는데","살 돈이","부족하구나……","모아둔","나무열매라도","팔아볼까……"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"GoldenrodDeptStoreRoofTeacherText","source":"new","rows":["어머 모두","정말 싸구나!","너무 많이 샀더니","가방이 꽉 찼어!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"GoldenrodDeptStoreRoofBugCatcherText","source":"new","rows":["내 포켓몬은 꼭","곤란한 순간에","마비되거나","독에 걸리더라……","그래서","만병통치제를 사러 왔어","아직","남아 있을까?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"Binoculars1Text","source":"new","rows":["망원경으로","멀리까지 보이는구나","우리 집도","보이지 않을까?","초록색 지붕의","저 집일까?"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"Binoculars2Text","source":"new","rows":["앗! 트레이너들이","도로에서","싸우고 있어!","포켓몬이","잎사귀를 마구 날렸어!","나도","당장 싸우고 싶은","기분이 드는걸!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"Binoculars3Text","source":"new","rows":["낚시꾼이 잉어킹을","잔뜩 잡았구나……","다같이","튀어오르기를 하고 있어!","물이","사방으로 튀잖아!"],"state":"development-needs-human-review"}
+,{"file":"maps/GoldenrodDeptStoreRoof.asm","label":"PokeDollVendingMachineText","source":"new","rows":["포켓몬 인형","자동판매기인가?","돈을 넣고","손잡이를 돌리면……","하지만 거의","텅 비어있구나……"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower1F.asm","label":"RadioTower1FLuckyNumberManAskToPlayText","source":"new","rows":["예 여기는","럭키 넘버","교환소입니다","당신의 포켓몬","아이디 넘버를","확인하시겠습니까?","운이 좋다면","상품획득 찬스!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower1F.asm","label":"RadioTower1FLuckyNumberManThisWeeksIdIsText","source":"original-gold","rows":["이번 아이디 넘버는","@"," 입니다"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower1F.asm","label":"RadioTower1FLuckyNumberManComeAgainText","source":"new","rows":["다음주에도 찾아와주세요","다음 럭키 넘버의 발표를","즐겁게 기다려주세요"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower1F.asm","label":"RadioTower1FRadioCardWomanQuestion1Text","source":"new","rows":["그럼 제1문제!","아침에만","나타나는 포켓몬이","있을까요?"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower1F.asm","label":"RadioTower1FRadioCardWomanQuestion2Text","source":"new","rows":["정답입니다","그럼 제2문제!","다음 말이","맞을까요?","프렌들리숍에서는","나무열매를 살 수 없다?"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower1F.asm","label":"RadioTower1FRadioCardWomanQuestion3Text","source":"new","rows":["정답입니다","계속해서 제3문제!","비전머신01의 기술은","플래시일까요?"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower1F.asm","label":"RadioTower1FRadioCardWomanQuestion4Text","source":"new","rows":["계속해서 정답","그럼 제4문제!","도라지 체육관의","관장은 비상이며","새 포켓몬을","사용할까요?"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower1F.asm","label":"RadioTower1FRadioCardWomanQuestion5Text","source":"new","rows":["대단하군요!","드디어 마지막","문제입니다","금빛시티 게임코너의","슬롯머신에는","파이리가","그려져 있을까요?"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower1F.asm","label":"RadioTower1FPokegearIsARadioText","source":"original-gold","rows":["<PLAYER>의 포켓몬 기어에서","라디오를 들을 수 있게","되었다!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaShowIntroductionText","source":"new","rows":["부에나『안녕! 나는","부에나라고 해!","암호라는","라디오 방송을","알고 있니?","방송에서 나온","암호를 나에게","알려주면","포인트를 받을 수 있어","그 포인트를","모아서","저기 있는","친절한 아가씨에게","가져가면 멋진","경품과 바꿔준단다!","자 여기!","너만의","포인트 카드야!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaTuneInToMyShowText","source":"new","rows":["부에나『내 암호 방송","꼭 들어줘!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaDoYouKnowPasswordText","source":"new","rows":["부에나『안녕!","내 라디오 방송","들었니?","오늘의 암호를","기억하고 있어?"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaJoinTheShowText","source":"new","rows":["부에나『와아!","고마워!","이름이","뭐라고 했지?","……<PLAY_G> 맞구나!","자 <PLAY_G>!","방송에 참가해줘"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaEveryoneSayPasswordText","source":"new","rows":["부에나『여러분","준비됐나요?","오늘의 암호를","크게 외쳐주세요","<PLAY_G>를(을)","위해서!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaComeBackAfterListeningText","source":"new","rows":["부에나『내 방송을","들어본 뒤에","다시 찾아와줘","그럼 또 보자!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaAlreadyPlayedText","source":"new","rows":["부에나『미안해……","하루에 한 번만","참가할 수 있단다","내일 다시","도전해줘!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaCorrectAnswerText","source":"new","rows":["부에나『야호!","정답이야!","방송을 들어줬구나!","정말 기뻐!","1포인트 획득!","축하해!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaDidYouForgetText","source":"new","rows":["부에나『아아……","그게 아닌데……","암호를","잊어버렸니?"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaThanksForComingText","source":"new","rows":["부에나『네! 오늘의","참가자는","<PLAY_G>였습니다!","참가해줘서 고마워!","방송을 듣고 있는","여러분도","꼭 찾아와주세요!","기다릴께요!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaPasswordIsHelpText","source":"new","rows":["부에나『응?","오늘의 암호?","물론 도와주세요!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaCardIsFullText","source":"new","rows":["부에나『블루카드가","가득 찼구나","멋진 경품과","교환해봐!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaTuneInAfterSixText","source":"new","rows":["부에나『암호 방송은","매일 밤","6시부터","자정까지야!","방송을 듣고 나서","나를 만나러 와줘!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaNoBlueCardText","source":"new","rows":["부에나『어라?","블루카드를","두고 왔니?","카드가 없으면","포인트를","줄 수 없단다"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaOfferPhoneNumberText","source":"new","rows":["부에나『와아!","오늘 블루카드가","{d:BLUE_CARD_POINT_CAP}포인트가 되었구나!","정말 대단해!","음……","{d:BLUE_CARD_POINT_CAP}포인트를","모은 경품은 없지만……","이렇게 자주 와줬으니","<PLAY_G>에게","특별한","선물을 해줄께!","내 전화번호를","알려줄까?"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaOfferNumberAgainText","source":"new","rows":["부에나『<PLAY_G>","내 전화번호를","등록하고","싶니?"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FRegisteredBuenasNumberText","source":"new","rows":["<PLAYER>는(은) 부에나의","전화번호를 등록했다"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaCallMeText","source":"new","rows":["부에나『너의","전화를","기다리고 있을께!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaSadRejectedText","source":"new","rows":["부에나『아아……","특별한 선물인데……"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaYourPhoneIsFullText","source":"new","rows":["부에나『<PLAY_G>","전화번호 수첩에","내 번호를 넣을","자리가 없구나……"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaReceptionistPointsForPrizesText","source":"new","rows":["모아둔 포인트로","마음에 드는","멋진 경품을","교환할 수 있단다!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower2F.asm","label":"RadioTower2FBuenaReceptionistNoCardText","source":"new","rows":["블루카드가 없으면","포인트로 경품을","교환할 수 없단다","블루카드를","잊지 말아라!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower3F.asm","label":"GruntM7BeatenText","source":"new","rows":["뭐야!?"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower3F.asm","label":"InsertedTheCardKeyText","source":"original-gold","rows":["<PLAYER>는(은)","카드키를 꽂았다!"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower5F.asm","label":"Executivef1AfterBattleText","source":"original-gold","rows":["<PLAYER>(이)라고 했었지?","너 같은","꼬마에게는","우리들의","위대함을","이해하기 힘들것 같군","유감이군 너의 강함이","맘에 들었는데"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower5F.asm","label":"RadioTower5FDirectorThankYouText","source":"original-gold","rows":["국장『오오 <PLAY_G>","정말 고맙다","너의 용기있는","행동이","전국의 포켓몬을","구했단다","이것은 약소하지만","나의","마음이란다"],"state":"development-needs-human-review","reference_token_aliases":{"<PLAYER>군":"<PLAY_G>"}}
+,{"file":"maps/RadioTower5F.asm","label":"RadioTower5FDirectorDescribeClearBellText","source":"new","rows":["예전에는","이 금빛시티에","탑이 서 있었단다","하지만 낡아서","무너질 것 같았지","그래서","라디오타워를","새로 세웠단다","공사를 하다가","그 방울을","파내게 되었지","옛날 금빛시티에는","여러 종류의 포켓몬이","살고","있었다더구나","혹시……","그 방울은","무언가 관련이","있을지도 모르지","인주시티의 방울탑과……","아!","그러고보니……","로켓단이 속삭이던","이야기를 들었단다","방울탑에서","무슨 일이","벌어지고 있다더구나","무슨 일인지는","모르겠지만","네가 한번","알아보면 어떻겠니","그럼 이제 나는","국장실로 돌아가야겠다"],"state":"development-needs-human-review"}
+,{"file":"maps/RadioTower5F.asm","label":"RadioTower5FDirectorText","source":"original-gold","rows":["국장『","<PLAY_G>","나는 포켓몬이","너무너무 좋아서","그 감정을","전하고싶어","라디오 방송을","시작했단다!","모두가","방송을 즐거워해준다면","기쁘겠구나"],"state":"development-needs-human-review","reference_token_aliases":{"<PLAYER>군":"<PLAY_G>"}}
+]

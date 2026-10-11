@@ -44,9 +44,8 @@ SageChowSeenText:
 	text "우리들이 이 탑을"
 	line "지키고있는 것은"
 
-	para "포켓몬에 대한 감사의"
-	line "마음을 항상 잊지"
-	cont "않도록 하기 위함이오!"
+	para "포켓몬에 대한 감사의 마음을"
+	line "항상 잊지 않도록 하기 위함이오!"
 	done
 
 SageChowBeatenText:
@@ -55,8 +54,7 @@ SageChowBeatenText:
 
 SageChowAfterBattleText:
 	text "세상의 모든 생명체"
-	line "서로 돕고"
-	cont "살아간다는……"
+	line "서로 돕고 살아간다는……"
 
 	para "감사의 마음을"
 	line "잊는다면 아니 될 것이오"
@@ -69,34 +67,28 @@ SproutTower1FSage1Text:
 	done
 
 SproutTower1FSage2Text:
-	text "이곳 모다피의"
-	line "탑은 포켓몬 수행을"
-
-	para "위하여 오래 전에"
-	line "지어진 것이오"
+	text "이곳 모다피의 탑은"
+	line "포켓몬 수행을 위하여"
+	cont "오래 전에 지어진 것이오"
 	done
 
 SproutTower1FGrannyText:
 	text "30미터에 달하는"
 	line "거대한 모다피"
 
-	para "그 몸체가 탑"
-	line "중심의 기둥이"
+	para "그 몸체가"
+	line "탑 중심의 기둥이"
 	cont "되었다고들 말하지"
 	done
 
 SproutTower1FTeacherText:
-	text "기둥이"
-	line "미묘하게 흔들리고 있지?"
-
-	para "위에서 스님들이"
-	line "수행을 하고있지"
+	text "기둥이 미묘하게 흔들리고 있지?"
+	line "위에서 스님들이"
+	cont "수행을 하고있지"
 	done
 
 SproutTower1FStatueText:
-	text "포켓몬이 받들어"
-
-	para "모셔지고 있군……"
+	text "포켓몬이 받들어 모셔지고 있군……"
 	line "어딘가 장엄한 기분이야"
 	done
 

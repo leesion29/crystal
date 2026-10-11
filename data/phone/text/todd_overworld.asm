@@ -1,67 +1,55 @@
 ToddAskNumber1Text:
-	text "From here, I can"
-	line "see GOLDENROD's"
+	text "여기서 금빛시티의 백화점이"
+	line "보이는데 가끔 옥상에서 바겐세일을"
+	cont "한단다"
 
-	para "DEPT.STORE. They"
-	line "have bargain sales"
+	para "전화번호를 알려주겠니?"
 
-	para "up on the rooftop"
-	line "every so often."
-
-	para "Could I get your"
-	line "phone number?"
-
-	para "I'll call you when"
-	line "they have a sale."
+	para "세일을 하면 전화해줄께!"
 	done
 
 ToddAskNumber2Text:
-	text "If you give me"
-	line "your number, I'll"
-
-	para "call you when they"
-	line "have a sale."
+	text "전화번호를 알려주면 세일을 할 때"
+	line "내가 전화해줄께!"
 	done
 
 ToddNumberAcceptedText:
-	text "I check GOLDENROD"
-	line "DEPT.STORE every"
+	text "금빛시티 백화점은"
+	line "매일 확인하니까"
 
-	para "day, so I know"
-	line "when there's a"
-	cont "sale."
+	para "세일을 하는 날을"
+	line "알 수 있단다"
 	done
 
 ToddNumberDeclinedText:
-	text "Anyway…"
+	text "어쨌든……"
 
-	para "If you're short on"
-	line "money, take down"
-	cont "my number."
+	para "돈이 부족하다면"
+	line "내 전화번호를"
+	cont "적어두렴"
 
-	para "I'll call you when"
-	line "there's a sale."
+	para "세일을 할 때"
+	line "전화해줄께!"
 	done
 
 ToddPhoneFullText:
-	text "Your phone doesn't"
-	line "have enough memory"
-	cont "for more numbers."
+	text "네 전화에는"
+	line "번호를 더 저장할"
+	cont "자리가 없구나"
 	done
 
 ToddRematchText:
-	text "I waited for you!"
-	line "I even cut back my"
+	text "기다리고 있었어!"
+	line "쇼핑도 줄이고"
 
-	para "shopping to raise"
-	line "my #MON better!"
+	para "포켓몬을 열심히"
+	line "키웠단다!"
 	done
 
 ToddSaleText: ; unreferenced
 ; This is a duplicate of CamperToddSaleText in maps/Route34.asm.
-	text "Shopping under the"
-	line "sky!"
+	text "하늘 아래에서 쇼핑!"
 
-	para "It feels so nice"
-	line "up on a rooftop."
+	para "옥상에 올라오니까"
+	line "기분이 참 좋구나!"
 	done
