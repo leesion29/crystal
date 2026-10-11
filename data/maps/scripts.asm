@@ -74,7 +74,11 @@ SECTION "Map Scripts 5", ROMX
 INCLUDE "maps/Route11.asm"
 INCLUDE "maps/VioletMart.asm"
 INCLUDE "maps/VioletGym.asm"
+; Keep the academy's scripts and text together without overflowing Map Scripts 5.
+PUSHS
+SECTION "Violet Academy Map Scripts", ROMX
 INCLUDE "maps/EarlsPokemonAcademy.asm"
+POPS
 INCLUDE "maps/VioletNicknameSpeechHouse.asm"
 INCLUDE "maps/VioletPokecenter1F.asm"
 INCLUDE "maps/VioletKylesHouse.asm"

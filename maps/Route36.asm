@@ -409,252 +409,252 @@ Route36SuicuneMovement:
 	step_end
 
 UseSquirtbottleText:
-	text "It's a weird tree."
-	line "Use SQUIRTBOTTLE?"
+	text "이상한 나무다!"
+	line "꼬부기 물뿌리개를 사용하겠습니까?"
 	done
 
 UsedSquirtbottleText:
-	text "<PLAYER> used the"
-	line "SQUIRTBOTTLE."
+	text "<PLAYER>는(은)"
+	line "꼬부기 물뿌리개를 사용했다!"
 	done
 
 SudowoodoAttackedText:
-	text "The weird tree"
-	line "doesn't like the"
-	cont "SQUIRTBOTTLE!"
+	text "이상한 나무는"
+	line "꼬부기 물뿌리개를"
+	cont "싫어하고 있다"
 
-	para "The weird tree"
-	line "attacked!"
+	para "이상한 나무가"
+	line "덤벼들었다"
 	done
 
 FloriaText1:
-	text "I'm the FLOWER"
-	line "SHOP's FLORIA!"
+	text "난 꽃집의"
+	line "플로리아야!"
 
-	para "Listen, listen!"
+	para "있잖아 있잖아!"
 
-	para "When I sprinkled"
-	line "water on that"
+	para "움직이는 나무에게"
+	line "물을 주니까"
 
-	para "wiggly tree, it"
-	line "jumped right up!"
+	para "놀라서"
+	line "뛰어올랐단다"
 
-	para "It just has to be"
-	line "a #MON."
+	para "틀림없이 포켓몬이라고"
+	line "생각하는데"
 
-	para "I bet it would be"
-	line "shocked out of its"
+	para "물을 듬뿍 뿌리면"
+	line "깜짝 놀라서"
 
-	para "disguise if you"
-	line "soaked it!"
+	para "나무인 척하는"
+	line "걸 그만둘 거야!"
 
-	para "I know! I'll tell"
-	line "my sis and borrow"
-	cont "her water bottle!"
+	para "맞아! 언니에게"
+	line "말해서 꼬부기"
+	cont "물뿌리개를 빌려야지!"
 	done
 
 FloriaText2:
-	text "When I told my sis"
-	line "about the jiggly"
+	text "언니에게 움직이는"
+	line "나무에 대해 말했더니"
 
-	para "tree, she said"
-	line "it's dangerous."
+	para "위험하다고"
+	line "하더라"
 
-	para "If I beat WHITNEY,"
-	line "I wonder if she'll"
+	para "꼭두를"
+	line "이기면 언니가"
 
-	para "lend me her water"
-	line "bottle…"
+	para "꼬부기 물뿌리개를"
+	line "빌려줄까……?"
 	done
 
 RockSmashGuyText1:
-	text "Wa-hey!"
+	text "우-쒸!"
 
-	para "I was going to"
-	line "snap that tree"
+	para "나의 강렬한 때려부수기로"
+	line "나무 한그루랑 두그루를"
 
-	para "with my straight-"
-	line "arm punch."
+	para "뚝 하고 부러뜨려볼까"
+	line "하고 생각했는데……"
 
-	para "But I couldn't!"
-	line "I'm a failure!"
+	para "통하지도 않지!"
+	line "분하기도 하지!"
 	done
 
 RockSmashGuyText2:
-	text "Did you clear that"
-	line "wretched tree?"
+	text "그대가 저"
+	line "방해되는 나무를"
 
-	para "I'm impressed!"
-	line "I want you to"
-	cont "have this."
+	para "치워주셨는가?"
+	line "고맙다고 말하지!"
+	cont "이것을 드리지!"
 	done
 
 Text_ReceivedTM08: ; unreferenced
-	text "<PLAYER> received"
-	line "TM08."
+	text "<PLAYER>는(은)"
+	line "기술머신08을 받았다!"
 	done
 
 RockSmashGuyText3:
-	text "That happens to be"
-	line "ROCK SMASH."
+	text "내용물은 필살"
+	line "바위깨기!"
 
-	para "You can shatter"
-	line "rocks with just a"
+	para "이것이 있으면"
+	line "돌덩어리등을"
 
-	para "single well-aimed"
-	line "smack."
+	para "한방에"
+	line "부술 수 있지"
 
-	para "If any rocks are"
-	line "in your way, just"
-	cont "smash 'em up!"
+	para "방해되는 돌덩어리는"
+	line "부수는게 좋다고"
+	cont "생각하지!"
 	done
 
 UnusedOddTreeText: ; unreferenced
-	text "An odd tree is"
-	line "blocking the way"
-	cont "to GOLDENROD CITY."
+	text "이상한 나무가"
+	line "생겨서 금빛시티로"
+	cont "갈 수 없어"
 
-	para "I wanted to go see"
-	line "the huge #MON"
+	para "새로 문을"
+	line "연 커다란"
 
-	para "CENTER they just"
-	line "opened…"
+	para "포켓몬센터에"
+	line "가보고 싶었는데……"
 	done
 
 Route36LassText:
-	text "An odd tree is"
-	line "blocking the way"
-	cont "to GOLDENROD CITY."
+	text "이상한 나무가"
+	line "생겨서"
+	cont "금빛시티에"
 
-	para "It's preventing"
-	line "me from shopping."
+	para "쇼핑하러"
+	line "갈 수 없어"
 
-	para "Something should"
-	line "be done about it."
+	para "누가 어떻게든"
+	line "해주었음 좋겠는데"
 	done
 
 Route36LassText_ClearedSudowoodo:
-	text "That odd tree dis-"
-	line "appeared without a"
-	cont "trace."
+	text "마치 없어진"
+	line "것 처럼"
+	cont "이상한 나무가"
 
-	para "Oh! That tree was"
-	line "really a #MON?"
+	para "사라져버렸다……"
+	line "엥? 포켓몬이었다고?"
 	done
 
 PsychicMarkSeenText:
-	text "I'm going to read"
-	line "your thoughts!"
+	text "너의 생각을"
+	line "맞춰보겠다"
 	done
 
 PsychicMarkBeatenText:
-	text "I misread you!"
+	text "맞추지 못했다"
 	done
 
 PsychicMarkAfterBattleText:
-	text "I'd be strong if"
-	line "only I could tell"
+	text "상대방의"
+	line "생각을 읽고"
 
-	para "what my opponent"
-	line "was thinking."
+	para "공격을 할 수"
+	line "있으면 강할텐데"
 	done
 
 SchoolboyAlan1SeenText:
-	text "Thanks to my stud-"
-	line "ies, I'm ready for"
-	cont "any #MON!"
+	text "어떤 포켓몬을"
+	line "상대로해도 확실히"
+	cont "예습은 해놓았지!"
 	done
 
 SchoolboyAlan1BeatenText:
-	text "Oops! Computation"
-	line "error?"
+	text "얼라리……?"
+	line "계산이 틀렸나?"
 	done
 
 SchoolboyAlanBooksText:
-	text "Darn. I study five"
-	line "hours a day too."
+	text "우으으으으 매일"
+	line "5시간씩 공부를"
 
-	para "There's more to"
-	line "learning than just"
-	cont "reading books."
+	para "했었는데……"
+	line "교과서만으로는 모르는"
+	cont "것이 많이 있구나"
 	done
 
 MeetArthurText:
-	text "ARTHUR: Who are"
-	line "you?"
+	text "목인『넌"
+	line "누구냐?"
 
-	para "I'm ARTHUR of"
-	line "Thursday."
+	para "나는 목요일의"
+	line "목인"
 	done
 
 ArthurGivesGiftText:
-	text "Here. You can have"
-	line "this."
+	text "자"
+	line "이걸줄께!"
 	done
 
 ArthurGaveGiftText:
-	text "ARTHUR: A #MON"
-	line "that uses rock-"
+	text "목인『바위타입의"
+	line "사용하는"
 
-	para "type moves should"
-	line "hold on to that."
+	para "포켓몬에게"
+	line "지니게해봐"
 
-	para "It pumps up rock-"
-	line "type attacks."
+	para "바위타입 기술의"
+	line "공격력이 상승할테니까"
 	done
 
 ArthurThursdayText:
-	text "ARTHUR: I'm ARTHUR"
-	line "of Thursday. I'm"
+	text "목인『나는"
+	line "목요일의 목인!"
 
-	para "the second son out"
-	line "of seven children."
+	para "7남매의"
+	line "차남이야!"
 	done
 
 ArthurNotThursdayText:
-	text "ARTHUR: Today's"
-	line "not Thursday. How"
-	cont "disappointing."
+	text "목인『오늘은 목요일이"
+	line "아닌가……"
+	cont "유감이군"
 	done
 
 Route36SignText:
-	text "ROUTE 36"
+	text "이곳은 36번 도로"
 	done
 
 RuinsOfAlphNorthSignText:
-	text "RUINS OF ALPH"
-	line "NORTH ENTRANCE"
+	text "알프의 유적"
+	line "북쪽 입구"
 	done
 
 Route36TrainerTips1Text:
-	text "TRAINER TIPS"
+	text "득이 되는 게시판!"
 
-	para "#MON stats"
-	line "vary--even within"
-	cont "the same species."
+	para "같은 종류의"
+	line "포켓몬이라도"
+	cont "강한 정도는"
 
-	para "Their stats may be"
-	line "similar at first."
+	para "여러가지"
+	line "처음은"
 
-	para "However, differ-"
-	line "ences will become"
+	para "거의"
+	line "같아도"
 
-	para "pronounced as the"
-	line "#MON grow."
+	para "키움에따라"
+	line "크게 바뀝니다"
 	done
 
 Route36TrainerTips2Text:
-	text "TRAINER TIPS"
+	text "득이 되는 게시판!"
 
-	para "Use DIG to return"
-	line "to the entrance of"
-	cont "any place."
+	para "구멍파기라고 하는"
+	line "기술을 사용하면 순간"
+	cont "입구까지 돌아올 수 있습니다"
 
-	para "It is convenient"
-	line "for exploring"
+	para "동굴등을"
+	line "탐험할 때"
 
-	para "caves and other"
-	line "landmarks."
+	para "그 기술을 배운 포켓몬이"
+	line "한마리 있으면 편리하겠죠"
 	done
 
 Route36_MapEvents:

@@ -108,36 +108,36 @@ RuinsOfAlphAerodactylChamberSkyfallTopMovement:
 	step_end
 
 RuinsOfAlphAerodactylChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
+	text "벽에 문양이"
+	line "나타났다……"
 	done
 
 RuinsOfAlphAerodactylChamberUnownText: ; unreferenced
-	text "It's UNOWN text!"
+	text "안농 문자다!"
 	done
 
 RuinsOfAlphAerodactylChamberWallPatternRightText:
-	text "Patterns appeared"
-	line "on the walls…"
+	text "벽에 문양이"
+	line "나타났다……"
 	done
 
 RuinsOfAlphAerodactylChamberWallHoleText:
-	text "There's a big hole"
-	line "in the wall!"
+	text "벽에 커다란"
+	line "구멍이 있다!"
 	done
 
 RuinsOfAlphAerodactylChamberAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	text "오래전의"
+	line "포켓몬을 흉내내서"
+	cont "만들어진 포켓몬"
 	done
 
 RuinsOfAlphAerodactylChamberDescriptionText:
-	text "This flying #-"
-	line "MON attacked its"
+	text "톱같이"
+	line "생긴 이빨로"
 
-	para "prey with saw-like"
-	line "fangs."
+	para "사냥감을 덮치던"
+	line "하늘의 포켓몬"
 	done
 
 RuinsOfAlphAerodactylChamber_MapEvents:

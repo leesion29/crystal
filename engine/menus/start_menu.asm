@@ -148,12 +148,26 @@ StartMenu::
 	call .Clear
 	jp .Reopen
 
+.CloseSubmenu:
+	; The tile backup does not include the cached glyph graphics. Rebuild
+	; START text while palettes are still white, before FinishExitMenu fades in.
+	call ClearBGPalettes
+	call ReloadTilesetAndPalettes
+	call UpdateSprites
+	call Call_ExitMenu
+	jr .FinishRedraw
+
 .Clear:
 	call ClearBGPalettes
 	call Call_ExitMenu
 	call ReloadTilesetAndPalettes
+
+.FinishRedraw:
+	call .SetUpMenuItems
+	ld a, [wBattleMenuCursorPosition]
+	ld [wMenuCursorPosition], a
 	call .DrawMenuAccount
-	call DrawVariableLengthMenuBox
+	call SetUpMenu
 	call .DrawBugContestStatus
 	call UpdateSprites
 	call GSReloadPalettes
@@ -459,7 +473,7 @@ StartMenu_Status:
 
 	call FadeToMenu
 	farcall TrainerCard
-	call CloseSubmenu
+	call StartMenu.CloseSubmenu
 	ld a, 0
 	ret
 
@@ -470,7 +484,7 @@ StartMenu_Pokedex:
 
 	call FadeToMenu
 	farcall Pokedex
-	call CloseSubmenu
+	call StartMenu.CloseSubmenu
 
 .empty
 	ld a, 0
@@ -479,7 +493,7 @@ StartMenu_Pokedex:
 StartMenu_Pokegear:
 	call FadeToMenu
 	farcall PokeGear
-	call CloseSubmenu
+	call StartMenu.CloseSubmenu
 	ld a, 0
 	ret
 
@@ -489,7 +503,7 @@ StartMenu_Pack:
 	ld a, [wPackUsedItem]
 	and a
 	jr nz, .used_item
-	call CloseSubmenu
+	call StartMenu.CloseSubmenu
 	ld a, 0
 	ret
 
@@ -535,7 +549,7 @@ StartMenu_Pokemon:
 	jr z, .quit
 
 .return
-	call CloseSubmenu
+	call StartMenu.CloseSubmenu
 	ld a, 0
 	ret
 

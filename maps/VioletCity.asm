@@ -178,102 +178,102 @@ VioletCitySpinningEarl_MovementData:
 	step_end
 
 Text_EarlAsksIfYouBeatFalkner:
-	text "Hello!"
-	line "You are trainer?"
+	text "하-이 당신"
+	line "트레이너로군요"
 
-	para "Battle GYM LEADER,"
-	line "win you did?"
+	para "체육관 관장에게는"
+	line "이겼습니까?"
 	done
 
 Text_VeryNiceIndeed:
-	text "Ooh, la la!"
-	line "Very indeed nice!"
+	text "그것은"
+	line "대단하군요!"
 	done
 
 Text_FollowEarl:
-	text "Is that so? Then"
-	line "study shall you!"
-	cont "Follow me!"
+	text "그래요?"
+	line "그렇다면 공부해야지요"
+	cont "그럼 따라오세요"
 	done
 
 Text_HereTeacherIAm:
-	text "Here, teacher I"
-	line "am. Good it is"
-	cont "you study here!"
+	text "나는 이곳의 선생님!"
+	line "그대는 여기서"
+	cont "공부를 한다면 좋겠군"
 	done
 
 VioletCityLassText:
-	text "Ghosts are rumored"
-	line "to appear in"
-	cont "SPROUT TOWER."
+	text "모다피의 탑은"
+	line "밤이되면 귀신이"
+	cont "나온다는 소문이야"
 
-	para "They said normal-"
-	line "type #MON moves"
+	para "그래서 포켓몬을"
+	line "싸우게 시켜도"
 
-	para "had no effect on"
-	line "ghosts."
+	para "노말타입의 기술로는"
+	line "전혀 효과가 없었대"
 	done
 
 VioletCitySuperNerdText:
-	text "Hey, you're a"
-	line "#MON trainer?"
+	text "오옷 포켓몬"
+	line "트레이너인가?"
 
-	para "If you beat the"
-	line "GYM LEADER here,"
+	para "이 마을의 체육관"
+	line "관장을 이겼다면"
 
-	para "you'll be ready"
-	line "for prime time!"
+	para "트레이너로서도"
+	line "제 구실을 하는 것이군"
 	done
 
 VioletCityGrampsText:
-	text "FALKNER, from the"
-	line "VIOLET #MON"
+	text "도라지시티"
+	line "포켓몬 체육관의"
 
-	para "GYM, is a fine"
-	line "trainer!"
+	para "비상은 뛰어난"
+	line "솜씨의 트레이너!"
 
-	para "He inherited his"
-	line "father's gym and"
+	para "아버지의 뒤를"
+	line "이어서 훌륭한"
 
-	para "has done a great"
-	line "job with it."
+	para "체육관을"
+	line "지키고 있단다!"
 	done
 
 VioletCityYoungsterText:
-	text "I saw a wiggly"
-	line "tree up ahead!"
+	text "이 앞에 움직이는"
+	line "나무를 봤다!"
 
-	para "If you touch it,"
-	line "it squirms and"
-	cont "dances! Cool!"
+	para "만지면 흔들흔들"
+	line "춤추기 시작한다"
+	cont "엄청나게 재미있어"
 	done
 
 VioletCitySignText:
-	text "VIOLET CITY"
+	text "이곳은 도라지시티"
 
-	para "The City of"
-	line "Nostalgic Scents"
+	para "그리운 향기가"
+	line "나는 마을"
 	done
 
 VioletGymSignText:
-	text "VIOLET CITY"
-	line "#MON GYM"
-	cont "LEADER: FALKNER"
+	text "도라지시티"
+	line "포켓몬 체육관"
+	cont "관장 비상"
 
-	para "The Elegant Master"
-	line "of Flying #MON"
+	para "화려한"
+	line "비행포켓몬 조련사!"
 	done
 
 SproutTowerSignText:
-	text "SPROUT TOWER"
+	text "이곳은 모다피의 탑"
 
-	para "Experience the"
-	line "Way of #MON"
+	para "포켓몬의"
+	line "수행을 하시오"
 	done
 
 EarlsPokemonAcademySignText:
-	text "EARL'S #MON"
-	line "ACADEMY"
+	text "다배워선생님의"
+	line "포켓몬 학원"
 	done
 
 VioletCity_MapEvents:

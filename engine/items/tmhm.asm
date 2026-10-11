@@ -335,8 +335,9 @@ TMHM_DisplayPocketItems:
 	cp BATTLETYPE_TUTORIAL
 	jp z, Tutorial_TMHMPocket
 
-	hlcoord 5, 2
-	lb bc, 10, 15
+	; Include the upper half of the first 8x16 Hangul item name.
+	hlcoord 5, 1
+	lb bc, 11, 15
 	ld a, ' '
 	call ClearBox
 	call TMHM_GetCurrentPocketPosition

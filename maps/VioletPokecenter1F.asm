@@ -56,7 +56,7 @@ VioletPokecenter1F_ElmsAideScript:
 	end
 
 .eggname
-	db "EGG@"
+	db "알@"
 
 .AideGivesEgg:
 	jumpstd ReceiveTogepiEggScript
@@ -119,113 +119,113 @@ MovementData_AideFinishesLeavingPokecenter:
 	step_end
 
 VioletPokecenterElmsAideFavorText:
-	text "<PLAY_G>, long"
-	line "time, no see."
+	text "<PLAY_G>"
+	line "오래간만입니다"
 
-	para "PROF.ELM asked me"
-	line "to find you."
+	para "공박사님께 부탁을 받아서"
+	line "당신을 찾고 있었어요"
 
-	para "He has another"
-	line "favor to ask."
+	para "사실은"
+	line "……"
 
-	para "Would you take the"
-	line "#MON EGG?"
+	para "포켓몬 알을"
+	line "지니고 있어달라는 것입니다!"
 	done
 
 VioletPokecenterElmsAideGiveEggText:
-	text "We discovered that"
-	line "a #MON will not"
+	text "공박사님이 조사한 바로는"
+	line "포켓몬은 알 안에서"
 
-	para "hatch until it"
-	line "grows in the EGG."
+	para "어느정도 키우지 않으면"
+	line "태어나지 않는다고 합니다!"
 
-	para "It also has to be"
-	line "with other active"
-	cont "#MON to hatch."
+	para "그것도 늘 활발한"
+	line "포켓몬 곁에 있지 않으면"
+	cont "안 된다는 것 같아요"
 
-	para "<PLAY_G>, you're"
-	line "the only person"
-	cont "we can rely on."
+	para "그러한 것을"
+	line "부탁할 만한 사람은"
+	cont "<PLAY_G> 뿐이니까"
 
-	para "Please call PROF."
-	line "ELM when that EGG"
-	cont "hatches!"
+	para "잘 부탁할께요!"
+	line "태어난다면 공박사님에게"
+	cont "연락해주세요"
 	done
 
 VioletCityElmsAideFullPartyText:
-	text "Oh, no. You can't"
-	line "carry any more"
-	cont "#MON with you."
+	text "포켓몬이 잔뜩 있어서"
+	line "그 이상 데리고 다닐 수"
+	cont "없습니다"
 
-	para "I'll wait here"
-	line "while you make"
-	cont "room for the EGG."
+	para "그럼"
+	line "이곳에서"
+	cont "기다리겠습니다"
 	done
 
 VioletPokecenterElmsAideRefuseText:
-	text "B-but… PROF.ELM"
-	line "asked for you…"
+	text "그 그런…… 공박사님의"
+	line "부탁이라니까요"
 	done
 
 VioletPokecenterElmsAideAskEggText:
-	text "<PLAY_G>, will you"
-	line "take the EGG?"
+	text "<PLAY_G> 알을"
+	line "데리고 있어 주겠습니까?"
 	done
 
 VioletPokecenterFarawayLinkText: ; unreferenced
-	text "I've been thinking"
-	line "it'd be great to"
+	text "멀리 사는"
+	line "친구들과"
 
-	para "be able to link up"
-	line "and battle with my"
+	para "통신으로 승부할"
+	line "수 있다면"
 
-	para "friends who live"
-	line "far away."
+	para "정말 좋겠다고"
+	line "생각했어"
 	done
 
 VioletPokecenterMobileAdapterText: ; unreferenced
-	text "I just battled a"
-	line "friend in CIANWOOD"
-	cont "over a link."
+	text "방금 진청시티의"
+	line "친구와 통신으로"
+	cont "승부했어"
 
-	para "If you connect a"
-	line "MOBILE ADAPTER,"
+	para "모바일 어댑터를"
+	line "연결하면 멀리"
 
-	para "you can link with"
-	line "a friend far away."
+	para "있는 친구와도"
+	line "통신할 수 있단다"
 	done
 
 VioletPokecenter1FGameboyKidText:
-	text "A guy named BILL"
-	line "made the #MON"
-	cont "PC storage system."
+	text "잡은 포켓몬을 컴퓨터에"
+	line "맡기는 시스템을"
+	cont "이수재라는 녀석이 만들었대"
 	done
 
 VioletPokecenter1FGentlemanText:
-	text "It was around"
-	line "three years ago."
+	text "3년정도 전쯤의"
+	line "이야기란다"
 
-	para "TEAM ROCKET was up"
-	line "to no good with"
-	cont "#MON."
+	para "로켓단이라고 하는 녀석들이"
+	line "포켓몬을 사용해서"
+	cont "나쁜 짓만 했단다"
 
-	para "But justice pre-"
-	line "vailed--a young"
-	cont "kid broke 'em up."
+	para "하지만 악은 망한다!"
+	line "어떤 소년의 활약으로"
+	cont "해산되었단다!"
 	done
 
 VioletPokecenter1FYoungsterText:
-	text "#MON are smart."
-	line "They won't obey a"
+	text "포켓몬은 머리가 좋으니까"
+	line "존경할만한 트레이너가"
 
-	para "trainer they don't"
-	line "respect."
+	para "말하는 것이"
+	line "아니면 듣지 않아"
 
-	para "Without the right"
-	line "GYM BADGES, they"
+	para "체육관 배지를"
+	line "지니고 있지 않으면"
 
-	para "will just do as"
-	line "they please."
+	para "명령도 듣지않고"
+	line "제멋대로란다"
 	done
 
 VioletPokecenter1F_MapEvents:

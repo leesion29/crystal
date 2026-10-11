@@ -25,9 +25,9 @@ RuinsOfAlphHoOhItemRoomAncientReplica:
 	jumptext RuinsOfAlphHoOhItemRoomAncientReplicaText
 
 RuinsOfAlphHoOhItemRoomAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	text "옛날의 포켓몬을"
+	line "흉내내서"
+	cont "만들어진 것"
 	done
 
 RuinsOfAlphHoOhItemRoom_MapEvents:

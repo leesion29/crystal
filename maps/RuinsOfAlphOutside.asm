@@ -148,134 +148,134 @@ RuinsOfAlphOutsidePlayerEnterLabMovement:
 	step_end
 
 RuinsOfAlphOutsideScientistText:
-	text "Hm? That's a #-"
-	line "DEX, isn't it?"
-	cont "May I see it?"
+	text "응?"
+	line "그건 포켓몬 도감이구나!"
+	cont "좀 보여주지 않을래?"
 
-	para "There are so many"
-	line "kinds of #MON."
+	para "흐음"
+	line "여러가지 포켓몬이 있군"
 
-	para "Hm? What's this?"
+	para "아니!!"
 
-	para "What is this"
-	line "#MON?"
+	para "이"
+	line "포켓몬은?"
 
-	para "It looks like the"
-	line "strange writing on"
+	para "유적의 벽에"
+	line "그려져 있는"
 
-	para "the walls of the"
-	line "RUINS."
+	para "수수께끼의 문양과"
+	line "닮아있군……"
 
-	para "If those drawings"
-	line "are really #-"
-	cont "MON, there should"
-	cont "be many more."
+	para "그 모양이"
+	line "포켓몬이라고 한다면"
+	cont "더욱더 많이"
+	cont "있을 텐데……"
 
-	para "I know! Let me up-"
-	line "grade your #-"
-	cont "DEX. Follow me."
+	para "좋아! 내가 너의 도감을"
+	line "파워업해서 줄께!"
+	cont "따라와!"
 	done
 
 SuperNerdStanSeenText:
-	text "What do you want?"
-	line "I'm studying--"
-	cont "don't disturb me!"
+	text "무슨 일이야?"
+	line "공부하고 있으니까"
+	cont "방해하지 마!"
 	done
 
 SuperNerdStanBeatenText:
-	text "Sorry…"
-	line "I'm frustrated by"
+	text "미안…… 제대로"
+	line "아는 것이"
 
-	para "our lack of real"
-	line "understanding…"
+	para "없어서"
+	line "답답했어……"
 	done
 
 SuperNerdStanAfterBattleText:
-	text "The RUINS are from"
-	line "about 1500 years"
-	cont "ago."
+	text "유적은 대략"
+	line "1500년"
+	cont "전에 만들어졌어"
 
-	para "Nobody knows who"
-	line "built them."
+	para "누가 만들었는지는"
+	line "아무도 몰라"
 
-	para "It's also not"
-	line "known if the #-"
-	cont "MON statues have"
-	cont "any meaning."
+	para "포켓몬"
+	line "석상에"
+	cont "어떤 의미가"
+	cont "있는지도 몰라"
 
-	para "It's all one big"
-	line "mystery…"
+	para "전부"
+	line "수수께끼투성이야……"
 	done
 
 PsychicNathanSeenText:
-	text "Hmmm… This is a"
-	line "strange place."
+	text "…… 움-"
+	line "여기는 이상한곳이구나"
 	done
 
 PsychicNathanBeatenText:
-	text "…"
+	text "…… …… ……"
 	done
 
 PsychicNathanAfterBattleText:
-	text "I like thinking"
-	line "here."
+	text "유적에서 생각에 잠기는 것을"
+	line "아주 좋아해"
 	done
 
 RuinsOfAlphOutsideMysteryChamberSignText:
-	text "MYSTERY STONE"
-	line "PANEL CHAMBER"
+	text "수수께끼"
+	line "석판의 방"
 	done
 
 RuinsOfAlphSignText:
-	text "RUINS OF ALPH"
-	line "VISITORS WELCOME"
+	text "알프의 유적"
+	line "견학중입니다"
 	done
 
 RuinsOfAlphResearchCenterSignText:
-	text "RUINS OF ALPH"
-	line "RESEARCH CENTER"
+	text "알프의"
+	line "유적 연구소"
 
-	para "THE AUTHORITY ON"
-	line "THE RUINS OF ALPH"
+	para "유적의 질문"
+	line "접수중!"
 	done
 
 RuinsOfAlphOutsideFisherText1:
-	text "While exploring"
-	line "the RUINS, we"
+	text "유적을"
+	line "조사하던 중에"
 
-	para "suddenly noticed"
-	line "an odd presence."
+	para "갑자기 이상한"
+	line "기미가 느껴졌어"
 
-	para "We all got scared"
-	line "and ran away."
+	para "우리 모두 겁이"
+	line "나서 도망쳤지"
 
-	para "You should be"
-	line "careful too."
+	para "너도 조심하는"
+	line "게 좋겠어"
 	done
 
 RuinsOfAlphOutsideFisherText2:
-	text "The RUINS hide a"
-	line "huge secret!"
+	text "유적에는 엄청난"
+	line "비밀이 숨겨져 있어!"
 
-	para "…I think…"
+	para "……아마도……"
 	done
 
 RuinsOfAlphOutsideYoungster1Text:
-	text "There are many"
-	line "kinds of UNOWN, so"
+	text "안농은"
+	line "종류가 많아서"
 
-	para "we use them for"
-	line "our secret codes."
+	para "우리는 비밀"
+	line "암호로 쓰고 있어"
 	done
 
 RuinsOfAlphOutsideYoungster2Text:
-	text "A… H… E… A… D…"
-	line "Hmm…"
+	text "A… H… E…"
+	line "A… D… 음……"
 
-	para "What?"
+	para "뭐?"
 
-	para "I'm decoding this"
-	line "message!"
+	para "지금 암호를 풀고"
+	line "있단 말이야!"
 	done
 
 RuinsOfAlphOutside_MapEvents:

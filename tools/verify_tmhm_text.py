@@ -109,7 +109,7 @@ class CPU:
                 if o == 0xf1:
                     self.r[7], self.z, self.carry = n >> 8, bool(n & 0x80), bool(n & 0x10)
                 else: self.setpair((o >> 3) & 6, n)
-            elif o in (0xc6, 0xe6, 0xf6, 0xd6, 0xfe) or 0x80 <= o <= 0x87 or 0xa0 <= o <= 0xbf:
+            elif o in (0xc6, 0xe6, 0xf6, 0xd6, 0xfe) or 0x80 <= o <= 0x87 or 0x90 <= o <= 0x97 or 0xa0 <= o <= 0xbf:
                 a = self.r[7]
                 n = self.byte() if o in (0xc6, 0xe6, 0xf6, 0xd6, 0xfe) else self.get(o & 7)
                 if o == 0xc6 or 0x80 <= o <= 0x87:
@@ -124,14 +124,17 @@ class CPU:
                 self.z = a == 0
                 if o != 0xfe and not 0xb8 <= o <= 0xbf:
                     self.r[7] = a
-                    if o not in (0xd6, 0xc6) and not 0x80 <= o <= 0x87: self.carry = False
+                    if o not in (0xd6, 0xc6) and not (0x80 <= o <= 0x87 or 0x90 <= o <= 0x97): self.carry = False
             elif o in (0x18, 0x20, 0x28, 0x30, 0x38):
                 n = self.byte()
                 condition = {0x18: True, 0x20: not self.z, 0x28: self.z, 0x30: not self.carry, 0x38: self.carry}[o]
                 if condition: self.pc += n if n < 128 else n - 256
-            elif o in (0xc3, 0xcd):
+            elif o in (0xc3, 0xcd, 0xc2, 0xca, 0xd2, 0xda):
                 p = self.word()
-                if not self.special(p):
+                condition = {0xc3: True, 0xcd: True, 0xc2: not self.z,
+                             0xca: self.z, 0xd2: not self.carry,
+                             0xda: self.carry}[o]
+                if condition and not self.special(p):
                     if o == 0xcd: self.stack.append(self.pc)
                     self.pc = p
             elif o == 0xcf:  # rst FarCall; execute the real wrapper and callee.
@@ -294,7 +297,8 @@ def verify(rom_path, sym_path):
         p += 3
     for redraw in range(256):
         cache.mem[tilemap+40:tilemap+240] = bytes([0x7f])*200
-        # First row of Hangul is retained just like the current TM/HM list.
+        # Deliberately retain the upper row to stress cache ownership separately
+        # from list geometry (covered by verify_pack_clear.py).
         for n, g in enumerate(glyphs):
             cache.setpair(0, g)
             cache.setpair(4, tilemap+48+n)

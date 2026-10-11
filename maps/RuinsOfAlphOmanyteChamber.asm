@@ -109,36 +109,36 @@ RuinsOfAlphOmanyteChamberSkyfallTopMovement:
 	step_end
 
 RuinsOfAlphOmanyteChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
+	text "벽에 문양이"
+	line "나타났다……"
 	done
 
 RuinsOfAlphOmanyteChamberUnownText: ; unreferenced
-	text "It's UNOWN text!"
+	text "안농 문자다!"
 	done
 
 RuinsOfAlphOmanyteChamberWallPatternRightText:
-	text "Patterns appeared"
-	line "on the walls…"
+	text "벽에 문양이"
+	line "나타났다……"
 	done
 
 RuinsOfAlphOmanyteChamberWallHoleText:
-	text "There's a big hole"
-	line "in the wall!"
+	text "벽에 커다란"
+	line "구멍이 있다!"
 	done
 
 RuinsOfAlphOmanyteChamberAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	text "옛날의 포켓몬을"
+	line "흉내내서"
+	cont "만들어낸 것"
 	done
 
 RuinsOfAlphOmanyteChamberDescriptionText:
-	text "This #MON"
-	line "drifted in the"
+	text "10개의"
+	line "다리를 휘어"
 
-	para "sea by twisting"
-	line "its ten tentacles."
+	para "굽혀서 바다를"
+	line "떠다녔던 포켓몬"
 	done
 
 RuinsOfAlphOmanyteChamber_MapEvents:

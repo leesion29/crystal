@@ -1428,8 +1428,10 @@ Pack_ClearTilemap: ; unreferenced
 	ret
 
 ClearPocketList:
-	hlcoord 5, 2
-	lb bc, 10, SCREEN_WIDTH - 5
+	; First-row Hangul extends one tile above its baseline at y=2.
+	; Keep the old bottom edge (y=11), and leave the tabs at y=0 intact.
+	hlcoord 5, 1
+	lb bc, 11, SCREEN_WIDTH - 5
 	call ClearBox
 	ret
 

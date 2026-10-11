@@ -25,9 +25,9 @@ RuinsOfAlphKabutoItemRoomAncientReplica:
 	jumptext RuinsOfAlphKabutoItemRoomAncientReplicaText
 
 RuinsOfAlphKabutoItemRoomAncientReplicaText:
-	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	text "옛날의 포켓몬을"
+	line "모방해서"
+	cont "만들어진 것"
 	done
 
 RuinsOfAlphKabutoItemRoom_MapEvents:

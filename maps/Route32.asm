@@ -526,83 +526,83 @@ Movement_Route32CooltrainerMReset2:
 	step_end
 
 Route32CooltrainerMText_WhatsTheHurry:
-	text "Wait up!"
-	line "What's the hurry?"
+	text "잠깐!"
+	line "뭐가 그리 급하니?"
 	done
 
 Route32CooltrainerMText_AideIsWaiting:
-	text "<PLAYER>, right?"
-	line "Some guy wearing"
+	text "<PLAYER>(이)란 사람이"
+	line "그댄가? 그대를 찾아다니는"
 
-	para "glasses was look-"
-	line "ing for you."
+	para "안경쓴 사내가"
+	line "있었다"
 
-	para "See for yourself."
-	line "He's waiting for"
+	para "포켓몬센터에서"
+	line "그대를 기다리고"
 
-	para "you at the #MON"
-	line "CENTER."
+	para "있을 것이다"
+	line "그곳에 가 보거라!"
 	done
 
 Route32CooltrainerMText_UnusedSproutTower:
-	text "Have you gone to"
-	line "SPROUT TOWER?"
+	text "모다피의 탑에는"
+	line "갔었는가?"
 
-	para "If you ever visit"
-	line "VIOLET CITY, "
+	para "도라지시티에 들리면"
+	line "모다피의탑에서"
 
-	para "they'll expect you"
-	line "to train there."
+	para "수행하는 것이"
+	line "트레이너의"
 
-	para "That's basic for"
-	line "trainers. Go to"
-	cont "SPROUT TOWER!"
+	para "상식이 아닌가"
+	line "어서"
+	cont "가 보거라!"
 	done
 
 Route32CooltrainerMText_VioletGym:
-	text "Have you gone to"
-	line "the #MON GYM?"
+	text "포켓몬 체육관에는"
+	line "갔었는가?"
 
-	para "You can test your"
-	line "#MON and your-"
-	cont "self there."
+	para "포켓몬 체육관에 들려서"
+	line "너와 포켓몬을"
+	cont "단련시키는 것이"
 
-	para "It's a rite of"
-	line "passage for all"
-	cont "trainers!"
+	para "트레이너의 상식이"
+	line "아닌가"
+	cont "어서 가 보거라!"
 	done
 
 Route32CooltrainerMText_HaveThisSeed:
-	text "You have some good"
-	line "#MON there."
+	text "음 좋은 포켓몬을"
+	line "데리고 있군!"
 
-	para "It must be from"
-	line "the training you"
+	para "이것도 저것도"
+	line "도라지시티에서"
 
-	para "gave them around"
-	line "VIOLET CITY."
+	para "여러가지로"
+	line "단련시켰기 때문이지"
 
-	para "The training at"
-	line "the GYM must have"
+	para "특별히 포켓몬"
+	line "체육관에서의 수행은"
 
-	para "been especially"
-	line "helpful."
+	para "이득이 되었을 터"
+	line "좋아! 도라지시티에 온 기념이다"
 
-	para "As a souvenir of"
-	line "VIOLET CITY, take"
-	cont "this."
+	para "이것을"
+	line "가지고 가거라"
+	cont "포켓몬에게 지니게하면"
 
-	para "It increases the"
-	line "power of grass-"
-	cont "type moves."
+	para "풀타입 기술의"
+	line "위력이 올라간다고 하는"
+	cont "상품이다!"
 	done
 
 Route32CooltrainerMText_ExperiencesShouldBeUseful:
-	text "Your experiences"
-	line "in VIOLET CITY"
+	text "도라지시티에서의"
+	line "경험은"
 
-	para "should be useful"
-	line "for your journey."
+	para "그대의 여행에"
+	line "도움이 될 것이다"
 	done
 
 Text_MillionDollarSlowpokeTail:
@@ -816,21 +816,21 @@ PicnickerLiz1AfterText:
 	done
 
 BirdKeeperPeterSeenText:
-	text "That BADGE! It's"
-	line "from VIOLET CITY!"
+	text "얼라리 그 배지는……"
+	line "도라지시티 체육관의 배지!"
 
-	para "You beat FALKNER?"
+	para "너 비상님에게 이겼단말인가!"
 	done
 
 BirdKeeperPeterBeatenText:
-	text "I know what my"
-	line "weaknesses are."
+	text "자신의 미숙함을"
+	line "알았다!"
 	done
 
 BirdKeeperPeterAfterText:
-	text "I should train"
-	line "again at the GYM"
-	cont "in VIOLET CITY."
+	text "도라지시티"
+	line "체육관에서"
+	cont "새로 단련이나 해볼까"
 	done
 
 Route32UnusedText: ; unreferenced

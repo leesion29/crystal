@@ -111,172 +111,172 @@ VioletGymStatue:
 	jumpstd GymStatue2Script
 
 FalknerIntroText:
-	text "I'm FALKNER, the"
-	line "VIOLET #MON GYM"
-	cont "leader!"
+	text "내가 도라지시티"
+	line "포켓몬 체육관"
+	cont "관장인 비상이다!"
 
-	para "People say you can"
-	line "clip flying-type"
+	para "세간에서는"
+	line "비행타입의 포켓몬같은 것은"
 
-	para "#MON's wings"
-	line "with a jolt of"
-	cont "electricity…"
+	para "전기 충격에"
+	line "한방이라고……"
+	cont "그렇게 새포켓몬을"
 
-	para "I won't allow such"
-	line "insults to bird"
-	cont "#MON!"
+	para "바보취급한다"
+	line "나는 그것을"
+	cont "용서 못 한다"
 
-	para "I'll show you the"
-	line "real power of the"
+	para "넓은 하늘을"
+	line "화려하게 나는"
 
-	para "magnificent bird"
-	line "#MON!"
+	para "새포켓몬의 진정 강함을"
+	line "알게 해주겠다!"
 	done
 
 FalknerWinLossText:
-	text "…Darn! My dad's"
-	line "cherished bird"
-	cont "#MON…"
+	text "……젠장"
+	line "아버지가 소중하게"
+	cont "여기던 포켓몬이……"
 
-	para "All right."
-	line "Take this."
+	para "알겠다"
+	line "이것을 가지고 가거라!"
 
-	para "It's the official"
-	line "#MON LEAGUE"
-	cont "ZEPHYRBADGE."
+	para "포켓몬 리그"
+	line "공인"
+	cont "윙배지다!"
 	done
 
 ReceivedZephyrBadgeText:
-	text "<PLAYER> received"
-	line "ZEPHYRBADGE."
+	text "<PLAYER>는(은) 비상으로부터"
+	line "윙배지를 받았다!"
 	done
 
 FalknerZephyrBadgeText:
-	text "ZEPHYRBADGE"
-	line "raises the attack"
-	cont "power of #MON."
+	text "윙배지를 지니고 있으면"
+	line "너의 포켓몬"
+	cont "공격력이 올라간다!"
 
-	para "It also enables"
-	line "#MON to use"
+	para "그리고 플래시라고 하는"
+	line "기술을 배운 포켓몬은"
 
-	para "FLASH, if they"
-	line "have it, anytime."
+	para "싸우고 있지 않을 때에도"
+	line "플래시를 쓸 수 있다!"
 
-	para "Here--take this"
-	line "too."
+	para "그리고 이것도"
+	line "가지고 가라"
 	done
 
 FalknerTMMudSlapText:
-	text "By using a TM, a"
-	line "#MON will"
+	text "기술머신을 사용하면"
+	line "단숨에 포켓몬에게"
 
-	para "instantly learn a"
-	line "new move."
+	para "기술을 가르칠"
+	line "수 있다!"
 
-	para "Think before you"
-	line "act--a TM can be"
-	cont "used only once."
+	para "그러나 1회용이기때문에"
+	line "잘 생각해서"
+	cont "써야할꺼야"
 
-	para "TM31 contains"
-	line "MUD-SLAP."
+	para "덧붙여서 기술머신31의"
+	line "안에는 진흙 뿌리기가 들어있다"
 
-	para "It reduces the"
-	line "enemy's accuracy"
+	para "상대의 명중력을"
+	line "떨어뜨리면서"
 
-	para "while it causes"
-	line "damage."
+	para "데미지를"
+	line "준단다"
 
-	para "In other words, it"
-	line "is both defensive"
-	cont "and offensive."
+	para "다시 말해서"
+	line "공격과 방어가"
+	cont "동시에 되는 기술이다"
 	done
 
 FalknerFightDoneText:
-	text "There are #MON"
-	line "GYMS in cities and"
-	cont "towns ahead."
+	text "이 앞에는 여러마을에"
+	line "포켓몬 체육관이"
+	cont "있으니까"
 
-	para "You should test"
-	line "your skills at"
-	cont "these GYMS."
+	para "거기서 실력을"
+	line "겨루어보면"
+	cont "좋을꺼다"
 
-	para "I'm going to train"
-	line "harder to become"
+	para "나는최강의"
+	line "새 조련사가 되기위하여"
 
-	para "the greatest bird"
-	line "master!"
+	para "포켓몬과 내 자신을"
+	line "단련시키겠어!"
 	done
 
 BirdKeeperRodSeenText:
-	text "The keyword is"
-	line "guts!"
+	text "표어는"
+	line "강한 근성"
 
-	para "Those here are"
-	line "training night and"
+	para "이곳에 모여있는"
+	line "인간은"
 
-	para "day to become bird"
-	line "#MON masters."
+	para "새포켓몬으로 최강을 목표로 하여"
+	line "밤낮 없이 특훈을 하고있다!"
 
-	para "Come on!"
+	para "덤벼랏!"
 	done
 
 BirdKeeperRodBeatenText:
-	text "Gaaah!"
+	text "쿠-웅!!"
 	done
 
 BirdKeeperRodAfterBattleText:
-	text "FALKNER's skills"
-	line "are for real!"
+	text "비상님의"
+	line "실력은 진짜다"
 
-	para "Don't get cocky"
-	line "just because you"
-	cont "beat me!"
+	para "나를 이긴"
+	line "것 정도로"
+	cont "들뜨지말아라!"
 	done
 
 BirdKeeperAbeSeenText:
-	text "Let me see if you"
-	line "are good enough to"
-	cont "face FALKNER!"
+	text "비상님에게"
+	line "도전할 수 있을까"
+	cont "시험해보겠다!"
 	done
 
 BirdKeeperAbeBeatenText:
-	text "This can't be"
-	line "true!"
+	text "진짜냐"
+	line "!?"
 	done
 
 BirdKeeperAbeAfterBattleText:
-	text "This is pathetic,"
-	line "losing to some"
-	cont "rookie trainer…"
+	text "신출내기 트레이너"
+	line "녀석에게 진다는 것은"
+	cont "말도 안 되지……"
 	done
 
 VioletGymGuideText:
-	text "Hey! I'm no train-"
-	line "er but I can give"
-	cont "some advice!"
+	text "여어!"
+	line "나는 트레이너가 아니지만"
+	cont "어드바이스는 할 수 있지!"
 
-	para "Believe me!"
-	line "If you believe, a"
+	para "믿음이야!"
+	line "믿는다면"
 
-	para "championship dream"
-	line "can come true."
+	para "챔피언도"
+	line "꿈은 아니지!"
 
-	para "You believe?"
-	line "Then listen."
+	para "그래 들어주겠니?"
+	line "좋아!"
 
-	para "The grass-type is"
-	line "weak against the"
+	para "풀타입은"
+	line "비행타입에"
 
-	para "flying-type. Keep"
-	line "this in mind."
+	para "대단히 상성이 나쁘단다"
+	line "꼭 주의를 해야해!"
 	done
 
 VioletGymGuideWinText:
-	text "Nice battle! Keep"
-	line "it up, and you'll"
+	text "나이스 파이트!"
+	line "그 상태로"
 
-	para "be the CHAMP in no"
-	line "time at all!"
+	para "단번에 포켓몬"
+	line "챔피언이 되어라!"
 	done
 
 VioletGym_MapEvents:

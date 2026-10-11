@@ -19,15 +19,15 @@ Kyle:
 	end
 
 VioletKylesHousePokefanMText:
-	text "A #MON you get"
-	line "in a trade grows"
-	cont "quickly."
+	text "다른 사람이랑"
+	line "교환한 포켓몬은"
+	cont "성장이 빠르다!"
 
-	para "But if you don't"
-	line "have the right GYM"
+	para "하지만 체육관배지를"
+	line "지니지 않으면"
 
-	para "BADGE, they may"
-	line "disobey you."
+	para "말하는 것을"
+	line "듣지 않게 된단다"
 	done
 
 VioletKylesHouse_MapEvents:
